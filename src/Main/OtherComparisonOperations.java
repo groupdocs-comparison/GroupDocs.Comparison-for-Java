@@ -1,0 +1,265 @@
+package Main;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import com.groupdocs.comparison.cells.contracts.ICellsCompareResult;
+import com.groupdocs.comparison.cells.contracts.enums.ComparisonSaveFormat;
+import com.groupdocs.comparison.cells.contracts.nodes.ComparisonParagraphBase;
+import com.groupdocs.comparison.cells.nodes.ComparisonCell;
+import com.groupdocs.comparison.cells.nodes.ComparisonWorkbook;
+import com.groupdocs.comparison.common.comparisonsettings.CellsComparisonSettings;
+import com.groupdocs.comparison.common.comparisonsettings.PdfComparisonSettings;
+import com.groupdocs.comparison.common.comparisonsettings.SlidesComparisonSettings;
+import com.groupdocs.comparison.common.comparisonsettings.WordsComparisonSettings;
+import com.groupdocs.comparison.pdf.ComparisonPdfDocument;
+import com.groupdocs.comparison.pdf.contracts.comparedresult.IPdfComparedResult;
+import com.groupdocs.comparison.slides.ComparisonColumn;
+import com.groupdocs.comparison.slides.ComparisonPresentation;
+import com.groupdocs.comparison.slides.ComparisonRow;
+import com.groupdocs.comparison.slides.ComparisonSlide;
+import com.groupdocs.comparison.slides.ComparisonTable;
+import com.groupdocs.comparison.slides.contracts.ISlidesCompareResult;
+import com.groupdocs.comparison.slides.contracts.comparison.ComparisonAutoShapeBase;
+import com.groupdocs.comparison.slides.contracts.comparison.ComparisonSlideBase;
+import com.groupdocs.comparison.slides.contracts.enums.ComparisonShapeType;
+import com.groupdocs.comparison.text.contracts.IComparisonParagraph;
+import com.groupdocs.comparison.text.contracts.IComparisonTextComponent;
+import com.groupdocs.comparison.words.contracts.IWordsCompareResult;
+import com.groupdocs.comparison.words.contracts.nodes.IComparisonCell;
+import com.groupdocs.comparison.words.contracts.nodes.IComparisonColumn;
+import com.groupdocs.comparison.words.contracts.nodes.IComparisonDocument;
+import com.groupdocs.comparison.words.contracts.nodes.IComparisonRow;
+import com.groupdocs.comparison.words.contracts.nodes.IComparisonTable;
+import com.groupdocs.comparison.words.nodes.ComparisonDocument;
+import com.groupdocs.comparison.words.nodes.ComparisonParagraph;
+
+public class OtherComparisonOperations {
+
+	public static void openWordDocsFromStream(String sourceFile) throws Throwable {
+		// Create stream of document
+		InputStream sourceStream = new FileInputStream(sourceFile);
+		// Open ComparisonDocument.
+		ComparisonDocument document = new ComparisonDocument(sourceStream);
+	}
+
+	public static void openWordDocsFromFile(String sourceFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		// Open *ComparisonDocument*.
+		ComparisonDocument document = new ComparisonDocument(sourcePath);
+	}
+
+	public static void compareWordDocsWithCompareWith(String sourceFile, String targetFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.sourcePath + targetFile;
+		ComparisonDocument source = new ComparisonDocument(sourcePath);
+		ComparisonDocument target = new ComparisonDocument(targetPath);
+		// Call method *CompareWith()*
+		IWordsCompareResult result = source.compareWith(target, new WordsComparisonSettings());
+	}
+
+	public static void getWordDocumentFromGetDocument(String sourceFile, String targetFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.sourcePath + targetFile;
+		ComparisonDocument source = new ComparisonDocument(sourcePath);
+		ComparisonDocument target = new ComparisonDocument(targetPath);
+		// Call method *CompareWith()*
+		IWordsCompareResult result = source.compareWith(target, new WordsComparisonSettings());
+		// Call *GetDocument()* method
+		IComparisonDocument resultDocument = result.getDocument();
+	}
+
+	public static void saveWordDocumentToFile(String sourceFile, String targetFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.sourcePath + targetFile;
+		ComparisonDocument source = new ComparisonDocument(sourcePath);
+		ComparisonDocument target = new ComparisonDocument(targetPath);
+		// Call method *CompareWith()*
+		IWordsCompareResult result = source.compareWith(target, new WordsComparisonSettings());
+		// Call *GetDocument()* method
+		IComparisonDocument resultDocument = result.getDocument();
+		// Call *Save()* method
+		resultDocument.save("result.docx", ComparisonSaveFormat.Auto);
+	}
+
+	public static void saveWordDocumentToStream(String sourceFile, String targetFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.sourcePath + targetFile;
+		ComparisonDocument source = new ComparisonDocument(sourcePath);
+		ComparisonDocument target = new ComparisonDocument(targetPath);
+		// Call method *CompareWith()*
+		IWordsCompareResult result = source.compareWith(target, new WordsComparisonSettings());
+		// Call *GetDocument()* method
+		IComparisonDocument resultDocument = result.getDocument();
+		// Call *Save()* method
+		resultDocument.save("result.docx", ComparisonSaveFormat.Auto);
+		// Create stream
+		OutputStream stream = new ByteArrayOutputStream();
+
+		// Call *save()* method
+		resultDocument.save(stream, ComparisonSaveFormat.Auto);
+	}
+
+	public static void compareTwoParagraphs() throws Throwable {
+		// Creating Paragraphs
+		IComparisonParagraph sourceParagraph = (IComparisonParagraph) new ComparisonParagraph();
+		sourceParagraph.addRun("This is source Paragraph.");
+
+		IComparisonParagraph targetParagraph = (IComparisonParagraph) new ComparisonParagraph();
+		targetParagraph.addRun("This is target Paragraph.");
+
+		// Creating settings for comparison of Paragraphs
+		WordsComparisonSettings settings = new WordsComparisonSettings();
+		// Comparing Paragraphs
+		IWordsCompareResult compareResult = ((IComparisonDocument) sourceParagraph)
+				.compareWith((IComparisonDocument) targetParagraph, settings);
+	}
+
+	public static void compareTwoCells() {
+		// Creating Cells
+		IComparisonCell sourceCell = (IComparisonCell) new ComparisonCell();
+		IComparisonParagraph paragraph = (IComparisonParagraph) sourceCell.addParagraph();
+		paragraph.addRun("This is Cell of source table.");
+
+		IComparisonCell targetCell = (IComparisonCell) new ComparisonCell();
+		paragraph = (IComparisonParagraph) targetCell.addParagraph();
+		paragraph.addRun("This is Cell of target table.");
+
+		// Creating settings for comparison of Cells
+		WordsComparisonSettings settings = new WordsComparisonSettings();
+		// Comparing Cells
+		IWordsCompareResult compareResult = sourceCell.compareWith(targetCell, settings);
+	}
+
+	public static void compareTwoColums() {
+		// Creating Columns
+		IComparisonColumn sourceColumn = (IComparisonColumn) new ComparisonColumn(new double[] { 20, 20 }, 100);
+		IComparisonParagraph paragraph = (IComparisonParagraph) sourceColumn.getCells()[0].addParagraph();
+		paragraph.addRun("This is cell.");
+		paragraph = (IComparisonParagraph) sourceColumn.getCells()[1].addParagraph();
+		paragraph.addRun("This is Cell of source table.");
+
+		IComparisonColumn targetColumn = (IComparisonColumn) new ComparisonColumn(new double[] { 20, 20 }, 100);
+		paragraph = (IComparisonParagraph) targetColumn.getCells()[0].addParagraph();
+		paragraph.addRun("This is cell.");
+		paragraph = (IComparisonParagraph) targetColumn.getCells()[1].addParagraph();
+		paragraph.addRun("This is Cell of target table.");
+
+		// Creating settings for comparison of Columns
+		WordsComparisonSettings settings = new WordsComparisonSettings();
+		// Comparing Columns
+		IWordsCompareResult compareResult = sourceColumn.compareWith(targetColumn, settings);
+	}
+
+	public static void compareTwoRows() {
+		// Creating Rows
+		IComparisonRow sourceRow = (IComparisonRow) new ComparisonRow(new double[] { 100, 100 }, 20);
+		IComparisonParagraph paragraph = (IComparisonParagraph) sourceRow.getCells()[0].addParagraph();
+		paragraph.addRun("This is cell.");
+		paragraph = (IComparisonParagraph) sourceRow.getCells()[1].addParagraph();
+		paragraph.addRun("This is Cell of source table.");
+
+		IComparisonRow targetRow = (IComparisonRow) new ComparisonRow(new double[] { 100, 100 }, 20);
+		paragraph = (IComparisonParagraph) targetRow.getCells()[0].addParagraph();
+		paragraph.addRun("This is cell.");
+		paragraph = (IComparisonParagraph) targetRow.getCells()[1].addParagraph();
+		paragraph.addRun("This is Cell of target table.");
+
+		// Creating settings for comparison of Rows
+		WordsComparisonSettings settings = new WordsComparisonSettings();
+		// Comparing Rows
+		IWordsCompareResult compareResult = sourceRow.compareWith(targetRow, settings);
+	}
+
+	/*
+	 * compare two tables
+	 */
+	public static void compareTwoTables() {
+		// Creating Tables
+		IComparisonTable sourceTable = (IComparisonTable) new ComparisonTable(0, 0, new double[] { 100, 100 },
+				new double[] { 20, 20 });
+		IComparisonParagraph paragraph = (IComparisonParagraph) sourceTable.getRows()[0].getCells()[0].addParagraph();
+		paragraph.addRun("This is cell.");
+		paragraph = (IComparisonParagraph) sourceTable.getRows()[0].getCells()[1].addParagraph();
+		paragraph.addRun("This is Cell of source table.");
+		paragraph = (IComparisonParagraph) sourceTable.getRows()[1].getCells()[0].addParagraph();
+		paragraph.addRun("This is Cel of tble.");
+
+		IComparisonTable targetTable = (IComparisonTable) new ComparisonTable(0, 0, new double[] { 100, 100 },
+				new double[] { 20, 20 });
+		paragraph = (IComparisonParagraph) targetTable.getRows()[0].getCells()[0].addParagraph();
+		paragraph.addRun("This is cell.");
+		paragraph = (IComparisonParagraph) targetTable.getRows()[0].getCells()[1].addParagraph();
+		paragraph.addRun("This is Cell of target table.");
+		paragraph = (IComparisonParagraph) targetTable.getRows()[1].getCells()[0].addParagraph();
+		paragraph.addRun("This is Cell of table.");
+
+		// Creating settings for comparison of Tables
+		WordsComparisonSettings settings = new WordsComparisonSettings();
+		// Comparing Tables
+		IWordsCompareResult compareResult = sourceTable.compareWith(targetTable, settings);
+	}
+
+	/*
+	 * compare two workbooks
+	 */
+	public static void compareTwoWorkboos(String sourceFile, String targetFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+
+		// Open two workbooks
+		ComparisonWorkbook source = new ComparisonWorkbook(sourcePath);
+		ComparisonWorkbook target = new ComparisonWorkbook(targetPath);
+
+		// Call method CompareWith.
+		ICellsCompareResult result = source.compareWith(target, new CellsComparisonSettings());
+	}
+
+	/*
+	 * compare two cells with method compareWith
+	 */
+	public static void compareTwoCellsWithCompareWith(String sourceFile, String targetFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+
+		// Open two workbooks
+		ComparisonWorkbook source = new ComparisonWorkbook(sourcePath);
+		ComparisonWorkbook target = new ComparisonWorkbook(targetPath);
+
+		// Compare cells
+		CellsComparisonSettings settings = new CellsComparisonSettings();
+		final ICellsCompareResult result = source.getWorksheets()[0].getCellRange().get_Item("A6")
+				.compareWith(target.getWorksheets()[0].getCellRange().get_Item("A6"), settings);
+	}
+
+	/*
+	 * Compare PDF documents with compareWith method
+	 */
+	public static void comparePdfWithCompareWith(String sourceFile, String targetFile) throws Throwable {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		// Open two documents
+		ComparisonPdfDocument source = new ComparisonPdfDocument(sourcePath);
+		ComparisonPdfDocument target = new ComparisonPdfDocument(targetPath);
+
+		// Call method CompareWith.
+		IPdfComparedResult result = source.compareWith(target, new PdfComparisonSettings());
+	}
+
+	/*
+	 * Compare two slides with compareWith method
+	 */
+	public static void compareSlidesWithCompareWith(String sourceFile, String targetFile) {
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		// Open two presentations
+		ComparisonPresentation source = new ComparisonPresentation(sourcePath);
+		ComparisonPresentation target = new ComparisonPresentation(targetPath);
+
+		// Call method CompareWith.
+		ISlidesCompareResult result = source.compareWith(target, new SlidesComparisonSettings());
+	}
+	
+}
