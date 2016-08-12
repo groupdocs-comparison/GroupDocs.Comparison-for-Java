@@ -5,8 +5,7 @@ GroupDocs.Comparison is a lightweight library that allows you to merge and diff 
 ##GroupDocs.Comparison Structure
 
 The core of GroupDocs.Comparison library consists of five main components: Words, Pdf, Slides, Cells and Text and Common . Each main component is divided into Contracts, Domain, that implements it, and Core component which compares documents using features specific for certain document type.
-
-Common component contains algorithms, which are used by every main component, common objects and enumerations. All five main components have reference on Common.
+All five main components have reference on Common.
 
 The Facade component gives an opportunity to simplify access to Comparison API and unites all comparison types into one API. Facade gives an ability to compare documents with all supported formats, and revise the changes from result document.
 
