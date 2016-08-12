@@ -20,7 +20,7 @@ This package contains [Examples](#) for [GroupDocs.Comparison for Java](#) that 
 
 Directory | Description
 --------- | -----------
-[Examples](#)  | Contains the package of all Java examples and sample files that will help you learn how to use product features.
+[Examples](#)  | Contains the package of Java examples and sample files that will help you learn how to use product features.
 
 ## Resources
 
