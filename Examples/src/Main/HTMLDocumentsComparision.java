@@ -11,11 +11,11 @@ public class HTMLDocumentsComparision {
 
 	// document extension
 		private static String extension = ".html";
-
 		/*
 		 * Comparing two html files from streams
 		 */
 		public static void CompareHtmlFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
+			//ExStart:CompareHtmlFromStreamToFile
 			// Create two streams of textFiles
 			InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
 			InputStream targetStream = Main.Utilities.targetStream(targetFile);
@@ -23,6 +23,7 @@ public class HTMLDocumentsComparision {
 			// Compare.
 			Comparison comparison = new Comparison();
 			InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension));
+			//ExEnd:CompareHtmlFromStreamToFile
 		}
 		
 		/*

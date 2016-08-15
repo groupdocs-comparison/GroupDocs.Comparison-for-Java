@@ -216,7 +216,14 @@ public class MainClass {
 		//compare two slides with compareWith method
 		//OtherComparisonOperations.compareSlidesWithCompareWith("source.pptx","target.pptx");
 		
+		//compare documents from string with result path and target extension
+		//OtherComparisonOperations.compareDocsFromStringWithTargetExtension("source.docx","target.docx");
 		
+		//compare encrypted documents from string
+		//OtherComparisonOperations.compareEncryptedDocumentsFromStrings("source.docx","target.docx");
+		
+		//compare encrypted documents from string with result path setting target extension
+		//OtherComparisonOperations.compareEncryptedDocumentsWithSettingsAndSaving("source.docx","target.docx");
 		
 		//End other options
 		

@@ -5,11 +5,13 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import com.groupdocs.comparison.Comparison;
 import com.groupdocs.comparison.cells.contracts.ICellsCompareResult;
 import com.groupdocs.comparison.cells.contracts.enums.ComparisonSaveFormat;
 import com.groupdocs.comparison.cells.contracts.nodes.ComparisonParagraphBase;
 import com.groupdocs.comparison.cells.nodes.ComparisonCell;
 import com.groupdocs.comparison.cells.nodes.ComparisonWorkbook;
+import com.groupdocs.comparison.common.FileType;
 import com.groupdocs.comparison.common.comparisonsettings.CellsComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.PdfComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.SlidesComparisonSettings;
@@ -39,28 +41,35 @@ import com.groupdocs.comparison.words.nodes.ComparisonParagraph;
 public class OtherComparisonOperations {
 
 	public static void openWordDocsFromStream(String sourceFile) throws Throwable {
+		//ExStart:openWordDocsFromStream
 		// Create stream of document
 		InputStream sourceStream = new FileInputStream(sourceFile);
 		// Open ComparisonDocument.
 		ComparisonDocument document = new ComparisonDocument(sourceStream);
+		//ExEnd:openWordDocsFromStream
 	}
 
 	public static void openWordDocsFromFile(String sourceFile) throws Throwable {
+		//ExStart:openWordDocsFromFile
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		// Open *ComparisonDocument*.
 		ComparisonDocument document = new ComparisonDocument(sourcePath);
+		//ExEnd:openWordDocsFromFile
 	}
 
 	public static void compareWordDocsWithCompareWith(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:compareWordDocsWithCompareWith
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
 		ComparisonDocument target = new ComparisonDocument(targetPath);
 		// Call method *CompareWith()*
 		IWordsCompareResult result = source.compareWith(target, new WordsComparisonSettings());
+		//ExEnd:compareWordDocsWithCompareWith
 	}
 
 	public static void getWordDocumentFromGetDocument(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:getWordDocumentFromGetDocument
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
@@ -69,9 +78,11 @@ public class OtherComparisonOperations {
 		IWordsCompareResult result = source.compareWith(target, new WordsComparisonSettings());
 		// Call *GetDocument()* method
 		IComparisonDocument resultDocument = result.getDocument();
+		//ExEnd:getWordDocumentFromGetDocument
 	}
 
 	public static void saveWordDocumentToFile(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:saveWordDocumentToFile
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
@@ -82,9 +93,11 @@ public class OtherComparisonOperations {
 		IComparisonDocument resultDocument = result.getDocument();
 		// Call *Save()* method
 		resultDocument.save("result.docx", ComparisonSaveFormat.Auto);
+		//ExEnd:saveWordDocumentToFile
 	}
 
 	public static void saveWordDocumentToStream(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:saveWordDocumentToStream
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
@@ -100,9 +113,11 @@ public class OtherComparisonOperations {
 
 		// Call *save()* method
 		resultDocument.save(stream, ComparisonSaveFormat.Auto);
+		//ExEnd:saveWordDocumentToStream
 	}
 
 	public static void compareTwoParagraphs() throws Throwable {
+		//ExStart:compareTwoParagraphs
 		// Creating Paragraphs
 		IComparisonParagraph sourceParagraph = (IComparisonParagraph) new ComparisonParagraph();
 		sourceParagraph.addRun("This is source Paragraph.");
@@ -115,9 +130,11 @@ public class OtherComparisonOperations {
 		// Comparing Paragraphs
 		IWordsCompareResult compareResult = ((IComparisonDocument) sourceParagraph)
 				.compareWith((IComparisonDocument) targetParagraph, settings);
+		//ExEnd:compareTwoParagraphs
 	}
 
 	public static void compareTwoCells() {
+		//ExStart:compareTwoCells
 		// Creating Cells
 		IComparisonCell sourceCell = (IComparisonCell) new ComparisonCell();
 		IComparisonParagraph paragraph = (IComparisonParagraph) sourceCell.addParagraph();
@@ -131,9 +148,11 @@ public class OtherComparisonOperations {
 		WordsComparisonSettings settings = new WordsComparisonSettings();
 		// Comparing Cells
 		IWordsCompareResult compareResult = sourceCell.compareWith(targetCell, settings);
+		//ExEnd:compareTwoCells
 	}
 
 	public static void compareTwoColums() {
+		//ExStart:compareTwoColums
 		// Creating Columns
 		IComparisonColumn sourceColumn = (IComparisonColumn) new ComparisonColumn(new double[] { 20, 20 }, 100);
 		IComparisonParagraph paragraph = (IComparisonParagraph) sourceColumn.getCells()[0].addParagraph();
@@ -151,9 +170,11 @@ public class OtherComparisonOperations {
 		WordsComparisonSettings settings = new WordsComparisonSettings();
 		// Comparing Columns
 		IWordsCompareResult compareResult = sourceColumn.compareWith(targetColumn, settings);
+		//ExEnd:compareTwoColums
 	}
 
 	public static void compareTwoRows() {
+		//ExStart:compareTwoRows
 		// Creating Rows
 		IComparisonRow sourceRow = (IComparisonRow) new ComparisonRow(new double[] { 100, 100 }, 20);
 		IComparisonParagraph paragraph = (IComparisonParagraph) sourceRow.getCells()[0].addParagraph();
@@ -171,12 +192,14 @@ public class OtherComparisonOperations {
 		WordsComparisonSettings settings = new WordsComparisonSettings();
 		// Comparing Rows
 		IWordsCompareResult compareResult = sourceRow.compareWith(targetRow, settings);
+		//ExEnd:compareTwoRows
 	}
 
 	/*
 	 * compare two tables
 	 */
 	public static void compareTwoTables() {
+		//ExStart:compareTwoTables
 		// Creating Tables
 		IComparisonTable sourceTable = (IComparisonTable) new ComparisonTable(0, 0, new double[] { 100, 100 },
 				new double[] { 20, 20 });
@@ -200,12 +223,14 @@ public class OtherComparisonOperations {
 		WordsComparisonSettings settings = new WordsComparisonSettings();
 		// Comparing Tables
 		IWordsCompareResult compareResult = sourceTable.compareWith(targetTable, settings);
+		//ExEnd:compareTwoTables
 	}
 
 	/*
 	 * compare two workbooks
 	 */
 	public static void compareTwoWorkboos(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:compareTwoWorkboos
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 
@@ -215,12 +240,14 @@ public class OtherComparisonOperations {
 
 		// Call method CompareWith.
 		ICellsCompareResult result = source.compareWith(target, new CellsComparisonSettings());
+		//ExEnd:compareTwoWorkboos
 	}
 
 	/*
 	 * compare two cells with method compareWith
 	 */
 	public static void compareTwoCellsWithCompareWith(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:compareTwoCellsWithCompareWith
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 
@@ -232,12 +259,14 @@ public class OtherComparisonOperations {
 		CellsComparisonSettings settings = new CellsComparisonSettings();
 		final ICellsCompareResult result = source.getWorksheets()[0].getCellRange().get_Item("A6")
 				.compareWith(target.getWorksheets()[0].getCellRange().get_Item("A6"), settings);
+		//ExEnd:compareTwoCellsWithCompareWith
 	}
 
 	/*
 	 * Compare PDF documents with compareWith method
 	 */
 	public static void comparePdfWithCompareWith(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:comparePdfWithCompareWith
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		// Open two documents
@@ -246,12 +275,14 @@ public class OtherComparisonOperations {
 
 		// Call method CompareWith.
 		IPdfComparedResult result = source.compareWith(target, new PdfComparisonSettings());
+		//ExEnd:comparePdfWithCompareWith
 	}
 
 	/*
 	 * Compare two slides with compareWith method
 	 */
 	public static void compareSlidesWithCompareWith(String sourceFile, String targetFile) {
+		//ExStart:compareSlidesWithCompareWith
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		// Open two presentations
@@ -260,6 +291,44 @@ public class OtherComparisonOperations {
 
 		// Call method CompareWith.
 		ISlidesCompareResult result = source.compareWith(target, new SlidesComparisonSettings());
+		//ExEnd:compareSlidesWithCompareWith
 	}
+	/*
+	 * Compare documents from string with result path and target extension
+	 */
+	public static void compareDocsFromStringWithTargetExtension(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareDocsFromStringWithTargetExtension
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		Comparison comparison = new Comparison();
+		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName("docx"), FileType.Docx);
+		//ExEnd:compareDocsFromStringWithTargetExtension
+	}
+	
+	/*
+	 * Compare encrypted documents from strings.
+	 */
+	public static void compareEncryptedDocumentsFromStrings(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareEncryptedDocumentsFromStrings
+		Comparison comparison = new Comparison();
+		String sourcePass = Utilities.sourcePassword;
+		String targetPass = Utilities.targetPassword;
+		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass);
+		System.out.println(result.available());
+		//ExEnd:compareEncryptedDocumentsFromStrings
+	}
+	/*
+	 * Compare encrypted documents from strings with result path settings and target extension
+	 */
+	public static void compareEncryptedDocumentsWithSettingsAndSaving(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareEncryptedDocumentsWithSettingsAndSaving
+		Comparison comparison = new Comparison();
+		String sourcePass = Utilities.sourcePassword;
+		String targetPass = Utilities.targetPassword;
+		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass, Utilities.outputFileName("docx"), new WordsComparisonSettings(), FileType.Docx);
+		System.out.println(result.available());
+		//ExEnd:compareEncryptedDocumentsWithSettingsAndSaving
+	}
+	
 	
 }

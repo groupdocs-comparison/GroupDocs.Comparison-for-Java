@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
 
 import com.groupdocs.comparison.*;
 import com.groupdocs.comparison.common.license.License;
-
+//ExStart:commonutilitiesclass
 public class Utilities {
 
 	// ExStart:CommonProperties
@@ -25,20 +25,20 @@ public class Utilities {
 	public final static String targetPath = "./Data/TargetFiles/";
 	public final static String licensePath = "D:/GroupDocs.Total.Java.lic";
 	public final static String resultFile = "result";
-
+	public final static String sourcePassword = "pass";
+	public final static String targetPassword = "pass";
 	public static String outputFileName(String extension) {
 		String resultPath = "./Data/ResultFiles/" + resultFile + extension;
 		return resultPath;
 	}
-
 	// ExEnd:CommonProperties
 
-	// ExStart:ApplyLicenseFromFile
 	/**
 	 * This method applies product license from file
 	 * 
 	 */
 	public static void applyLicenseFromFile(String filePath) {
+		//ExStart:applyLicenseFromFile
 		try {
 			// Setup license
 			License lic = new License();
@@ -47,17 +47,14 @@ public class Utilities {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
 		}
+		//ExEnd:applyLicenseFromFile
 	}
-
-	// ExEnd:ApplyLicenseFromFile
-
-	// ExStart:ApplyLicenseFromStreamObj
 	/**
 	 * This method applies product license from stream
 	 * 
 	 */
 	public static void applyLicenseFromStream(String filePath) {
-
+		// ExStart:ApplyLicenseFromStreamObj
 		try {
 			// Obtain license stream
 			FileInputStream licenseStream = new FileInputStream(filePath);
@@ -69,19 +66,17 @@ public class Utilities {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
 		}
+		// ExEnd:ApplyLicenseFromStreamObj
 	}
-
-	// ExEnd:ApplyLicenseFromStreamObj
-
 	public static InputStream sourceStream(String sourceFile) throws Throwable {
 		String sourceFilePath = sourcePath + sourceFile;
 		InputStream sourceStream = new FileInputStream(sourceFilePath);
 		return sourceStream;
 	}
-
 	public static InputStream targetStream(String targetFile) throws Throwable {
 		String targetFilePath = targetPath + targetFile;
 		InputStream targetStream = new FileInputStream(targetFilePath);
 		return targetStream;
 	}
 }
+//ExEnd:commonutilitiesclass

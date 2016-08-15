@@ -23,83 +23,98 @@ public class WordDocumentComparison {
 	 * Comparing two word document from streams, with settings and saving output to a resultant file
 	 */
 	public static void CompareWordDocumentsFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
+		//ExStart:CompareWordDocumentsFromStreamToFile
 		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Main.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourceStream, targetStream, Main.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
+		//ExEnd:CompareWordDocumentsFromStreamToFile
 	}
 	/*
 	 * Comparing two word document from streams, with settings 
 	 */
 	public static void CompareWordDocumentsFromStreamWithSettings(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:CompareWordDocumentsFromStreamWithSettings
 		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Main.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourceStream, targetStream,
 				ComparisonType.Words, new WordsComparisonSettings());
-			
+			//ExEnd:CompareWordDocumentsFromStreamWithSettings
 	}
 	/*
 	 * Comparing two word document from streams without settings and saving results to a file
 	 */
 	public static void CompareWordDocumentsFromStreamToFileWitoutSettings(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:CompareWordDocumentsFromStreamToFileWitoutSettings
 		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Main.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourceStream, targetStream, Main.Utilities.outputFileName(extension), ComparisonType.Words);
+	//ExEnd:CompareWordDocumentsFromStreamToFileWitoutSettings
 	}
 	/*
 	 * Comparing two word document from streams without settings and saving file
 	 */
 	public static void CompareWordDocumentsFromStreamWithoutSettings(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:CompareWordDocumentsFromStreamWithoutSettings
 		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Main.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Words);
+	//ExEnd:CompareWordDocumentsFromStreamWithoutSettings
 	}
 	/*
 	 * Compare two word document from files with saving file and  settings
 	 */
 	public static void CompareWordDocumentsFromFileToFileWithSettings(String sourceFile, String targetFile) throws Exception{
+		//ExStart:CompareWordDocumentsFromFileToFileWithSettings
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Main.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
+	//ExEnd:CompareWordDocumentsFromFileToFileWithSettings
 	}
 	/*
 	 * Compare two word document from files with settings
 	 */
 	public static void CompareWordDocumentsFromFileWithSettings(String sourceFile, String targetFile) throws Exception{
+		//ExStart:CompareWordDocumentsFromFileWithSettings
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words, new WordsComparisonSettings());
+	//ExEnd:CompareWordDocumentsFromFileWithSettings
 	}
 	/*
 	 * Comparing two word document from files to file without settings 
 	 */
 	public static void CompareWordDocumentsFromFileToFileWithoutSettings(String sourceFile, String targetFile) throws Exception{
+		//ExStart:CompareWordDocumentsFromFileToFileWithoutSettings
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Main.Utilities.outputFileName(extension), ComparisonType.Words);
+		//ExEnd:CompareWordDocumentsFromFileToFileWithoutSettings
 	}
 	/*
 	 * Comparing two word document from files without settings
 	 */
 	public static void CompareWordDocumentsFromFileWithoutSettings(String sourceFile, String targetFile) throws Exception{
+		//ExStart:CompareWordDocumentsFromFileWithoutSettings
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words);
+		//ExEnd:CompareWordDocumentsFromFileWithoutSettings
 	}
 	
 }
