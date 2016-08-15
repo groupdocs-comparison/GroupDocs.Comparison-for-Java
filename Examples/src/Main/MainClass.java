@@ -216,14 +216,41 @@ public class MainClass {
 		//compare two slides with compareWith method
 		//OtherComparisonOperations.compareSlidesWithCompareWith("source.pptx","target.pptx");
 		
+		//compare documents from string 
+		//OtherComparisonOperations.compareDocsFromStrings("source.pptx","target.pptx");
+		
 		//compare documents from string with result path and target extension
 		//OtherComparisonOperations.compareDocsFromStringWithTargetExtension("source.docx","target.docx");
+		
+		//compare documents from string with result path and settings
+		//OtherComparisonOperations.compareDocsFromStringWithSettings("source.docx","target.docx");
+		
+		//compare documents from string with result path, settings and file extension
+		//OtherComparisonOperations.compareDocsFromStringWithSettingsAndFileExtension("source.docx","target.docx");
+		
+		//compare documents from string with result path and type
+		//OtherComparisonOperations.compareDocsWithResultAndType("source.docx","target.docx");
+		
+		//compare documents from string with result path, comparison type and target extension
+		//OtherComparisonOperations.compareDocsWithResultAndTargetExtension("source.docx","target.docx");
 		
 		//compare encrypted documents from string
 		//OtherComparisonOperations.compareEncryptedDocumentsFromStrings("source.docx","target.docx");
 		
+		//compare encrypted documents from string with result path and target extension
+		//OtherComparisonOperations.compareEncryptedDocsWithResultAndTargetExtension("source.docx","target.docx");
+		
 		//compare encrypted documents from string with result path setting target extension
 		//OtherComparisonOperations.compareEncryptedDocumentsWithSettingsAndSaving("source.docx","target.docx");
+		
+		//compare encrypted documents from string with result path and type
+		//OtherComparisonOperations.compareEncryptedDocsWithResultAndType("source.docx","target.docx");
+		
+		//compare encrypted documents from string with result path type and target extension
+		//OtherComparisonOperations.compareEncryptedDocsWithResultTypeAndTargetExtension("source.docx","target.docx");
+		
+		//compare encrypted documents from strings with type
+		//OtherComparisonOperations.compareEncryptedDocsFromStringsWithType("source.docx","target.docx");
 		
 		//End other options
 		

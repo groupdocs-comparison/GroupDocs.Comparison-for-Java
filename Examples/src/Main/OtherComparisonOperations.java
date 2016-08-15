@@ -11,6 +11,7 @@ import com.groupdocs.comparison.cells.contracts.enums.ComparisonSaveFormat;
 import com.groupdocs.comparison.cells.contracts.nodes.ComparisonParagraphBase;
 import com.groupdocs.comparison.cells.nodes.ComparisonCell;
 import com.groupdocs.comparison.cells.nodes.ComparisonWorkbook;
+import com.groupdocs.comparison.common.ComparisonType;
 import com.groupdocs.comparison.common.FileType;
 import com.groupdocs.comparison.common.comparisonsettings.CellsComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.PdfComparisonSettings;
@@ -294,6 +295,17 @@ public class OtherComparisonOperations {
 		//ExEnd:compareSlidesWithCompareWith
 	}
 	/*
+	 * Compare documents from strings
+	 */
+	public static void compareDocsFromStrings(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareDocsFromStrings
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		Comparison comparison = new Comparison();
+		InputStream result = comparison.compare(sourcePath, targetPath);
+		//ExEnd:compareDocsFromStrings
+	}
+	/*
 	 * Compare documents from string with result path and target extension
 	 */
 	public static void compareDocsFromStringWithTargetExtension(String sourceFile, String targetFile) throws Throwable{
@@ -301,8 +313,56 @@ public class OtherComparisonOperations {
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName("docx"), FileType.Docx);
+		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx"), FileType.Docx);
 		//ExEnd:compareDocsFromStringWithTargetExtension
+	}
+	
+	/*
+	 * Compare documents from string with result path and settings
+	 */
+	public static void compareDocsFromStringWithSettings(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareDocsFromStringWithTargetExtension
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		Comparison comparison = new Comparison();
+		InputStream result = comparison.compare(sourcePath, targetPath, new WordsComparisonSettings());
+		//ExEnd:compareDocsFromStringWithTargetExtension
+	}
+	
+	/*
+	 * Compare documents from strings with result path and target extension
+	 */
+	public static void compareDocsFromStringWithSettingsAndFileExtension(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareDocsFromStringWithSettingsAndFileExtension
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		Comparison comparison = new Comparison();
+		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx") , new WordsComparisonSettings(), FileType.Docx);
+		//ExEnd:compareDocsFromStringWithSettingsAndFileExtension
+	}
+	
+	/*
+	 * Compare documents from strings with result path and type.
+	 */
+	public static void compareDocsWithResultAndType(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareDocsWithResultAndType
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		Comparison comparison = new Comparison();
+		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx") , ComparisonType.Words);
+		//ExEnd:compareDocsWithResultAndType
+	}
+	
+	/*
+	 * Compare documents from strings with result path type and target extension
+	 */
+	public static void compareDocsWithResultAndTargetExtension(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareDocsWithResultAndTargetExtension
+		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String targetPath = Main.Utilities.targetPath + targetFile;
+		Comparison comparison = new Comparison();
+		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx"),ComparisonType.Words, FileType.Docx);
+		//ExEnd:compareDocsWithResultAndTargetExtension
 	}
 	
 	/*
@@ -317,6 +377,20 @@ public class OtherComparisonOperations {
 		System.out.println(result.available());
 		//ExEnd:compareEncryptedDocumentsFromStrings
 	}
+	
+	/*
+	 * Compare encrypted documents from strings with result path and target extension.
+	 */
+	public static void compareEncryptedDocsWithResultAndTargetExtension(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareEncryptedDocsWithResultAndTargetExtension
+		Comparison comparison = new Comparison();
+		String sourcePass = Utilities.sourcePassword;
+		String targetPass = Utilities.targetPassword;
+		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass, Utilities.outputFileName(".docx"), FileType.Docx);
+		System.out.println(result.available());
+		//ExEnd:compareEncryptedDocsWithResultAndTargetExtension
+	}
+	
 	/*
 	 * Compare encrypted documents from strings with result path settings and target extension
 	 */
@@ -325,9 +399,48 @@ public class OtherComparisonOperations {
 		Comparison comparison = new Comparison();
 		String sourcePass = Utilities.sourcePassword;
 		String targetPass = Utilities.targetPassword;
-		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass, Utilities.outputFileName("docx"), new WordsComparisonSettings(), FileType.Docx);
+		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass, Utilities.outputFileName(".docx"), new WordsComparisonSettings(), FileType.Docx);
 		System.out.println(result.available());
 		//ExEnd:compareEncryptedDocumentsWithSettingsAndSaving
+	}
+	
+	/*
+	 * Compare encrypted documents from strings with result path and type
+	 */
+	public static void compareEncryptedDocsWithResultAndType(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareEncryptedDocsWithResultAndType
+		Comparison comparison = new Comparison();
+		String sourcePass = Utilities.sourcePassword;
+		String targetPass = Utilities.targetPassword;
+		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass, Utilities.outputFileName(".docx"), ComparisonType.Words);
+		System.out.println(result.available());
+		//ExEnd:compareEncryptedDocsWithResultAndType
+	}
+	
+	/*
+	 * Compare encypted documents from strings with result path type and target extension
+	 */
+	public static void compareEncryptedDocsWithResultTypeAndTargetExtension(String sourceFile, String targetFile) throws Throwable{
+		//ExStart:compareEncryptedDocsWithResultTypeAndTargetExtension
+		Comparison comparison = new Comparison();
+		String sourcePass = Utilities.sourcePassword;
+		String targetPass = Utilities.targetPassword;
+		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass, Utilities.outputFileName(".docx"), ComparisonType.Words, FileType.Docx);
+		System.out.println(result.available());
+		//ExEnd:compareEncryptedDocsWithResultTypeAndTargetExtension
+	}
+	
+	/*
+	 * Compare encrypted documents from strings with type.
+	 */
+	public static void compareEncryptedDocsFromStringsWithType(String sourceFile, String targetFile) throws Exception{
+		//ExStart:compareEncryptedDocsFromStringsWithType
+		Comparison comparison = new Comparison();
+		String sourcePass = Utilities.sourcePassword;
+		String targetPass = Utilities.targetPassword;
+		InputStream result = comparison.compare(sourceFile, sourcePass, targetFile, targetPass, ComparisonType.Words);
+		System.out.println(result.available());
+		//ExEnd:compareEncryptedDocsFromStringsWithType
 	}
 	
 	
