@@ -321,12 +321,12 @@ public class OtherComparisonOperations {
 	 * Compare documents from string with result path and settings
 	 */
 	public static void compareDocsFromStringWithSettings(String sourceFile, String targetFile) throws Throwable{
-		//ExStart:compareDocsFromStringWithTargetExtension
+		//ExStart:compareDocsFromStringWithSettings
 		String sourcePath = Main.Utilities.sourcePath + sourceFile;
 		String targetPath = Main.Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, new WordsComparisonSettings());
-		//ExEnd:compareDocsFromStringWithTargetExtension
+		//ExEnd:compareDocsFromStringWithSettings
 	}
 	
 	/*
@@ -418,7 +418,7 @@ public class OtherComparisonOperations {
 	}
 	
 	/*
-	 * Compare encypted documents from strings with result path type and target extension
+	 * Compare encrypted documents from strings with result path type and target extension
 	 */
 	public static void compareEncryptedDocsWithResultTypeAndTargetExtension(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:compareEncryptedDocsWithResultTypeAndTargetExtension
