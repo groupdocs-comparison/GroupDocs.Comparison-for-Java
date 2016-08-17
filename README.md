@@ -12,6 +12,7 @@ The Facade component gives an opportunity to simplify access to Comparison API a
 This package contains [Examples](#) for [GroupDocs.Comparison for Java](#) that will help you understand API's working and write your own applications.
 
 <p align="center">
+
   <a title="Download complete GroupDocs.Comparison for Java source code" href="#">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
