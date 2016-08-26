@@ -41,7 +41,7 @@ public class MainClass {
 		// WordDocumentComparison.CompareWordDocumentsFromFileWithSettings("source.docx","target.docx");
 
 		// compare word document files to file without settings
-		 WordDocumentComparison.CompareWordDocumentsFromFileToFileWithoutSettings("source.docx","target.docx");
+		 //WordDocumentComparison.CompareWordDocumentsFromFileToFileWithoutSettings("source.docx","target.docx");
 
 		// compare word document files without saving and settings
 		// WordDocumentComparison.CompareWordDocumentsFromFileWithoutSettings("source.docx","target.docx");
