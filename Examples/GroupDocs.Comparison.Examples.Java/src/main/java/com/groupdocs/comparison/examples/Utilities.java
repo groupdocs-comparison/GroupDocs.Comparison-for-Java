@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,8 +10,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Properties;
 
 import javax.imageio.ImageIO;
 
@@ -21,14 +23,16 @@ import com.groupdocs.comparison.common.license.License;
 public class Utilities {
 
 	// ExStart:CommonProperties
+	
 	public final static String sourcePath = "./Data/SourceFiles/";
 	public final static String targetPath = "./Data/TargetFiles/";
-	public final static String licensePath = "D:/GroupDocs.Total.Java.lic";
+	public static final Path resultFilePath = getProjectBaseDir().resolve("Data/ResultFiles/output");
 	public final static String resultFile = "result";
+	public static final Path licensePath = getProjectBaseDir().resolve("GroupDocs.Total.Java.lic");
 	public final static String sourcePassword = "pass";
 	public final static String targetPassword = "pass";
 	public static String outputFileName(String extension) {
-		String resultPath = "./Data/ResultFiles/" + resultFile + extension;
+		String resultPath = resultFilePath + extension;
 		return resultPath;
 	}
 	// ExEnd:CommonProperties
@@ -37,17 +41,30 @@ public class Utilities {
 	 * This method applies product license from file
 	 * 
 	 */
-	public static void applyLicenseFromFile(String filePath) {
+	public static void applyLicenseFromFile() {
 		//ExStart:applyLicenseFromFile
 		try {
 			// Setup license
 			License lic = new License();
-			lic.setLicense(filePath);
+			lic.setLicense(licensePath.toString());
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
 		}
 		//ExEnd:applyLicenseFromFile
+	}
+	/*
+	 * get project base directories
+	 */
+	public static Path getProjectBaseDir() {
+		Properties props = new Properties();
+		try {
+			InputStream i = Utilities.class.getResourceAsStream("/project.properties");
+			props.load(i);
+		} catch (IOException x) {
+			throw new RuntimeException(x);
+		}
+		return FileSystems.getDefault().getPath(props.getProperty("project.basedir"));
 	}
 	/**
 	 * This method applies product license from stream

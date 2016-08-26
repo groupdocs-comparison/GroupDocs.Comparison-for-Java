@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 
 import java.io.InputStream;
 
@@ -18,12 +18,12 @@ public class PdfDocumentsComparision {
 	public static void ComparePdfFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:ComparePdfFromStreamToFile
 		// Create two streams of textFiles
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Main.Utilities.outputFileName(extension),
+		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
 				ComparisonType.Pdf, new PdfComparisonSettings());
 		//ExEnd:ComparePdfFromStreamToFile
 	}
@@ -33,8 +33,8 @@ public class PdfDocumentsComparision {
 	 */
 	public static void ComparePdfFromStreamWithSettings(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:ComparePdfFromStreamWithSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -48,8 +48,8 @@ public class PdfDocumentsComparision {
 	 */
 	public static void ComparePdfFromStreamToFileWitoutSettings(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:ComparePdfFromStreamToFileWitoutSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -63,8 +63,8 @@ public class PdfDocumentsComparision {
 	 */
 	public static void ComparePdfFromStreamWithoutSettings(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:ComparePdfFromStreamWithoutSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -77,8 +77,8 @@ public class PdfDocumentsComparision {
 	 */
 	public static void ComparePdfFromFileToFileWithSettings(String sourceFile, String targetFile) throws Exception {
 		//ExStart:ComparePdfFromFileToFileWithSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -92,8 +92,8 @@ public class PdfDocumentsComparision {
 	 */
 	public static void ComparePdfFromFileWithSettings(String sourceFile, String targetFile) throws Exception {
 		//ExStart:ComparePdfFromFileWithSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -107,8 +107,8 @@ public class PdfDocumentsComparision {
 	 */
 	public static void ComparePdfFromFileToFileWithoutSettings(String sourceFile, String targetFile) throws Exception {
 		//ExStart:ComparePdfFromFileToFileWithoutSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -122,8 +122,8 @@ public class PdfDocumentsComparision {
 	 */
 	public static void ComparePdfFromFileWithoutSettings(String sourceFile, String targetFile) throws Exception {
 		//ExStart:ComparePdfFromFileWithoutSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();

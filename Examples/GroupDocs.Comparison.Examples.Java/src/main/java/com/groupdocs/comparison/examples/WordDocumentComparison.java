@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -24,11 +24,11 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareWordDocumentsFromStreamToFile
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Main.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
+		InputStream result = comparison.compare(sourceStream, targetStream, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
 		//ExEnd:CompareWordDocumentsFromStreamToFile
 	}
 	/*
@@ -36,8 +36,8 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromStreamWithSettings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:CompareWordDocumentsFromStreamWithSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourceStream, targetStream,
@@ -49,11 +49,11 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromStreamToFileWitoutSettings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:CompareWordDocumentsFromStreamToFileWitoutSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Main.Utilities.outputFileName(extension), ComparisonType.Words);
+		InputStream result = comparison.compare(sourceStream, targetStream, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words);
 	//ExEnd:CompareWordDocumentsFromStreamToFileWitoutSettings
 	}
 	/*
@@ -61,8 +61,8 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromStreamWithoutSettings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:CompareWordDocumentsFromStreamWithoutSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Words);
@@ -73,11 +73,11 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromFileToFileWithSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileToFileWithSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Main.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
+		InputStream result = comparison.compare(sourcePath, targetPath, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
 	//ExEnd:CompareWordDocumentsFromFileToFileWithSettings
 	}
 	/*
@@ -85,8 +85,8 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromFileWithSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileWithSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words, new WordsComparisonSettings());
@@ -97,11 +97,11 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromFileToFileWithoutSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileToFileWithoutSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Main.Utilities.outputFileName(extension), ComparisonType.Words);
+		InputStream result = comparison.compare(sourcePath, targetPath, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words);
 		//ExEnd:CompareWordDocumentsFromFileToFileWithoutSettings
 	}
 	/*
@@ -109,8 +109,8 @@ public class WordDocumentComparison {
 	 */
 	public static void CompareWordDocumentsFromFileWithoutSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileWithoutSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words);
