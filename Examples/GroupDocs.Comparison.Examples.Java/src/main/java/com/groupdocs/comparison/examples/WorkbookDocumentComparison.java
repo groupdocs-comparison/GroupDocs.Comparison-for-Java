@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 
 import java.io.InputStream;
 
@@ -17,8 +17,8 @@ public class WorkbookDocumentComparison {
 	public static void CompareWorkBooksFromStreamToFileWithSettings(String sourceFile, String targetFile)
 			throws Throwable {
 		//ExStart:CompareWorkBooksFromStreamToFileWithSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -32,8 +32,8 @@ public class WorkbookDocumentComparison {
 	 */
 	public static void CompareWorkBooksFromStreamWithSettings(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareWorkBooksFromStreamWithSettings
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -47,8 +47,8 @@ public class WorkbookDocumentComparison {
 	 */
 	public static void CompareWorkBooksFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareWorkBooksFromStreamToFile
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -62,8 +62,8 @@ public class WorkbookDocumentComparison {
 	 */
 	public static void CompareWorkBooksFromStream(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareWorkBooksFromStream
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
+		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -77,8 +77,8 @@ public class WorkbookDocumentComparison {
 	public static void CompareWorkBooksFromFilesToFileWithSettings(String sourceFile, String targetFile)
 			throws Exception {
 		//ExStart:CompareWorkBooksFromFilesToFileWithSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of *GroupDocs.Comparison.Comparison* and call method
 		// *Compare*.
 		Comparison comparison = new Comparison();
@@ -92,8 +92,8 @@ public class WorkbookDocumentComparison {
 	 */
 	public static void CompareWorkBooksFromFilesWithSettings(String sourceFile, String targetFile) throws Exception {
 		//ExStart:CompareWorkBooksFromFilesWithSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of *GroupDocs.Comparison.Comparison* and call method
 		// *Compare*.
 		Comparison comparison = new Comparison();
@@ -107,8 +107,8 @@ public class WorkbookDocumentComparison {
 	 */
 	public static void CompareWorkBooksFromFilesToFile(String sourceFile, String targetFile) throws Exception {
 		//ExStart:CompareWorkBooksFromFilesToFile
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of *GroupDocs.Comparison.Comparison* and call method
 		// *Compare*.
 		Comparison comparison = new Comparison();
@@ -122,8 +122,8 @@ public class WorkbookDocumentComparison {
 	 */
 	public static void CompareWorkBooksFromFiles(String sourceFile, String targetFile) throws Exception {
 		//ExStart:CompareWorkBooksFromFiles
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
+		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
 		// Create instance of *GroupDocs.Comparison.Comparison* and call method
 		// *Compare*.
 		Comparison comparison = new Comparison();

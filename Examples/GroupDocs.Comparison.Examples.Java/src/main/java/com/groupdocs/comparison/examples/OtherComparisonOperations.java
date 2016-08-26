@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -52,7 +52,7 @@ public class OtherComparisonOperations {
 
 	public static void openWordDocsFromFile(String sourceFile) throws Throwable {
 		//ExStart:openWordDocsFromFile
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
 		// Open *ComparisonDocument*.
 		ComparisonDocument document = new ComparisonDocument(sourcePath);
 		//ExEnd:openWordDocsFromFile
@@ -60,8 +60,8 @@ public class OtherComparisonOperations {
 
 	public static void compareWordDocsWithCompareWith(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:compareWordDocsWithCompareWith
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.sourcePath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
 		ComparisonDocument target = new ComparisonDocument(targetPath);
 		// Call method *CompareWith()*
@@ -71,8 +71,8 @@ public class OtherComparisonOperations {
 
 	public static void getWordDocumentFromGetDocument(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:getWordDocumentFromGetDocument
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.sourcePath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
 		ComparisonDocument target = new ComparisonDocument(targetPath);
 		// Call method *CompareWith()*
@@ -84,8 +84,8 @@ public class OtherComparisonOperations {
 
 	public static void saveWordDocumentToFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:saveWordDocumentToFile
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.sourcePath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
 		ComparisonDocument target = new ComparisonDocument(targetPath);
 		// Call method *CompareWith()*
@@ -99,8 +99,8 @@ public class OtherComparisonOperations {
 
 	public static void saveWordDocumentToStream(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:saveWordDocumentToStream
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.sourcePath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.sourcePath + targetFile;
 		ComparisonDocument source = new ComparisonDocument(sourcePath);
 		ComparisonDocument target = new ComparisonDocument(targetPath);
 		// Call method *CompareWith()*
@@ -232,8 +232,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareTwoWorkboos(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:compareTwoWorkboos
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 
 		// Open two workbooks
 		ComparisonWorkbook source = new ComparisonWorkbook(sourcePath);
@@ -249,8 +249,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareTwoCellsWithCompareWith(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:compareTwoCellsWithCompareWith
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 
 		// Open two workbooks
 		ComparisonWorkbook source = new ComparisonWorkbook(sourcePath);
@@ -268,8 +268,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void comparePdfWithCompareWith(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:comparePdfWithCompareWith
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Open two documents
 		ComparisonPdfDocument source = new ComparisonPdfDocument(sourcePath);
 		ComparisonPdfDocument target = new ComparisonPdfDocument(targetPath);
@@ -284,8 +284,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareSlidesWithCompareWith(String sourceFile, String targetFile) {
 		//ExStart:compareSlidesWithCompareWith
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Open two presentations
 		ComparisonPresentation source = new ComparisonPresentation(sourcePath);
 		ComparisonPresentation target = new ComparisonPresentation(targetPath);
@@ -299,8 +299,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareDocsFromStrings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:compareDocsFromStrings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath);
 		//ExEnd:compareDocsFromStrings
@@ -310,8 +310,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareDocsFromStringWithTargetExtension(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:compareDocsFromStringWithTargetExtension
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx"), FileType.Docx);
 		//ExEnd:compareDocsFromStringWithTargetExtension
@@ -322,8 +322,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareDocsFromStringWithSettings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:compareDocsFromStringWithSettings
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, new WordsComparisonSettings());
 		//ExEnd:compareDocsFromStringWithSettings
@@ -334,8 +334,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareDocsFromStringWithSettingsAndFileExtension(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:compareDocsFromStringWithSettingsAndFileExtension
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx") , new WordsComparisonSettings(), FileType.Docx);
 		//ExEnd:compareDocsFromStringWithSettingsAndFileExtension
@@ -346,8 +346,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareDocsWithResultAndType(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:compareDocsWithResultAndType
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx") , ComparisonType.Words);
 		//ExEnd:compareDocsWithResultAndType
@@ -358,8 +358,8 @@ public class OtherComparisonOperations {
 	 */
 	public static void compareDocsWithResultAndTargetExtension(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:compareDocsWithResultAndTargetExtension
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(".docx"),ComparisonType.Words, FileType.Docx);
 		//ExEnd:compareDocsWithResultAndTargetExtension

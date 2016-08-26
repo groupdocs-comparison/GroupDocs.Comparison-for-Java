@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,16 +18,15 @@ public class MainClass {
 
 	public static void main(String[] args) throws Throwable {
 		// Setup license
-		License license = new License();
-		license.setLicense(Utilities.licensePath);
+		Utilities.applyLicenseFromFile();
 		
 		// Word documents comparison_______________________________________
 
 		// compare word document streams and save output to a file
-		// WordDocumentComparison.CompareWordDocumentsFromStreamToFile("source.docx","target.docx");
+		//WordDocumentComparison.CompareWordDocumentsFromStreamToFile("source.docx","target.docx");
 
 		// compare word document streams
-		// WordDocumentComparison.CompareWordDocumentsFromStreamWithSettings("source.docx","target.docx");
+		 //WordDocumentComparison.CompareWordDocumentsFromStreamWithSettings("source.docx","target.docx");
 
 		// compare word document streams without settings
 		// WordDocumentComparison.CompareWordDocumentsFromStreamToFileWitoutSettings("source.docx","target.docx");
@@ -42,7 +41,7 @@ public class MainClass {
 		// WordDocumentComparison.CompareWordDocumentsFromFileWithSettings("source.docx","target.docx");
 
 		// compare word document files to file without settings
-		// WordDocumentComparison.CompareWordDocumentsFromFileToFileWithoutSettings("source.docx","target.docx");
+		 //WordDocumentComparison.CompareWordDocumentsFromFileToFileWithoutSettings("source.docx","target.docx");
 
 		// compare word document files without saving and settings
 		// WordDocumentComparison.CompareWordDocumentsFromFileWithoutSettings("source.docx","target.docx");
@@ -64,7 +63,7 @@ public class MainClass {
 		// WorkbookDocumentComparison.CompareWorkBooksFromStream("source.xlsx","target.xlsx");
 
 		// compare workbooks from files to file with settings
-		// WorkbookDocumentComparison.CompareWorkBooksFromFilesToFileWithSettings("source.xlsx","target.xlsx");
+		 //WorkbookDocumentComparison.CompareWorkBooksFromFilesToFileWithSettings("source.xlsx","target.xlsx");
 
 		// compare workbooks from files with settings, without saving
 		// WorkbookDocumentComparison.CompareWorkBooksFromFilesWithSettings("source.xlsx","target.xlsx");

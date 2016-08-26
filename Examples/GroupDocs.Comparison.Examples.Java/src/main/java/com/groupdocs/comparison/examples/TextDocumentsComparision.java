@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 
 import java.io.InputStream;
 
@@ -18,12 +18,12 @@ public class TextDocumentsComparision {
 	public static void CompareTextDcumentsFromStreamToFileWithSettings(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromStreamToFileWithSettings
 		// Create two streams of textFiles
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Main.Utilities.outputFileName(extension),
+		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
 				ComparisonType.Text, new TextComparisonSettings());
 		//ExEnd:CompareTextDcumentsFromStreamToFileWithSettings
 	}
@@ -33,8 +33,8 @@ public class TextDocumentsComparision {
 	public static void CompareTextDcumentsFromStreamWithSettings(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromStreamWithSettings
 		// Create two streams of textFiles
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -48,8 +48,8 @@ public class TextDocumentsComparision {
 	public static void CompareTextDcumentsFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromStreamToFile
 		// Create two streams of textFiles
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -63,8 +63,8 @@ public class TextDocumentsComparision {
 	public static void CompareTextDcumentsFromStream(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromStream
 		// Create two streams of textFiles
-		InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-		InputStream targetStream = Main.Utilities.targetStream(targetFile);
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);
+		InputStream targetStream = Utilities.targetStream(targetFile);
 		// Create instance of GroupDocs.Comparison.Comparison and call method
 		// Compare.
 		Comparison comparison = new Comparison();
@@ -77,8 +77,8 @@ public class TextDocumentsComparision {
 	 */
 	public static void CompareTextDcumentsFromFileToFileWithSetting(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromFileToFileWithSetting
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension), ComparisonType.Text, new TextComparisonSettings());
@@ -89,8 +89,8 @@ public class TextDocumentsComparision {
 	 */
 	public static void CompareTextDcumentsFromFileWithSetting(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromFileWithSetting
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Text, new TextComparisonSettings());
@@ -101,8 +101,8 @@ public class TextDocumentsComparision {
 	 */
 	public static void CompareTextDcumentsFromFileToFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromFileToFile
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension), ComparisonType.Text);
@@ -113,8 +113,8 @@ public class TextDocumentsComparision {
 	 */
 	public static void CompareTextDcumentsFromFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareTextDcumentsFromFile
-		String sourcePath = Main.Utilities.sourcePath + sourceFile;
-		String targetPath = Main.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Text);

@@ -1,4 +1,4 @@
-package Main;
+package com.groupdocs.comparison.examples;
 
 import java.io.InputStream;
 
@@ -6,6 +6,7 @@ import com.groupdocs.comparison.Comparison;
 import com.groupdocs.comparison.common.ComparisonType;
 import com.groupdocs.comparison.common.comparisonsettings.HtmlComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.PdfComparisonSettings;
+import com.groupdocs.comparison.examples.Utilities;
 
 public class HTMLDocumentsComparision {
 
@@ -17,8 +18,8 @@ public class HTMLDocumentsComparision {
 		public static void CompareHtmlFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
 			//ExStart:CompareHtmlFromStreamToFile
 			// Create two streams of textFiles
-			InputStream sourceStream = Main.Utilities.sourceStream(sourceFile);
-			InputStream targetStream = Main.Utilities.targetStream(targetFile);
+			InputStream sourceStream = Utilities.sourceStream(sourceFile);
+			InputStream targetStream = Utilities.targetStream(targetFile);
 			// Create instance of GroupDocs.Comparison.Comparison and call method
 			// Compare.
 			Comparison comparison = new Comparison();
