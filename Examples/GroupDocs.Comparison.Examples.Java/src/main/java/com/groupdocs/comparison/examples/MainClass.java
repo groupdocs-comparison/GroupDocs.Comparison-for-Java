@@ -18,7 +18,7 @@ public class MainClass {
 
 	public static void main(String[] args) throws Throwable {
 		// Setup license
-		Utilities.applyLicenseFromFile();
+		//Utilities.applyLicenseFromFile();
 		
 		// Word documents comparison_______________________________________
 
@@ -35,7 +35,7 @@ public class MainClass {
 		// WordDocumentComparison.CompareWordDocumentsFromStreamWithoutSettings("source.docx","target.docx");
 
 		// compare word document files with settings and saving file
-		// WordDocumentComparison.CompareWordDocumentsFromFileToFileWithSettings("source.docx","target.docx");
+		 //WordDocumentComparison.CompareWordDocumentsFromFileToFileWithSettings("source.docx","target.docx");
 
 		// compare word document files with settings
 		// WordDocumentComparison.CompareWordDocumentsFromFileWithSettings("source.docx","target.docx");
