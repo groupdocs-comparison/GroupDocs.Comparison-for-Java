@@ -9,11 +9,11 @@ All five main components have reference on Common.
 
 The Facade component gives an opportunity to simplify access to Comparison API and unites all comparison types into one API. Facade gives an ability to compare documents with all supported formats, and revise the changes from result document.
 
-This package contains [Examples](#) for [GroupDocs.Comparison for Java](#) that will help you understand API's working and write your own applications.
+This package contains [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples) for [GroupDocs.Comparison for Java](http://www.groupdocs.com/java/document-comparison-library) that will help you understand API's working and write your own applications.
 
 <p align="center">
 
-  <a title="Download complete GroupDocs.Comparison for Java source code" href="#">
+  <a title="Download complete GroupDocs.Comparison for Java source code" href="ad.github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/zip/master">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
@@ -25,9 +25,9 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Comparison for Java](#)
-+ **Download:** [Download GroupDocs.Comparison for Java](#)
-+ **Documentation:** [GroupDocs.Comparison for Java Documentation](#)
++ **Product Home:** [GroupDocs.Comparison for Java](http://www.groupdocs.com/java/document-comparison-library)
++ **Download:** [Download GroupDocs.Comparison for Java](http://groupdocs.com/Community/files/9/java-libraries/groupdocs_comparison_for_java/category1060.aspx)
++ **Documentation:** [GroupDocs.Comparison for Java Documentation](http://www.groupdocs.com/docs/display/comparisonjava/Home)
 + **Forum:** [GroupDocs.Comparison for Java Forum](http://groupdocs.com/Community/forums/groupdocs.Comparison-product-family/7/showforum.aspx)
 + **Blog:** [GroupDocs.Comparison for Java Blog](http://groupdocs.com/blog/category/Comparison)
 
