@@ -13,7 +13,7 @@ This package contains [Examples](https://github.com/groupdocs-comparison/GroupDo
 
 <p align="center">
 
-  <a title="Download complete GroupDocs.Comparison for Java source code" href="ad.github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/zip/master">
+  <a title="Download complete GroupDocs.Comparison for Java source code" href="https://codeload.github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/zip/master">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
