@@ -20,7 +20,7 @@ This package contains [Examples](https://github.com/groupdocs-comparison/GroupDo
 
 Directory | Description
 --------- | -----------
-[Examples](.github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/zip/master)  | Contains the package of Java examples and sample files that will help you learn how to use product features.
+[Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples)  | Contains the package of Java examples and sample files that will help you learn how to use product features.
 
 ## Resources
 
