@@ -29,5 +29,5 @@ Directory | Description
 + **Download:** [Download GroupDocs.Comparison for Java](http://groupdocs.com/Community/files/9/java-libraries/groupdocs_comparison_for_java/category1060.aspx)
 + **Documentation:** [GroupDocs.Comparison for Java Documentation](http://www.groupdocs.com/docs/display/comparisonjava/Home)
 + **Forum:** [GroupDocs.Comparison for Java Forum](http://groupdocs.com/Community/forums/groupdocs.Comparison-product-family/7/showforum.aspx)
-+ **Blog:** [GroupDocs.Comparison for Java Blog](http://groupdocs.com/blog/category/Comparison)
++ **Blog:** [GroupDocs.Comparison for Java Blog](http://www.groupdocs.com/blog/category/groupdocs-comparison-product-family)
 
