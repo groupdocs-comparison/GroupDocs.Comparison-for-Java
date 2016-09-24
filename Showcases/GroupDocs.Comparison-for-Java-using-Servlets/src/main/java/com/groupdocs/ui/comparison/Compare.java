@@ -1,6 +1,7 @@
 package com.groupdocs.ui.comparison;
 
 import com.groupdocs.comparison.Comparison;
+import com.groupdocs.comparison.common.ComparisonType;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,27 @@ public class Compare extends HttpServlet {
         Path source = (Path) request.getSession().getAttribute("source");
         Path target = (Path) request.getSession().getAttribute("target");
         int comparisonType = (int) request.getSession().getAttribute("comparison-type");
-        Path result = Files.createTempFile("groupdocs-comparison-result-", ".docx");
+
+        // Guess the extension of result file
+        String ext = "";
+        switch (comparisonType) {
+            case ComparisonType.Words:
+                ext = "docx";
+                break;
+            case ComparisonType.Cells:
+                ext = "xlsx";
+                break;
+            case ComparisonType.Pdf:
+                ext = "pdf";
+                break;
+            case ComparisonType.Slides:
+                ext = "pptx";
+                break;
+            case ComparisonType.Text:
+                ext = "txt";
+                break;
+        }
+        Path result = Files.createTempFile("groupdocs-comparison-result-", "." + ext);
 
         // Now do the comparison
         Comparison comparison = new Comparison();
