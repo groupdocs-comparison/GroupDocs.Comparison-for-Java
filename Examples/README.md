@@ -7,10 +7,9 @@ GroupDocs.Comparison for Java is a document comparison component that allows use
 
 <p align="center">
 
- <a title="Download complete GroupDocs.Comparison for .NET source code" href="https://codeload.github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/zip/master">
+  <a title="Download complete GroupDocs.Comparison for Java source code" href="ad.github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/zip/master">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
-
 </p>
 
 ## How to Run the Examples?
