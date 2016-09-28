@@ -21,6 +21,7 @@ This package contains [Examples](https://github.com/groupdocs-comparison/GroupDo
 Directory | Description
 --------- | -----------
 [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples)  | Contains the package of Java examples and sample files that will help you learn how to use product features.
+[Showcases](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Showcases)  |The Servlets based Front-end is a sample web application that demonstrates the core functionalities provided by GroupDocs.Comparison for Java. The application allows the user to upload two documents of similar format and find the differences between them.
 
 ## Resources
 
