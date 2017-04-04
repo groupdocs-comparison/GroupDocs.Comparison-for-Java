@@ -1,8 +1,8 @@
-##GroupDocs.Comparison for Java
+# GroupDocs.Comparison for Java
 
 GroupDocs.Comparison is a lightweight library that allows you to merge and diff two versions of a document. Supported file formats include: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, TXT, HTML.
 
-##GroupDocs.Comparison Structure
+# GroupDocs.Comparison Structure
 
 The core of GroupDocs.Comparison library consists of five main components: Words, Pdf, Slides, Cells and Text and Common . Each main component is divided into Contracts, Domain, that implements it, and Core component which compares documents using features specific for certain document type.
 All five main components have reference on Common.
@@ -23,7 +23,7 @@ Directory | Description
 [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples)  | Contains the package of Java examples and sample files that will help you learn how to use product features.
 [Showcases](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Showcases)  |The Servlets based Front-end is a sample web application that demonstrates the core functionalities provided by GroupDocs.Comparison for Java. The application allows the user to upload two documents of similar format and find the differences between them.
 
-## Resources
+#  Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Comparison for Java](http://www.groupdocs.com/java/document-comparison-library)
