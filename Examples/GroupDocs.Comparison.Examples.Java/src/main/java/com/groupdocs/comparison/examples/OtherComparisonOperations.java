@@ -258,8 +258,8 @@ public class OtherComparisonOperations {
 
 		// Compare cells
 		CellsComparisonSettings settings = new CellsComparisonSettings();
-		final ICellsCompareResult result = source.getWorksheets()[0].getCellRange().get_Item("A6")
-				.compareWith(target.getWorksheets()[0].getCellRange().get_Item("A6"), settings);
+		final ICellsCompareResult result = source.getWorksheets()[0].getCellRange().getItem("A6")
+				.compareWith(target.getWorksheets()[0].getCellRange().getItem("A6"), settings);
 		//ExEnd:compareTwoCellsWithCompareWith
 	}
 
@@ -282,7 +282,7 @@ public class OtherComparisonOperations {
 	/*
 	 * Compare two slides with compareWith method
 	 */
-	public static void compareSlidesWithCompareWith(String sourceFile, String targetFile) {
+	public static void compareSlidesWithCompareWith(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:compareSlidesWithCompareWith
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
