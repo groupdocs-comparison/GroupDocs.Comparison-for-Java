@@ -1,27 +1,27 @@
 package com.groupdocs.comparison.examples;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
-import javax.swing.text.Utilities;
-
+import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.Comparison;
+import com.groupdocs.comparison.MultiComparer;
 import com.groupdocs.comparison.common.ComparisonType;
+import com.groupdocs.comparison.common.ICompareResult;
+import com.groupdocs.comparison.common.changes.ChangeInfo;
+import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.WordsComparisonSettings;
-import com.groupdocs.comparison.words.nodes.ComparisonDocument;
 
 public class WordDocumentComparison {
 
 	//document extension
 	private static String extension = ".docx";
 	
-	/*
+	/*	
 	 * Comparing two word document from streams, with settings and saving output to a resultant file
 	 */
+	 
 	public static void CompareWordDocumentsFromStreamToFile(String sourceFile, String targetFile) throws Throwable {
 		//ExStart:CompareWordDocumentsFromStreamToFile
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
@@ -31,9 +31,9 @@ public class WordDocumentComparison {
 		InputStream result = comparison.compare(sourceStream, targetStream, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
 		//ExEnd:CompareWordDocumentsFromStreamToFile
 	}
-	/*
-	 * Comparing two word document from streams, with settings 
-	 */
+	
+	 /* Comparing two word document from streams, with settings */
+	 
 	public static void CompareWordDocumentsFromStreamWithSettings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:CompareWordDocumentsFromStreamWithSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
@@ -44,9 +44,9 @@ public class WordDocumentComparison {
 				ComparisonType.Words, new WordsComparisonSettings());
 			//ExEnd:CompareWordDocumentsFromStreamWithSettings
 	}
-	/*
-	 * Comparing two word document from streams without settings and saving results to a file
-	 */
+	
+	 /* Comparing two word document from streams without settings and saving results to a file	  */
+	 
 	public static void CompareWordDocumentsFromStreamToFileWitoutSettings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:CompareWordDocumentsFromStreamToFileWitoutSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
@@ -56,9 +56,9 @@ public class WordDocumentComparison {
 		InputStream result = comparison.compare(sourceStream, targetStream, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words);
 	//ExEnd:CompareWordDocumentsFromStreamToFileWitoutSettings
 	}
-	/*
-	 * Comparing two word document from streams without settings and saving file
-	 */
+	
+	 /* Comparing two word document from streams without settings and saving file*/
+	 
 	public static void CompareWordDocumentsFromStreamWithoutSettings(String sourceFile, String targetFile) throws Throwable{
 		//ExStart:CompareWordDocumentsFromStreamWithoutSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
@@ -68,9 +68,9 @@ public class WordDocumentComparison {
 		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Words);
 	//ExEnd:CompareWordDocumentsFromStreamWithoutSettings
 	}
-	/*
-	 * Compare two word document from files with saving file and  settings
-	 */
+	
+	 /* Compare two word document from files with saving file and  settings*/
+	 
 	public static void CompareWordDocumentsFromFileToFileWithSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileToFileWithSettings
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
@@ -80,9 +80,9 @@ public class WordDocumentComparison {
 		InputStream result = comparison.compare(sourcePath, targetPath, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
 	//ExEnd:CompareWordDocumentsFromFileToFileWithSettings
 	}
-	/*
-	 * Compare two word document from files with settings
-	 */
+	
+	 /* Compare two word document from files with settings*/
+	 
 	public static void CompareWordDocumentsFromFileWithSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileWithSettings
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
@@ -92,29 +92,223 @@ public class WordDocumentComparison {
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words, new WordsComparisonSettings());
 	//ExEnd:CompareWordDocumentsFromFileWithSettings
 	}
-	/*
-	 * Comparing two word document from files to file without settings 
-	 */
+	
+	 /* Comparing two word document from files to file without settings */
+	 
 	public static void CompareWordDocumentsFromFileToFileWithoutSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileToFileWithoutSettings
-		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
-		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words);
+		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension), ComparisonType.Words);
 		//ExEnd:CompareWordDocumentsFromFileToFileWithoutSettings
 	}
-	/*
-	 * Comparing two word document from files without settings
-	 */
+	
+	 /* Comparing two word document from files without settings*/
+	 
 	public static void CompareWordDocumentsFromFileWithoutSettings(String sourceFile, String targetFile) throws Exception{
 		//ExStart:CompareWordDocumentsFromFileWithoutSettings
-		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
-		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
 		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words);
 		//ExEnd:CompareWordDocumentsFromFileWithoutSettings
 	}
 	
+	//Compare word documents from file using setting properties
+	public static void compareWordDocumentsFromFileWithSettingsProperties(String sourceFile, String targetFile) throws Exception{
+		//ExStart:compareWordDocumentsFromFileWithSettingsProperties
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+		
+		//CellsComparisonSettings settings = new CellsComparisonSettings()
+		WordsComparisonSettings settings = new WordsComparisonSettings();
+		settings.setShowDeletedContent(false);
+		settings.setGenerateSummaryPage(true);		
+		//settings.setProcessHyperLinksAsAText(true);
+		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
+		Comparison comparison = new Comparison();
+		InputStream result = comparison.compare(sourcePath, targetPath,Utilities.outputFileName(extension), ComparisonType.Words, settings);
+	//ExEnd:compareWordDocumentsFromFileWithSettingsProperties
+	}
+	
+	//Comparison settings when comparing files
+	public static void comparisonSettingsWhenComparingFiles(String sourceFile, String targetFile) throws Exception{
+		//ExStart:comparisonSettingsWhenComparingFiles
+		
+		ComparisonSettings settings = new ComparisonSettings();
+		//settings.setDetailLevel(DetailLevel.Low);
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+	
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(sourcePath, targetPath,settings);
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:comparisonSettingsWhenComparingFiles
+	}
+	
+	//Comparer for comparing two documents from file
+	public static void comparerForDocsFromFiles(String sourceFile, String targetFile) throws Exception{		
+		//ExStart:comparerForDocsFromFiles
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+		
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:comparerForDocsFromFiles
+	}
+	
+	//Comparer for comparing two encrypted documents from file
+	public static void comparerForEncryptedDocsFromFiles(String sourceFile, String targetFile) throws Exception{	
+		//ExStart:comparerForEncryptedDocsFromFiles
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+		
+		String sourcePassword = Utilities.sourcePassword;
+		String targetPassword = Utilities.targetPassword;
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(sourcePath, sourcePassword, targetPath, targetPassword, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:comparerForEncryptedDocsFromFiles
+	}
+	
+	//Comparer for comparing two documents from stream
+	public static void comparerForDocsFromStream(String sourceFile, String targetFile) throws Exception{		
+		//ExStart:comparerForDocsFromStream		
+		InputStream source = new FileInputStream(Utilities.sourcePath + sourceFile);
+		InputStream target = new FileInputStream(Utilities.targetPath + targetFile);
+		 
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(source, target, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:comparerForDocsFromStream
+	}
+	//Comparer for comparing two encrypted documents from stream
+	public static void comparerForEncryptedDocsFromStream(String sourceFile, String targetFile) throws Exception{
+		//ExStart:comparerForEncryptedDocsFromStream
+		InputStream source = new FileInputStream(Utilities.sourcePath + sourceFile);
+		InputStream target = new FileInputStream(Utilities.targetPath + targetFile);
+		
+		String sourcePassword = Utilities.sourcePassword;
+		String targetPassword = Utilities.targetPassword;
+		 
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(source, sourcePassword, target, targetPassword, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:comparerForEncryptedDocsFromStream
+	}
+	//Multi comparer for comparing more than two documents from file
+	public static void multiComparerForDocsFromFiles(String sourceFile, String targetFile,String targetFile_2,String targetFile_3) throws Exception{		
+		//ExStart:multiComparerForDocsFromFiles
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		
+		List<String> targets = Arrays.asList(
+			Utilities.targetPath + targetFile,
+			Utilities.targetPath + targetFile_2,
+			Utilities.targetPath + targetFile_3
+		);
+		MultiComparer comparer = new MultiComparer();
+		ICompareResult result = comparer.compare(sourcePath, targets, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:multiComparerForDocsFromFiles
+	}
+	
+	//Multi comparer for comparing more than two documents from stream
+	public static void multiComparerForDocsFromStream(String sourceFile, String targetFile,String targetFile_2,String targetFile_3) throws Exception{		
+		//ExStart:multiComparerForDocsFromStream
+		InputStream source = new FileInputStream(Utilities.sourcePath +sourceFile);
+		List<InputStream> targets = Arrays.<InputStream>asList(
+		        new FileInputStream(Utilities.targetPath + targetFile),
+		        new FileInputStream(Utilities.targetPath + targetFile_2),
+		        new FileInputStream(Utilities.targetPath + targetFile_3)
+		);
+		MultiComparer comparer = new MultiComparer();
+		ICompareResult result = comparer.compare(source, targets, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:multiComparerForDocsFromStream
+	}
+	
+	//Multi comparer for comparing more than two encrypted documents from file
+	public static void multiComparerForEncryptedDocsFromFiles(String sourceFile, String targetFile,String targetFile_2,String targetFile_3) throws Exception{		
+		//ExStart:multiComparerForEncryptedDocsFromFiles
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		List<String> targets = Arrays.asList(
+			Utilities.targetPath + targetFile,
+			Utilities.targetPath + targetFile_2,
+			Utilities.targetPath + targetFile_3
+		);
+		String sourcePassword = Utilities.sourcePassword;
+		List<String> targetPasswords = Arrays.asList(
+			Utilities.targetPassword,
+			Utilities.targetPassword,
+			Utilities.targetPassword
+		);
+		MultiComparer comparer = new MultiComparer();
+		ICompareResult result = comparer.compare(sourcePath, sourcePassword, targets, targetPasswords, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:multiComparerForEncryptedDocsFromFiles
+	}
+	
+	//Multi comparer for comparing more than two encrypted documents from stream 
+	public static void multiComparerForEncryptedDocsFromStream(String sourceFile, String targetFile,String targetFile_2,String targetFile_3) throws Exception{		
+		//ExStart:multiComparerForEncryptedDocsFromStream
+		InputStream sourceStream = new FileInputStream(Utilities.sourcePath + sourceFile);
+		List<InputStream> targets = Arrays.<InputStream>asList(
+		        new FileInputStream(Utilities.targetPath + targetFile),
+		        new FileInputStream(Utilities.targetPath + targetFile_2),
+		        new FileInputStream(Utilities.targetPath + targetFile_3)
+		);
+		 
+		String sourcePassword = Utilities.sourcePassword;
+		List<String> targetPasswords = Arrays.asList(
+			Utilities.targetPassword,
+			Utilities.targetPassword,
+			Utilities.targetPassword
+		);
+		 
+		MultiComparer comparer = new MultiComparer();
+		ICompareResult result = comparer.compare(sourceStream, sourcePassword, targets, targetPasswords, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:multiComparerForEncryptedDocsFromStream
+	}
+	
+	//Properties of ICompareResult
+	public static void propertiesOfICompareResult(String sourceFile, String targetFile) throws Exception{		
+		//ExStart:propertiesOfICompareResult		
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+		
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(sourcePath, targetPath, new ComparisonSettings());
+		//Save result document to file
+		result.saveDocument(Utilities.outputFileName(extension));
+		
+		//Get stream of result document
+		InputStream resultStream = result.getStream();
+		 
+		/**Save images of result document to folder**/
+		//result.saveImages(Utilities.outputFileName(".jpg"));
+		 
+		/**Get images of result document as array of streams**/
+		//List<InputStream> imgStreams = result.getImages();
+		 
+		//Get array of changes
+		ChangeInfo[] changes = result.getChanges();
+		 
+		//Update changes in CompareResult object (this method updated result document)
+		result.updateChanges(changes);
+		
+		/**To update changes use the following algorithm:**/		
+		//Set actions of changes as Accept or Reject
+		
+		/*ChangeInfo[] changes = result.getChanges();
+		changes[0].setAction(ComparisonAction.Accept);
+		changes[1].setAction(ComparisonAction.Reject);
+		result.updateChanges(changes);*/
+		
+		//ExEnd:propertiesOfICompareResult
+	}
 }
