@@ -1,4 +1,5 @@
 package com.groupdocs.comparison.examples;
+import java.awt.Color;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Arrays;
@@ -125,8 +126,8 @@ public class WordDocumentComparison {
 		
 		//CellsComparisonSettings settings = new CellsComparisonSettings()
 		WordsComparisonSettings settings = new WordsComparisonSettings();
-		settings.setShowDeletedContent(false);
-		settings.setGenerateSummaryPage(true);		
+		settings.setGenerateSummaryPage(true);
+		settings.setShowDeletedContent(false);			
 		//settings.setProcessHyperLinksAsAText(true);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
 		Comparison comparison = new Comparison();
@@ -136,13 +137,32 @@ public class WordDocumentComparison {
 	
 	//Comparison settings when comparing files
 	public static void comparisonSettingsWhenComparingFiles(String sourceFile, String targetFile) throws Exception{
-		//ExStart:comparisonSettingsWhenComparingFiles
-		
-		ComparisonSettings settings = new ComparisonSettings();
-		//settings.setDetailLevel(DetailLevel.Low);
+		//ExStart:comparisonSettingsWhenComparingFiles		
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-	
+		
+		ComparisonSettings settings = new ComparisonSettings();
+		settings.setGenerateSummaryPage(true);
+		settings.setShowDeletedContent(true);
+		settings.setStyleChangeDetection(true);
+		//settings.setDetailLevel(DetailLevel.Low);
+		/**WordsSeparatorChars is array that contain separators for compared text**/
+		//settings.setWordsSeparatorChars(new char[] {' '});
+		/**setting to draw frames for shapes in Comparison.Words**/
+		//settings.setUseFramesForDelInsElements(false);
+		/**Inserted, deleted and style changed items styles setting**/
+		/*
+		settings.getInsertedItemsStyle().setColor(Color.LIGHT_GRAY);
+		settings.getInsertedItemsStyle().setBeginSeparatorString("<inserted>");
+		settings.getInsertedItemsStyle().setEndSeparatorString("</inserted>");
+		settings.getDeletedItemsStyle().setColor(Color.CYAN);
+		settings.getDeletedItemsStyle().setBeginSeparatorString("<deleted>");
+		settings.getDeletedItemsStyle().setEndSeparatorString("</deleted>");
+		 
+		settings.getStyleChangedItemsStyle().setColor(Color.BLUE);
+		settings.getStyleChangedItemsStyle().setBeginSeparatorString("<style>");
+		settings.getStyleChangedItemsStyle().setEndSeparatorString("</style>");
+		*/		 
 		Comparer comparer = new Comparer();
 		ICompareResult result = comparer.compare(sourcePath, targetPath,settings);
 		result.saveDocument(Utilities.outputFileName(extension));

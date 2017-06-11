@@ -170,7 +170,7 @@ public class MainClass {
 		//PresentationDocumentsComparision.savePresentationToImageFromFile("source.pptx");
 		
 		//Save presentation to image from stream
-		//PresentationDocumentsComparision.savePresentationToImageFromStream("source.pptx");
+		//PresentationDocumentsComparision.savePresentationToImageWithStream("source.pptx");
 		
 		//Save slide to image from file
 		//PresentationDocumentsComparision.saveSlideToImageFromFile("source.pptx");	
