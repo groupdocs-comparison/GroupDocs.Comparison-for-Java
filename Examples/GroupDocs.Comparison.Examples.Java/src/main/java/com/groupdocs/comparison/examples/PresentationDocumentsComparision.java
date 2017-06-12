@@ -158,11 +158,10 @@ public class PresentationDocumentsComparision {
 		//ExEnd:savePresentationToImageFromFile
 	}
 	
-	//Save presentation to image from stream
-	public static void savePresentationToImageFromStream(String sourceFile) throws Exception{
-		//ExStart:savePresentationToImageFromStream
+	//Save presentation to image with stream
+	public static void savePresentationToImageWithStream(String sourceFile) throws Exception{
+		//ExStart:savePresentationToImageWithStream
 		String sourcePath = Utilities.sourcePath + sourceFile;
-		//path to image folder
 		//stream
 		ArrayList<ByteArrayOutputStream> imageStream = new ArrayList<ByteArrayOutputStream>();		 
 		//Open  document
@@ -171,7 +170,7 @@ public class PresentationDocumentsComparision {
 		ComparisonSlidesImageSettings settings = new ComparisonSlidesImageSettings();		 
 		//Save as Image
 		presentation.saveAsImages(imageStream, settings);
-		//ExEnd:savePresentationToImageFromStream
+		//ExEnd:savePresentationToImageWithStream
 	}
 	
 	//Save slide to image from file

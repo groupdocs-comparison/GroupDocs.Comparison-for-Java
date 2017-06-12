@@ -458,7 +458,6 @@ public class OtherComparisonOperations {
 		String targetPath = Utilities.sourcePath + targetFile;
 		Comparer comparer = new Comparer();
 		comparer.compare(sourcePath, targetPath, new ComparisonSettings());
-		comparer.compare(sourcePath, targetPath, new ComparisonSettings());
 		 
 		// Get consumption quantity from metered after several calls of comparison
 		BigDecimal amountAfter = Metered.getConsumptionQuantity();
