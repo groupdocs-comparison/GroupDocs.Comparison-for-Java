@@ -4,32 +4,32 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.math.BigDecimal;
 
+import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.Comparison;
 import com.groupdocs.comparison.cells.contracts.ICellsCompareResult;
 import com.groupdocs.comparison.cells.contracts.enums.ComparisonSaveFormat;
-import com.groupdocs.comparison.cells.contracts.nodes.ComparisonParagraphBase;
 import com.groupdocs.comparison.cells.nodes.ComparisonCell;
 import com.groupdocs.comparison.cells.nodes.ComparisonWorkbook;
 import com.groupdocs.comparison.common.ComparisonType;
 import com.groupdocs.comparison.common.FileType;
 import com.groupdocs.comparison.common.comparisonsettings.CellsComparisonSettings;
+import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.PdfComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.SlidesComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.WordsComparisonSettings;
+import com.groupdocs.comparison.common.license.Metered;
+import com.groupdocs.comparison.html.contracts.IComparisonHtmlDocument;
 import com.groupdocs.comparison.pdf.ComparisonPdfDocument;
 import com.groupdocs.comparison.pdf.contracts.comparedresult.IPdfComparedResult;
 import com.groupdocs.comparison.slides.ComparisonColumn;
 import com.groupdocs.comparison.slides.ComparisonPresentation;
 import com.groupdocs.comparison.slides.ComparisonRow;
-import com.groupdocs.comparison.slides.ComparisonSlide;
 import com.groupdocs.comparison.slides.ComparisonTable;
 import com.groupdocs.comparison.slides.contracts.ISlidesCompareResult;
-import com.groupdocs.comparison.slides.contracts.comparison.ComparisonAutoShapeBase;
-import com.groupdocs.comparison.slides.contracts.comparison.ComparisonSlideBase;
-import com.groupdocs.comparison.slides.contracts.enums.ComparisonShapeType;
+import com.groupdocs.comparison.text.ComparisonTextFile;
 import com.groupdocs.comparison.text.contracts.IComparisonParagraph;
-import com.groupdocs.comparison.text.contracts.IComparisonTextComponent;
 import com.groupdocs.comparison.words.contracts.IWordsCompareResult;
 import com.groupdocs.comparison.words.contracts.nodes.IComparisonCell;
 import com.groupdocs.comparison.words.contracts.nodes.IComparisonColumn;
@@ -134,7 +134,7 @@ public class OtherComparisonOperations {
 		//ExEnd:compareTwoParagraphs
 	}
 
-	public static void compareTwoCells() {
+	public static void compareTwoCells() throws Exception {
 		//ExStart:compareTwoCells
 		// Creating Cells
 		IComparisonCell sourceCell = (IComparisonCell) new ComparisonCell();
@@ -152,7 +152,7 @@ public class OtherComparisonOperations {
 		//ExEnd:compareTwoCells
 	}
 
-	public static void compareTwoColums() {
+	public static void compareTwoColums() throws Exception {
 		//ExStart:compareTwoColums
 		// Creating Columns
 		IComparisonColumn sourceColumn = (IComparisonColumn) new ComparisonColumn(new double[] { 20, 20 }, 100);
@@ -174,7 +174,7 @@ public class OtherComparisonOperations {
 		//ExEnd:compareTwoColums
 	}
 
-	public static void compareTwoRows() {
+	public static void compareTwoRows() throws Exception {
 		//ExStart:compareTwoRows
 		// Creating Rows
 		IComparisonRow sourceRow = (IComparisonRow) new ComparisonRow(new double[] { 100, 100 }, 20);
@@ -199,7 +199,7 @@ public class OtherComparisonOperations {
 	/*
 	 * compare two tables
 	 */
-	public static void compareTwoTables() {
+	public static void compareTwoTables() throws Exception {
 		//ExStart:compareTwoTables
 		// Creating Tables
 		IComparisonTable sourceTable = (IComparisonTable) new ComparisonTable(0, 0, new double[] { 100, 100 },
@@ -443,5 +443,97 @@ public class OtherComparisonOperations {
 		//ExEnd:compareEncryptedDocsFromStringsWithType
 	}
 	
+	//Metered Licensing
+	public static void meteredLicensingOnFiles(String sourceFile, String targetFile) throws Exception{
+		//ExStart:meteredLicensingOnFiles	
+		// Set metered key
+		Metered metered = new Metered();
+		metered.setMeteredKey("****", "****");
+		
+		// Get consumption quantity from metered
+		BigDecimal amountBefor = Metered.getConsumptionQuantity();
+		 
+		// Call comparison
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.sourcePath + targetFile;
+		Comparer comparer = new Comparer();
+		comparer.compare(sourcePath, targetPath, new ComparisonSettings());
+		 
+		// Get consumption quantity from metered after several calls of comparison
+		BigDecimal amountAfter = Metered.getConsumptionQuantity();
+		//ExEnd:meteredLicensingOnFiles
+	}
 	
+	//Open workbook from stream  
+	public static void openWorkbookFromStream(String sourceFile) throws Exception{
+		//ExStart:openWorkbookFromStream
+		// Create stream of document
+		InputStream sourceStream = new FileInputStream(sourceFile);		
+		// Open ComparisonDocument.
+		ComparisonDocument sourcedocument = new ComparisonDocument(sourceStream);
+		
+		//ExEnd:openWorkbookFromStream
+	}	
+	
+	//Open PDF from stream 
+	public static void openPDFFromStream(String sourceFile) throws Exception {
+		//ExStart:openPDFFromStream
+		// Enter document path
+		String sourcePath = Utilities.sourcePath + sourceFile;	
+		// Create stream of document
+		FileInputStream sourceStream = new FileInputStream(sourcePath);	
+		// Open ComparisonPdfDocument.
+		ComparisonPdfDocument sorcedocument = new ComparisonPdfDocument(sourceStream);		
+		//ExEnd:openPDFFromStream
+	}
+	
+	//Open slides from stream 
+	public static void openSlidesFromStream(String sourceFile) throws Exception{
+		//ExStart:openSlidesFromStream
+		// Enter document path
+		String sourcePath = Utilities.sourcePath + sourceFile;	
+		// Create stream of document
+		FileInputStream sourceStream = new FileInputStream(sourcePath);
+		// Open ComparisonPresentation.
+		ComparisonPresentation sourcepresentation = new ComparisonPresentation(sourcePath);		
+		//ExEnd:openSlidesFromStream
+	}
+	
+	//Open text from file
+	public static void openTextDcumentsFromFile(String sourceFile) throws Exception{
+		//ExStart:openTextDcumentsFromFile
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		// Open ComparisonTextFile.
+		ComparisonTextFile sourcetextFile = new ComparisonTextFile(sourcePath);		
+		//ExEnd:openTextDcumentsFromFile
+	} 
+	
+	//Open text from stream
+	public static void openTextDcumentsFromStream(String sourceFile) throws Exception {
+		//ExStart:openTextDcumentsFromStream
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		// Create stream of document
+		FileInputStream sourceStream = new FileInputStream(sourcePath);
+		// Open ComparisonTextFile
+		ComparisonTextFile sourcetextFile = new ComparisonTextFile(sourceStream);		
+		//ExEnd:openTextDcumentsFromStream
+	} 
+	
+	//Open HTML from file
+	/*public static void openHTMLFromFile(String sourceFile) throws Exception{
+		//ExStart:openHTMLFromFile
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		// Open ComparisonTextFile.
+		IComparisonHtmlDocument htmlFile = new ComparisonHtmlDocument(sourcePath);		
+		//ExEnd:openHTMLFromFile
+	} 
+	
+	//Open HTML from stream
+	public static void openHTMLFromStream(String sourceFile) throws Exception{
+		//ExStart:openHTMLFromStream
+		InputStream sourceStream = Utilities.sourceStream(sourceFile);		 
+		// Open ComparisonTextFile.
+		IComparisonHtmlDocument htmlFile = new ComparisonHtmlDocument(sourceStream);		
+		//ExEnd:openHTMLFromStream
+	} */
 }
