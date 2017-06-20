@@ -327,8 +327,7 @@ public class WordDocumentComparison {
 		/*ChangeInfo[] changes = result.getChanges();
 		changes[0].setAction(ComparisonAction.Accept);
 		changes[1].setAction(ComparisonAction.Reject);
-		result.updateChanges(changes);*/
-		
+		result.updateChanges(changes);*/		
 		//ExEnd:propertiesOfICompareResult
 	}
 }

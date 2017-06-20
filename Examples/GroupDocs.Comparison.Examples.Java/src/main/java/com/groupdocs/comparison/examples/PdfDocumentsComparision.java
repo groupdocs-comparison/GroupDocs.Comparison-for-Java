@@ -164,7 +164,7 @@ public class PdfDocumentsComparision {
 	
 	//Compare imaging documents from file and get result in file
 	public static void compareImagingDocumentFromFileToFile(String sourceFile, String targetFile) throws Exception{
-		//ExStart:compareImagingDocumentFromStreamToFile		
+		//compareImagingDocumentFromFileToFile		
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
 		
@@ -178,12 +178,12 @@ public class PdfDocumentsComparision {
 		 
 		//save results into a file
 		resultPdf.save(Utilities.outputFileName(extension));
-		//ExEnd:compareImagingDocumentFromStreamToFile
+		//compareImagingDocumentFromFileToFile
 	}
 	
 	//Compare imaging documents from file with setting and get result in file
 	public static void compareImagingDocumentFromFileWithSetting(String sourceFile, String targetFile) throws Exception {
-		//ExStart:compareImagingDocumentFromStreamToFile
+		//compareImagingDocumentFromFileWithSetting
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;		
 		//Open files
@@ -205,7 +205,7 @@ public class PdfDocumentsComparision {
 		 
 		//save results into a file
 		resultPdf.save(Utilities.outputFileName(extension));
-		//ExEnd:compareImagingDocumentFromStreamToFile
+		//compareImagingDocumentFromFileWithSetting
 	}
 	
 }
