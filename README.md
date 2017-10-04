@@ -25,10 +25,10 @@ Directory | Description
 
 #  Resources
 
-+ **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Comparison for Java](http://www.groupdocs.com/java/document-comparison-library)
-+ **Download:** [Download GroupDocs.Comparison for Java](http://groupdocs.com/Community/files/9/java-libraries/groupdocs_comparison_for_java/category1060.aspx)
-+ **Documentation:** [GroupDocs.Comparison for Java Documentation](http://www.groupdocs.com/docs/display/comparisonjava/Home)
-+ **Forum:** [GroupDocs.Comparison for Java Forum](http://groupdocs.com/Community/forums/groupdocs.comparison-product-family/9/showforum.aspx)
-+ **Blog:** [GroupDocs.Comparison for Java Blog](http://www.groupdocs.com/blog/category/groupdocs-comparison-product-family)
++ **Website:** [www.groupdocs.com](https://www.groupdocs.com)
++ **Product Home:** [GroupDocs.Comparison for Java](https://www.groupdocs.com/products/comparison/java)
++ **Download:** [Download GroupDocs.Comparison for Java](https://downloads.groupdocs.com/comparison/java)
++ **Documentation:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/display/comparisonjava/Home)
++ **Forum:** [GroupDocs.Comparison for Java Forum](https://forum.groupdocs.com/c/comparison)
++ **Blog:** [GroupDocs.Comparison for Java Blog](https://blog.groupdocs.com/category/groupdocs-comparison-product-family/)
 
