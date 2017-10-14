@@ -35,17 +35,52 @@ public class MainClass {
 		// WordDocumentComparison.CompareWordDocumentsFromStreamWithoutSettings("source.docx","target.docx");
 
 		// compare word document files with settings and saving file
-		 //WordDocumentComparison.CompareWordDocumentsFromFileToFileWithSettings("source.docx","target.docx");
+		// WordDocumentComparison.CompareWordDocumentsFromFileToFileWithSettings("source.docx","target.docx");
 
 		// compare word document files with settings
 		// WordDocumentComparison.CompareWordDocumentsFromFileWithSettings("source.docx","target.docx");
 
 		// compare word document files to file without settings
-		 //WordDocumentComparison.CompareWordDocumentsFromFileToFileWithoutSettings("source.docx","target.docx");
+		// WordDocumentComparison.CompareWordDocumentsFromFileToFileWithoutSettings("source.docx","target.docx");
 
 		// compare word document files without saving and settings
 		// WordDocumentComparison.CompareWordDocumentsFromFileWithoutSettings("source.docx","target.docx");
 
+		
+		//Compare word documents from file using setting properties
+		//WordDocumentComparison.compareWordDocumentsFromFileWithSettingsProperties("source.docx","target.docx");
+		
+		//Comparison settings when comparing files
+		//WordDocumentComparison.comparisonSettingsWhenComparingFiles("source.docx","target.docx");
+		
+		//Comparer for comparing two documents from file
+		//WordDocumentComparison.comparerForDocsFromFiles("source.docx","target.docx");
+		
+		//Comparer for comparing two encrypted documents from file
+		//WordDocumentComparison.comparerForEncryptedDocsFromFiles("source.docx","target.docx");
+		
+		//Comparer for comparing two documents from stream
+		//WordDocumentComparison.comparerForDocsFromStream("source.docx","target.docx");
+		
+		//Comparer for comparing two encrypted documents from stream
+		//WordDocumentComparison.comparerForEncryptedDocsFromStream("source.docx","target.docx");
+				
+		//Multi comparer for comparing more than two documents from file
+		//WordDocumentComparison.multiComparerForDocsFromFiles("source.docx","target.docx","target_2.docx","target_3.docx");
+				
+		//Multi comparer for comparing more than two documents from stream
+		//WordDocumentComparison.multiComparerForDocsFromStream("source.docx","target.docx","target_2.docx","target_3.docx");
+		
+		//Multi comparer for comparing more than two encrypted documents from file
+		//WordDocumentComparison.multiComparerForEncryptedDocsFromFiles("source.docx","target.docx","target_2.docx","target_3.docx");
+		
+		//Multi comparer for comparing more than two encrypted documents from stream 
+		//WordDocumentComparison.multiComparerForEncryptedDocsFromStream("source.docx","target.docx","target_2.docx","target_3.docx");
+		
+		//Properties of ICompareResult
+		//WordDocumentComparison.propertiesOfICompareResult("source.docx","target.docx");
+		
+		
 		// End word documents comparison___________________________________________________
 
 		// Workbooks comparison
@@ -130,12 +165,22 @@ public class MainClass {
 		// compare presentations files without saving and settings
 		// PresentationDocumentsComparision.ComparePresentationsFromFileWithoutSettings("source.pptx","target.pptx");
 
+		
+		//Save presentation to image from file
+		//PresentationDocumentsComparision.savePresentationToImageFromFile("source.pptx");
+		
+		//Save presentation to image from stream
+		//PresentationDocumentsComparision.savePresentationToImageWithStream("source.pptx");
+		
+		//Save slide to image from file
+		//PresentationDocumentsComparision.saveSlideToImageFromFile("source.pptx");	
+		
 		// End presentations comparison_____________________________________________________________
 		
 		// PDF comparison
 
 		// compare pdf documents streams and save output to a file
-		// PdfDocumentsComparision.ComparePdfFromStreamToFile("source.pdf","target.pdf");
+		//PdfDocumentsComparision.ComparePdfFromStreamToFile("source50p.pdf","target50p.pdf");
 
 		// compare pdf documents streams
 		// PdfDocumentsComparision.ComparePdfFromStreamWithSettings("source.pdf","target.pdf");
@@ -153,10 +198,20 @@ public class MainClass {
 		// PdfDocumentsComparision.ComparePdfFromFileWithSettings("source.pdf","target.pdf");
 
 		// compare pdf documents files to file without settings
-		// PdfDocumentsComparision.ComparePdfFromFileToFileWithoutSettings("source.pdf","target.pdf");
+		 //PdfDocumentsComparision.ComparePdfFromFileToFileWithoutSettings("source.pdf","target.pdf");
 
 		// compare pdf documents files without saving and settings
 		// PdfDocumentsComparision.ComparePdfFromFileWithoutSettings("source.pdf","target.pdf");
+		
+		
+		//Compare imaging documents from stream and get result in file
+		//PdfDocumentsComparision.compareImagingDocumentFromStreamToFile("source.djvu","target.djvu");
+				
+		//Compare imaging documents from file and get result in file
+		//PdfDocumentsComparision.compareImagingDocumentFromFileToFile("source.djvu","target.djvu");
+		
+		//Compare imaging documents from file with setting and get result in file
+		//PdfDocumentsComparision.compareImagingDocumentFromFileWithSetting("source.djvu","target.djvu");
 
 		// End pdf comparison_____________________________________________________________
 		
@@ -204,7 +259,7 @@ public class MainClass {
 		
 		
 		//compare two workbooks
-		//OtherComparisonOperations.compareTwoWorkboos("source.xlsx","target.xlsx");
+	//	OtherComparisonOperations.compareTwoWorkboos("source.xlsx","target.xlsx");
 		
 		//compare two cells with compareWith method
 		//OtherComparisonOperations.compareTwoCellsWithCompareWith("source.xlsx","target.xlsx");
@@ -250,9 +305,33 @@ public class MainClass {
 		
 		//compare encrypted documents from strings with type
 		//OtherComparisonOperations.compareEncryptedDocsFromStringsWithType("source.docx","target.docx");
+	
 		
-		//End other options
+		//Metered Licensing
+		//OtherComparisonOperations.meteredLicensingOnFiles("source.docx","target.docx");
 		
+		//Open workbook from stream  
+		//OtherComparisonOperations.openWorkbookFromStream("source.xlsx");
+		
+		//Open PDF from stream 
+		//OtherComparisonOperations.openPDFFromStream("source.pdf");
+		
+		//Open slides from stream 
+		//OtherComparisonOperations.openSlidesFromStream("source.pptx");
+				
+		//Open text from file
+		//OtherComparisonOperations.openTextDcumentsFromFile("source.txt");
+		
+		//Open text from stream 
+		//OtherComparisonOperations.openTextDcumentsFromStream("source.txt");
+		
+		//Open HTML from file
+		//OtherComparisonOperations.openHTMLFromFile("source.html");
+		
+		//Open HTML from stream
+		//OtherComparisonOperations.openHTMLFromStream("source.html");
+		
+		//End other options		
 		
 	}
 }
