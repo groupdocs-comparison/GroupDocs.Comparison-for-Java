@@ -9,7 +9,7 @@ All five main components have reference on Common.
 
 The Facade component gives an opportunity to simplify access to Comparison API and unites all comparison types into one API. Facade gives an ability to compare documents with all supported formats, and revise the changes from result document.
 
-This package contains [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples) for [GroupDocs.Comparison for Java](https://www.groupdocs.com/products/comparison/java) that will help you understand API's working and write your own applications.
+This package contains [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples) for [GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java) that will help you understand API's working and write your own applications.
 
 <p align="center">
 
@@ -26,7 +26,7 @@ Directory | Description
 #  Resources
 
 + **Website:** [www.groupdocs.com](https://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Comparison for Java](https://www.groupdocs.com/products/comparison/java)
++ **Product Home:** [GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)
 + **Download:** [Download GroupDocs.Comparison for Java](https://downloads.groupdocs.com/comparison/java)
 + **Documentation:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/display/comparisonjava/Home)
 + **Forum:** [GroupDocs.Comparison for Java Forum](https://forum.groupdocs.com/c/comparison)
