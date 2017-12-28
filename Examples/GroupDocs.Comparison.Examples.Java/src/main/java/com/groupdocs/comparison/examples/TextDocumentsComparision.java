@@ -2,10 +2,10 @@ package com.groupdocs.comparison.examples;
 
 import java.io.InputStream;
 
-import com.groupdocs.comparison.Comparison;
+import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.common.ComparisonType;
-import com.groupdocs.comparison.common.comparisonsettings.TextComparisonSettings;
-import com.groupdocs.comparison.common.comparisonsettings.WordsComparisonSettings;
+import com.groupdocs.comparison.common.ICompareResult;
+import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 
 public class TextDocumentsComparision {
 
@@ -20,11 +20,13 @@ public class TextDocumentsComparision {
 		// Create two streams of textFiles
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Text, new TextComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, settings);
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromStreamToFileWithSettings
 	}
 	/*
@@ -35,11 +37,13 @@ public class TextDocumentsComparision {
 		// Create two streams of textFiles
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream,
-				ComparisonType.Text, new TextComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, settings);
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromStreamWithSettings
 	} 
 	/*
@@ -50,11 +54,11 @@ public class TextDocumentsComparision {
 		// Create two streams of textFiles
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Text);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromStreamToFile
 	} 
 	/*
@@ -65,11 +69,11 @@ public class TextDocumentsComparision {
 		// Create two streams of textFiles
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream,
-				ComparisonType.Text);
+		Comparer comparison = new Comparer();
+	    ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromStream
 	} 
 	/*
@@ -79,9 +83,13 @@ public class TextDocumentsComparision {
 		//ExStart:CompareTextDcumentsFromFileToFileWithSetting
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension), ComparisonType.Text, new TextComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromFileToFileWithSetting
 	} 
 	/*
@@ -91,9 +99,13 @@ public class TextDocumentsComparision {
 		//ExStart:CompareTextDcumentsFromFileWithSetting
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Text, new TextComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromFileWithSetting
 	} 
 	/*
@@ -103,9 +115,11 @@ public class TextDocumentsComparision {
 		//ExStart:CompareTextDcumentsFromFileToFile
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension), ComparisonType.Text);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+	    ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromFileToFile
 	} 
 	/*
@@ -115,9 +129,11 @@ public class TextDocumentsComparision {
 		//ExStart:CompareTextDcumentsFromFile
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Text);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+	    ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".txt"));
 		//ExEnd:CompareTextDcumentsFromFile
 	} 
 	

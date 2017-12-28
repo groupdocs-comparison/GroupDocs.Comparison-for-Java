@@ -4,8 +4,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.Comparison;
 import com.groupdocs.comparison.common.ComparisonType;
+import com.groupdocs.comparison.common.ICompareResult;
+import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.SlidesComparisonSettings;
 import com.groupdocs.comparison.common.images.ComparisonSlidesImageSettings;
 import com.groupdocs.comparison.slides.ComparisonPresentation;
@@ -25,11 +28,11 @@ public class PresentationDocumentsComparision {
 		// Create two streams of textFiles
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Slides, new SlidesComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromStreamToFile
 	}
 
@@ -41,11 +44,13 @@ public class PresentationDocumentsComparision {
 		//ExStart:ComparePresentationsFromStreamWithSettings
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Slides,
-				new SlidesComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, settings);
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromStreamWithSettings
 	}
 
@@ -58,11 +63,11 @@ public class PresentationDocumentsComparision {
 		//ExStart:ComparePresentationsFromStreamToFileWitoutSettings
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Slides);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromStreamToFileWitoutSettings
 	}
 
@@ -74,10 +79,11 @@ public class PresentationDocumentsComparision {
 		//ExStart:ComparePresentationsFromStreamWithoutSettings
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Slides);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromStreamWithoutSettings
 	}
 
@@ -89,11 +95,13 @@ public class PresentationDocumentsComparision {
 		//ExStart:ComparePresentationsFromFileToFileWithSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension),
-				ComparisonType.Slides, new SlidesComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromFileToFileWithSettings
 	}
 
@@ -104,11 +112,13 @@ public class PresentationDocumentsComparision {
 		//ExStart:ComparePresentationsFromFileWithSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Slides,
-				new SlidesComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromFileWithSettings
 	}
 
@@ -120,11 +130,11 @@ public class PresentationDocumentsComparision {
 		//ExStart:ComparePresentationsFromFileToFileWithoutSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension),
-				ComparisonType.Slides);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromFileToFileWithoutSettings
 	}
 
@@ -136,10 +146,11 @@ public class PresentationDocumentsComparision {
 		//ExStart:ComparePresentationsFromFileWithoutSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		//// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Slides);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".ppt"));
 		//ExEnd:ComparePresentationsFromFileWithoutSettings
 	}
 

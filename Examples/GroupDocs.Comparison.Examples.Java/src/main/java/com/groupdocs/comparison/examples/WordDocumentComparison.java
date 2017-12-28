@@ -27,9 +27,11 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromStreamToFile
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".docx"));
 		//ExEnd:CompareWordDocumentsFromStreamToFile
 	}
 	
@@ -39,11 +41,14 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromStreamWithSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream,
-				ComparisonType.Words, new WordsComparisonSettings());
-			//ExEnd:CompareWordDocumentsFromStreamWithSettings
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, settings);
+		result.saveDocument(Utilities.outputFileName(".docx"));
+		//ExEnd:CompareWordDocumentsFromStreamWithSettings
 	}
 	
 	 /* Comparing two word document from streams without settings and saving results to a file	  */
@@ -52,10 +57,12 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromStreamToFileWitoutSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words);
-	//ExEnd:CompareWordDocumentsFromStreamToFileWitoutSettings
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".docx"));
+		//ExEnd:CompareWordDocumentsFromStreamToFileWitoutSettings
 	}
 	
 	 /* Comparing two word document from streams without settings and saving file*/
@@ -64,10 +71,12 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromStreamWithoutSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Words);
-	//ExEnd:CompareWordDocumentsFromStreamWithoutSettings
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".docx"));
+		//ExEnd:CompareWordDocumentsFromStreamWithoutSettings
 	}
 	
 	 /* Compare two word document from files with saving file and  settings*/
@@ -76,9 +85,13 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromFileToFileWithSettings
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
 		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, com.groupdocs.comparison.examples.Utilities.outputFileName(extension), ComparisonType.Words, new WordsComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".docx"));
 	//ExEnd:CompareWordDocumentsFromFileToFileWithSettings
 	}
 	
@@ -88,9 +101,13 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromFileWithSettings
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
 		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words, new WordsComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".docx"));
 	//ExEnd:CompareWordDocumentsFromFileWithSettings
 	}
 	
@@ -100,9 +117,11 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromFileToFileWithoutSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension), ComparisonType.Words);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".docx"));
 		//ExEnd:CompareWordDocumentsFromFileToFileWithoutSettings
 	}
 	
@@ -112,9 +131,11 @@ public class WordDocumentComparison {
 		//ExStart:CompareWordDocumentsFromFileWithoutSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Words);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".docx"));
 		//ExEnd:CompareWordDocumentsFromFileWithoutSettings
 	}
 	
@@ -125,13 +146,14 @@ public class WordDocumentComparison {
 		String targetPath = Utilities.targetPath + targetFile;
 		
 		//CellsComparisonSettings settings = new CellsComparisonSettings()
-		WordsComparisonSettings settings = new WordsComparisonSettings();
+		ComparisonSettings settings = new ComparisonSettings();  
 		settings.setGenerateSummaryPage(true);
 		settings.setShowDeletedContent(false);			
 		//settings.setProcessHyperLinksAsAText(true);
 		// Create instance of GroupDocs.Comparison.Comparison and call method Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath,Utilities.outputFileName(extension), ComparisonType.Words, settings);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".docx"));
 	//ExEnd:compareWordDocumentsFromFileWithSettingsProperties
 	}
 	
