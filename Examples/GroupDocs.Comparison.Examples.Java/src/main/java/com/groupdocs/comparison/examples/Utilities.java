@@ -36,6 +36,9 @@ public class Utilities {
 			// Setup license
 			License lic = new License();
 			lic.setLicense(licensePath.toString());
+			if(lic.isValidLicense()){
+				System.out.println("License is validated");
+			}
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
