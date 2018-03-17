@@ -125,7 +125,7 @@ public class WorkbookDocumentComparison {
 		// Compare.
 		Comparer comparison = new Comparer();
 		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
-		result.saveDocument(Utilities.outputFileName(".docx"));
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromFilesToFile
 	}
 
@@ -140,7 +140,7 @@ public class WorkbookDocumentComparison {
 		// Compare.
 		Comparer comparison = new Comparer();
 		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
-		result.saveDocument(Utilities.outputFileName(".docx"));
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromFiles
 	}
 }
