@@ -27,7 +27,7 @@ public class HTMLDocumentsComparision {
 			// Compare.
 			Comparer comparison = new Comparer();
 			ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
-			result.saveDocument(Utilities.outputFileName(".pdf"));
+			result.saveDocument(Utilities.outputFileName(".html"));
 			//ExEnd:CompareHtmlFromStreamToFile
 		}
 		
