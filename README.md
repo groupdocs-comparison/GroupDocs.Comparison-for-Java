@@ -27,6 +27,7 @@ Directory | Description
 
 + **Website:** [www.groupdocs.com](https://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)
++ **API Reference:** [GroupDocs.Comparison for Java API Reference](https://apireference.groupdocs.com/java/comparison)
 + **Download:** [Download GroupDocs.Comparison for Java](https://artifact.groupdocs.com/repo/com/groupdocs/groupdocs-comparison/)
 + **Documentation:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/display/comparisonjava/Home)
 + **Free Support:** [GroupDocs.Comparison for Java Free Support Forum](https://forum.groupdocs.com/c/comparison)
