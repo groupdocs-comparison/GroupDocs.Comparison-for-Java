@@ -27,8 +27,8 @@ Directory | Description
 
 + **Website:** [www.groupdocs.com](https://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)
-+ **Download:** [Download GroupDocs.Comparison for Java](https://downloads.groupdocs.com/comparison/java)
++ **Download:** [Download GroupDocs.Comparison for Java](https://artifact.groupdocs.com/repo/com/groupdocs/groupdocs-comparison/)
 + **Documentation:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/display/comparisonjava/Home)
-+ **Forum:** [GroupDocs.Comparison for Java Forum](https://forum.groupdocs.com/c/comparison)
++ **Free Support:** [GroupDocs.Comparison for Java Free Support Forum](https://forum.groupdocs.com/c/comparison)
++ **Paid Support:** [GroupDocs.Comparison for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
 + **Blog:** [GroupDocs.Comparison for Java Blog](https://blog.groupdocs.com/category/groupdocs-comparison-product-family/)
-
