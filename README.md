@@ -9,7 +9,7 @@ All five main components have reference on Common.
 
 The Facade component gives an opportunity to simplify access to Comparison API and unites all comparison types into one API. Facade gives an ability to compare documents with all supported formats, and revise the changes from result document.
 
-This package contains [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples) for [GroupDocs.Comparison for Java](http://www.groupdocs.com/java/document-comparison-library) that will help you understand API's working and write your own applications.
+This package contains [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples) for [GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java) that will help you understand API's working and write your own applications.
 
 <p align="center">
 
@@ -25,10 +25,11 @@ Directory | Description
 
 #  Resources
 
-+ **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-+ **Product Home:** [GroupDocs.Comparison for Java](http://www.groupdocs.com/java/document-comparison-library)
-+ **Download:** [Download GroupDocs.Comparison for Java](http://groupdocs.com/Community/files/9/java-libraries/groupdocs_comparison_for_java/category1060.aspx)
-+ **Documentation:** [GroupDocs.Comparison for Java Documentation](http://www.groupdocs.com/docs/display/comparisonjava/Home)
-+ **Forum:** [GroupDocs.Comparison for Java Forum](http://groupdocs.com/Community/forums/groupdocs.comparison-product-family/9/showforum.aspx)
-+ **Blog:** [GroupDocs.Comparison for Java Blog](http://www.groupdocs.com/blog/category/groupdocs-comparison-product-family)
-
++ **Website:** [www.groupdocs.com](https://www.groupdocs.com)
++ **Product Home:** [GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)
++ **API Reference:** [GroupDocs.Comparison for Java API Reference](https://apireference.groupdocs.com/java/comparison)
++ **Download:** [Download GroupDocs.Comparison for Java](https://artifact.groupdocs.com/repo/com/groupdocs/groupdocs-comparison/)
++ **Documentation:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/display/comparisonjava/Home)
++ **Free Support:** [GroupDocs.Comparison for Java Free Support Forum](https://forum.groupdocs.com/c/comparison)
++ **Paid Support:** [GroupDocs.Comparison for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
++ **Blog:** [GroupDocs.Comparison for Java Blog](https://blog.groupdocs.com/category/groupdocs-comparison-product-family/)

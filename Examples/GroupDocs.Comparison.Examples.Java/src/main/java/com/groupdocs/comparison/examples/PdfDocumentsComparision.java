@@ -28,11 +28,11 @@ public class PdfDocumentsComparision {
 		// Create two streams of textFiles
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Pdf, new PdfComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromStreamToFile
 	}
 
@@ -43,11 +43,13 @@ public class PdfDocumentsComparision {
 		//ExStart:ComparePdfFromStreamWithSettings
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Pdf,
-				new PdfComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, settings);
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromStreamWithSettings
 	}
 	
@@ -59,11 +61,11 @@ public class PdfDocumentsComparision {
 		//ExStart:ComparePdfFromStreamToFileWitoutSettings
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Pdf);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromStreamToFileWitoutSettings
 	}
 
@@ -74,10 +76,11 @@ public class PdfDocumentsComparision {
 		//ExStart:ComparePdfFromStreamWithoutSettings
 		InputStream sourceStream = Utilities.sourceStream(sourceFile);
 		InputStream targetStream = Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Pdf);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromStreamWithoutSettings
 	}
 
@@ -88,11 +91,13 @@ public class PdfDocumentsComparision {
 		//ExStart:ComparePdfFromFileToFileWithSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension),
-				ComparisonType.Pdf, new PdfComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromFileToFileWithSettings
 	}
 
@@ -103,11 +108,13 @@ public class PdfDocumentsComparision {
 		//ExStart:ComparePdfFromFileWithSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Pdf,
-				new PdfComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromFileWithSettings
 	}
 
@@ -118,11 +125,11 @@ public class PdfDocumentsComparision {
 		//ExStart:ComparePdfFromFileToFileWithoutSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
-		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension),
-				ComparisonType.Pdf);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare. 
+		Comparer comparison = new Comparer(); 
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromFileToFileWithoutSettings
 	}
 
@@ -133,10 +140,11 @@ public class PdfDocumentsComparision {
 		//ExStart:ComparePdfFromFileWithoutSettings
 		String sourcePath = Utilities.sourcePath + sourceFile;
 		String targetPath = Utilities.targetPath + targetFile;
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Pdf);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromFileWithoutSettings
 	}
 	
@@ -148,7 +156,6 @@ public class PdfDocumentsComparision {
 		 
 		ComparisonDjvuImage sourceImage = new ComparisonDjvuImage(sourceStream);
 		ComparisonDjvuImage targetImage = new ComparisonDjvuImage(targetStream);
-		 
 		ImagingComparisonSettings settings = new ImagingComparisonSettings();
 		 
 		//Compare

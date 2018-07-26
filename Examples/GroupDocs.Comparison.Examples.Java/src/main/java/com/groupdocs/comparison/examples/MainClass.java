@@ -180,7 +180,7 @@ public class MainClass {
 		// PDF comparison
 
 		// compare pdf documents streams and save output to a file
-		//PdfDocumentsComparision.ComparePdfFromStreamToFile("source50p.pdf","target50p.pdf");
+		//PdfDocumentsComparision.ComparePdfFromStreamToFile("source.pdf","target.pdf");
 
 		// compare pdf documents streams
 		// PdfDocumentsComparision.ComparePdfFromStreamWithSettings("source.pdf","target.pdf");
@@ -198,7 +198,7 @@ public class MainClass {
 		// PdfDocumentsComparision.ComparePdfFromFileWithSettings("source.pdf","target.pdf");
 
 		// compare pdf documents files to file without settings
-		 //PdfDocumentsComparision.ComparePdfFromFileToFileWithoutSettings("source.pdf","target.pdf");
+		// PdfDocumentsComparision.ComparePdfFromFileToFileWithoutSettings("source.pdf","target.pdf");
 
 		// compare pdf documents files without saving and settings
 		// PdfDocumentsComparision.ComparePdfFromFileWithoutSettings("source.pdf","target.pdf");

@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.groupdocs</groupId>
             <artifactId>groupdocs-comparison</artifactId>
-            <version>17.3.0</version>
+            <version>17.3.2</version>
         </dependency>
     </dependencies>
     <build>

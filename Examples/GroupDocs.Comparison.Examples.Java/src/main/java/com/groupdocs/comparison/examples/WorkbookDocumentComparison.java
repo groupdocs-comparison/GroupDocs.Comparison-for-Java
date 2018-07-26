@@ -2,9 +2,12 @@ package com.groupdocs.comparison.examples;
 
 import java.io.InputStream;
 
+import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.Comparison;
 import com.groupdocs.comparison.common.ComparisonType;
+import com.groupdocs.comparison.common.ICompareResult;
 import com.groupdocs.comparison.common.comparisonsettings.CellsComparisonSettings;
+import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.WordsComparisonSettings;
 
 public class WorkbookDocumentComparison {
@@ -19,11 +22,13 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromStreamToFileWithSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Cells, new CellsComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, settings);
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromStreamToFileWithSettings
 	}
 
@@ -34,11 +39,13 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromStreamWithSettings
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Cells,
-				new CellsComparisonSettings());
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, settings);
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromStreamWithSettings
 	}
 
@@ -49,11 +56,11 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromStreamToFile
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, Utilities.outputFileName(extension),
-				ComparisonType.Cells);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromStreamToFile
 	}
 
@@ -64,10 +71,11 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromStream
 		InputStream sourceStream = com.groupdocs.comparison.examples.Utilities.sourceStream(sourceFile);
 		InputStream targetStream = com.groupdocs.comparison.examples.Utilities.targetStream(targetFile);
-		// Create instance of GroupDocs.Comparison.Comparison and call method
+		// Create instance of GroupDocs.Comparison.Comparer and call method
 		// Compare.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourceStream, targetStream, ComparisonType.Cells);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourceStream, targetStream, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromStream
 	}
 
@@ -79,11 +87,13 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromFilesToFileWithSettings
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
 		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
-		// Create instance of *GroupDocs.Comparison.Comparison* and call method
-		// *Compare*.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension),
-				ComparisonType.Cells, new CellsComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromFilesToFileWithSettings
 	}
 
@@ -94,11 +104,13 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromFilesWithSettings
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
 		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
-		// Create instance of *GroupDocs.Comparison.Comparison* and call method
-		// *Compare*.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Cells,
-				new CellsComparisonSettings());
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromFilesWithSettings
 	}
 
@@ -109,11 +121,11 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromFilesToFile
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
 		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
-		// Create instance of *GroupDocs.Comparison.Comparison* and call method
-		// *Compare*.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, Utilities.outputFileName(extension),
-				ComparisonType.Cells);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromFilesToFile
 	}
 
@@ -124,10 +136,11 @@ public class WorkbookDocumentComparison {
 		//ExStart:CompareWorkBooksFromFiles
 		String sourcePath = com.groupdocs.comparison.examples.Utilities.sourcePath + sourceFile;
 		String targetPath = com.groupdocs.comparison.examples.Utilities.targetPath + targetFile;
-		// Create instance of *GroupDocs.Comparison.Comparison* and call method
-		// *Compare*.
-		Comparison comparison = new Comparison();
-		InputStream result = comparison.compare(sourcePath, targetPath, ComparisonType.Cells);
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(".xlsx"));
 		//ExEnd:CompareWorkBooksFromFiles
 	}
 }
