@@ -3,16 +3,15 @@ import java.awt.Color;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import com.groupdocs.comparison.Comparer;
-import com.groupdocs.comparison.Comparison;
 import com.groupdocs.comparison.MultiComparer;
-import com.groupdocs.comparison.common.ComparisonType;
-import com.groupdocs.comparison.common.ICompareResult;
 import com.groupdocs.comparison.common.changes.ChangeInfo;
+import com.groupdocs.comparison.common.compareresult.ICompareResult;
 import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
-import com.groupdocs.comparison.common.comparisonsettings.WordsComparisonSettings;
+import com.groupdocs.comparison.internal.c.a.m.System.e.q;
 
 public class WordDocumentComparison {
 
@@ -268,8 +267,8 @@ public class WordDocumentComparison {
 		        new FileInputStream(Utilities.targetPath + targetFile_3)
 		);
 		MultiComparer comparer = new MultiComparer();
-		ICompareResult result = comparer.compare(source, targets, new ComparisonSettings());
-		result.saveDocument(Utilities.outputFileName(extension));
+		/*ICompareResult result = comparer.compare(source, targets, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));*/
 		//ExEnd:multiComparerForDocsFromStream
 	}
 	
@@ -312,8 +311,8 @@ public class WordDocumentComparison {
 		);
 		 
 		MultiComparer comparer = new MultiComparer();
-		ICompareResult result = comparer.compare(sourceStream, sourcePassword, targets, targetPasswords, new ComparisonSettings());
-		result.saveDocument(Utilities.outputFileName(extension));
+		/*ICompareResult result = comparer.compare(sourcePassword, targetPasswords, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));*/
 		//ExEnd:multiComparerForEncryptedDocsFromStream
 	}
 	

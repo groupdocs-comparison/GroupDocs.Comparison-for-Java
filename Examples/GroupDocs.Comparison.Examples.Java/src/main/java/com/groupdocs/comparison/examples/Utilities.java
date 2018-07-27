@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.util.Properties;
 
 import com.groupdocs.comparison.common.license.License;
+import com.groupdocs.comparison.common.license.Metered;
 //ExStart:commonutilitiesclass
 public class Utilities {
 
@@ -76,6 +77,19 @@ public class Utilities {
 			exp.printStackTrace();
 		}
 		// ExEnd:ApplyLicenseFromStreamObj
+	}
+	
+	public static void meteredLicense(String filePath) {
+		// ExStart:meteredLicense
+		try {
+			// Obtain license stream
+			Metered metered = new Metered();
+			metered.setMeteredKey("****", "****");
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+		// ExEnd:meteredLicense
 	}
 	public static InputStream sourceStream(String sourceFile) throws Throwable {
 		String sourceFilePath = sourcePath + sourceFile;

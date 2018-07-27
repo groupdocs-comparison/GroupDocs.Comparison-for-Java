@@ -3,12 +3,8 @@ package com.groupdocs.comparison.examples;
 import java.io.InputStream;
 
 import com.groupdocs.comparison.Comparer;
-import com.groupdocs.comparison.Comparison;
-import com.groupdocs.comparison.common.ComparisonType;
-import com.groupdocs.comparison.common.ICompareResult;
-import com.groupdocs.comparison.common.comparisonsettings.CellsComparisonSettings;
+import com.groupdocs.comparison.common.compareresult.ICompareResult;
 import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
-import com.groupdocs.comparison.common.comparisonsettings.WordsComparisonSettings;
 
 public class WorkbookDocumentComparison {
 	private static String extension = ".xlsx";
