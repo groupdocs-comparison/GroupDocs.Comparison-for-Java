@@ -10,17 +10,16 @@
 	</properties>
 
 	<dependencies>
-	<dependency>
-		<groupId>com.groupdocs</groupId>
-		<artifactId>groupdocs-comparison</artifactId>
-		<version>18.6</version>
-	</dependency>	
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-comparison</artifactId>
+			<version>18.6.1</version>
+		</dependency>
 	</dependencies>
-	   <repositories>
+	<repositories>
 		<repository>
-			<id>GroupDocsJavaAPI</id>
-			<name>GroupDocs Java API</name>
-			<url>http://artifact.groupdocs.com/repo/</url>
+			<id>artifact.groupdocs.com</id>
+			<url>https://artifact.groupdocs.com/repo/</url>
 		</repository>
 	</repositories>
 	<build>
