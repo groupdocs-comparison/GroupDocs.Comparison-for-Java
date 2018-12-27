@@ -3,8 +3,7 @@ package com.groupdocs.comparison.examples;
 import java.io.InputStream;
 
 import com.groupdocs.comparison.Comparer;
-import com.groupdocs.comparison.common.ComparisonType;
-import com.groupdocs.comparison.common.ICompareResult;
+import com.groupdocs.comparison.common.compareresult.ICompareResult;
 import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 
 public class TextDocumentsComparision {
