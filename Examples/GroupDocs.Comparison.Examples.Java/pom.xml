@@ -18,8 +18,9 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>artifact.groupdocs.com</id>
-			<url>https://artifact.groupdocs.com/repo/</url>
+			<id>GroupDocsJavaAPI</id>
+			<name>GroupDocs Java API</name>
+			<url>https://repository.groupdocs.com/repo/</url>
 		</repository>
 	</repositories>
 	<build>
