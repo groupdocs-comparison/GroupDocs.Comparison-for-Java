@@ -3,15 +3,15 @@ import java.awt.Color;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.MultiComparer;
 import com.groupdocs.comparison.common.changes.ChangeInfo;
+import com.groupdocs.comparison.common.changes.ComparisonAction;
 import com.groupdocs.comparison.common.compareresult.ICompareResult;
 import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
-import com.groupdocs.comparison.internal.c.a.m.System.e.q;
+import com.groupdocs.comparison.common.comparisonsettings.DetailLevel;
 
 public class WordDocumentComparison {
 
@@ -166,13 +166,13 @@ public class WordDocumentComparison {
 		settings.setGenerateSummaryPage(true);
 		settings.setShowDeletedContent(true);
 		settings.setStyleChangeDetection(true);
-		//settings.setDetailLevel(DetailLevel.Low);
+		settings.setDetailLevel(DetailLevel.Low);
 		/**WordsSeparatorChars is array that contain separators for compared text**/
-		//settings.setWordsSeparatorChars(new char[] {' '});
+		settings.setWordsSeparatorChars(new char[] {' '});
 		/**setting to draw frames for shapes in Comparison.Words**/
-		//settings.setUseFramesForDelInsElements(false);
+		settings.setUseFramesForDelInsElements(false);
 		/**Inserted, deleted and style changed items styles setting**/
-		/*
+		
 		settings.getInsertedItemsStyle().setColor(Color.LIGHT_GRAY);
 		settings.getInsertedItemsStyle().setBeginSeparatorString("<inserted>");
 		settings.getInsertedItemsStyle().setEndSeparatorString("</inserted>");
@@ -183,7 +183,7 @@ public class WordDocumentComparison {
 		settings.getStyleChangedItemsStyle().setColor(Color.BLUE);
 		settings.getStyleChangedItemsStyle().setBeginSeparatorString("<style>");
 		settings.getStyleChangedItemsStyle().setEndSeparatorString("</style>");
-		*/		 
+			 
 		Comparer comparer = new Comparer();
 		ICompareResult result = comparer.compare(sourcePath, targetPath,settings);
 		result.saveDocument(Utilities.outputFileName(extension));
@@ -267,8 +267,8 @@ public class WordDocumentComparison {
 		        new FileInputStream(Utilities.targetPath + targetFile_3)
 		);
 		MultiComparer comparer = new MultiComparer();
-		/*ICompareResult result = comparer.compare(source, targets, new ComparisonSettings());
-		result.saveDocument(Utilities.outputFileName(extension));*/
+		ICompareResult result = comparer.compare(source, targets, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
 		//ExEnd:multiComparerForDocsFromStream
 	}
 	
@@ -311,8 +311,8 @@ public class WordDocumentComparison {
 		);
 		 
 		MultiComparer comparer = new MultiComparer();
-		/*ICompareResult result = comparer.compare(sourcePassword, targetPasswords, new ComparisonSettings());
-		result.saveDocument(Utilities.outputFileName(extension));*/
+		ICompareResult result = comparer.compare(sourceStream,sourcePassword,targets,targetPasswords, new ComparisonSettings());
+		result.saveDocument(Utilities.outputFileName(extension));
 		//ExEnd:multiComparerForEncryptedDocsFromStream
 	}
 	
@@ -338,17 +338,12 @@ public class WordDocumentComparison {
 		 
 		//Get array of changes
 		ChangeInfo[] changes = result.getChanges();
-		 
-		//Update changes in CompareResult object (this method updated result document)
-		result.updateChanges(changes);
-		
 		/**To update changes use the following algorithm:**/		
 		//Set actions of changes as Accept or Reject
-		
-		/*ChangeInfo[] changes = result.getChanges();
-		changes[0].setAction(ComparisonAction.Accept);
-		changes[1].setAction(ComparisonAction.Reject);
-		result.updateChanges(changes);*/		
+		changes[0].setAction(ComparisonAction.ACCEPT);
+		changes[1].setAction(ComparisonAction.REJECT);
+		//Update changes in CompareResult object (this method updated result document)
+		result.updateChanges(changes);			
 		//ExEnd:propertiesOfICompareResult
 	}
 }
