@@ -173,14 +173,18 @@ public class WordDocumentComparison {
 		settings.setUseFramesForDelInsElements(false);
 		/**Inserted, deleted and style changed items styles setting**/
 		
-		settings.getInsertedItemsStyle().setColor(Color.LIGHT_GRAY);
+		settings.getInsertedItemsStyle().setFontColor(Color.LIGHT_GRAY);
+		settings.getInsertedItemsStyle().setHighlightColor(Color.GRAY);
 		settings.getInsertedItemsStyle().setBeginSeparatorString("<inserted>");
 		settings.getInsertedItemsStyle().setEndSeparatorString("</inserted>");
-		settings.getDeletedItemsStyle().setColor(Color.CYAN);
+		
+		settings.getDeletedItemsStyle().setFontColor(Color.CYAN);
+		settings.getDeletedItemsStyle().setHighlightColor(Color.PINK);
 		settings.getDeletedItemsStyle().setBeginSeparatorString("<deleted>");
 		settings.getDeletedItemsStyle().setEndSeparatorString("</deleted>");
 		 
-		settings.getStyleChangedItemsStyle().setColor(Color.BLUE);
+		settings.getStyleChangedItemsStyle().setFontColor(Color.BLUE);
+		settings.getStyleChangedItemsStyle().setHighlightColor(Color.LIGHT_GRAY);
 		settings.getStyleChangedItemsStyle().setBeginSeparatorString("<style>");
 		settings.getStyleChangedItemsStyle().setEndSeparatorString("</style>");
 			 
