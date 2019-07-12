@@ -1,10 +1,15 @@
 package com.groupdocs.comparison.examples;
 
-import java.awt.Color;
-import java.io.FileInputStream;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.List;
+
+import javax.imageio.ImageIO;
 
 import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.common.PageImage;
 import com.groupdocs.comparison.common.compareresult.ICompareResult;
 import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 
@@ -140,4 +145,34 @@ public class PdfDocumentsComparision {
 		result.saveDocument(Utilities.outputFileName(".pdf"));
 		//ExEnd:ComparePdfFromFileWithoutSettings
 	}	
+	
+	 /* Compare two pdf documents from files and get image representation of result document*/
+	 
+	public static void getImageRepresentationOfDocumentPages(String sourceFile, String targetFile) throws Exception {
+		//ExStart:getImageRepresentationOfDocumentPages
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+		// Create instance of GroupDocs.Comparison.Comparer and call method
+		// Compare.
+		ComparisonSettings settings = new ComparisonSettings();  
+		settings.setGenerateSummaryPage(false);
+		Comparer comparison = new Comparer();
+		ICompareResult result = comparison.compare(sourcePath, targetPath, settings);
+		result.saveDocument(Utilities.outputFileName(".pdf"));
+		//get list of pages
+		List<PageImage> resultImages = comparison.convertToImages(sourcePath,targetPath);
+		  
+		  
+		//save them as bitmap to separate folder
+		if (!new File(Utilities.resultFilePath + "/Result Pages").exists()) 
+		   new File(Utilities.resultFilePath + "/Result Pages").mkdir();
+		  
+		  
+		for (PageImage image : resultImages){ 
+		     BufferedImage bitmap = ImageIO.read(image.getPageStream()); 
+		     ImageIO.write(bitmap, "png", new FileOutputStream(Utilities.resultFilePath + "/Result Pages/result_" + image.getPageNumber() + ".png")); 
+		}
+		//ExEnd:getImageRepresentationOfDocumentPages
+	}
+
 }

@@ -192,6 +192,9 @@ public class MainClass {
 
 		// compare pdf documents files without saving and settings
 		//PdfDocumentsComparision.ComparePdfFromFileWithoutSettings("source.pdf", "target.pdf");
+		
+		// compare pdf documents files and get image representation of document pages
+		// PdfDocumentsComparision.getImageRepresentationOfDocumentPages("source.pdf", "target.pdf");
 
 		// End pdf
 		// comparison_____________________________________________________________

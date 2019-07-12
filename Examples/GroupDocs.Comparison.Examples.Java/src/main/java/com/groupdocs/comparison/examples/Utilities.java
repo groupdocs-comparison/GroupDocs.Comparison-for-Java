@@ -16,13 +16,13 @@ public class Utilities {
 	
 	public final static String sourcePath = "./Data/SourceFiles/";
 	public final static String targetPath = "./Data/TargetFiles/";
-	public static final Path resultFilePath = getProjectBaseDir().resolve("Data/ResultFiles/output");
+	public static final String resultFilePath = "./Data/ResultFiles/";
 	public final static String resultFile = "result";
-	public static final Path licensePath = getProjectBaseDir().resolve("GroupDocs.Total.Java.lic");
+	public static final String licensePath = "E://GroupDocs.Total.Java.lic";
 	public final static String sourcePassword = "pass";
 	public final static String targetPassword = "pass";
 	public static String outputFileName(String extension) {
-		String resultPath = resultFilePath + extension;
+		String resultPath = resultFilePath + resultFile + extension;
 		return resultPath;
 	}
 	// ExEnd:CommonProperties
@@ -36,8 +36,8 @@ public class Utilities {
 		try {
 			// Setup license
 			License lic = new License();
-			lic.setLicense(licensePath.toString());
-			if(lic.isValidLicense()){
+			lic.setLicense(licensePath);
+			if(License.isValidLicense()){
 				System.out.println("License is validated");
 			}
 		} catch (Exception exp) {
