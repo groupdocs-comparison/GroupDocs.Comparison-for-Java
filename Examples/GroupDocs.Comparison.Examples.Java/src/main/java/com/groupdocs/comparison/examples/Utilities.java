@@ -7,6 +7,8 @@ import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.util.Properties;
 
+import com.groupdocs.comparison.Informer;
+import com.groupdocs.comparison.common.documentinfo.DocumentInfo;
 import com.groupdocs.comparison.common.license.License;
 import com.groupdocs.comparison.common.license.Metered;
 //ExStart:commonutilitiesclass
@@ -17,6 +19,7 @@ public class Utilities {
 	public final static String sourcePath = "./Data/SourceFiles/";
 	public final static String targetPath = "./Data/TargetFiles/";
 	public static final String resultFilePath = "./Data/ResultFiles/";
+	public static final String resultImagePath = "Data/ResultFiles/ResultImages/";
 	public final static String resultFile = "result";
 	public static final String licensePath = "E://GroupDocs.Total.Java.lic";
 	public final static String sourcePassword = "pass";
@@ -91,6 +94,16 @@ public class Utilities {
 		}
 		// ExEnd:meteredLicense
 	}
+	
+	public static void getDocumentInfo(String sourceFile) {
+		// ExStart:getDocumentInfo
+		Informer informer = new Informer();
+		// Get information about document from filePath
+		String sourceFilePath = sourcePath + sourceFile;
+		DocumentInfo documentInfo = informer.getDocumentInfo(sourceFilePath);
+		// ExEnd:getDocumentInfo
+	}
+	
 	public static InputStream sourceStream(String sourceFile) throws Throwable {
 		String sourceFilePath = sourcePath + sourceFile;
 		InputStream sourceStream = new FileInputStream(sourceFilePath);

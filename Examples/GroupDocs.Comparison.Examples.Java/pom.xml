@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>com.groupdocs</groupId>
 			<artifactId>groupdocs-comparison</artifactId>
-			<version>19.6</version>
+			<version>19.10</version>
 		</dependency>
 	</dependencies>
 	<repositories>

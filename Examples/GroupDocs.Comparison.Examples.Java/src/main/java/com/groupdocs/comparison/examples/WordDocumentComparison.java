@@ -1,14 +1,22 @@
 package com.groupdocs.comparison.examples;
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.imageio.ImageIO;
+
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.MultiComparer;
-import com.groupdocs.comparison.common.changes.ChangeInfo;
-import com.groupdocs.comparison.common.changes.ComparisonAction;
+import com.groupdocs.comparison.changes.ChangeInfo;
+import com.groupdocs.comparison.changes.ComparisonAction;
+import com.groupdocs.comparison.changes.Rectangle;
+import com.groupdocs.comparison.common.PageImage;
+import com.groupdocs.comparison.common.TypeChanged;
 import com.groupdocs.comparison.common.compareresult.ICompareResult;
 import com.groupdocs.comparison.common.comparisonsettings.ComparisonSettings;
 import com.groupdocs.comparison.common.comparisonsettings.DetailLevel;
@@ -349,5 +357,71 @@ public class WordDocumentComparison {
 		//Update changes in CompareResult object (this method updated result document)
 		result.updateChanges(changes);			
 		//ExEnd:propertiesOfICompareResult
+	}
+	
+	//Get Coordinates of Specific Changes in Result Document
+	public static void getCoordinatesOfSpecificChangesInResultDocument(String sourceFile, String targetFile) throws Exception{	
+		//ExStart:getCoordinatesOfSpecificChangesInResultDocument
+		ComparisonSettings comparisonSettings = new ComparisonSettings();
+		comparisonSettings.setStyleChangeDetection(true);
+		//this setting specify that we want to have change coordinates
+		comparisonSettings.setCalculateComponentCoordinates(true);
+		comparisonSettings.setDetailLevel(DetailLevel.High);
+		
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+		
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(sourcePath, targetPath, comparisonSettings);
+		result.saveDocument(Utilities.outputFileName(extension));
+		  
+		List<PageImage> resultImages = comparer.convertToImages(Utilities.resultImagePath);
+		final ChangeInfo[] changes = result.getChanges();
+		
+		// Below the one of cases how we could use changes coordinates.
+		// We are passing through pages object and draw a rectangle in the coordinates of changes
+		for (PageImage pageImage : resultImages) {
+		    final InputStream pageStream = pageImage.getPageStream();
+		    final BufferedImage bufferedImage = ImageIO.read(pageStream);
+		    final Graphics graphics = bufferedImage.getGraphics();
+		    for (ChangeInfo changeInfo : changes) {
+		        final Rectangle rectangle = changeInfo.getBox();
+		        //if something was Inserted draw a Blue rectange
+		        if (changeInfo.getType() == TypeChanged.Inserted) {
+		            graphics.setColor(Color.BLUE);
+		            graphics.drawRect((int) rectangle.getX(), (int) rectangle.getY(), (int) rectangle.getWidth(), (int) rectangle.getHeight());
+		        }
+		        //if something was Deleted draw a Red rectange
+		        if (changeInfo.getType() == TypeChanged.Deleted) {
+		  
+		            graphics.setColor(Color.RED);
+		            graphics.drawRect((int) rectangle.getX(), (int) rectangle.getY(), (int) rectangle.getWidth(), (int) rectangle.getHeight());
+		        }
+		        //if something was Changes draw a Green rectange
+		        if (changeInfo.getType() == TypeChanged.StyleChanged) {
+		            graphics.setColor(Color.GREEN);
+		            graphics.drawRect((int) rectangle.getX(), (int) rectangle.getY(), (int) rectangle.getWidth(), (int) rectangle.getHeight());
+		        }
+		    }		   
+		    graphics.dispose();
+		    pageStream.close();
+		}
+		
+		//ExEnd:getCoordinatesOfSpecificChangesInResultDocument
+	}
+	
+	//Sensitive comparison of the documents
+	public static void sensitiveComparisonOfDocuments(String sourceFile, String targetFile) throws Exception{	
+		//ExStart:sensitiveComparisonOfDocuments
+		String sourcePath = Utilities.sourcePath + sourceFile;
+		String targetPath = Utilities.targetPath + targetFile;
+		
+		ComparisonSettings comparisonSettings = new ComparisonSettings();
+		comparisonSettings.setSensitivityOfComparison(100);
+		
+		Comparer comparer = new Comparer();
+		ICompareResult result = comparer.compare(sourcePath, targetPath, comparisonSettings);
+		result.saveDocument(Utilities.outputFileName(extension));
+		//ExEnd:sensitiveComparisonOfDocuments
 	}
 }

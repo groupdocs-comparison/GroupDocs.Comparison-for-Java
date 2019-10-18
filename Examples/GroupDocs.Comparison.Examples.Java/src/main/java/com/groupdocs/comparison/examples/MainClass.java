@@ -1,15 +1,5 @@
 package com.groupdocs.comparison.examples;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.stream.Stream;
-
-import com.groupdocs.comparison.common.license.License;
-
 public class MainClass {
 
 	public static void main(String[] args) throws Throwable {
@@ -76,6 +66,12 @@ public class MainClass {
 
 		// Properties of ICompareResult
 		//WordDocumentComparison.propertiesOfICompareResult("source.docx", "target.docx");
+		
+		//Get Coordinates of Specific Changes in Result Document
+		//WordDocumentComparison.getCoordinatesOfSpecificChangesInResultDocument("source.docx", "target.docx");
+		
+		//Sensitive comparison of the documents
+		//WordDocumentComparison.sensitiveComparisonOfDocuments("source.docx", "target.docx");
 
 		// End word documents
 		// comparison___________________________________________________
