@@ -4,7 +4,7 @@ public class MainClass {
 
 	public static void main(String[] args) throws Throwable {
 		// Setup license
-		 Utilities.applyLicenseFromFile();
+		// Utilities.applyLicenseFromFile();
 
 		// Word documents comparison_______________________________________
 
