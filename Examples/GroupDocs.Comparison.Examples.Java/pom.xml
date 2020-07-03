@@ -1,26 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>GroupDocs.Comparison.Examples.Java</groupId>
 	<artifactId>GroupDocs.Comparison.Examples.Java</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>20.4</version>
 	<properties>
-		<maven.compiler.source>8</maven.compiler.source>
-		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.source>7</maven.compiler.source>
+		<maven.compiler.target>7</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.groupdocs</groupId>
 			<artifactId>groupdocs-comparison</artifactId>
-			<version>19.10</version>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>GroupDocsJavaAPI</id>
-			<name>GroupDocs Java API</name>
-			<url>https://repository.groupdocs.com/repo/</url>
+			<id>GroupDocsArtifactRepository</id>
+			<name>GroupDocs Artifact Repository</name>
+			<url>http://repository.groupdocs.com/repo/</url>
 		</repository>
 	</repositories>
 	<build>
@@ -30,5 +31,25 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.6.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>java</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<mainClass>com.groupdocs.comparison.examples.RunExamples</mainClass>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>
