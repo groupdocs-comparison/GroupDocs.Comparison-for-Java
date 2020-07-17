@@ -23,7 +23,9 @@ The following are the steps to generate document preview with GroupDocs.Compari
     *   page numbers to process;
     *   custom size of preview images (if needed).          
 
-{{< alert style="info" >}}Stream that were created by CreatePageStream callback will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument ReleasePageStream to clean up resources.{{< /alert >}}
+{{< alert style="info" >}}
+Stream that were created by [CreatePageStream](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.common.delegates/Delegates_CreatePageStream) callback will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleasePageStream](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.common.delegates/Delegates_ReleasePageStream) to clean up resources.
+{{< /alert >}}
 
 *   Call [generatePreview](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Document#generatePreview(com.groupdocs.comparison.options.PreviewOptions)) method of [Source](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#getSource()) and [Targets](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#getTargets()) document and pass [PreviewOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/PreviewOptions) to it. 
     
