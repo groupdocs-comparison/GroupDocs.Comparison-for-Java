@@ -1,7 +1,7 @@
 
 # GroupDocs.Comparison for Java Examples
 
-This package contains Java Example Projects for GroupDocs.Comparison for Java and sample input docucuments/templates.
+This package contains Java Example Projects for GroupDocs.Comparison for Java and sample input documents/templates.
 
 GroupDocs.Comparison for Java is a document comparison component that allows users to quickly and easily find differences between two revisions of a document right in your web app. It merges two uploaded documents into one and displays it, highlighting differences with the redline view approach - similar to the Microsoft Word change tracking feature, but online.
 
