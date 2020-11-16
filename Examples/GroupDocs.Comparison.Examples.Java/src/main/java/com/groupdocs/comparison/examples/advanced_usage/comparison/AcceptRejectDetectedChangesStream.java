@@ -9,6 +9,8 @@ import com.groupdocs.comparison.result.ComparisonAction;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 
 /**
@@ -19,17 +21,17 @@ public class AcceptRejectDetectedChangesStream {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "AcceptRejectDetectedChangesStream");
 
-        Comparer comparer = new Comparer(new FileInputStream(SampleFiles.SOURCE_WORD));
-        try {
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_WORD);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET1_WORD);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
 
-            comparer.add(new FileInputStream(SampleFiles.TARGET_WORD));
+            comparer.add(targetStream);
             comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
             // inserted word "Cool" was not be added to result document
             changes[0].setComparisonAction(ComparisonAction.REJECT);
-            comparer.applyChanges(new FileOutputStream(outputFileName), new ApplyChangeOptions(changes));
-        } finally {
-            comparer.dispose();
+            comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
         }
         System.out.println("\nChanges updated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

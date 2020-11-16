@@ -24,28 +24,22 @@ The following code sample shows how to compare password-protected documents.
 ## Compare multiple protected documents from local disk
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf", new LoadOptions("source-password"));
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf", new LoadOptions("source-password"))) {
     comparer.add("C:\\target1.pdf", new LoadOptions("target-password"));
     comparer.add("C:\\target2.pdf", new LoadOptions("target-password"));
     comparer.add("C:\\target3.pdf", new LoadOptions("target-password"));
     comparer.compare("C:\\result.pdf");
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Compare multiple protected documents from stream
 
 ```java
-Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"), new LoadOptions("source-password"));
-try {
+try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"), new LoadOptions("source-password"))) {
     comparer.add(new FileInputStream("C:\\target1.pdf"), new LoadOptions("target-password"));
     comparer.add(new FileInputStream("C:\\target2.pdf"), new LoadOptions("target-password"));
     comparer.add(new FileInputStream("C:\\target3.pdf"), new LoadOptions("target-password"));
     comparer.compare(new FileOutputStream("C:\\result.pdf"));
-} finally {
-    comparer.dispose();
 }
 ```
 

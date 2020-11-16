@@ -8,6 +8,7 @@ import com.groupdocs.comparison.options.style.StyleSettings;
 
 import java.awt.*;
 import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 /**
  * This example demonstrates comparing of multi documents from path
@@ -17,12 +18,12 @@ public class CompareMultipleDocumentsSettingsPath {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CompareMultipleDocumentsSettingsPath");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
 
             {
                 // Note: It is the same with commented code below
-                comparer.add(SampleFiles.TARGET_WORD, SampleFiles.TARGET2_WORD, SampleFiles.TARGET3_WORD);
+                comparer.add(SampleFiles.TARGET1_WORD, SampleFiles.TARGET2_WORD, SampleFiles.TARGET3_WORD);
 
                 // Note: It is the same with the code above
 //                comparer.add(SampleFiles.TARGET_WORD);
@@ -31,7 +32,7 @@ public class CompareMultipleDocumentsSettingsPath {
             }
             {
                 // Note: It is the same with the code above
-                comparer.compare(new FileOutputStream(outputFileName),
+                comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -45,8 +46,6 @@ public class CompareMultipleDocumentsSettingsPath {
 //                compareOptions.setInsertedItemStyle(styleSettings);
 //                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

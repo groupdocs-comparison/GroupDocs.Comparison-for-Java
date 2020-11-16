@@ -24,8 +24,7 @@ The following code sample shows how to get changes coordinates.
 ## Coordinates calculation example
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
 
     CompareOptions compareOptions = new CompareOptions();
@@ -36,8 +35,6 @@ try {
     for (ChangeInfo change : changes) {
         System.out.println(String.format("Change Type: %d, X: %f, Y: %f, Text: %s", change.getType(), change.getBox().getX(), change.getBox().getY(), change.getText()));
     }
-} finally {
-    comparer.dispose();
 }
 ```
 

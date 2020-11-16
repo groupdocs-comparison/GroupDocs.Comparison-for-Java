@@ -30,12 +30,9 @@ The following are the steps to compare two DOCX files
 The following code samples demonstrate how to compare two DOCX files.
 
 ```java
-Comparer comparer = new Comparer(SOURCE_FILE, new LoadOptions("source-password"));
-try {
+try (Comparer comparer = new Comparer(SOURCE_FILE, new LoadOptions("source-password"))) {
     comparer.add(TARGET_FILE, new LoadOptions("target-password"));
     comparer.compare(RESULT_FILE);
-} finally {
-    comparer.dispose();
 }
 ```
 

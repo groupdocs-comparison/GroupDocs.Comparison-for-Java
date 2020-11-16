@@ -8,6 +8,7 @@ import com.groupdocs.comparison.result.ChangeInfo;
 import com.groupdocs.comparison.result.ComparisonAction;
 
 import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 /**
  * This example demonstrates how to update changes from path
@@ -17,16 +18,14 @@ public class AcceptRejectDetectedChangesPath {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "AcceptRejectDetectedChangesPath");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
             comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
             // inserted word "Cool" was not be added to result document
             changes[0].setComparisonAction(ComparisonAction.REJECT);
-            comparer.applyChanges(new FileOutputStream(outputFileName), new ApplyChangeOptions(changes));
-        } finally {
-            comparer.dispose();
+            comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
         }
         System.out.println("\nChanges updated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

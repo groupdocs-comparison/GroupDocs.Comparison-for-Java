@@ -42,9 +42,7 @@ try {
 Code given below explains how to apply license using stream.
 
 ```java
-try {
-	// Obtain license stream
-	FileInputStream licenseStream = new FileInputStream(filePath);
+try (FileInputStream licenseStream = new FileInputStream(filePath)) {
 	// Setup license
 	License lic = new License();
 	lic.setLicense(licenseStream);
@@ -75,12 +73,13 @@ BigDecimal amountBefor = Metered.getConsumptionQuantity();
 // Call comparison
 String sourcePath = "./data/source.docx";
 String targetPath = "./data/target.docx";
-Comparer comparer = new Comparer();
-comparer.compare(sourcePath, targetPath, new ComparisonSettings());
-comparer.compare(sourcePath, targetPath, new ComparisonSettings()); 
-
-// Get consumption quantity from metered after several calls of comparison
-BigDecimal amountAfter = Metered.getConsumptionQuantity();
+try (Comparer comparer = new Comparer()) {
+    comparer.compare(sourcePath, targetPath, new ComparisonSettings());
+    comparer.compare(sourcePath, targetPath, new ComparisonSettings()); 
+    
+    // Get consumption quantity from metered after several calls of comparison
+    BigDecimal amountAfter = Metered.getConsumptionQuantity();
+}
 ```
 
 ## Validate the License

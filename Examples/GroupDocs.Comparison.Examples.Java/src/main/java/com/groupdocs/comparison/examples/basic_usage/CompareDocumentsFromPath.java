@@ -12,12 +12,9 @@ public class CompareDocumentsFromPath {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CompareDocumentsFromPath");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
             comparer.compare(outputFileName);
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

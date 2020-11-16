@@ -23,8 +23,7 @@ The following code snippet demonstrates how to compare files with specific opt
 ## Compare files from local disk with custom change styles
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     
     CompareOptions compareOptions = new CompareOptions();
@@ -53,16 +52,13 @@ try {
     changedStyleSettings.setItalic(true);
     compareOptions.setChangedItemStyle(changedStyleSettings);
     comparer.compare("C:\\result.pdf", compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Compare files from stream with custom change styles
 
 ```java
-Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"));
-try {
+try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     comparer.add(new FileInputStream("C:\\target.pdf"));
     
     CompareOptions compareOptions = new CompareOptions();
@@ -91,8 +87,6 @@ try {
     changedStyleSettings.setItalic(true);
     compareOptions.setChangedItemStyle(changedStyleSettings);
     comparer.compare(new FileOutputStream("C:\\result.pdf"), compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 

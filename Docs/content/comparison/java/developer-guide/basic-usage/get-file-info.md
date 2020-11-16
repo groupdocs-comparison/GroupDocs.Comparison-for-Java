@@ -19,24 +19,18 @@ The following code samples demonstrate how to get file information.
 ## Get file info for the file from local disk
 
 ```java
-Comparer comparer = new Comparer("C:\\source.docx");
-try {
+try (Comparer comparer = new Comparer("C:\\source.docx")) {
     IDocumentInfo info = comparer.getSource().getDocumentInfo();
     System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize()));
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Get file for the file from stream
 
 ```java
-Comparer comparer = new Comparer(new FileInputStream("C:\\source.docx"));
-try {
+try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.docx"))) {
     IDocumentInfo info = comparer.getSource().getDocumentInfo();
     System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize()));
-} finally {
-    comparer.dispose();
 }
 ```
 

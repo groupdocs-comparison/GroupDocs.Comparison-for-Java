@@ -9,6 +9,8 @@ import com.groupdocs.comparison.options.style.StyleSettings;
 import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * This example demonstrates comparing of multi documents from stream
@@ -18,15 +20,16 @@ public class CompareMultipleDocumentsSettingsStream {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CompareMultipleDocumentsSettingsStream");
 
-        Comparer comparer = new Comparer(new FileInputStream(SampleFiles.SOURCE_WORD));
-        try {
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_WORD);
+             InputStream target1Stream = new FileInputStream(SampleFiles.TARGET1_WORD);
+             InputStream target2Stream = new FileInputStream(SampleFiles.TARGET2_WORD);
+             InputStream target3Stream = new FileInputStream(SampleFiles.TARGET3_WORD);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
 
             {
                 // Note: It is the same with commented code below
-                comparer.add(
-                        new FileInputStream(SampleFiles.TARGET_WORD),
-                        new FileInputStream(SampleFiles.TARGET2_WORD),
-                        new FileInputStream(SampleFiles.TARGET3_WORD));
+                comparer.add(target1Stream, target2Stream, target3Stream);
 
                 // Note: It is the same with the code above
 //                comparer.add(new FileInputStream(SampleFiles.TARGET_WORD));
@@ -35,7 +38,7 @@ public class CompareMultipleDocumentsSettingsStream {
             }
             {
                 // Note: It is the same with commented code below
-                comparer.compare(new FileOutputStream(outputFileName),
+                comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -50,8 +53,6 @@ public class CompareMultipleDocumentsSettingsStream {
 //                compareOptions.setInsertedItemStyle(styleSettings);
 //                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

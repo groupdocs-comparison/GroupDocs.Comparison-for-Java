@@ -12,12 +12,9 @@ public class CompareCellsFromPath {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_CELLS, "CompareCellsFromPath");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_CELLS);
-        try {
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_CELLS)) {
             comparer.add(SampleFiles.TARGET_CELLS);
             comparer.compare(outputFileName);
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

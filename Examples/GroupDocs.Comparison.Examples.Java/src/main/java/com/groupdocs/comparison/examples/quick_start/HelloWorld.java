@@ -15,16 +15,13 @@ public class HelloWorld {
 
     public static void run() throws Exception {
         String sourceDocumentPath = SampleFiles.SOURCE_WORD;
-        String targetDocumentPath = SampleFiles.TARGET_WORD;
+        String targetDocumentPath = SampleFiles.TARGET1_WORD;
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "HelloWorld");
 
-        Comparer comparer = new Comparer(sourceDocumentPath);
-        try {
+        try (Comparer comparer = new Comparer(sourceDocumentPath)) {
             comparer.add(targetDocumentPath);
             comparer.compare(outputFileName);
-        } finally {
-            comparer.dispose();
         }
 
         System.out.println("\nSource document rendered successfully.\nCheck output in " + outputFileName + ".");

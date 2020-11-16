@@ -8,10 +8,7 @@ import com.groupdocs.comparison.examples.Utils;
 import com.groupdocs.comparison.options.PreviewOptions;
 import com.groupdocs.comparison.options.enums.PreviewFormats;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
  * This example demonstrates how to get document previews with user memory clean code
@@ -29,11 +26,12 @@ public class GetPagePreviewsResouresCleaning {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_SLIDES, "GetPagePreviewsResouresCleaning");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_SLIDES);
-        try {
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             InputStream documentStream = new FileInputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_SLIDES)) {
             comparer.add(SampleFiles.TARGET_SLIDES);
-            comparer.compare(new FileOutputStream(outputFileName));
-            Document document = new Document(new FileInputStream(outputFileName));
+            comparer.compare(resultStream);
+            Document document = new Document(documentStream);
             {
                 // Note: It is the same with commented code below
                 document.generatePreview(new PreviewOptions.Builder(
@@ -82,8 +80,6 @@ public class GetPagePreviewsResouresCleaning {
 //                });
 //                document.generatePreview(previewOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocument previews generated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

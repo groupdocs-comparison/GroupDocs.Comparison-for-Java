@@ -23,8 +23,7 @@ The following are the steps to protect resultant document:
 The following code snippet demonstrates how to compare documents and protect resultant document with password
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
 
     CompareOptions compareOptions = new CompareOptions();
@@ -32,8 +31,6 @@ try {
     SaveOptions saveOptions = new SaveOptions();
     saveOptions.setPassword("3333");
     comparer.compare("C:\\result.pdf", saveOptions, compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 

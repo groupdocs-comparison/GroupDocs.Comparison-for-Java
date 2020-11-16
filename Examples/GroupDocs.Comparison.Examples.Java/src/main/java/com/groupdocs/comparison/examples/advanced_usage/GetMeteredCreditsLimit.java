@@ -8,6 +8,7 @@ import com.groupdocs.comparison.options.CompareOptions;
 import com.groupdocs.comparison.options.save.SaveOptions;
 
 import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 /**
  * This example demonstrates how to get credit consumption quantity
@@ -15,12 +16,10 @@ import java.io.FileOutputStream;
 public class GetMeteredCreditsLimit {
     public static void run() throws Exception {
         System.out.println("Credits before using Comparer: " + Metered.getConsumptionQuantity());
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
-            comparer.compare(new FileOutputStream(SampleFiles.RESULT_WORD), new SaveOptions(), new CompareOptions());
-        } finally {
-            comparer.dispose();
+        try (OutputStream resultStream = new FileOutputStream(SampleFiles.RESULT_WORD);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
+            comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
         }
         System.out.println("Credits after using Comparer: " + Metered.getConsumptionQuantity());
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");

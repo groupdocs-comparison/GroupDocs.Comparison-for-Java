@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>GroupDocs.Comparison.Examples.Java</groupId>
 	<artifactId>GroupDocs.Comparison.Examples.Java</artifactId>
-	<version>20.4</version>
+	<version>20.11</version>
 	<properties>
 		<maven.compiler.source>7</maven.compiler.source>
 		<maven.compiler.target>7</maven.compiler.target>

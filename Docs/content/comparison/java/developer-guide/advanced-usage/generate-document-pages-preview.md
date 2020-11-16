@@ -44,8 +44,7 @@ The following code snippet demonstrates how to generate document previews.
 ## Get page previews for source document
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
@@ -61,18 +60,14 @@ try {
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
     previewOptions.setPageNumbers(new int[]{1, 2});
     comparer.getSource().generatePreview(previewOptions);
-} finally {
-    comparer.dispose();
 }
-
 ```
 
 ## Get page previews for target document
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-comparer.add("C:\\target.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
+    comparer.add("C:\\target.pdf");
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
@@ -88,16 +83,13 @@ try {
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
     previewOptions.setPageNumbers(new int[]{1, 2});
     comparer.getTargets().get(0).generatePreview(previewOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Get page previews for resultant document
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare("C:\\target.pdf");
     Document document = new Document("C:\\result.pdf");
@@ -116,8 +108,6 @@ try {
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
     previewOptions.setPageNumbers(new int[]{1, 2});
     document.generatePreview(previewOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
@@ -128,8 +118,7 @@ In some cases it may be useful to set specific image size during document pages 
 The following code snippet demonstrates how to set specific size for preview images.
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare(new FileOutputStream("C:\\result.pdf"));
     Document document = new Document("C:\\result.pdf");
@@ -151,8 +140,6 @@ try {
     previewOptions.setHeight(1000);
     previewOptions.setWidth(1000);
     document.generatePreview(previewOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
@@ -170,8 +157,7 @@ private static void userReleaseStreamMethod(int pageNumber, OutputStream stream)
 }
  
 // Somewhere in the same class
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare("C:\\result.pdf");
     Document document = new Document("C:\\result.pdf");
@@ -197,8 +183,6 @@ try {
         }
     });
     document.generatePreview(previewOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 

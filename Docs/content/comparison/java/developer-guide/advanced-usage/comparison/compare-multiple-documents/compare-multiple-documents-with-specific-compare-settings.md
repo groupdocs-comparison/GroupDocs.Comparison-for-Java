@@ -22,8 +22,7 @@ The following code sample shows how to compare multiple documents with specific
 ## Compare multiple documents with specific compare settings from local disk
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target1.pdf");
     comparer.add("C:\\target2.pdf");
     comparer.add("C:\\target3.pdf");
@@ -35,16 +34,13 @@ try {
     compareOptions.setInsertedItemStyle(styleSettings);
 
     comparer.compare("C:\\result.pdf", compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Compare multiple documents with specific compare settings from stream
 
 ```java
-Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"));
-try {
+try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     comparer.add(new FileInputStream("C:\\target1.pdf"));
     comparer.add(new FileInputStream("C:\\target2.pdf"));
     comparer.add(new FileInputStream("C:\\target3.pdf"));
@@ -56,8 +52,6 @@ try {
     compareOptions.setInsertedItemStyle(styleSettings);
 
     comparer.compare(new FileOutputStream("C:\\result.pdf"), compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 

@@ -9,9 +9,7 @@ import com.groupdocs.comparison.options.save.SaveOptions;
 import com.groupdocs.comparison.options.style.StyleSettings;
 
 import java.awt.*;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * This class demonstrates how to use CompareOptions
@@ -24,12 +22,12 @@ public class UseCompareOptions {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "IgnoreHeaderFooter");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WITH_FOOTER);
-        try {
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_WITH_FOOTER)) {
             comparer.add(SampleFiles.TARGET_WITH_FOOTER);
             {
                 // Note: It is the same with commented code below
-                comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(),
+                comparer.compare(resultStream, new SaveOptions(),
                         new CompareOptions.Builder()
                                 .setHeaderFootersComparison(false)
                                 .build());
@@ -39,9 +37,6 @@ public class UseCompareOptions {
 //                compareOptions.setHeaderFootersComparison(false);
 //                comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), compareOptions);
             }
-        } finally {
-            comparer.dispose();
-
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
@@ -53,13 +48,13 @@ public class UseCompareOptions {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "SetOutputPaperSize");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(new FileOutputStream(outputFileName),
+                comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setPaperSize(PaperSize.A6)
                                 .build());
@@ -69,9 +64,6 @@ public class UseCompareOptions {
 //                compareOptions.setPaperSize(PaperSize.A6);
 //                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
-        } finally {
-            comparer.dispose();
-
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
@@ -83,13 +75,13 @@ public class UseCompareOptions {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "AdjustComparisonSensitivity");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(new FileOutputStream(outputFileName),
+                comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setSensitivityOfComparison(100)
                                 .build());
@@ -99,9 +91,6 @@ public class UseCompareOptions {
 //                compareOptions.setSensitivityOfComparison(100);
 //                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
-        } finally {
-            comparer.dispose();
-
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
@@ -113,12 +102,14 @@ public class UseCompareOptions {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CustomizeChangesStylesStream");
 
-        Comparer comparer = new Comparer(new FileInputStream(SampleFiles.SOURCE_WORD));
-        try {
-            comparer.add(new FileInputStream(SampleFiles.TARGET_WORD));
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_WORD);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET1_WORD);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
             {
                 // Note: It is the same with commented code below
-                comparer.compare(new FileOutputStream(outputFileName),
+                comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -177,8 +168,6 @@ public class UseCompareOptions {
 //                compareOptions.setChangedItemStyle(changedStyleSettings);
 //                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
@@ -190,9 +179,8 @@ public class UseCompareOptions {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CustomizeChangesStylesPath");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
             {
                 // Note: It is the same with commented code below
                 comparer.compare(outputFileName,
@@ -254,8 +242,6 @@ public class UseCompareOptions {
 //                compareOptions.setChangedItemStyle(changedStyleSettings);
 //                comparer.compare(outputFileName, compareOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

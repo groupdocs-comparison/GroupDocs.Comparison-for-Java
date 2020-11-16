@@ -6,6 +6,8 @@ import com.groupdocs.comparison.examples.Utils;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * This example demonstrates comparing of two cells files
@@ -15,12 +17,12 @@ public class CompareCellsFromStream {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_CELLS, "CompareCellsFromStream");
 
-        Comparer comparer = new Comparer(new FileInputStream(SampleFiles.SOURCE_CELLS));
-        try {
-            comparer.add(new FileInputStream(SampleFiles.TARGET_CELLS));
-            comparer.compare(new FileOutputStream(outputFileName));
-        } finally {
-            comparer.dispose();
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_CELLS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_CELLS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+            comparer.compare(resultStream);
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

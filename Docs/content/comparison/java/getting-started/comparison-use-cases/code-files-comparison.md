@@ -34,8 +34,7 @@ ApplyChangeOptions class:
 The following code samples demonstrate how to compare two CS files and accept or reject detected changesin a specific range.
 
 ```java
-Comparer comparer = new Comparer(SOURCE_FILE); // NOTE: Put here actual path to source document
-try {
+try (Comparer comparer = new Comparer(SOURCE_FILE)) {
     comparer.add(TARGET_FILE); // NOTE: Put here actual path to target document
     comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
@@ -47,8 +46,6 @@ try {
         changes[n].setComparisonAction(ComparisonAction.ACCEPT);
     }
     comparer.applyChanges(RESULT_FILE, new SaveOptions(), new ApplyChangeOptions(changes));
-} finally {
-    comparer.dispose();
 }
 ```
 

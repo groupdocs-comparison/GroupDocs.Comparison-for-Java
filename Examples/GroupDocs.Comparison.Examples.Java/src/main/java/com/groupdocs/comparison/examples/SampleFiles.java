@@ -9,7 +9,7 @@ public class SampleFiles {
     public static final String TARGET_CELLS = getSampleFilePath("target.xlsx");
 
     public static final String SOURCE_WORD = getSampleFilePath("source.docx");
-    public static final String TARGET_WORD = getSampleFilePath("target.docx");
+    public static final String TARGET1_WORD = getSampleFilePath("target.docx");
     public static final String TARGET2_WORD = getSampleFilePath("target2.docx");
     public static final String TARGET3_WORD = getSampleFilePath("target3.docx");
     public static final String SOURCE_WORD_PROTECTED = getSampleFilePath("source_protected.docx");

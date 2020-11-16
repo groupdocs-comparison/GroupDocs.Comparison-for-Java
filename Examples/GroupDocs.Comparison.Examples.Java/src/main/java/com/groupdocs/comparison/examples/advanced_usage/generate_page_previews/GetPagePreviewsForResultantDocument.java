@@ -8,10 +8,7 @@ import com.groupdocs.comparison.examples.Utils;
 import com.groupdocs.comparison.options.PreviewOptions;
 import com.groupdocs.comparison.options.enums.PreviewFormats;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
  * This example demonstrates how to get document previews
@@ -21,12 +18,13 @@ public class GetPagePreviewsForResultantDocument {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "GetPagePreviewsForResultantDocument");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
-            comparer.compare(new FileOutputStream(outputFileName));
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             InputStream documentStream = new FileInputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
+            comparer.compare(resultStream);
 
-            Document document = new Document(new FileInputStream(outputFileName));
+            Document document = new Document(documentStream);
 
             {
                 // Note: It is the same with commented code below
@@ -64,8 +62,6 @@ public class GetPagePreviewsForResultantDocument {
 //                previewOptions.setPageNumbers(new int[]{1, 2});
 //                document.generatePreview(previewOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocument previews generated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

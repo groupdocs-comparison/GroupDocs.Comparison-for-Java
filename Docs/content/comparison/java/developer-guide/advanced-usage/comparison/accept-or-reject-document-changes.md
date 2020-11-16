@@ -28,27 +28,21 @@ The following code sample shows how to accept/reject detected changes.
 ## Accept or Reject changes from local disk
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare("C:\\result.pdf");
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Accept or Reject changes from stream
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     changes[0].setComparisonAction(ComparisonAction.REJECT);
     comparer.applyChanges(new FileOutputStream("C:\\result.pdf"), new ApplyChangeOptions(changes));
-} finally {
-    comparer.dispose();
 }
 ```
 

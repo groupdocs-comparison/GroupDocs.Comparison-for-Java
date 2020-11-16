@@ -13,12 +13,9 @@ public class LoadDocumentFromLocalDisc {
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "LoadDocumentFromLocalDisc");
 
         String sourcePath = SampleFiles.SOURCE_WORD;
-        Comparer comparer = new Comparer(sourcePath);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (Comparer comparer = new Comparer(sourcePath)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
             comparer.compare(outputFileName);
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

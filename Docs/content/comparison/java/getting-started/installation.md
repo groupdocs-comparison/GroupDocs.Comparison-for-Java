@@ -34,6 +34,7 @@ GroupDocs hosts all Java APIs on [GroupDocs Repository](https://repository.grou
 
 First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows:
 
+```xml
 <repositories>
 	<repository>
 		<id>GroupDocsJavaAPI</id>
@@ -41,17 +42,20 @@ First, you need to specify GroupDocs repository configuration/location in your M
 		<url>http://repository.groupdocs.com/repo/</url>
 	</repository>
 </repositories>
+```
 
 ### Define GroupDocs.Comparison for Java API Dependency
 
 Then define GroupDocs.Comparison for Java API dependency in your `pom.xml` as follows:
 
+```xml
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-comparison</artifactId>
-        <version>19.10</version> 
+        <version>20.11</version> 
     </dependency>
 </dependencies>
+```
 
 After performing above-mentioned steps, GroupDocs.Comparison for Java dependency will finally be added to your Maven project.

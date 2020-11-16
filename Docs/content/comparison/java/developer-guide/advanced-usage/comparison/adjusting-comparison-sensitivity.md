@@ -49,16 +49,13 @@ The following code snippet demonstrates how compare files with specific sensit
 ## Compare files with sensitivity adjustment
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
 
     CompareOptions compareOptions = new CompareOptions();
     compareOptions.setSensitivityOfComparison(100);
 
     comparer.compare("C:\\result.pdf", compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 

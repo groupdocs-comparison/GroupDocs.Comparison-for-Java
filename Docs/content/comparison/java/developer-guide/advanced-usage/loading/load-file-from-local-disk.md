@@ -13,12 +13,9 @@ When the source file is located on the local disk **[GroupDocs.Comparison](htt
 Following code snippet shows how to load files from local disk.
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare("C:\\result.pdf");
-} finally {
-    comparer.dispose();
 }
 ```
 

@@ -14,9 +14,8 @@ public class SetDocumentMetadataTarget {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "SetDocumentMetadataTarget");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
 
             {
                 // Note: It is the same with commented code below
@@ -29,8 +28,6 @@ public class SetDocumentMetadataTarget {
 //                saveOptions.setCloneMetadataType(MetadataType.Target);
 //                comparer.compare(outputFileName, saveOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

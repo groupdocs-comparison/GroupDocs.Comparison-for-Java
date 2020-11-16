@@ -15,9 +15,8 @@ public class SetPasswordForResultantDocument {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "SetPasswordForResultantDocument");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
 
             {
                 // Note: It is the same with commented code below
@@ -36,8 +35,6 @@ public class SetPasswordForResultantDocument {
 //                saveOptions.setPassword("3333");
 //                comparer.compare(outputFileName, saveOptions, compareOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

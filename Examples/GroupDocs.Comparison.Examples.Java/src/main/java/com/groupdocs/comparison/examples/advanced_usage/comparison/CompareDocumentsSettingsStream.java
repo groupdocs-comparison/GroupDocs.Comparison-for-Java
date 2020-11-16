@@ -9,6 +9,8 @@ import com.groupdocs.comparison.options.style.StyleSettings;
 import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * This example demonstrates using some of compare settings
@@ -18,13 +20,15 @@ public class CompareDocumentsSettingsStream {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CompareDocumentsSettingsStream");
 
-        Comparer comparer = new Comparer(new FileInputStream(SampleFiles.SOURCE_WORD));
-        try {
-            comparer.add(new FileInputStream(SampleFiles.TARGET_WORD));
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_WORD);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET1_WORD);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(new FileOutputStream(outputFileName),
+                comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -44,8 +48,6 @@ public class CompareDocumentsSettingsStream {
 //                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
 
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

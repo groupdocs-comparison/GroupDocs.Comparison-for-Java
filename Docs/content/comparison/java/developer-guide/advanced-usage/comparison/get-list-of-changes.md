@@ -23,28 +23,22 @@ The following code sample demonstrates how to get list of all changes.
 ## Get list of changes from local disk
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     System.out.println("Count of changes: " + changes.length);
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Get list of changes from stream
 
 ```java
-Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"));
-try {
+try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     comparer.add(new FileInputStream("C:\\target.pdf"));
     comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     System.out.println("Count of changes: " + changes.length);
-} finally {
-    comparer.dispose();
 }
 ```
 

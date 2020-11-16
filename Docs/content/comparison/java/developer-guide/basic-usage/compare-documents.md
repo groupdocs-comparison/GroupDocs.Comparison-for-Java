@@ -36,24 +36,18 @@ The following code snippet demonstrates the simplest case of documents compariso
 ## Compare documents from local file 
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare("C:\\result.pdf");
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Compare documents from stream 
 
 ```java
-Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"));
-try {
+try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     comparer.add(new FileInputStream("C:\\target.pdf"));
     comparer.compare(new FileOutputStream("C:\\result.pdf"));
-} finally {
-    comparer.dispose();
 }
 ```
 

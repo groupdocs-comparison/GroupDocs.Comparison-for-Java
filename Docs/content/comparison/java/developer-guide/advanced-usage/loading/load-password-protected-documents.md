@@ -23,12 +23,9 @@ The following are the steps to compare password-protected documents.
 The following code sample shows how to compare password protected documents.
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf", new LoadOptions("source-password"));
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf", new LoadOptions("source-password"))) {
     comparer.add("C:\\target.pdf", new LoadOptions("target-password"));
     comparer.compare(new FileOutputStream("C:\\result.pdf"));
-} finally {
-    comparer.dispose();
 }
 ```
 

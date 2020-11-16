@@ -1,6 +1,7 @@
 package com.groupdocs.comparison.examples.advanced_usage.comparison;
 
 import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.common.exceptions.ComparisonException;
 import com.groupdocs.comparison.examples.SampleFiles;
 import com.groupdocs.comparison.examples.Utils;
 import com.groupdocs.comparison.options.CompareOptions;
@@ -9,6 +10,7 @@ import com.groupdocs.comparison.options.style.DiagramMasterSetting;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 
 /**
  * This class demonstrates comparing of multi documents
@@ -21,12 +23,11 @@ public class CompareMultipleDocumentsPath {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "compareMultipleWordsDocuments");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
 
             {
                 // Note: It is the same with commented code below
-                comparer.add(SampleFiles.TARGET_WORD, SampleFiles.TARGET2_WORD, SampleFiles.TARGET3_WORD);
+                comparer.add(SampleFiles.TARGET1_WORD, SampleFiles.TARGET2_WORD, SampleFiles.TARGET3_WORD);
 
                 // Note: It is the same with the code above
 //                comparer.add(SampleFiles.TARGET_WORD);
@@ -35,8 +36,6 @@ public class CompareMultipleDocumentsPath {
             }
 
             comparer.compare(outputFileName);
-        } finally {
-            comparer.dispose();
         }
 
         System.out.println("\nChanges updated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -48,8 +47,8 @@ public class CompareMultipleDocumentsPath {
     public static void compareMultipleTxtDocuments() throws IOException {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_TXT, "compareMultipleTxtDocuments");
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_TXT);
-        try {
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_TXT)) {
 
             {
                 // Note: It is the same with commented code below
@@ -61,9 +60,7 @@ public class CompareMultipleDocumentsPath {
 //                comparer.add(SampleFiles.TARGET3_TXT);
             }
 
-            comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), new CompareOptions());
-        } finally {
-            comparer.dispose();
+            comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
         }
 
         System.out.println("\nText documents compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -75,8 +72,8 @@ public class CompareMultipleDocumentsPath {
     public static void compareMultipleEmailDocuments() throws IOException {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_EMAIL, "compareMultipleEmailDocuments");
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_EMAIL);
-        try {
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_EMAIL)) {
 
             {
                 // Note: It is the same with commented code below
@@ -88,9 +85,7 @@ public class CompareMultipleDocumentsPath {
 //                comparer.add(SampleFiles.TARGET3_EMAIL);
             }
 
-            comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), new CompareOptions());
-        } finally {
-            comparer.dispose();
+            comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
         }
 
         System.out.println("\nEmail documents compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -103,8 +98,8 @@ public class CompareMultipleDocumentsPath {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_PDF, "compareMultiplePdfDocuments");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_PDF);
-        try {
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_PDF)) {
 
             {
                 // Note: It is the same with commented code below
@@ -115,10 +110,13 @@ public class CompareMultipleDocumentsPath {
 //                comparer.add(SampleFiles.TARGET2_PDF);
 //                comparer.add(SampleFiles.TARGET3_PDF);
             }
-
-            comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), new CompareOptions());
-        } finally {
-            comparer.dispose();
+            comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
+        } catch (ComparisonException e) {
+            if (e.getMessage() != null && e.getMessage().contains("It is impossible to process this document without license")) {
+                System.err.println("Valid license is required to run this sample");
+            } else {
+                throw e;
+            }
         }
         System.out.println("\nPDF documents compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
@@ -130,8 +128,8 @@ public class CompareMultipleDocumentsPath {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_DIAGRAM, "compareMultipleDiagramDocuments");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_DIAGRAM);
-        try {
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(SampleFiles.SOURCE_DIAGRAM)) {
 
             {
                 // Note: It is the same with commented code below
@@ -145,7 +143,7 @@ public class CompareMultipleDocumentsPath {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(),
+                comparer.compare(resultStream, new SaveOptions(),
                         new CompareOptions.Builder()
                                 .setDiagramMasterSetting(
                                         new DiagramMasterSetting.Builder()
@@ -159,8 +157,6 @@ public class CompareMultipleDocumentsPath {
 //                compareOptions.setDiagramMasterSetting(diagramMasterSetting);
 //                comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), compareOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDiagram documents compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

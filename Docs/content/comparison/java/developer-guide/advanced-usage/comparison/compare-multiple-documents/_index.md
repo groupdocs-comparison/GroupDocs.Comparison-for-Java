@@ -23,28 +23,22 @@ The following code sample shows how to compare multiple documents with specific
 ## Compare multiple documents from local disk
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target1.pdf");
     comparer.add("C:\\target2.pdf");
     comparer.add("C:\\target3.pdf");
     comparer.compare("C:\\result.pdf");
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Compare multiple documents from stream
 
 ```java
-Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"));
-try {
+try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     comparer.add(new FileInputStream("C:\\target1.pdf"));
     comparer.add(new FileInputStream("C:\\target2.pdf"));
     comparer.add(new FileInputStream("C:\\target3.pdf"));
     comparer.compare(new FileOutputStream("C:\\result.pdf"));
-} finally {
-    comparer.dispose();
 }
 ```
 

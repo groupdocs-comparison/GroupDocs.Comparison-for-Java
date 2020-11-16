@@ -29,14 +29,11 @@ The following are the steps to compare three or more XLSX files
 The following code samples demonstrate how to compare three or more XLSX files.
 
 ```java
-Comparer comparer = new Comparer(SOURCE_FILE);
-try {
+try (Comparer comparer = new Comparer(SOURCE_FILE)) {
     comparer.add(TARGET_FILE_ONE);
     comparer.add(TARGET_FILE_TWO);
  
     comparer.compare(RESULT_FILE);
-} finally {
-    comparer.dispose();
 }
 ```
 

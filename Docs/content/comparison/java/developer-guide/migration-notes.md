@@ -36,13 +36,10 @@ result.saveDocument("result.docx");
 **New coding style**
 
 ```java
-Comparer comparer = new Comparer("source.docx");
-try {
+try (Comparer comparer = new Comparer("source.docx")) {
     comparer.add("target.docx");
     CompareOptions compareOptions = new CompareOptions();
     compareOptions.setDetectStyleChanges(true);
     comparer.compare("result.docx", compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```

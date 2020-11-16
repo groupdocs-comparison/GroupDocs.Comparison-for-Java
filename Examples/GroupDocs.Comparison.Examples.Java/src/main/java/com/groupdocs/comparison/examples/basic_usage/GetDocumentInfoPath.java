@@ -9,12 +9,9 @@ import com.groupdocs.comparison.interfaces.IDocumentInfo;
  */
 public class GetDocumentInfoPath {
     public static void run() {
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
             IDocumentInfo info = comparer.getSource().getDocumentInfo();
             System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize()));
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocument info extracted successfully.");
     }

@@ -27,8 +27,7 @@ The following are the steps to compare two PPTX files.
 The following code samples demonstrate how to compare two PPTX files.
 
 ```java
-Comparer comparer = new Comparer(SOURCE_FILE);
-try {
+try (Comparer comparer = new Comparer(SOURCE_FILE)) {
     comparer.add(TARGET_FILE);
  
     final CompareOptions compareOptions = new CompareOptions();
@@ -36,8 +35,6 @@ try {
     compareOptions.setDetalisationLevel(DetalisationLevel.High);
  
     comparer.compare(RESULT_FILE, compareOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 

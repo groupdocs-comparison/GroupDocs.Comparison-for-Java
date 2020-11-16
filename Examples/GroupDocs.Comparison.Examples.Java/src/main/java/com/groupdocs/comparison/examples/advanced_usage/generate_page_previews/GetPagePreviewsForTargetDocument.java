@@ -16,9 +16,8 @@ import java.io.OutputStream;
  */
 public class GetPagePreviewsForTargetDocument {
     public static void run() {
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
 
             {
                 // Note: It is the same with commented code below
@@ -57,8 +56,6 @@ public class GetPagePreviewsForTargetDocument {
 //                previewOptions.setPageNumbers(new int[]{1, 2});
 //                comparer.getTargets().get(0).generatePreview(previewOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocument previews generated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

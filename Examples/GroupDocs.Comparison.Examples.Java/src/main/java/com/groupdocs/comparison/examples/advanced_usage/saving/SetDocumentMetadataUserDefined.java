@@ -15,9 +15,8 @@ public class SetDocumentMetadataUserDefined {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "SetDocumentMetadataUserDefined");
 
-        Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
-        try {
-            comparer.add(SampleFiles.TARGET_WORD);
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
 
             {
                 // Note: It is the same with commented code below
@@ -41,8 +40,6 @@ public class SetDocumentMetadataUserDefined {
 //                saveOptions.setFileAuthorMetadata(fileAuthorMetadata);
 //                comparer.compare(outputFileName, saveOptions);
             }
-        } finally {
-            comparer.dispose();
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

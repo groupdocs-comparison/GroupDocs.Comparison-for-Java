@@ -28,36 +28,29 @@ The following code demonstrates how to set resultant file metadata.
 ## Set metadata from source file
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     final SaveOptions saveOptions = new SaveOptions();
     saveOptions.setCloneMetadataType(MetadataType.Source);
     comparer.compare("C:\\result.pdf", saveOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Set metadata from target file
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     final SaveOptions saveOptions = new SaveOptions();
     saveOptions.setCloneMetadataType(MetadataType.Target);
     comparer.compare("C:\\result.pdf", saveOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
 ## Set user-defined metadata 
 
 ```java
-Comparer comparer = new Comparer("C:\\source.pdf");
-try {
+try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     final FileAuthorMetadata fileAuthorMetadata = new FileAuthorMetadata();
     fileAuthorMetadata.setAuthor("Tom");
@@ -67,8 +60,6 @@ try {
     saveOptions.setCloneMetadataType(MetadataType.FileAuthor);
     saveOptions.setFileAuthorMetadata(fileAuthorMetadata);
     comparer.compare("C:\\result.pdf", saveOptions);
-} finally {
-    comparer.dispose();
 }
 ```
 
