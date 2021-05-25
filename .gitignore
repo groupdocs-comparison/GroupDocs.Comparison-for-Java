@@ -1,1 +1,4 @@
 deploy_key
+
+#License files
+*.lic
