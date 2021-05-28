@@ -3,35 +3,36 @@ id: compare-documents
 url: comparison/java/compare-documents
 title: Compare documents
 weight: 3
-description: ""
-keywords: 
+description: "This article demonstrates how to compare Word, Excel, PowerPoint, Outlook, OneNote, PDF, Image, HTML, AutoCAD, Visio, OpenDocument, OneNote documents using GroupDocs.Comparison for Java."
+keywords: Compare documents, document comparison in C#
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---
+## File comparison features
 
-Changes detection algorithms used by **[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** allows to detect changes in different document parts and blocks:
+Changes detection algorithms used by **[GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)** allows to detect changes in different document parts and blocks:
 
-*   Text blocks - paragraphs, words and characters;    
-*   Tables;    
-*   Images;    
-*   Shapes etc.    
+*   Text blocks - paragraphs, words and characters;
+*   Tables;
+*   Images;
+*   Shapes etc.
 
 For better visual separation of detected changes added, modified or deleted document parts are highlighted with different colors:
 
-*   Added – **blue**     
-*   Modified – **green**    
-*   Style – **green**    
-*   Deleted – **red**    
+*   Added – <font color="blue">**blue** </font>
+*   Modified – <font color="green">**green**</font>
+*   Style – <font color="green">**green**</font>
+*   Deleted – <font color="red">**red**</font>
 
 Changes styling coloring scheme can be customized if needed, changed text blocks can be marked with different formatting - italic, bold, underlined, strikethrough etc.
 
- Here are simple steps to compare two documents: 
+Here are simple steps to compare two documents:
 
-*   Instantiate [Comparer](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer) objectwith source document path or stream;    
-*   Call [add](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.lang.String)) method and specify target document path or stream.    
-*   Call [compare](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#compare(java.lang.String)) method.    
+*   Instantiate [Comparer](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer) objectwith source document path or stream;
+*   Call [add](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.lang.String)) method and specify target document path or stream.
+*   Call [compare](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#compare(java.lang.String)) method.
 
-The following code snippet demonstrates the simplest case of documents comparison using couple lines of code. 
+The following code snippet demonstrates the simplest case of documents comparison using couple lines of code.
 
 ## Compare documents from local file 
 
@@ -60,11 +61,11 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 *   [GroupDocs.Comparison for Java examples, plugins, and showcase](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java)
 *   [GroupDocs.Comparison for .NET examples, plugins, and showcase](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET)
-*   [Document Comparison for Java App Dropwizard UI Modern Example](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard)    
-*   [Document Comparison for Java Spring UI Example](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring)    
-*   [Document Comparison for .NET MVC UI Example](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC)    
+*   [Document Comparison for Java App Dropwizard UI Modern Example](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard)
+*   [Document Comparison for Java Spring UI Example](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring)
+*   [Document Comparison for .NET MVC UI Example](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC)
 *   [Document Comparison for .NET App WebForms UI Modern Example](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms)
-    
+
 
 ### Free Online App
 Along with full-featured Java library we provide simple, but powerful free Apps.

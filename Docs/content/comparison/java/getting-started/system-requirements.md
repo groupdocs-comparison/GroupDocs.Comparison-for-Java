@@ -1,16 +1,16 @@
 ---
 id: system-requirements
 url: comparison/java/system-requirements
-title: Supported Platforms
+title: System Requirements
 weight: 3
-description: ""
-keywords: 
+description: "On this page you will find system requirements supported platforms, development environments. GroupDocs.Comparison for Java does not require any external software or third party tool to be installed."
+keywords: System Requirements, Supported Operating System, Supported Frameworks
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---
 ## Overview
 
-GroupDocs.Comparison for Java does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "comparison/java/getting-started/installation.md" >}}).
+**[GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)** does not require any external software or third party tool to be installed. Just follow one of the way as described in [Installation]({{< ref "comparison/java/getting-started/installation.md" >}}).
 
 ## Supported Operating Systems
 
@@ -43,7 +43,17 @@ GroupDocs.Comparison for Java supports any 32-bit or 64-bit operating system t
 
 GroupDocs.Comparison for Java supports the following Java versions:
 
-*   J2SE 6.0 (1.6)
 *   J2SE 7.0 (1.7)
 *   J2SE 8.0 (1.8)
 *   or above (*for example Java 10*)
+
+## Development Environments
+
+GroupDocs.Comparison for Java can be used to develop applications in any development environment that targets the Java platform, but the following environments are explicitly supported:
+
+*   IntelliJ IDEA
+*   Eclipse
+*   Apache NetBeans
+*   Apache Maven
+*   Apache Ant
+*   Gradle

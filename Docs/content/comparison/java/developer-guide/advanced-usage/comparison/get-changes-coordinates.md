@@ -3,12 +3,12 @@ id: get-changes-coordinates
 url: comparison/java/get-changes-coordinates
 title: Get changes coordinates
 weight: 5
-description: ""
-keywords: 
+description: "This article explains how to obtain coordinates for detected changes at a document pages preview when compare documents with GroupDocs.Comparison for Java"
+keywords: Compare documents, get changes coordinates
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---
-**[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** allows to detect changes between source and target files and obtain changes coordinates at files preview images.
+**[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** allows to detect changes between source and target documents and obtain changes coordinates at document preview images. These coordinates can be quite useful for highlighting detected changes at document preview images with some graphics (for example, place a red rectangle around each detected change).
 
 The following are the steps to obtain changes coordinates.
 

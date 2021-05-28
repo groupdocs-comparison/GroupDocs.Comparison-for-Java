@@ -14,7 +14,7 @@ hideChildren: False
 
 The following are the steps to compare multiple documents.
 
-*   Instantiate [Comparer](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer) objectwith source document path or stream;
+*   Instantiate [Comparer](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer) objectwith source document path or stream;
 *   Call [add](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/add/index) method and specify target document path or stream. Repeat this step for every target document.
 *   Call [compare](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer) method.
 

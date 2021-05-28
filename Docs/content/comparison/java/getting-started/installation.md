@@ -1,7 +1,7 @@
 ---
 id: installation
 url: comparison/java/installation
-title: Development Environment Installation and Configuration
+title: Installation
 weight: 4
 description: ""
 keywords: 
@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ### Operating Systems
 
-**GroupDocs.Comparison** for Java can be executed on any Operating System with Java JDK installed.
+**[GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)** can be executed on any Operating System with Java JDK installed.
 
 *   Windows Desktops and Servers
 *   Linux
@@ -18,7 +18,7 @@ hideChildren: False
 
 ### Supported Runtime
 
-GroupDocs.Comparison for Java supports Java run-time version 6 (1.6) and above.
+**[GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)** supports Java run-time version 7 (1.7) and above.
 
 ### Development Environments
 
@@ -46,14 +46,14 @@ First, you need to specify GroupDocs repository configuration/location in your M
 
 ### Define GroupDocs.Comparison for Java API Dependency
 
-Then define GroupDocs.Comparison for Java API dependency in your `pom.xml` as follows:
+Then define **[GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)** API dependency in your `pom.xml` as follows:
 
 ```xml
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-comparison</artifactId>
-        <version>20.11</version> 
+        <version>21.5</version> 
     </dependency>
 </dependencies>
 ```

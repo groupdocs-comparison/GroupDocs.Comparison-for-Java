@@ -10,7 +10,7 @@ hideChildren: True
 ---
 {{< alert style="info" >}}
 ![](comparison/java/images/home.png) **Welcome to the GroupDocs.Comparison for Java**  
-It is a Difference Checker and Documents Merging API. Supported are all industry standard document formats: PDF, OpenDocument, HTML, Microsoft Word, Excel, PowerPoint and Text files. It compares both Content and Styles of the documents. Supported with out-of-box ‘Track Changes’ functionality producing a summary file listing the source files with the changes made. 
+It compares and merges Microsoft Word, Excel, PowerPoint, openDocument ODT, PDF, Text and HTML documents. Document comparison API compares content to detect changes for words, paragraphs and characters. It also compares style changes like font size, bold, italic etc. Differences summary saved in a separate result file. 
 {{< /alert >}}
 
 ## GroupDocs.Comparison for Java Resources

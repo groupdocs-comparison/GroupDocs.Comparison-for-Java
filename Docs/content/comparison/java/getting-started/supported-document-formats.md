@@ -1,10 +1,10 @@
 ---
 id: supported-document-formats
 url: comparison/java/supported-document-formats
-title: Supported Document Formats
+title: Supported File Formats
 weight: 2
-description: ""
-keywords: 
+description: "The following article indicates the file formats that GroupDocs.Comparison can work with."
+keywords: File comparison, Apply Reject changes between documents, information extraction
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---

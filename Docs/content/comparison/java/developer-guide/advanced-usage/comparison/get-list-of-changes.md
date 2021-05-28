@@ -3,8 +3,8 @@ id: get-list-of-changes
 url: comparison/java/get-list-of-changes
 title: Get list of changes
 weight: 6
-description: ""
-keywords: 
+description: "This article explains how to get collection of changes between compared documents when using GroupDocs.Comparison for Java."
+keywords: Get file diff, documents diff, compare documents, compare files
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---

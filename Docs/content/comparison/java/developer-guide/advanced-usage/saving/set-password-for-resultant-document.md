@@ -3,20 +3,19 @@ id: set-password-for-resultant-document
 url: comparison/java/set-password-for-resultant-document
 title: Set password for resultant document
 weight: 2
-description: ""
-keywords: 
+description: "This article explains how to set document password after files comparison within your Java applications using GroupDocs.Comparison for Java."
+keywords: Compare document and protect with password
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---
-{{< alert style="info" >}} This feature works only for Excel spreadsheets, Word processing documents and PowerPoint presentations.{{< /alert >}}
-
 **[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** allows to protect resultant document with password.
 
 The following are the steps to protect resultant document:
 *   Instantiate [Comparer](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer) objectwith source document path or stream;    
 *   Call [add](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#add(java.lang.String)) method and specify target document path or stream.    
-*   Instantiate [CompareOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions) object with [setPasswordSaveOption](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions#setPasswordSaveOption(int))([PasswordSaveOption.User](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.enums/PasswordSaveOption#User));    
-*   Instantiate [SaveOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions) object and set using *setPassword* setter desired password for resultant document;    
+*   Instantiate [CompareOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions) object with 
+*   Set [PasswordSaveOption](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions#setPasswordSaveOption(int)) property of [CompareOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions) object to [PasswordSaveOption.User](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.enums/PasswordSaveOption#User);    
+*   Instantiate [SaveOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions) object and set using [Password](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions#setPassword(java.lang.String)) setter desired password for resultant document;    
 *   Call [compare](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#compare(java.lang.String,%20com.groupdocs.comparison.options.save.SaveOptions,%20com.groupdocs.comparison.options.CompareOptions)) method and pass [SaveOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions) and [CompareOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options/CompareOptions) objects to a method;
     
 

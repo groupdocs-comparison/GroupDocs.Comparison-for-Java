@@ -3,12 +3,12 @@ id: set-document-metadata-on-save
 url: comparison/java/set-document-metadata-on-save
 title: Set document metadata on save
 weight: 1
-description: ""
-keywords: 
+description: "Follow this guide and learn how to set document metadata when saving resultant document after files comparison within your Java applications."
+keywords: Save document metadata,  Compare documents, Document comparison, File diff
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---
-**[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** provides an ability to select metadata source when saving resultant file. Files have metadata information – author, organization, etc.  
+Usually documents can contain some metadata information, such as author, organization, etc. [**GroupDocs.Comparison**](https://products.groupdocs.com/comparison) provides an ability to select metadata source when saving resultant document.  
 
 Possible metadata sources are:
 *   **Source** file metadata;    
@@ -19,7 +19,7 @@ Possible metadata sources are:
 The following are the steps to set resultant file metadata:
 *   Instantiate [Comparer](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer) objectwith source file path or stream;    
 *   Call [add](https://apireference.groupdocs.com/net/comparison/groupdocs.comparison/comparer/methods/add/index) method and specify target file path or stream.    
-*   Instantiate [SaveOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions) object and use setter [setCloneMetadataType](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions#setCloneMetadataType(int))to set desired [MetadataType](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.enums/MetadataType) variant;    
+*   Instantiate [SaveOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions) object and use property [CloneMetadataType](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions#setCloneMetadataType(int)) to set desired [MetadataType](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.enums/MetadataType) variant;    
 *   Call [compare](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison/Comparer#compare(java.lang.String,%20com.groupdocs.comparison.options.CompareOptions)) method and pass [SaveOptions](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.options.save/SaveOptions) object to method;
     
 

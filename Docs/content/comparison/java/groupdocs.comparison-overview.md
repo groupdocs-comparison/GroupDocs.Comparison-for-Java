@@ -1,16 +1,15 @@
 ---
-id: introducing-groupdocs-comparison-for-java
-url: comparison/java/introducing-groupdocs-comparison-for-java
-title: Introducing GroupDocs.Comparison for Java
+id: groupdocs-comparison-overview
+url: comparison/java/groupdocs-comparison-overview
+title: GroupDocs.Comparison Overview
 weight: 1
-description: ""
-keywords: 
+description: "In this article, get acquainted with the features, functions, supported file formats and developer usage of GroupDocs.Comparison for Java — API to compare two or more files and get the difference between them."
+keywords: GroupDocs.Comparison Overview, Developer usage
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---
-**[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** – API for compare and merge two or more files in applications on the Java platform. Compiled file shows line-by-line difference of content, paragraphs, characters, styles, shapes and positions.
-
 ## What is GroupDocs.Comparison?
+**[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** – API for compare and merge two or more files in applications on the Java platform. Compiled file shows line-by-line difference of content, paragraphs, characters, styles, shapes and positions.
 
 Supported formats:
 

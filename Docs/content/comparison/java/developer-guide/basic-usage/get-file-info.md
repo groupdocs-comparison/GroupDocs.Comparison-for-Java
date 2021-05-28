@@ -10,9 +10,10 @@ hideChildren: False
 ---
 **[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** allows to get file information which includes:
 
-*   [FileType](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.interfaces/IDocumentInfo#getFileType())
-*   [PageCount](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.interfaces/IDocumentInfo#getPageCount())
-*   [FileSize](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.interfaces/IDocumentInfo#getSize())
+*   [FileType](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.interfaces/IDocumentInfo#getFileType()) - document file type (PDF, Word document, Excel spreadsheet, PowerPoint presentation or image etc.);
+*   [PageCount](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.interfaces/IDocumentInfo#getPageCount()) - count of document pages;
+*   [FileSize](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.interfaces/IDocumentInfo#getSize()) - document file size;
+*   [PagesInfo](https://apireference.groupdocs.com/comparison/java/com.groupdocs.comparison.interfaces/IDocumentInfo#getPagesInfo()) - represents information about page.
 
 The following code samples demonstrate how to get file information.
 
@@ -21,16 +22,21 @@ The following code samples demonstrate how to get file information.
 ```java
 try (Comparer comparer = new Comparer("C:\\source.docx")) {
     IDocumentInfo info = comparer.getSource().getDocumentInfo();
-    System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize()));
+    for (int i = 0; i < info.getPageCount(); i++) {
+        System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes\nWidth: %d\nHeight: %d", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize(), info.getPagesInfo().get(i).getWidth(), info.getPagesInfo().get(i).getHeight()));
+    }
 }
 ```
 
 ## Get file for the file from stream
 
 ```java
-try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.docx"))) {
-    IDocumentInfo info = comparer.getSource().getDocumentInfo();
-    System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize()));
+try (final InputStream = new FileInputStream("C:\\source.docx");
+        Comparer comparer = new Comparer(inputStream)) {
+        IDocumentInfo info = comparer.getSource().getDocumentInfo();
+        for (int i = 0; i < info.getPageCount(); i++) {
+            System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes\nWidth: %d\nHeight: %d", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize(), info.getPagesInfo().get(i).getWidth(), info.getPagesInfo().get(i).getHeight()));
+        }
 }
 ```
 

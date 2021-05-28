@@ -3,12 +3,14 @@ id: compare-multiple-documents-with-specific-compare-settings
 url: comparison/java/compare-multiple-documents-with-specific-compare-settings
 title: Compare multiple documents with specific compare settings
 weight: 2
-description: ""
-keywords: 
+description: "Following this guide you will learn how to compare multiple documents with different customisations - style detection, change comparison detalisation level and more."
+keywords: Compare multiple documents, style change detection, Multi-compare files
 productName: GroupDocs.Comparison for Java
 hideChildren: False
 ---
-**[GroupDocs.Comparison](https://products.groupdocs.com/comparison/java)** allows to compare more that 2 documents and specify some specific comparison options like styling for detected changes, comparison details level etc.
+{{< alert style="info" >}}NOTE: This feature available only for Microsoft Word documents, Microsoft PowerPoint and Open Document presentations.{{< /alert >}}
+
+**[GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java)** allows to compare more that 2 documents and specify some specific comparison options like styling for detected changes, comparison details level etc.
 
 The following are the steps to compare multiple documents with specific options.
 
