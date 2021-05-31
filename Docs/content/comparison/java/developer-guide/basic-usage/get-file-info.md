@@ -20,24 +20,26 @@ The following code samples demonstrate how to get file information.
 ## Get file info for the file from local disk
 
 ```java
-try (Comparer comparer = new Comparer("C:\\source.docx")) {
-    IDocumentInfo info = comparer.getSource().getDocumentInfo();
-    for (int i = 0; i < info.getPageCount(); i++) {
-        System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes\nWidth: %d\nHeight: %d", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize(), info.getPagesInfo().get(i).getWidth(), info.getPagesInfo().get(i).getHeight()));
+    try (Comparer comparer = new Comparer("C:\\source.docx")) {
+        IDocumentInfo info = comparer.getSource().getDocumentInfo();
+        for (int i = 0; i < info.getPageCount(); i++) {
+            System.out.printf("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes\nWidth: %d\nHeight: %d%n",
+                info.getFileType().getFileFormat(), info.getPageCount(), info.getSize(), info.getPagesInfo().get(i).getWidth(), info.getPagesInfo().get(i).getHeight());
+        }
     }
-}
 ```
 
 ## Get file for the file from stream
 
 ```java
-try (final InputStream = new FileInputStream("C:\\source.docx");
+    try (InputStream inputStream = new FileInputStream("C:\\source.docx");
         Comparer comparer = new Comparer(inputStream)) {
         IDocumentInfo info = comparer.getSource().getDocumentInfo();
         for (int i = 0; i < info.getPageCount(); i++) {
-            System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes\nWidth: %d\nHeight: %d", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize(), info.getPagesInfo().get(i).getWidth(), info.getPagesInfo().get(i).getHeight()));
+            System.out.printf("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes\nWidth: %d\nHeight: %d%n", 
+                info.getFileType().getFileFormat(), info.getPageCount(), info.getSize(), info.getPagesInfo().get(i).getWidth(), info.getPagesInfo().get(i).getHeight());
         }
-}
+    }
 ```
 
 ## More resources

@@ -33,10 +33,13 @@ The following code example demonstrates how to get revisions from a document, ac
 ```java
 try (RevisionHandler revisionHandler = new RevisionHandler(pathRevision + "Document_with_revision.docx")) {
     List<RevisionInfo> revisionList = revisionHandler.getRevisions();
-    for (RevisionInfo revision in revisionList) {
-        if (revision.getType() == RevisionType.Insertion) revision.setAction(RevisionAction.Accept);
+    for (RevisionInfo revision : revisionList) {
+        if (revision.getType() == RevisionType.Insertion) {
+            revision.setAction(RevisionAction.Accept);
+        }
     }
-    ApplyRevisionOptions revisionOptions = new ApplyRevisionOptions(revisionList);
+    ApplyRevisionOptions revisionOptions = new ApplyRevisionOptions();
+    revisionOptions.setChanges(revisionList);
     revisionHandler.applyRevisionChanges(pathRevision + "result.docx", revisionOptions);
 }
 ```
@@ -45,9 +48,9 @@ try (RevisionHandler revisionHandler = new RevisionHandler(pathRevision + "Docum
 
 ```java
 try (InputStream inputStream = new FileInputStream("Document_with_revision.docx");
-        RevisionHandler revisionHandler = new RevisionHandler(inputStream)) {
+    RevisionHandler revisionHandler = new RevisionHandler(inputStream)) {
     List<RevisionInfo> revisionList = revisionHandler.getRevisions();
-    for (RevisionInfo revision in revisionList) {
+    for (RevisionInfo revision : revisionList) {
         if (revision.getType() == RevisionType.Insertion) {
             revision.setAction(RevisionAction.Accept);
         }

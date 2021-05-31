@@ -54,12 +54,11 @@ Let's say you have two contracts in DOCX format that were concluded in different
 
 Here is the code that is used to compare two contracts.
 
-```csharp
-using (Comparer comparer = new Comparer("source-contract.docx"))
-{
-   comparer.Add("target_contract.docx");
-   comparer.Compare("result-contract.docx");
-}
+```java
+    try (Comparer comparer = new Comparer("source-contract.docx")) {
+        comparer.add("target_contract.docx");
+        comparer.compare("result-contract.docx");
+    }
 ```
 
 As a result, we get a DOCX file where the deleted elements are marked in <font color="red">**red**</font>, the added – in <font color="blue">**blue**</font>, and the modified – in <font color="green">**green**</font>.

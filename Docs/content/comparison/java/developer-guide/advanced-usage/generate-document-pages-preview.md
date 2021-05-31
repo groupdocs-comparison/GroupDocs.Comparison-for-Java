@@ -48,13 +48,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
-            String pagePath = "C:\\"+ "result_" + pageNumber + ".png";
-            try {
-                return new FileOutputStream(pagePath);
-            } catch (FileNotFoundException e) {
-                // Process exception
-                throw new RuntimeException(e);
-            }
+            return new FileOutputStream("C:\\" + "result_" + pageNumber + ".png");
         }
     });
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
@@ -71,13 +65,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
-            String pagePath = "C:\\"+ "result_" + pageNumber + ".png";
-            try {
-                return new FileOutputStream(pagePath);
-            } catch (FileNotFoundException e) {
-                // Process exception
-                throw new RuntimeException(e);
-            }
+            return new FileOutputStream("C:\\" + "result_" + pageNumber + ".png");
         }
     });
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
@@ -96,13 +84,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
-            String pagePath = "C:\\"+ "result_" + pageNumber + ".png";
-            try {
-                return new FileOutputStream(pagePath);
-            } catch (FileNotFoundException e) {
-                // Process exception
-                throw new RuntimeException(e);
-            }
+            return new FileOutputStream("C:\\" + "result_" + pageNumber + ".png");
         }
     });
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
@@ -120,19 +102,13 @@ The following code snippet demonstrates how to set specific size for preview im
 ```java
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
-    comparer.compare(new FileOutputStream("C:\\result.pdf"));
+    comparer.compare("C:\\result.pdf");
     Document document = new Document("C:\\result.pdf");
-
+    
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
-            String pagePath = "C:\\"+ "result-SetSpecificImagesSize_" + pageNumber + ".png";
-            try {
-                return new FileOutputStream(pagePath);
-            } catch (FileNotFoundException e) {
-                // Process exception
-                throw new RuntimeException(e);
-            }
+            return new FileOutputStream("C:\\" + "result-SetSpecificImagesSize_" + pageNumber + ".png");
         }
     });
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
@@ -147,31 +123,19 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
 
 ## Get page previews with manual resource cleaning
 
-By default, after generating and rendering document page preview  image stream will be immediately disposed. However there is an ability to implement custom method for handling this operation.
+By default, after generating and rendering document page preview image stream will be immediately disposed. However, there is an ability to implement custom method for handling this operation.
 
 ```java
-// Method should match with ReleasePageStream interface signature
-private static void userReleaseStreamMethod(int pageNumber, OutputStream stream) {
-    System.out.println("Releasing memory for page: " + pageNumber);
-    stream.close();
-}
- 
 // Somewhere in the same class
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     comparer.compare("C:\\result.pdf");
     Document document = new Document("C:\\result.pdf");
-
+    
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
-            String pagePath = "C:\\"+ "result-GetPagePreviewsResouresCleaning_" + pageNumber + ".png";
-            try {
-                return new FileOutputStream(pagePath);
-            } catch (FileNotFoundException e) {
-                // Process exception
-                throw new RuntimeException(e);
-            }
+            return new FileOutputStream("C:\\" + "result-GetPagePreviewsResouresCleaning_" + pageNumber + ".png");
         }
     });
     previewOptions.setPreviewFormat(PreviewFormats.PNG);
@@ -179,7 +143,8 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     previewOptions.setReleasePageStream(new Delegates.ReleasePageStream() {
         @Override
         public void invoke(int pageNumber, OutputStream outputStream) {
-            userReleaseStreamMethod(pageNumber, outputStream);
+            System.out.println("Releasing memory for page: " + pageNumber);
+            outputStream.close();
         }
     });
     document.generatePreview(previewOptions);

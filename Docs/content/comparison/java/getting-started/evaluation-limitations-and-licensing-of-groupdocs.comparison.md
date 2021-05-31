@@ -70,9 +70,9 @@ BigDecimal amountBefor = Metered.getConsumptionQuantity();
 // Call comparison
 String sourcePath = "./data/source.docx";
 String targetPath = "./data/target.docx";
-try (Comparer comparer = new Comparer()) {
-    comparer.compare(sourcePath, targetPath, new ComparisonSettings());
-    comparer.compare(sourcePath, targetPath, new ComparisonSettings()); 
+try (Comparer comparer = new Comparer(sourcePath)) {
+    comparer.add(targetPath);
+    comparer.compare(new CompareOptions());
     
     // Get consumption quantity from metered after several calls of comparison
     BigDecimal amountAfter = Metered.getConsumptionQuantity();
