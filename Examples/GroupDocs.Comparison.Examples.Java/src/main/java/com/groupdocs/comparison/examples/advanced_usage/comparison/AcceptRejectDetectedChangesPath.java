@@ -9,6 +9,7 @@ import com.groupdocs.comparison.result.ComparisonAction;
 
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 /**
  * This example demonstrates how to update changes from path
@@ -21,7 +22,7 @@ public class AcceptRejectDetectedChangesPath {
         try (OutputStream resultStream = new FileOutputStream(outputFileName);
              Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
             comparer.add(SampleFiles.TARGET1_WORD);
-            comparer.compare();
+            final Path resultPath = comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
             // inserted word "Cool" was not be added to result document
             changes[0].setComparisonAction(ComparisonAction.REJECT);

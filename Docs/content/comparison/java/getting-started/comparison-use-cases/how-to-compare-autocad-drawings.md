@@ -47,7 +47,7 @@ The following code sample demonstrates an approach described above.
 ```java
 try (Comparer comparer = new Comparer("source.dwg")) {
     comparer.add("target.dwg"); // NOTE: Put here actual path to target document
-    comparer.compare("result.dwg"); // NOTE: Put here actual path to result document
+    final Path resultPath = comparer.compare("result.dwg"); // NOTE: Put here actual path to result document
 }
 ```
 

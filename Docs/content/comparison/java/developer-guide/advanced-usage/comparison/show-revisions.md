@@ -31,7 +31,7 @@ try (Comparer comparer = new Comparer(sourcePath)) {
     comparer.add(targetPath);
     CompareOptions options = new CompareOptions();
     options.setShowRevisions(false);
-    comparer.compare(resultPath, options);
+    final Path resultPath = comparer.compare(RESULT_PATH, options);
 }
 ```
 

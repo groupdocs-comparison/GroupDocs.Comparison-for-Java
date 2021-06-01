@@ -24,10 +24,9 @@ The following code sample shows how to connect custom fonts and compare document
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.getFontDirectories().add("./fontPath/");
  
-try (Comparer comparer = new Comparer("source.docx", loadOptions))
-{
+try (Comparer comparer = new Comparer("source.docx", loadOptions)) {
     comparer.add("target.docx");
-    comparer.compare("result.docx");
+    final Path resultPath = comparer.compare("result.docx");
 }
 ```
 

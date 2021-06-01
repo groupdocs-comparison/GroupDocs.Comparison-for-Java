@@ -32,7 +32,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     final SaveOptions saveOptions = new SaveOptions();
     saveOptions.setCloneMetadataType(MetadataType.Source);
-    comparer.compare("C:\\result.pdf", saveOptions);
+    final Path resultPath = comparer.compare("C:\\result.pdf", saveOptions);
 }
 ```
 
@@ -43,7 +43,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
     final SaveOptions saveOptions = new SaveOptions();
     saveOptions.setCloneMetadataType(MetadataType.Target);
-    comparer.compare("C:\\result.pdf", saveOptions);
+    final Path resultPath = comparer.compare("C:\\result.pdf", saveOptions);
 }
 ```
 
@@ -59,7 +59,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     final SaveOptions saveOptions = new SaveOptions();
     saveOptions.setCloneMetadataType(MetadataType.FileAuthor);
     saveOptions.setFileAuthorMetadata(fileAuthorMetadata);
-    comparer.compare("C:\\result.pdf", saveOptions);
+    final Path resultPath = comparer.compare("C:\\result.pdf", saveOptions);
 }
 ```
 

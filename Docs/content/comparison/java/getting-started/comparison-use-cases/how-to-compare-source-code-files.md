@@ -56,7 +56,7 @@ The following code samples demonstrate how to compare two CS files and accept or
 ```java
 try (Comparer comparer = new Comparer(SOURCE_FILE)) {
     comparer.add(TARGET_FILE); // NOTE: Put here actual path to target document
-    comparer.compare();
+    final Path resultPath = comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     changes[0].setComparisonAction(ComparisonAction.REJECT); // This is how to reject first detected difference;
     changes[1].setComparisonAction(ComparisonAction.REJECT); // This is how to reject second detected difference;

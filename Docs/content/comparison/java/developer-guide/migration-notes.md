@@ -40,6 +40,6 @@ try (Comparer comparer = new Comparer("source.docx")) {
     comparer.add("target.docx");
     CompareOptions compareOptions = new CompareOptions();
     compareOptions.setDetectStyleChanges(true);
-    comparer.compare("result.docx", compareOptions);
+    final Path resultPath = comparer.compare("result.docx", compareOptions);
 }
 ```

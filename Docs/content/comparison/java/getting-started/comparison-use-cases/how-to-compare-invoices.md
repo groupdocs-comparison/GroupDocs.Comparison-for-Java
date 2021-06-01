@@ -35,8 +35,8 @@ try (Comparer comparer = new Comparer(SOURCE_FILE)) {
     final CompareOptions compareOptions = new CompareOptions();
     compareOptions.setSensitivityOfComparison(100);
     compareOptions.setDetalisationLevel(DetalisationLevel.High);
- 
-    comparer.compare(RESULT_FILE, compareOptions);
+
+    final Path resultPath = comparer.compare(RESULT_FILE, compareOptions);
 }
 ```
 

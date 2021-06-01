@@ -31,7 +31,7 @@ The following code sample shows how to accept/reject detected changes.
 ```java
 try (Comparer comparer = new Comparer("C:\\source.docx")) {
     comparer.add("C:\\target.docx");
-    comparer.compare();
+    final Path resultPath = comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     changes[0].setComparisonAction(ComparisonAction.REJECT);
     comparer.applyChanges("result.docx", new SaveOptions(), new ApplyChangeOptions(changes));
@@ -44,7 +44,7 @@ try (Comparer comparer = new Comparer("C:\\source.docx")) {
 try (OutputStream outputStream = new FileOutputStream("C:\\result.docx");
         Comparer comparer = new Comparer("C:\\source.docx")) {
     comparer.add("C:\\target.docx");
-    comparer.compare(new SaveOptions(), new CompareOptions());
+    final Path resultPath = comparer.compare(new SaveOptions(), new CompareOptions());
     ChangeInfo[] changes = comparer.getChanges();
     changes[0].setComparisonAction(ComparisonAction.REJECT);
     comparer.applyChanges(outputStream, new ApplyChangeOptions(changes));
@@ -56,7 +56,7 @@ try (OutputStream outputStream = new FileOutputStream("C:\\result.docx");
 ```java
 try (Comparer comparer = new Comparer("source.docx")) {
 	comparer.add("target.docx");
-    comparer.compare();
+    final Path resultPath = comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     changes[0].setComparisonAction(ComparisonAction.REJECT);
     ApplyChangeOptions changeOptions = new ApplyChangeOptions();

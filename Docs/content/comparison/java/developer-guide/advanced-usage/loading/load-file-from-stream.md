@@ -21,7 +21,7 @@ Following code snippet describes how to load file from stream.
 ```java
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
-    comparer.compare(new FileOutputStream("C:\\result.pdf"));
+    final Path resultPath = comparer.compare(new FileOutputStream("C:\\result.pdf"));
 }
 ```
 

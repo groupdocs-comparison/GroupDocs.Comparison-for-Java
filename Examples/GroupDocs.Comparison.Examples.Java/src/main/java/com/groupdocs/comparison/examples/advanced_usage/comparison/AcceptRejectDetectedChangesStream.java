@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 
 /**
@@ -27,7 +28,7 @@ public class AcceptRejectDetectedChangesStream {
              Comparer comparer = new Comparer(sourceStream)) {
 
             comparer.add(targetStream);
-            comparer.compare();
+            final Path resultPath = comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
             // inserted word "Cool" was not be added to result document
             changes[0].setComparisonAction(ComparisonAction.REJECT);

@@ -53,7 +53,7 @@ Then define **[GroupDocs.Comparison for Java](https://products.groupdocs.com/com
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-comparison</artifactId>
-        <version>21.5</version> 
+        <version>21.6</version> 
     </dependency>
 </dependencies>
 ```

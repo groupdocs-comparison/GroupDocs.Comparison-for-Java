@@ -11,6 +11,7 @@ import com.groupdocs.comparison.options.style.DiagramMasterSetting;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 /**
  * This class demonstrates comparing of multi documents
@@ -35,7 +36,7 @@ public class CompareMultipleDocumentsPath {
 //                comparer.add(SampleFiles.TARGET3_WORD);
             }
 
-            comparer.compare(outputFileName);
+            final Path resultPath = comparer.compare(outputFileName);
         }
 
         System.out.println("\nChanges updated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -60,7 +61,7 @@ public class CompareMultipleDocumentsPath {
 //                comparer.add(SampleFiles.TARGET3_TXT);
             }
 
-            comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
+            final Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
         }
 
         System.out.println("\nText documents compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -85,7 +86,7 @@ public class CompareMultipleDocumentsPath {
 //                comparer.add(SampleFiles.TARGET3_EMAIL);
             }
 
-            comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
+            final Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
         }
 
         System.out.println("\nEmail documents compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -110,7 +111,7 @@ public class CompareMultipleDocumentsPath {
 //                comparer.add(SampleFiles.TARGET2_PDF);
 //                comparer.add(SampleFiles.TARGET3_PDF);
             }
-            comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
+            final Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
         } catch (ComparisonException e) {
             if (e.getMessage() != null && e.getMessage().contains("It is impossible to process this document without license")) {
                 System.err.println("Valid license is required to run this sample");
@@ -143,7 +144,7 @@ public class CompareMultipleDocumentsPath {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(resultStream, new SaveOptions(),
+                final Path resultPath = comparer.compare(resultStream, new SaveOptions(),
                         new CompareOptions.Builder()
                                 .setDiagramMasterSetting(
                                         new DiagramMasterSetting.Builder()
@@ -155,7 +156,7 @@ public class CompareMultipleDocumentsPath {
 //                diagramMasterSetting.setMasterPath(SampleFiles.DIAGRAM_SETTINGS);
 //                final CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setDiagramMasterSetting(diagramMasterSetting);
-//                comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), compareOptions);
             }
         }
         System.out.println("\nDiagram documents compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");

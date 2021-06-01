@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 /**
  * This example demonstrates comparing of two documents loaded by file stream
@@ -22,7 +23,7 @@ public class LoadDocumentFromStream {
              OutputStream resultStream = new FileOutputStream(outputFileName);
              Comparer comparer = new Comparer(sourceStream)) {
             comparer.add(targetStream);
-            comparer.compare(resultStream);
+            final Path resultPath = comparer.compare(resultStream);
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

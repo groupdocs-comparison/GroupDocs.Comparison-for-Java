@@ -5,6 +5,8 @@ import com.groupdocs.comparison.examples.SampleFiles;
 import com.groupdocs.comparison.examples.Utils;
 import com.groupdocs.comparison.options.load.LoadOptions;
 
+import java.nio.file.Path;
+
 /**
  * This example demonstrates comparing of two documents with passwords
  */
@@ -15,7 +17,7 @@ public class CompareDocumentsProtectedPath {
 
         try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD_PROTECTED, new LoadOptions("1234"))) {
             comparer.add(SampleFiles.TARGET_WORD_PROTECTED, new LoadOptions("5678"));
-            comparer.compare(outputFileName);
+            final Path resultPath = comparer.compare(outputFileName);
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

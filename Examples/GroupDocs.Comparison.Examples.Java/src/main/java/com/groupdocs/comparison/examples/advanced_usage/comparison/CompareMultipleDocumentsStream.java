@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 /**
  * This example demonstrates comparing of multi documents
@@ -32,7 +33,7 @@ public class CompareMultipleDocumentsStream {
 //                comparer.add(new FileInputStream(SampleFiles.TARGET2_WORD));
 //                comparer.add(new FileInputStream(SampleFiles.TARGET3_WORD));
             }
-            comparer.compare(resultStream);
+            final Path resultPath = comparer.compare(resultStream);
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

@@ -23,7 +23,7 @@ The following code sample shows how to compare password protected documents.
 ```java
 try (Comparer comparer = new Comparer("C:\\source.pdf", new LoadOptions("source-password"))) {
     comparer.add("C:\\target.pdf", new LoadOptions("target-password"));
-    comparer.compare(new FileOutputStream("C:\\result.pdf"));
+    final Path resultPath = comparer.compare(new FileOutputStream("C:\\result.pdf"));
 }
 ```
 

@@ -36,7 +36,7 @@ GroupDocs hosts all Java APIs on [GroupDocs Artifact Repository](https://artifac
 ```java
 try (Comparer comparer = new Comparer("source.pdf")) {
     comparer.add("target.pdf");
-    comparer.compare("result.pdf");
+    final Path resultPath = comparer.compare("result.pdf");
 }
 ```
 

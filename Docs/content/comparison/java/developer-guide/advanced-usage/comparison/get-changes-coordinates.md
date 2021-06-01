@@ -29,7 +29,7 @@ The following code sample shows how to get changes coordinates.
 
         CompareOptions compareOptions = new CompareOptions();
         compareOptions.setCalculateCoordinates(true);
-        comparer.compare("C:\\result.pdf", compareOptions);
+        final Path resultPath = comparer.compare("C:\\result.pdf", compareOptions);
 
         ChangeInfo[] changes = comparer.getChanges();
         for (ChangeInfo change : changes) {

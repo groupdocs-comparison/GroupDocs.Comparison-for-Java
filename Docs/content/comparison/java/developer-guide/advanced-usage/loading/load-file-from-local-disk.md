@@ -15,7 +15,7 @@ Following code snippet shows how to load files from local disk.
 ```java
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
-    comparer.compare("C:\\result.pdf");
+    final Path resultPath = comparer.compare("C:\\result.pdf");
 }
 ```
 

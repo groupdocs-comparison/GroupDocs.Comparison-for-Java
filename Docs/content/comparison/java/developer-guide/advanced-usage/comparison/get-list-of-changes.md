@@ -25,7 +25,7 @@ The following code sample demonstrates how to get list of all changes.
 ```java
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
-    comparer.compare();
+    final Path resultPath = comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     System.out.println("Count of changes: " + changes.length);
 }
@@ -36,7 +36,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
 ```java
 try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     comparer.add(new FileInputStream("C:\\target.pdf"));
-    comparer.compare();
+    final Path resultPath = comparer.compare();
     ChangeInfo[] changes = comparer.getChanges();
     System.out.println("Count of changes: " + changes.length);
 }

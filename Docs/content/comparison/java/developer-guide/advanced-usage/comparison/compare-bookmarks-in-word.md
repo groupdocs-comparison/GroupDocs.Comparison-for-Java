@@ -30,7 +30,7 @@ try (Comparer comparer = new Comparer(sourcePath)) {
 
     CompareOptions compareOptions = new CompareOptions();
     compareOptions.setCompareBookmarks(true);
-    comparer.compare(resultPath, compareOptions);
+    final Path resultPath = comparer.compare(RESULT_PATH, compareOptions);
 }
 ```
 

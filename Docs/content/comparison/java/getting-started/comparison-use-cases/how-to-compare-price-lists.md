@@ -47,8 +47,8 @@ Here is the code that is used to compare three price lists.
 try (Comparer comparer = new Comparer(SOURCE_FILE)) {
     comparer.add(TARGET_FILE_ONE);
     comparer.add(TARGET_FILE_TWO);
- 
-    comparer.compare(RESULT_FILE);
+
+    final Path resultPath = comparer.compare(RESULT_FILE);
 }
 ```
 

@@ -57,7 +57,7 @@ Here is the code that is used to compare two contracts.
 ```java
     try (Comparer comparer = new Comparer("source-contract.docx")) {
         comparer.add("target_contract.docx");
-        comparer.compare("result-contract.docx");
+        final Path resultPath = comparer.compare("result-contract.docx");
     }
 ```
 

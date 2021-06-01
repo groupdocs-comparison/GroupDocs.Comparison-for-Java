@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 /**
  * This example demonstrates comparing of multi protected documents from stream
@@ -26,7 +27,7 @@ public class CompareMultipleDocumentsProtectedStream {
             comparer.add(target1Stream, new LoadOptions("5678"));
             comparer.add(target2Stream, new LoadOptions("5678"));
             comparer.add(target3Stream, new LoadOptions("5678"));
-            comparer.compare(resultStream);
+            final Path resultPath = comparer.compare(resultStream);
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

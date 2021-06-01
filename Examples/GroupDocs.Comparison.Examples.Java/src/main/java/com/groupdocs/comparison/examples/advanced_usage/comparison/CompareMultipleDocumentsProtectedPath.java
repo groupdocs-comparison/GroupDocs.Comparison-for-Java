@@ -5,6 +5,8 @@ import com.groupdocs.comparison.examples.SampleFiles;
 import com.groupdocs.comparison.examples.Utils;
 import com.groupdocs.comparison.options.load.LoadOptions;
 
+import java.nio.file.Path;
+
 /**
  * This example demonstrates comparing of multi protected documents from path
  */
@@ -17,7 +19,7 @@ public class CompareMultipleDocumentsProtectedPath {
             comparer.add(SampleFiles.TARGET_WORD_PROTECTED, new LoadOptions("5678"));
             comparer.add(SampleFiles.TARGET2_WORD_PROTECTED, new LoadOptions("5678"));
             comparer.add(SampleFiles.TARGET3_WORD_PROTECTED, new LoadOptions("5678"));
-            comparer.compare(outputFileName);
+            final Path resultPath = comparer.compare(outputFileName);
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }

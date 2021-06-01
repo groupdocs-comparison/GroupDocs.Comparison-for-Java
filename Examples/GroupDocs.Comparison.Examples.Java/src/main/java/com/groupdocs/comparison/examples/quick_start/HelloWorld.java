@@ -4,6 +4,8 @@ import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.examples.SampleFiles;
 import com.groupdocs.comparison.examples.Utils;
 
+import java.nio.file.Path;
+
 /**
  * This example demonstrates how to compare two documents.
  */
@@ -21,7 +23,7 @@ public class HelloWorld {
 
         try (Comparer comparer = new Comparer(sourceDocumentPath)) {
             comparer.add(targetDocumentPath);
-            comparer.compare(outputFileName);
+            final Path resultPath = comparer.compare(outputFileName);
         }
 
         System.out.println("\nSource document rendered successfully.\nCheck output in " + outputFileName + ".");

@@ -27,7 +27,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target1.pdf");
     comparer.add("C:\\target2.pdf");
     comparer.add("C:\\target3.pdf");
-    comparer.compare("C:\\result.pdf");
+    final Path resultPath = comparer.compare("C:\\result.pdf");
 }
 ```
 
@@ -38,7 +38,7 @@ try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     comparer.add(new FileInputStream("C:\\target1.pdf"));
     comparer.add(new FileInputStream("C:\\target2.pdf"));
     comparer.add(new FileInputStream("C:\\target3.pdf"));
-    comparer.compare(new FileOutputStream("C:\\result.pdf"));
+    final Path resultPath = comparer.compare(new FileOutputStream("C:\\result.pdf"));
 }
 ```
 

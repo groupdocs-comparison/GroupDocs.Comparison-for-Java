@@ -6,6 +6,8 @@ import com.groupdocs.comparison.examples.Utils;
 import com.groupdocs.comparison.options.enums.MetadataType;
 import com.groupdocs.comparison.options.save.SaveOptions;
 
+import java.nio.file.Path;
+
 /**
  * This example demonstrates using option for select metadata
  */
@@ -19,7 +21,7 @@ public class SetDocumentMetadataSource {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(outputFileName,
+                final Path resultPath = comparer.compare(outputFileName,
                         new SaveOptions.Builder()
                                 .setCloneMetadataType(MetadataType.Source)
                                 .build());
@@ -27,7 +29,7 @@ public class SetDocumentMetadataSource {
                 // Note: It is the same with the code above
 //                final SaveOptions saveOptions = new SaveOptions();
 //                saveOptions.setCloneMetadataType(MetadataType.Source);
-//                comparer.compare(outputFileName, saveOptions);
+//                final Path resultPath = comparer.compare(outputFileName, saveOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");

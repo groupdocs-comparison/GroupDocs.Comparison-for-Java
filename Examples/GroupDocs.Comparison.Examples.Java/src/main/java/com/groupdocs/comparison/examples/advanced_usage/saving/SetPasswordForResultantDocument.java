@@ -7,6 +7,8 @@ import com.groupdocs.comparison.options.CompareOptions;
 import com.groupdocs.comparison.options.enums.PasswordSaveOption;
 import com.groupdocs.comparison.options.save.SaveOptions;
 
+import java.nio.file.Path;
+
 /**
  * This example demonstrates how protect result document by password
  */
@@ -20,7 +22,7 @@ public class SetPasswordForResultantDocument {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(outputFileName,
+                final Path resultPath = comparer.compare(outputFileName,
                         new SaveOptions.Builder()
                                 .setPassword("3333")
                                 .build(),
@@ -33,7 +35,7 @@ public class SetPasswordForResultantDocument {
 //                compareOptions.setPasswordSaveOption(PasswordSaveOption.User);
 //                SaveOptions saveOptions = new SaveOptions();
 //                saveOptions.setPassword("3333");
-//                comparer.compare(outputFileName, saveOptions, compareOptions);
+//                final Path resultPath = comparer.compare(outputFileName, saveOptions, compareOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");

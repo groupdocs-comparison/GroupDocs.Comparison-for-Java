@@ -55,7 +55,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     changedStyleSettings.setItalic(true);
     compareOptions.setChangedItemStyle(changedStyleSettings);
 
-    comparer.compare("C:\\result.pdf", compareOptions);
+    final Path resultPath = comparer.compare("C:\\result.pdf", compareOptions);
 }
 ```
 
@@ -94,7 +94,7 @@ try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"))) {
     changedStyleSettings.setItalic(true);
     compareOptions.setChangedItemStyle(changedStyleSettings);
 
-    comparer.compare(new FileOutputStream("C:\\result.pdf"), compareOptions);
+    final Path resultPath = comparer.compare(new FileOutputStream("C:\\result.pdf"), compareOptions);
 }
 ```
 

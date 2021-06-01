@@ -62,7 +62,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     CompareOptions compareOptions = new CompareOptions();
     compareOptions.setSensitivityOfComparison(100);
 
-    comparer.compare("C:\\result.pdf", compareOptions);
+    final Path resultPath = comparer.compare("C:\\result.pdf", compareOptions);
 }
 ```
 

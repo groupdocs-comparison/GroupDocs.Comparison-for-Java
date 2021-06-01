@@ -46,7 +46,7 @@ The following code samples demonstrate how to merge two source code files.
 ```java
 try (Comparer comparer = new Comparer(sourcePath)) {
     comparer.add(targetPath);
-    comparer.compare(resultPath);
+    final Path resultPath = comparer.compare(RESULT_PATH);
 
     ChangeInfo[] changes = comparer.getChanges();
     for (int i = 0; i < 10; i++) {

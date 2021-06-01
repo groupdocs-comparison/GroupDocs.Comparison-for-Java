@@ -72,7 +72,7 @@ String sourcePath = "./data/source.docx";
 String targetPath = "./data/target.docx";
 try (Comparer comparer = new Comparer(sourcePath)) {
     comparer.add(targetPath);
-    comparer.compare(new CompareOptions());
+    final Path resultPath = comparer.compare(new CompareOptions());
     
     // Get consumption quantity from metered after several calls of comparison
     BigDecimal amountAfter = Metered.getConsumptionQuantity();

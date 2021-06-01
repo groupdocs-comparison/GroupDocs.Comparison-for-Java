@@ -30,7 +30,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf", new LoadOptions("source-
     comparer.add("C:\\target1.pdf", new LoadOptions("target-password"));
     comparer.add("C:\\target2.pdf", new LoadOptions("target-password"));
     comparer.add("C:\\target3.pdf", new LoadOptions("target-password"));
-    comparer.compare("C:\\result.pdf");
+    final Path resultPath = comparer.compare("C:\\result.pdf");
 }
 ```
 
@@ -41,7 +41,7 @@ try (Comparer comparer = new Comparer(new FileInputStream("C:\\source.pdf"), new
     comparer.add(new FileInputStream("C:\\target1.pdf"), new LoadOptions("target-password"));
     comparer.add(new FileInputStream("C:\\target2.pdf"), new LoadOptions("target-password"));
     comparer.add(new FileInputStream("C:\\target3.pdf"), new LoadOptions("target-password"));
-    comparer.compare(new FileOutputStream("C:\\result.pdf"));
+    final Path resultPath = comparer.compare(new FileOutputStream("C:\\result.pdf"));
 }
 ```
 

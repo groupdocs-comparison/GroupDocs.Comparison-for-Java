@@ -9,6 +9,7 @@ import com.groupdocs.comparison.options.PreviewOptions;
 import com.groupdocs.comparison.options.enums.PreviewFormats;
 
 import java.io.*;
+import java.nio.file.Path;
 
 /**
  * This example demonstrates how to get document previews with user memory clean code
@@ -26,11 +27,13 @@ public class GetPagePreviewsResouresCleaning {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_SLIDES, "GetPagePreviewsResouresCleaning");
 
+        final Path resultPath;
         try (OutputStream resultStream = new FileOutputStream(outputFileName);
-             InputStream documentStream = new FileInputStream(outputFileName);
              Comparer comparer = new Comparer(SampleFiles.SOURCE_SLIDES)) {
             comparer.add(SampleFiles.TARGET_SLIDES);
-            comparer.compare(resultStream);
+            resultPath = comparer.compare(resultStream);
+        }
+        try (InputStream documentStream = new FileInputStream(resultPath.toFile())) {
             Document document = new Document(documentStream);
             {
                 // Note: It is the same with commented code below

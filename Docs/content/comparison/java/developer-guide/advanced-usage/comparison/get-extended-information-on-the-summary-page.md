@@ -33,7 +33,7 @@ try (Comparer comparer = new Comparer(sourcePath)) {
 	comparer.add(targetPath);
 	CompareOptions options = new CompareOptions();
     options.setExtendedSummaryPage(true);
-    comparer.compare(resultPath, options);
+    final Path resultPath = comparer.compare(resultPath, options);
 }
 ```
 

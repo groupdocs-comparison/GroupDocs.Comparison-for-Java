@@ -79,8 +79,8 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
 ```java
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
-    comparer.compare("C:\\target.pdf");
-    Document document = new Document("C:\\result.pdf");
+    final Path resultPath = comparer.compare("C:\\result.pdf");
+    Document document = new Document(resultPath);
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
         public OutputStream invoke(int pageNumber) {
@@ -102,8 +102,8 @@ The following code snippet demonstrates how to set specific size for preview im
 ```java
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
-    comparer.compare("C:\\result.pdf");
-    Document document = new Document("C:\\result.pdf");
+    final Path resultPath = comparer.compare("C:\\result.pdf");
+    Document document = new Document(resultPath);
     
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override
@@ -129,8 +129,8 @@ By default, after generating and rendering document page preview image stream 
 // Somewhere in the same class
 try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     comparer.add("C:\\target.pdf");
-    comparer.compare("C:\\result.pdf");
-    Document document = new Document("C:\\result.pdf");
+    final Path resultPath = comparer.compare("C:\\result.pdf");
+    Document document = new Document(resultPath);
     
     PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
         @Override

@@ -24,7 +24,7 @@ The following code example demonstrates how to get specified texts from a file.
 ```java
 try (Comparer comparer = new Comparer(sourceDocumentPath)) {
     comparer.add(targetDocumentPath);
-    comparer.compare(outputPath);
+    final Path resultPath = comparer.compare(outputPath);
     ChangeInfo[] changes = comparer.getChanges();
     for (ChangeInfo change : changes) {
         System.out.println();
@@ -40,7 +40,7 @@ try (Comparer comparer = new Comparer(sourceDocumentPath)) {
 try (InputStream inputStream = new FileInputStream(sourceDocumentPath);
         Comparer comparer = new Comparer(inputStream)) {
         comparer.add(targetDocumentPath);
-        comparer.compare(outputPath);
+        final Path resultPath = comparer.compare(outputPath);
         ChangeInfo[] changes = comparer.getChanges();
         for (ChangeInfo change : changes) {
         System.out.println();

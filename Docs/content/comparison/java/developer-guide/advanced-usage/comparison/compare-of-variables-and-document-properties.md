@@ -35,8 +35,8 @@ try (Comparer comparer = new Comparer(sourcePath)) {
     CompareOptions options = new CompareOptions();
     options.setCompareVariableProperty(true); // to activate the comparison of variable properties
     options.setCompareDocumentProperty(true); // to activate the comparison of built and custom properties
-     
-    comparer.compare(resultPath, options);
+
+    final Path resultPath = comparer.compare(RESULT_PATH, options);
 }
 ```
 

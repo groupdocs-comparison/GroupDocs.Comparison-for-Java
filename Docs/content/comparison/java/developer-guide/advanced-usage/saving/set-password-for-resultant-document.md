@@ -29,7 +29,7 @@ try (Comparer comparer = new Comparer("C:\\source.pdf")) {
     compareOptions.setPasswordSaveOption(PasswordSaveOption.User);
     SaveOptions saveOptions = new SaveOptions();
     saveOptions.setPassword("3333");
-    comparer.compare("C:\\result.pdf", saveOptions, compareOptions);
+    final Path resultPath = comparer.compare("C:\\result.pdf", saveOptions, compareOptions);
 }
 ```
 
