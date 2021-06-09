@@ -56,6 +56,19 @@ As a result, we get a PPTX file where the deleted elements are marked in <font 
 | --- |
 | ![](comparison/java/images/how-to-compare-powerpoint-presentations_3.png)
 
+To compare comments in presentation document, you have to set DetalisationLevel property to High:
+
+```java
+    try (Comparer comparer = new Comparer(sourcePath)) {
+        comparer.add(targetPath);
+
+        CompareOptions compareOptions = new CompareOptions();
+        compareOptions.setDetalisationLevel(DetalisationLevel.High);
+
+        final Path resultPath = comparer.compare(resultPath, compareOptions);
+    }
+```
+
 ## More resources
 ### Advanced Usage Topics
 To learn more about document comparison features, please refer to the [advanced usage section]({{< ref "comparison/java/developer-guide/advanced-usage/_index.md" >}}).

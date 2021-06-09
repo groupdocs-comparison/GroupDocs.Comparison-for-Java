@@ -70,6 +70,8 @@ Below is the list of most notable changes in release of GroupDocs.Comparison for
 | COMPARISONNET-2586 | Improve ability of getting source text for PDF documents | Feature |
 | COMPARISONNET-2587 | Improve ability of getting source text for Cells documents | Feature |
 | COMPARISONNET-2134 | Comparison of variables and document properties for Word format | Feature |
+| COMPARISONJAVA-822 | Implement ShowInsertedContent Function | Feature |
+| COMPARISONJAVA-882 | Comments comparison in Presentation slides | Improvement |
 | COMPARISONNET-2383 | Comparison.Cells Compare empty cells with a modified style | Improvement |
 | COMPARISONNET-2380 | Refactor getDocumentInfo Method for Cells | Improvement |
 | COMPARISONNET-2388 | Improving sheet rendering for Cells | Improvement |
@@ -112,6 +114,14 @@ Below is the list of most notable changes in release of GroupDocs.Comparison for
 | COMPARISONNET-2603 | Incorrect display of Excel document | Bug |
 | COMPARISONNET-2602 | Charts are not displayed in Excel format | Bug |
 | COMPARISONNET-2601 | HTML preview renders only one image | Bug |
+| COMPARISONJAVA-870 | Table of contents comparison wrong results | Bug |
+| COMPARISONJAVA-869 | Pen comparison results issue | Bug |
+| COMPARISONJAVA-876 | Issue in comparing Excel files with table tools | Bug |
+| COMPARISONJAVA-928 | Text Box Comparison issue in PDF | Bug |
+| COMPARISONJAVA-937 | Graph comparison issue in Excel | Bug |
+| COMPARISONJAVA-975 | Document comparison shows no difference and a warning message in the output | Bug |
+| COMPARISONJAVA-978 | Expected Spreadsheets with images comparison output | Bug |
+| COMPARISONJAVA-977 | Find character string before and after the difference | Bug |
 
 ## Public API and Backward Incompatible Changes
 
