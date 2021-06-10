@@ -9,6 +9,7 @@ import com.groupdocs.comparison.options.style.StyleSettings;
 import java.awt.*;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 /**
  * This example demonstrates comparing of multi documents from path
@@ -32,7 +33,7 @@ public class CompareMultipleDocumentsSettingsPath {
             }
             {
                 // Note: It is the same with the code above
-                comparer.compare(resultStream,
+                final Path resultPath = comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -44,7 +45,7 @@ public class CompareMultipleDocumentsSettingsPath {
 //                styleSettings.setFontColor(Color.YELLOW);
 //                CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setInsertedItemStyle(styleSettings);
-//                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");

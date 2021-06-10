@@ -10,6 +10,7 @@ import com.groupdocs.comparison.options.style.StyleSettings;
 
 import java.awt.*;
 import java.io.*;
+import java.nio.file.Path;
 
 /**
  * This class demonstrates how to use CompareOptions
@@ -27,7 +28,7 @@ public class UseCompareOptions {
             comparer.add(SampleFiles.TARGET_WITH_FOOTER);
             {
                 // Note: It is the same with commented code below
-                comparer.compare(resultStream, new SaveOptions(),
+                final Path resultPath = comparer.compare(resultStream, new SaveOptions(),
                         new CompareOptions.Builder()
                                 .setHeaderFootersComparison(false)
                                 .build());
@@ -35,7 +36,7 @@ public class UseCompareOptions {
                 // Note: It is the same with the code above
 //                CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setHeaderFootersComparison(false);
-//                comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), compareOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -54,7 +55,7 @@ public class UseCompareOptions {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(resultStream,
+                final Path resultPath = comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setPaperSize(PaperSize.A6)
                                 .build());
@@ -62,7 +63,7 @@ public class UseCompareOptions {
                 // Note: It is the same with the code above
 //                final CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setPaperSize(PaperSize.A6);
-//                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -81,7 +82,7 @@ public class UseCompareOptions {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(resultStream,
+                final Path resultPath = comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setSensitivityOfComparison(100)
                                 .build());
@@ -89,7 +90,7 @@ public class UseCompareOptions {
                 // Note: It is the same with the code above
 //                final CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setSensitivityOfComparison(100);
-//                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -109,7 +110,7 @@ public class UseCompareOptions {
             comparer.add(targetStream);
             {
                 // Note: It is the same with commented code below
-                comparer.compare(resultStream,
+                final Path resultPath = comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -166,7 +167,7 @@ public class UseCompareOptions {
 //                changedStyleSettings.setStrikethrough(true);
 //                changedStyleSettings.setItalic(true);
 //                compareOptions.setChangedItemStyle(changedStyleSettings);
-//                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -183,7 +184,7 @@ public class UseCompareOptions {
             comparer.add(SampleFiles.TARGET1_WORD);
             {
                 // Note: It is the same with commented code below
-                comparer.compare(outputFileName,
+                final Path resultPath = comparer.compare(outputFileName,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -240,7 +241,7 @@ public class UseCompareOptions {
 //                changedStyleSettings.setStrikethrough(true);
 //                changedStyleSettings.setItalic(true);
 //                compareOptions.setChangedItemStyle(changedStyleSettings);
-//                comparer.compare(outputFileName, compareOptions);
+//                final Path resultPath = comparer.compare(outputFileName, compareOptions);
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");

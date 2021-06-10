@@ -7,6 +7,7 @@ import com.groupdocs.comparison.options.CompareOptions;
 import com.groupdocs.comparison.result.ChangeInfo;
 
 import java.io.*;
+import java.nio.file.Path;
 
 public class GetChanges {
     /**
@@ -22,18 +23,18 @@ public class GetChanges {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(resultStream,
+                final Path resultPath = comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setCalculateCoordinates(true)
                                 .build());
                 // Note: It is the same with the code above
 //                CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setCalculateCoordinates(true);
-//                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
             ChangeInfo[] changes = comparer.getChanges();
             for (ChangeInfo change : changes) {
-                System.out.println(String.format("Change Type: %d, X: %f, Y: %f, Text: %s", change.getType(), change.getBox().getX(), change.getBox().getY(), change.getText()));
+                System.out.printf("Change Type: %d, X: %f, Y: %f, Text: %s%n", change.getType(), change.getBox().getX(), change.getBox().getY(), change.getText());
             }
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
@@ -45,7 +46,7 @@ public class GetChanges {
     public static void getListOfChangesPath() {
         try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
             comparer.add(SampleFiles.TARGET1_WORD);
-            comparer.compare();
+            final Path resultPath = comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
             System.out.println("Count of changes: " + changes.length);
         }
@@ -60,7 +61,7 @@ public class GetChanges {
              InputStream targetStream = new FileInputStream(SampleFiles.TARGET1_WORD);
              Comparer comparer = new Comparer(sourceStream)) {
             comparer.add(targetStream);
-            comparer.compare();
+            final Path resultPath = comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
             System.out.println("Count of changes: " + changes.length);
         }
@@ -73,7 +74,7 @@ public class GetChanges {
     public static void getTargetText() {
         try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
             comparer.add(SampleFiles.TARGET1_WORD);
-            comparer.compare();
+            final Path resultPath = comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
             for (ChangeInfo change : changes) {
                 String text = change.getText();

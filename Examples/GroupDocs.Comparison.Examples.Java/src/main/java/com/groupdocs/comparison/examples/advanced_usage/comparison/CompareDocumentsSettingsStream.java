@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Path;
 
 /**
  * This example demonstrates using some of compare settings
@@ -28,7 +29,7 @@ public class CompareDocumentsSettingsStream {
 
             {
                 // Note: It is the same with commented code below
-                comparer.compare(resultStream,
+                final Path resultPath = comparer.compare(resultStream,
                         new CompareOptions.Builder()
                                 .setInsertedItemStyle(
                                         new StyleSettings.Builder()
@@ -45,7 +46,7 @@ public class CompareDocumentsSettingsStream {
 //                styleSettings.setUnderline(true);
 //                CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setInsertedItemStyle(styleSettings);
-//                comparer.compare(new FileOutputStream(outputFileName), compareOptions);
+//                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), compareOptions);
             }
 
         }
