@@ -11,8 +11,8 @@ GroupDocs.Comparison for Java is a [Document Comparison API](https://products.gr
 
 Directory | Description
 --------- | -----------
+[Demos](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos)  | GroupDocs.Comparison for Java Dropwizard and Spring Demo projects.
 [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples)  | Java examples and sample documents for you to get started quickly.
-[Showcases](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Showcases)  | Build Document Comparison Applications with UI using GroupDocs.Comparison for Java.
 
 ## Compare Documents via Java
 
