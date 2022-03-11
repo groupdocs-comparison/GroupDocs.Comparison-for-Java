@@ -28,6 +28,7 @@ public class RunExamples {
         //NOTE: Please uncomment the example you want to try out
         // region Quick Start
         SetLicenseFromFile.run();
+//        SetLicenseFromUrl.run();
         //SetLicenseFromStream.run();
         //SetMeteredLicense.run();
         HelloWorld.run();

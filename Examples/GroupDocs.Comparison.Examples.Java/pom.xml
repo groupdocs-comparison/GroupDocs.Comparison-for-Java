@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>GroupDocs.Comparison.Examples.Java</groupId>
 	<artifactId>GroupDocs.Comparison.Examples.Java</artifactId>
-	<version>21.6</version>
+	<version>22.3</version>
 	<properties>
 		<maven.compiler.source>7</maven.compiler.source>
 		<maven.compiler.target>7</maven.compiler.target>
@@ -19,9 +19,13 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>GroupDocsArtifactRepository</id>
-			<name>GroupDocs Artifact Repository</name>
-			<url>http://repository.groupdocs.com/repo/</url>
+			<id>maven.groupdocs.com</id>
+			<name>artifact.groupdocs.com-releases</name>
+			<url>https://repository.groupdocs.com/repo/</url>
+		</repository>
+		<repository>
+			<id>maven-central</id>
+			<url>https://repo1.maven.org/maven2</url>
 		</repository>
 	</repositories>
 	<build>

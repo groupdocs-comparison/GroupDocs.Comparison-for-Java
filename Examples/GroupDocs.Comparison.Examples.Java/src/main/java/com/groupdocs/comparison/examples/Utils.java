@@ -6,11 +6,15 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Objects;
 
 public class Utils {
 
     public static final String LICENSE_PATH;
+    public static final String LICENSE_URL;
     public static final String SAMPLES_PATH;
     public static final String OUTPUT_PATH;
 
@@ -24,6 +28,7 @@ public class Utils {
             SAMPLES_PATH = baseFile.getAbsolutePath() + "/resources/sample_files";
             LICENSE_PATH = baseFile.getAbsolutePath() + "/resources/GroupDocs.Viewer.Java.lic";
             OUTPUT_PATH = baseFile.getAbsolutePath() + "/output";
+            LICENSE_URL = System.getenv("GROUPDOCS_LIC_PATH");
         } catch (URISyntaxException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
