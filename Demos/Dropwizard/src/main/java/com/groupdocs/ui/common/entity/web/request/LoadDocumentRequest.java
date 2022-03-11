@@ -1,5 +1,7 @@
 package com.groupdocs.ui.common.entity.web.request;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class LoadDocumentRequest {
 
     private String guid;
@@ -14,7 +16,7 @@ public class LoadDocumentRequest {
     }
 
     public String getPassword() {
-        return password;
+        return StringUtils.isEmpty(password) || StringUtils.isBlank(password) ? null : password;
     }
 
     public void setPassword(String password) {

@@ -45,6 +45,8 @@ common:
   browse: true
   # Set false to disable right mouse click
   enableRightClick: true
+  # Session timeout (cache live time) in seconds
+  sessionTimeout: 60
 
 ################################################
 # GroupDocs.Comparison configurations

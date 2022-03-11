@@ -1,6 +1,7 @@
 package com.groupdocs.ui.common;
 
 import com.google.common.collect.Sets;
+import com.groupdocs.ui.common.config.CommonConfiguration;
 import com.groupdocs.ui.common.config.GlobalConfiguration;
 import com.groupdocs.ui.common.exception.TotalGroupDocsExceptionMapper;
 import com.groupdocs.ui.common.health.TemplateHealthCheck;
@@ -15,6 +16,8 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 import org.apache.commons.lang3.StringUtils;
+import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.server.session.SessionHandler;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +25,8 @@ import org.slf4j.LoggerFactory;
 import javax.imageio.ImageIO;
 import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
+import javax.servlet.http.HttpSessionEvent;
+import javax.servlet.http.HttpSessionListener;
 import java.io.File;
 import java.util.EnumSet;
 import java.util.HashSet;
@@ -100,6 +105,7 @@ public class MainService extends Application<GlobalConfiguration> {
         // Enable CORS headers
         final FilterRegistration.Dynamic cors = environment.servlets().addFilter("CORS", CrossOriginFilter.class);
 
+
         // Configure CORS parameters
         cors.setInitParameter("allowedOrigins", "*");
         cors.setInitParameter("allowedHeaders", "X-Requested-With,Content-Type,Accept,Origin");
@@ -109,7 +115,8 @@ public class MainService extends Application<GlobalConfiguration> {
         cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
 
         // Initiate resources (web pages)
-        environment.jersey().register(new ComparisonResources(globalConfiguration));
+        final ComparisonResources comparisonResources = new ComparisonResources(globalConfiguration);
+        environment.jersey().register(comparisonResources);
 
         // Add custom exception mapper
         environment.jersey().register(new TotalGroupDocsExceptionMapper());
@@ -118,5 +125,12 @@ public class MainService extends Application<GlobalConfiguration> {
         // TODO: implement health check
         final TemplateHealthCheck healthCheck = new TemplateHealthCheck("");
         environment.healthChecks().register("HealthCheck", healthCheck);
+
+        final CommonConfiguration commonConfiguration = globalConfiguration.getCommon();
+
+        final SessionHandler sessionHandler = new SessionHandler();
+        sessionHandler.setMaxInactiveInterval(commonConfiguration.getSessionTimeout());
+        sessionHandler.addEventListener(comparisonResources);
+        environment.servlets().setSessionHandler(sessionHandler);
     }
 }

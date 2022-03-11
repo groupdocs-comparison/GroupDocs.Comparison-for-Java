@@ -1,5 +1,7 @@
 package com.groupdocs.ui.common.util.comparator;
 
+import com.groupdocs.ui.common.entity.web.FileDescriptionEntity;
+
 import java.io.File;
 import java.util.Comparator;
 
@@ -8,7 +10,7 @@ import java.util.Comparator;
  * Compare and sort file names alphabetically
  * @author Aspose Pty Ltd
  */
-public class FileNameComparator implements Comparator<File> {
+public class FileNameComparator implements Comparator<FileDescriptionEntity> {
 
     public static FileNameComparator instance = new FileNameComparator();
 
@@ -19,7 +21,7 @@ public class FileNameComparator implements Comparator<File> {
      * @return int
      */
     @Override
-    public int compare(File file1, File file2) {
+    public int compare(FileDescriptionEntity file1, FileDescriptionEntity file2) {
 
         return String.CASE_INSENSITIVE_ORDER.compare(file1.getName(),
                 file2.getName());

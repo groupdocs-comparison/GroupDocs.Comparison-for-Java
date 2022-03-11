@@ -97,12 +97,16 @@ For all methods above you can adjust settings in `configuration.yml`. By default
 ### Comparison configuration options
 
 | Option                             | Type    |   Default value   | Description                                                                                                                                  |
-| ---------------------------------- | ------- |:-----------------:|:-------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------------------------- | ------- |:-----------------:|:---------------------------------------------------------------------------------------------------------------------------------------------|
 | **`filesDirectory`**               | String  | `DocumentSamples` | Files directory path. Indicates where uploaded and predefined files are stored. It can be absolute or relative path                          |
 | **`fontsDirectory`**               | String  |                   | Path to custom fonts directory.                                                                                                              |
 | **`defaultDocument`**              | String  |                   | Absolute path to default document that will be loaded automaticaly.                                                                          |
 | **`preloadPageCount`**             | Integer |        `0`        | Indicate how many pages from a document should be loaded, remaining pages will be loaded on page scrolling.Set `0` to load all pages at once |
 | **`multiComparing`**               | String  |      `true`       | Enable/disable multi comparing feature                                                                                                       |
+| **`sessionTimeout`**               | Integer |       `600`       | Timeout, after which session will expire. Session expiration will remove files that were cached for the user                                 |
+
+#### Caching details
+Cache files will be deleted when session expires (see sessionTimeout option). **Note:** cache files will be deleted for current user. For user, who left the site forever, cache files WILL NOT be deleted. They must be deleted manually, or additional functionality must be implemented to do it.
 
 ## License
 The MIT License (MIT). 

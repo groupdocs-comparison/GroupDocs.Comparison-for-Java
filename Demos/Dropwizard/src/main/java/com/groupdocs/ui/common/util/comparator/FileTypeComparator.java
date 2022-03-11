@@ -1,5 +1,7 @@
 package com.groupdocs.ui.common.util.comparator;
 
+import com.groupdocs.ui.common.entity.web.FileDescriptionEntity;
+
 import java.io.File;
 import java.util.Comparator;
 
@@ -8,7 +10,7 @@ import java.util.Comparator;
  * Compare and sort file types - folders first
  * @author Aspose Pty Ltd
  */
-public class FileTypeComparator implements Comparator<File> {
+public class FileTypeComparator implements Comparator<FileDescriptionEntity> {
 
     public static FileTypeComparator instance = new FileTypeComparator();
 
@@ -19,14 +21,14 @@ public class FileTypeComparator implements Comparator<File> {
      * @return
      */
     @Override
-    public int compare(File file1, File file2) {
+    public int compare(FileDescriptionEntity file1, FileDescriptionEntity file2) {
 
-        if (file1.isDirectory() && file2.isFile())
+        if (file1.isDirectory() && !file2.isDirectory())
             return -1;
         if (file1.isDirectory() && file2.isDirectory()) {
             return 0;
         }
-        if (file1.isFile() && file2.isFile()) {
+        if (!file1.isDirectory() && !file2.isDirectory()) {
             return 0;
         }
         return 1;

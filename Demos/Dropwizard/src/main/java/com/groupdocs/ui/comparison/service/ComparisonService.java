@@ -6,6 +6,7 @@ import com.groupdocs.ui.common.entity.web.PageDescriptionEntity;
 import com.groupdocs.ui.common.entity.web.request.FileTreeRequest;
 import com.groupdocs.ui.common.entity.web.request.LoadDocumentPageRequest;
 import com.groupdocs.ui.common.entity.web.request.LoadDocumentRequest;
+import com.groupdocs.ui.common.util.SessionCache;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.model.request.CompareRequest;
 import com.groupdocs.ui.comparison.model.response.CompareResultResponse;
@@ -27,7 +28,23 @@ public interface ComparisonService {
      * @param fileTreeRequest request with path to directory
      * @return list of files and folders
      */
-    List<FileDescriptionEntity> loadFiles(FileTreeRequest fileTreeRequest);
+    List<FileDescriptionEntity> loadFileTree(FileTreeRequest fileTreeRequest);
+
+    /**
+     * Loads document
+     *
+     * @param loadDocumentRequest request with paths to documents to load
+     * @return document loading result
+     */
+    LoadDocumentEntity loadDocumentDescription(LoadDocumentRequest loadDocumentRequest, SessionCache sessionCache);
+
+    /**
+     * Load the page of results
+     *
+     * @param loadDocumentPageRequest request with path to page result
+     * @return page result data
+     */
+    PageDescriptionEntity loadDocumentPage(LoadDocumentPageRequest loadDocumentPageRequest, SessionCache sessionCache);
 
     /**
      * Compare two documents, save results in files,
@@ -36,15 +53,7 @@ public interface ComparisonService {
      * @param compareRequest request with paths to documents to compare
      * @return comparing results
      */
-    CompareResultResponse compare(CompareRequest compareRequest);
-
-    /**
-     * Load the page of results
-     *
-     * @param loadDocumentPageRequest request with path to page result
-     * @return page result data
-     */
-    PageDescriptionEntity loadResultPage(LoadDocumentPageRequest loadDocumentPageRequest);
+    CompareResultResponse compare(CompareRequest compareRequest, SessionCache sessionCache);
 
     /**
      * Check format files for comparing
@@ -53,6 +62,4 @@ public interface ComparisonService {
      * @return true - formats of the both files are the same and format is supported, false - other
      */
     boolean checkFiles(CompareRequest request);
-
-    LoadDocumentEntity loadDocument(LoadDocumentRequest loadDocumentRequest);
 }

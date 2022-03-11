@@ -12,8 +12,6 @@ import javax.ws.rs.core.Response;
 import java.io.File;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.junit.Assert.*;
-
 public class ComparisonResourcesTest {
 
     @ClassRule

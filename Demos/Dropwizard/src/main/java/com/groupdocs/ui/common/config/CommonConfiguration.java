@@ -40,6 +40,10 @@ public class CommonConfiguration extends Configuration {
     @JsonProperty
     private boolean enableRightClick;
 
+    @Valid
+    @JsonProperty
+    private int sessionTimeout;
+
     public boolean isPageSelector() {
         return pageSelector;
     }
@@ -94,5 +98,13 @@ public class CommonConfiguration extends Configuration {
 
     public void setEnableRightClick(boolean enableRightClick) {
         this.enableRightClick = enableRightClick;
+    }
+
+    public int getSessionTimeout() {
+        return sessionTimeout;
+    }
+
+    public void setSessionTimeout(int sessionTimeout) {
+        this.sessionTimeout = sessionTimeout;
     }
 }

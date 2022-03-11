@@ -1,6 +1,7 @@
 package com.groupdocs.ui.common.util;
 
 import com.google.common.collect.Ordering;
+import com.groupdocs.ui.common.entity.web.FileDescriptionEntity;
 import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.common.util.comparator.FileNameComparator;
 import com.groupdocs.ui.common.util.comparator.FileTypeComparator;
@@ -15,8 +16,10 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
+import java.util.Locale;
 
 import static com.groupdocs.ui.common.exception.PasswordExceptions.INCORRECT_PASSWORD;
 import static com.groupdocs.ui.common.exception.PasswordExceptions.PASSWORD_REQUIRED;
@@ -24,7 +27,21 @@ import static com.groupdocs.ui.common.exception.PasswordExceptions.PASSWORD_REQU
 public class Utils {
     private static final Logger logger = LoggerFactory.getLogger(Utils.class);
 
-    public static java.util.List<File> orderByTypeAndName(List<File> files) {
+    private static final List<String> SUPPORTED_FORMATS = Arrays.asList(
+            "jpg",
+            "docx",
+            "doc",
+            "xls",
+            "xlsx",
+            "ppt",
+            "pptx",
+            "pdf",
+            "txt",
+            "htm",
+            "html"
+    );
+
+    public static java.util.List<FileDescriptionEntity> orderByTypeAndName(List<FileDescriptionEntity> files) {
         return Ordering.from(FileTypeComparator.instance).compound(FileNameComparator.instance).sortedCopy(files);
     }
 
@@ -49,7 +66,18 @@ public class Utils {
      */
     public static String parseFileExtension(String documentGuid) {
         String extension = FilenameUtils.getExtension(documentGuid);
-        return extension == null ? null : extension.toLowerCase();
+        return extension == null ? null : extension.toLowerCase(Locale.getDefault());
+    }
+
+
+    /**
+     * Check support formats for comparing
+     *
+     * @param extension file extension
+     * @return true - format is supported, false - format is not supported
+     */
+    public static boolean checkSupportedFiles(String extension) {
+        return SUPPORTED_FORMATS.contains(extension);
     }
 
     /**

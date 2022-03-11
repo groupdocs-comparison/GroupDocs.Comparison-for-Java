@@ -1,4 +1,5 @@
 deploy_key
+.idea
 
 #License files
 *.lic
