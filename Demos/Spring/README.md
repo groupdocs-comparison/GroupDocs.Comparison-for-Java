@@ -1,14 +1,14 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison for Java Spring Example
 New GroupDocs.Comparison for Java Spring UI Example
-###### version 1.9.19
+###### version 22.3
 
 [![Build Status](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring.svg?branch=master)](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f945b8bc09a5ff2e8a2d/maintainability)](https://codeclimate.com/github/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/maintainability)
 [![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/blob/master/LICENSE)
 
 ## System Requirements
-- Java 8 (JDK 1.8)
+- Java 8+ (JDK 1.8+)
 - Maven 3
 
 
@@ -62,8 +62,8 @@ You can run this sample by one of following methods
 Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/archive/master.zip) from github or clone this repository.
 
 ```bash
-git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring
-cd GroupDocs.Comparison-for-Java-Spring
+git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
+cd GroupDocs.Comparison-for-Java/Demos/Spring
 mvn clean spring-boot:run
 ## Open http://localhost:8080/comparison/ in your favorite browser.
 ```
@@ -81,7 +81,7 @@ mvn package -P war
 
 #### Binary release (with all dependencies)
 
-Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/releases/latest) from [releases page](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/releases). 
+Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/latest) from [releases page](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases).
 
 **Note**: This method is **recommended** for running this sample behind firewall.
 
@@ -123,9 +123,10 @@ Please have a look at the LICENSE.md for more details
 
 ## GroupDocs Comparison on other platforms & frameworks
 
-- [Comapre documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard) with JAVA Dropwizard 
-- [Comapre documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC) with .NET MVC 
-- [Comapre documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms) with .NET WebForms 
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard) with JAVA Dropwizard
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Compose) with Kotlin in Compose Desktop application
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC) with .NET MVC 
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms) with .NET WebForms 
 
 
 [Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/comparison/java) | [Documentation](https://docs.groupdocs.com/comparison/java/) | [Demos](https://products.groupdocs.app/comparison/family) | [API Reference](https://apireference.groupdocs.com/java/comparison) | [Examples](https://github.com/groupdocs-comparison/GroupDocs.comparison-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/comparison/) | [Free Support](https://forum.groupdocs.com/c/comparison) | [Temporary License](https://purchase.groupdocs.com/temporary-license)

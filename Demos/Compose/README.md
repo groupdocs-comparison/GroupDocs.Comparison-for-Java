@@ -1,18 +1,17 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
-# GroupDocs.Comparison for Java Dropwizard Example
+# GroupDocs.Comparison for Kotlin Compose Example
 New GroupDocs.Comparison for Java Dropwizard UI Example
 ###### version 22.3
 
-[![Build Status](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg?branch=master)](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard)
-[![Maintainability](https://api.codeclimate.com/v1/badges/bd15712ebdd04405b1ea/maintainability)](https://codeclimate.com/github/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/maintainability)
-[![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/blob/master/Demos/Compose/LICENSE)
 
 ## System Requirements
 - Kotlin 1.6+
+- Java 11+
 
 ## Compare documents with Java API
 
-**GroupDocs.Comparison for Java** is a library that allows you to **compare PDF, DOCX, PPT, XLS,** and over 90 other document formats. With GroupDocs.Comparison for Java you will be able to compare two or more files, perform style and text comparison and generate a detailed report with changes.
+**GroupDocs.Comparison for Java/Kotlin** is a library that allows you to **compare PDF, DOCX, PPT, XLS,** and over 90 other document formats. With GroupDocs.Comparison for Java/Kotlin you will be able to compare two or more files, perform style and text comparison and generate a detailed report with changes.
 
 This application allows you to compare multiple documents and can be used as a standalone application or integrated as part of your project.
 
@@ -44,30 +43,38 @@ This application allows you to compare multiple documents and can be used as a s
 
 You can run this sample by one of following methods
 
-#### Build from source
+#### Run from source
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/archive/master.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/archive/refs/heads/master.zip) from github or clone this repository.
 
 ```bash
-git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard
-cd GroupDocs.Comparison-for-Java-Dropwizard
-mvn clean compile exec:java
-## Open http://localhost:8080/comparison/ in your favorite browser.
+git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
+cd GroupDocs.Comparison-for-Java/Demos/Compose
+gradlew run
+## Desktop application will be compiled and run
+```
+
+#### Build Windows installer from source
+
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/archive/refs/heads/master.zip) from github or clone this repository.
+
+```bash
+git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
+cd GroupDocs.Comparison-for-Java/Demos/Compose
+gradlew packageMsi
+## Windows installer will be built and the path to it will be printed
 ```
 
 #### Binary release (with all dependencies)
 
-Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/releases/latest) from [releases page](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/releases).
+Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/latest) from [releases page](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases).
 
-**Note**: This method is **recommended** for running this sample behind firewall.
+**Note**: This method is **recommended** for running this sample without Java installed.
 
-```bash
-curl -J -L -o release.tar.gz https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/releases/download/1.8.17/release.tar.gz
-tar -xvzf release.tar.gz
-cd release
-java -jar comparison-1.8.6.jar configuration.yaml
-## Open http://localhost:8080/comparison/ in your favorite browser.
-```
+* Download `groupdocs-comparison-compose-*.zip` file
+* Unzip it to any directory
+* Run installer and install the application
+* After installation, you can run the application using shortcut on your desktop
 
 ## License
 The MIT License (MIT).
@@ -76,9 +83,9 @@ Please have a look at the LICENSE.md for more details
 
 ## GroupDocs Comparison on other platforms & frameworks
 
-- [Comapre documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring) with JAVA Spring
-- [Comapre documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard) with JAVA Dropwizard
-- [Comapre documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC) with .NET MVC
-- [Comapre documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms) with .NET WebForms
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring) with JAVA Spring
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard) with JAVA Dropwizard
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC) with .NET MVC
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms) with .NET WebForms
 
 [Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/comparison/java) | [Documentation](https://docs.groupdocs.com/comparison/java/) | [Demos](https://products.groupdocs.app/comparison/family) | [API Reference](https://apireference.groupdocs.com/java/comparison) | [Examples](https://github.com/groupdocs-comparison/GroupDocs.comparison-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/comparison/) | [Free Support](https://forum.groupdocs.com/c/comparison) | [Temporary License](https://purchase.groupdocs.com/temporary-license)

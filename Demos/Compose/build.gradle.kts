@@ -33,7 +33,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "groupdocs-comparison-compose"
-            packageVersion = "1.0.0"
+            packageVersion = "22.3.0"
 
             windows {
                 shortcut = true
