@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>GroupDocs.Comparison Dropwizard</name>
-    <url>http://groupdocs.com</url>
+    <url>https://groupdocs.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,5 +1,7 @@
 deploy_key
 .idea
+.gradle
+build
 
 #License files
 *.lic
