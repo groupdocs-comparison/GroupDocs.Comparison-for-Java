@@ -20,7 +20,7 @@ class Settings private constructor(val path: Path) {
     }
 
     var licensePath: String?
-        get() = properties.getProperty("licensePath").ifBlank { null }
+        get() = properties.getProperty("licensePath")?.ifBlank { null }
         set(value) {
             properties.setProperty("licensePath", if (value.isNullOrBlank()) "" else value)
         }
@@ -58,9 +58,7 @@ class Settings private constructor(val path: Path) {
 
     companion object {
 
-        private val settingsPath: Path =
-            Paths.get(File(SettingsViewModel::class.java.protectionDomain.codeSource.location.toURI()).path)
-                .parent.resolve("settings.properties")
+        private val settingsPath: Path = Paths.get(System.getProperty("user.home")).resolve("groupdocs-comparison-compose.properties")
         private var _instance: Settings? = null
 
         val instance: Settings
