@@ -58,7 +58,7 @@ You can run this sample by one of following methods
 
 #### Build from source
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/archive/master.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/archive/master.zip) from GitHub or clone this repository.
 
 ```bash
 git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
@@ -107,6 +107,26 @@ For all methods above you can adjust settings in `configuration.yml`. By default
 
 #### Caching details
 Cache files will be deleted when session expires (see sessionTimeout option). **Note:** cache files will be deleted for current user. For user, who left the site forever, cache files WILL NOT be deleted. They must be deleted manually, or additional functionality must be implemented to do it.
+
+#### Developer Notes
+
+Run next command to build image of sample project and put it to local Docker instance
+```shell
+docker build -t groupdocs_comparison_dropwizard_sample ./
+```
+
+Run next command to run the image as Docker container
+```shell
+docker run -p 8080:8080 --name my-comparer --rm groupdocs_comparison_dropwizard_sample
+```
+
+To pass environment variables use parameter: `--env DOWNLOAD_ON=false`
+To attach Docker volume, use parameter: `-v groupdocs_comparison_dropwizard_volume:/home/groupdocs/app/MyDocumentSamples`
+For example:
+```shell
+docker run -p 8080:8080 --name my-comparer --env FILES_DIR=/home/groupdocs/app/MyDocumentSamples -v groupdocs_comparison_dropwizard_volume:/home/groupdocs/app/MyDocumentSamples --rm groupdocs_comparison_dropwizard_sample
+
+```
 
 ## License
 The MIT License (MIT). 
