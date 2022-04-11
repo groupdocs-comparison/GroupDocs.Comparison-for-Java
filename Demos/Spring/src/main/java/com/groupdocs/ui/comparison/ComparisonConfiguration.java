@@ -25,6 +25,7 @@ public class ComparisonConfiguration extends CommonConfiguration {
     @PostConstruct
     public void init() {
         this.filesDirectory = StringUtils.isEmpty(this.filesDirectory) ? defaultComparisonDirectory() : relativePathToAbsolute(this.filesDirectory);
+        this.resultDirectory = StringUtils.isEmpty(this.resultDirectory) ? defaultComparisonDirectory() : relativePathToAbsolute(this.resultDirectory);
     }
 
     public String getFilesDirectory() {

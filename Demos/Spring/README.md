@@ -116,6 +116,26 @@ For all methods above you can adjust settings in `configuration.yml`. By default
 | **`preloadPageCount`**             | Integer |        `0`        | Indicate how many pages from a document should be loaded, remaining pages will be loaded on page scrolling.Set `0` to load all pages at once |
 | **`multiComparing`**               | String  |      `true`       | Enable/disable multi comparing feature                                                                                                       |
 
+#### Developer Notes
+
+Run next command to build image of sample project and put it to local Docker instance
+```shell
+docker build -t groupdocs_comparison_spring_sample ./
+```
+
+Run next command to run the image as Docker container
+```shell
+docker run -p 8080:8080 --name my-spring-comparer --rm groupdocs_comparison_spring_sample
+```
+
+To pass environment variables use parameter: `--env DOWNLOAD_ON=false`
+To attach Docker volume, use parameter: `-v groupdocs_comparison_spring_volume:/home/groupdocs/app/MyDocumentSamples`
+For example:
+```shell
+docker run -p 8080:8080 --name my-spring-comparer --env FILES_DIR=/home/groupdocs/app/MyDocumentSamples -v groupdocs_comparison_spring_volume:/home/groupdocs/app/MyDocumentSamples --rm groupdocs_comparison_spring_sample
+
+```
+
 ## License
 The MIT License (MIT). 
 

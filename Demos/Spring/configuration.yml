@@ -14,9 +14,9 @@ server:
 application:
   # License path
   # Absolute or relative path to GroupDocs license file
-  licensePath:
+  licensePath: ${LIC_PATH:Licenses}
   # Host name or ip for server instance
-  hostAddress:
+  hostAddress: ${HOST_ADDRESS:}
 
 ################################################
 # Common configurations
@@ -31,16 +31,16 @@ common:
   pageSelector: true
   # Document download
   # Set false to disable document download
-  download: true
+  download: ${DOWNLOAD_ON:true}
   # Document upload
   # Set false to disable document upload
-  upload: true
+  upload: ${UPLOAD_ON:true}
   # Document print
   # Set false to disable document print
-  print: true
+  print: ${PRINT_ON:true}
   # File browser
   # Set false to disable document browse
-  browse: true
+  browse: ${BROWSE_ON:true}
   # Set false to disable right mouse click
   enableRightClick: false
 
@@ -50,10 +50,10 @@ common:
 comparison:
   # Files directory path
   # Absolute or relative path to files directory
-  filesDirectory: DocumentSamples
+  filesDirectory: ${FILES_DIR:DocumentSamples}
   # FResult files directory path
   # Absolute path to result files directory
-  resultDirectory:
+  resultDirectory: ${RESULT_DIR:DocumentSamples}
   # Result pages preload
   # How many pages from a result document should be loaded, remaining pages will be loaded on page scrolling
   # Set 0 to load all pages at once

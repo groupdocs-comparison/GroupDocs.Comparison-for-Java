@@ -1,6 +1,7 @@
 package com.groupdocs.ui.comparison;
 
 import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.Document;
 import com.groupdocs.comparison.common.delegates.Delegates;
 import com.groupdocs.comparison.interfaces.IDocumentInfo;
 import com.groupdocs.comparison.license.License;
@@ -191,12 +192,13 @@ public class ComparisonServiceImpl implements ComparisonService {
     public static LoadDocumentEntity loadDocumentPages(String documentGuid, String password, int loadPagesCount) {
         LoadDocumentEntity loadDocumentEntity = new LoadDocumentEntity();
 
-        try (Comparer comparer = new Comparer(documentGuid, getLoadOptions(password))) {
-            IDocumentInfo documentInfo = comparer.getSource().getDocumentInfo();
+        try (Document document = new Document(documentGuid, password)) {
+            IDocumentInfo documentInfo = document.getDocumentInfo();
 
-            for (int i = 0; i < documentInfo.getPageCount(); i++) {
+            final List<PageInfo> pagesInfo = documentInfo.getPagesInfo();
+            for (int i = 0; i < pagesInfo.size(); i++) {
                 PageDescriptionEntity pageData = new PageDescriptionEntity();
-                final PageInfo pageInfo = documentInfo.getPagesInfo().get(i);
+                final PageInfo pageInfo = pagesInfo.get(i);
                 pageData.setHeight(pageInfo.getHeight());
                 pageData.setWidth(pageInfo.getWidth());
                 pageData.setNumber(i);

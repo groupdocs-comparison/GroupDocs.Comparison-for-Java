@@ -1,5 +1,5 @@
 ################################################
-# Server configurations
+# Default server configurations. Will be used when configuration.yml does not exist
 ################################################
 server:
   connector:

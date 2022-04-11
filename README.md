@@ -26,7 +26,7 @@ Directory | Description
 
 ## Get Started with GroupDocs.Comparison for Java
 
-GroupDocs.Comparison for Java requires J2SE 7.0 (1.7), J2SE 8.0 (1.8) or above. Please install Java first if you do not have it already.
+GroupDocs.Comparison for Java requires J2SE 8.0 (1.8) or above. Please install Java first if you do not have it already.
 
 GroupDocs hosts all Java APIs on [GroupDocs Artifact Repository](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-comparison), so simply [configure](https://docs.groupdocs.com/comparison/java/installation/) your Maven project to fetch the dependencies automatically.
 
