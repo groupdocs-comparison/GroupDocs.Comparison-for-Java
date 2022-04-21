@@ -1,5 +1,6 @@
 .git
 target
 client/node_modules
+docker
 Dockerfile
 DocumentSamples/temp/*

@@ -18,7 +18,7 @@ application:
   # Absolute or relative path to GroupDocs license file
   licensePath: ${LIC_PATH:-C:/GroupDocs.Total.Java.lic}
   # Host name or ip for server instance
-  hostAddress: ${application.hostAddress}
+  hostAddress: ${HOST_ADDRESS:-}
 
 ################################################
 # Common configurations
@@ -42,9 +42,9 @@ common:
   print: ${PRINT_ON:-true}
   # File browser
   # Set false to disable document browse
-  browse: true
+  browse: ${BROWSE_ON:-true}
   # Set false to disable right mouse click
-  enableRightClick: true
+  enableRightClick: ${RIGHTCLICK_ON:-true}
   # Session timeout (cache live time) in seconds
   sessionTimeout: 600
 

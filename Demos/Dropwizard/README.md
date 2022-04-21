@@ -82,12 +82,19 @@ java -jar comparison-1.8.6.jar configuration.yaml
 ```
 
 #### Docker image
-Use [docker](https://hub.docker.com/u/groupdocs) image.
+Use [docker](https://hub.docker.com/r/groupdocs/comparison) image.
+
+There are 3 Dropwizard images available on Docker Hub.
+1. `<VERSION>-java-openjdk8-bullseye-dropwizard` - based on OpenJDK 8 and Debian Bullseye
+2. `<VERSION>-java-openjdk11-bullseye-dropwizard` - based on OpenJDK 11 and Debian Bullseye
+3. `<VERSION>-java-openjdk18-bullseye-dropwizard` - based on OpenJDK 18 and Debian Bullseye
+
+Each can be used to run GroupDocs.Comparison for Java Dropwizard sample
+
+Example:
 
 ```bash
-mkdir DocumentSamples
-mkdir Licenses
-docker run -p 8080:8080 --env application.hostAddress=localhost -v `pwd`/DocumentSamples:/home/groupdocs/app/DocumentSamples -v `pwd`/Licenses:/home/groupdocs/app/Licenses groupdocs/comparison
+docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:22.3-java-openjdk8-bullseye-dropwizard
 ## Open http://localhost:8080/comparison/ in your favorite browser.
 ```
 

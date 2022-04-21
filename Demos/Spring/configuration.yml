@@ -42,7 +42,7 @@ common:
   # Set false to disable document browse
   browse: ${BROWSE_ON:true}
   # Set false to disable right mouse click
-  enableRightClick: false
+  enableRightClick: ${RIGHTCLICK_ON:false}
 
 ################################################
 # GroupDocs.Comparison configurations
