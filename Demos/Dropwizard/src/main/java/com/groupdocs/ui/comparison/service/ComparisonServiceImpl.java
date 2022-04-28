@@ -6,7 +6,6 @@ import com.groupdocs.comparison.options.CompareOptions;
 import com.groupdocs.comparison.options.PreviewOptions;
 import com.groupdocs.comparison.options.load.LoadOptions;
 import com.groupdocs.comparison.result.ChangeInfo;
-import com.groupdocs.ui.common.config.DefaultDirectories;
 import com.groupdocs.ui.common.config.GlobalConfiguration;
 import com.groupdocs.ui.common.entity.web.FileDescriptionEntity;
 import com.groupdocs.ui.common.entity.web.LoadDocumentEntity;
@@ -20,20 +19,22 @@ import com.groupdocs.ui.common.util.SessionCache;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.model.request.CompareRequest;
 import com.groupdocs.ui.comparison.model.response.CompareResultResponse;
+import com.groupdocs.ui.comparison.provider.FilesProvider;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.DirectoryStream;
+import java.io.OutputStream;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import static com.groupdocs.ui.common.util.Utils.*;
@@ -41,28 +42,12 @@ import static com.groupdocs.ui.common.util.Utils.*;
 public class ComparisonServiceImpl implements ComparisonService {
 
     private static final Logger logger = LoggerFactory.getLogger(ComparisonServiceImpl.class);
+    private final GlobalConfiguration globalConfiguration;
 
-    private ComparisonConfiguration comparisonConfiguration;
-    private GlobalConfiguration globalConfiguration;
+    private Path tempDirectoryAbsolutePath = null;
 
     public ComparisonServiceImpl(GlobalConfiguration globalConfiguration) {
         this.globalConfiguration = globalConfiguration;
-        this.comparisonConfiguration = globalConfiguration.getComparison();
-        init();
-    }
-
-    /**
-     * Initializing fields after creating configuration objects
-     */
-    public void init() {
-        // check files directories
-        String filesDirectory = comparisonConfiguration.getFilesDirectory();
-        String resultDirectory = comparisonConfiguration.getResultDirectory();
-        if (StringUtils.isEmpty(resultDirectory)) {
-            resultDirectory = filesDirectory + File.separator + "Temp";
-            comparisonConfiguration.setResultDirectory(resultDirectory);
-        }
-        DefaultDirectories.makeDirs(Paths.get(resultDirectory));
     }
 
     /**
@@ -70,62 +55,55 @@ public class ComparisonServiceImpl implements ComparisonService {
      */
     @Override
     public ComparisonConfiguration getComparisonConfiguration() {
-        return comparisonConfiguration;
+        return globalConfiguration.getComparison();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public List<FileDescriptionEntity> loadFileTree(FileTreeRequest fileTreeRequest) {
+    public List<FileDescriptionEntity> loadFileTree(FileTreeRequest fileTreeRequest) throws IOException {
         List<FileDescriptionEntity> fileList;
         {
-            Path currentPath = Paths.get(comparisonConfiguration.getFilesDirectory());
-            if (fileTreeRequest.isNotEmpty()) {
-                currentPath = currentPath.resolve(fileTreeRequest.getPath());
-            }
+            String currentPath = fileTreeRequest.getPath();
             logger.debug("Current path is " + currentPath);
 
-            try (final DirectoryStream<Path> directoryStream = Files.newDirectoryStream(currentPath)) {
-                List<FileDescriptionEntity> unsortedDirectoryItems = new ArrayList<>();
-                for (Path path : directoryStream) {
-                    FileDescriptionEntity fileDescription = new FileDescriptionEntity();
-                    // set path to file
-                    fileDescription.setGuid(path.toAbsolutePath().normalize().toString());
-                    // set file name
-                    fileDescription.setName(path.getFileName().toString());
-                    // set is directory true/false
-                    fileDescription.setDirectory(Files.isDirectory(path));
-                    // set file size
-                    fileDescription.setSize(Files.size(path));
-                    unsortedDirectoryItems.add(fileDescription);
-                }
-                fileList = orderByTypeAndName(unsortedDirectoryItems);
-            } catch (IOException e) {
-                logger.error("Exception occurred while load file tree", e);
-                throw new TotalGroupDocsException("Exception occurred while load file tree", e);
-            }
+            List<FileDescriptionEntity> unsortedDirectoryItems = new ArrayList<>();
+            FilesProvider.getInstance().visitDirectoryContent(currentPath, (guid, name, isDirectory, size) -> {
+                FileDescriptionEntity fileDescription = new FileDescriptionEntity();
+                // set path to file
+                fileDescription.setGuid(guid);
+                // set file name
+                fileDescription.setName(name);
+                // set is directory true/false
+                fileDescription.setDirectory(isDirectory);
+                // set file size
+                fileDescription.setSize(size);
+                unsortedDirectoryItems.add(fileDescription);
+            });
+            fileList = orderByTypeAndName(unsortedDirectoryItems);
         }
         return fileList;
     }
 
     @Override
-    public LoadDocumentEntity loadDocumentDescription(LoadDocumentRequest loadDocumentRequest, SessionCache sessionCache) {
+    public LoadDocumentEntity loadDocumentDescription(LoadDocumentRequest loadDocumentRequest, SessionCache sessionCache) throws Exception {
         LoadDocumentEntity loadDocumentEntity = new LoadDocumentEntity();
         {
             final String guid = loadDocumentRequest.getGuid();
             final String password = loadDocumentRequest.getPassword();
-            final int pageHeight = 1056, pageWidth = 816;
+            final ComparisonConfiguration comparisonConfiguration = getComparisonConfiguration();
+            final int pageWidth = comparisonConfiguration.getPreviewPageWidth();
+            final float pageRatio = comparisonConfiguration.getPreviewPageRatio();
+            final int pageHeight = (int) (pageWidth * pageRatio);
             try {
                 List<PageDescriptionEntity> pageDescriptionEntities;
                 final CachedPageStream cachedPageStream = new CachedPageStream(sessionCache, guid);
 
                 if (!cachedPageStream.isCached()) {
-                    final Document document = new Document(guid, password);
-                    document.generatePreview(new PreviewOptions.Builder(cachedPageStream)
-                            .setHeight(pageHeight)
-                            .setWidth(pageWidth)
-                            .build());
+                    try (final InputStream inputStream = FilesProvider.getInstance().createFilesInputStream(guid); final Document document = new Document(inputStream, password)) {
+                        document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
+                    }
                 }
 
                 pageDescriptionEntities = cachedPageStream.stream().map(item -> {
@@ -137,15 +115,17 @@ public class ComparisonServiceImpl implements ComparisonService {
                         pageDescription.setData(getStringFromStream(inputStream));
                         return pageDescription;
                     } catch (Exception e) {
-                        logger.error("Exception occurred while getting page description", e);
-                        throw new TotalGroupDocsException("Exception occurred while getting page description", e);
+                        throw new RuntimeException("Exception occurred while getting page description", e);
                     }
                 }).collect(Collectors.toList());
                 loadDocumentEntity.setGuid(guid);
                 loadDocumentEntity.setPages(pageDescriptionEntities);
             } catch (Exception e) {
-                logger.error("Exception occurred while load file description", e);
-                throw new TotalGroupDocsException("Exception occurred while load file description", e);
+                final String message = e.getMessage();
+                if (message != null && message.contains("At most 4 elements")) {
+                    throw new TotalGroupDocsException("Unlicensed version's limitation exception", e);
+                }
+                throw e;
             }
         }
         return loadDocumentEntity;
@@ -155,37 +135,31 @@ public class ComparisonServiceImpl implements ComparisonService {
      * {@inheritDoc}
      */
     @Override
-    public PageDescriptionEntity loadDocumentPage(LoadDocumentPageRequest loadDocumentPageRequest, SessionCache sessionCache) {
+    public PageDescriptionEntity loadDocumentPage(LoadDocumentPageRequest loadDocumentPageRequest, SessionCache sessionCache) throws Exception {
         PageDescriptionEntity pageDescription = new PageDescriptionEntity();
         {
             final String guid = loadDocumentPageRequest.getGuid();
             final String password = loadDocumentPageRequest.getPassword();
             final int pageNumber = loadDocumentPageRequest.getPage();
-            final int pageHeight = 1056, pageWidth = 816, pageIndex = pageNumber - 1;
-            try {
-                final CachedPageStream cachedPageStream = new CachedPageStream(sessionCache, guid);
+            final ComparisonConfiguration comparisonConfiguration = getComparisonConfiguration();
+            final int pageWidth = comparisonConfiguration.getPreviewPageWidth();
+            final float pageRatio = comparisonConfiguration.getPreviewPageRatio();
+            final int pageHeight = (int) (pageWidth * pageRatio);
+            final int pageIndex = pageNumber - 1;
 
-                if (!cachedPageStream.isCached()) {
-                    final Document document = new Document(guid, password);
-                    document.generatePreview(new PreviewOptions.Builder(cachedPageStream)
-                            .setHeight(pageHeight)
-                            .setWidth(pageWidth)
-                            .build());
+            final CachedPageStream cachedPageStream = new CachedPageStream(sessionCache, guid);
+
+            if (!cachedPageStream.isCached()) {
+                try (final InputStream inputStream = FilesProvider.getInstance().createFilesInputStream(guid); final Document document = new Document(inputStream, password)) {
+                    document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
                 }
+            }
 
-                try (InputStream inputStream = cachedPageStream.createPageStream(pageIndex)) {
-                    pageDescription.setNumber(pageIndex);
-                    pageDescription.setHeight(pageHeight);
-                    pageDescription.setWidth(pageWidth);
-                    pageDescription.setData(getStringFromStream(inputStream));
-                } catch (Exception e) {
-                    logger.error("Exception occurred while getting page description", e);
-                    throw new TotalGroupDocsException("Exception occurred while getting page description", e);
-                }
-
-            } catch (Exception e) {
-                logger.error("Exception occurred while load file page", e);
-                throw new TotalGroupDocsException("Exception occurred while load file page", e);
+            try (InputStream inputStream = cachedPageStream.createPageStream(pageIndex)) {
+                pageDescription.setNumber(pageIndex);
+                pageDescription.setHeight(pageHeight);
+                pageDescription.setWidth(pageWidth);
+                pageDescription.setData(getStringFromStream(inputStream));
             }
         }
         return pageDescription;
@@ -195,10 +169,9 @@ public class ComparisonServiceImpl implements ComparisonService {
      * {@inheritDoc}
      */
     @Override
-    public CompareResultResponse compare(CompareRequest compareRequest, SessionCache sessionCache) {
+    public CompareResultResponse compare(CompareRequest compareRequest, SessionCache sessionCache) throws Exception {
         CompareResultResponse compareResultResponse = new CompareResultResponse();
         {
-
             final LoadDocumentRequest sourceDocumentRequest = compareRequest.getSourceDocumentRequest();
             final LoadDocumentRequest targetDocumentRequest = compareRequest.getTargetDocumentRequest();
 
@@ -206,20 +179,40 @@ public class ComparisonServiceImpl implements ComparisonService {
             final String sourcePassword = sourceDocumentRequest.getPassword();
             final String targetGuid = targetDocumentRequest.getGuid();
             final String targetPassword = targetDocumentRequest.getPassword();
-            final int pageHeight = 1056, pageWidth = 816;
+            final ComparisonConfiguration comparisonConfiguration = getComparisonConfiguration();
+            final int pageWidth = comparisonConfiguration.getPreviewPageWidth();
+            final float pageRatio = comparisonConfiguration.getPreviewPageRatio();
+            final int pageHeight = (int) (pageWidth * pageRatio);
+
+            final String extension = parseFileExtension(sourceGuid);
+            final String tempFileName = "gd_comparison_result_" + sourceGuid.hashCode() + "_" + targetGuid.hashCode() + "." + extension;
+            final String outputFileName;
+            Path outputFilePath = null;
+            final Path tempFilePath = createTempPath(tempFileName);
 
             try {
-                final String extension = parseFileExtension(sourceGuid);
-                final String outputFileName = "gd_" + sourceGuid.hashCode() + "_" + targetGuid.hashCode() + ".cache";
-                // Delete old result file if existed. Can't reuse because changes are not cached
-                sessionCache.deleteCacheEntry(outputFileName);
-                // Saving to cache because it should be deleted when session expires
-                final Path outputFile = sessionCache.createCacheEntry(outputFileName);
+                final FilesProvider filesProvider = FilesProvider.getInstance();
 
                 final ChangeInfo[] changes;
-                try (final Comparer comparer = new Comparer(sourceGuid, new LoadOptions(sourcePassword))) {
-                    comparer.add(targetGuid, new LoadOptions(targetPassword));
-                    comparer.compare(outputFile, new CompareOptions.Builder().setShowDeletedContent(true).setDetectStyleChanges(true).setCalculateCoordinates(true).build());
+                try (InputStream sourceStream = filesProvider.createFilesInputStream(sourceGuid);
+                     InputStream targetStream = filesProvider.createFilesInputStream(targetGuid);
+                     final Comparer comparer = new Comparer(sourceStream, new LoadOptions(sourcePassword))) {
+                    comparer.add(targetStream, new LoadOptions(targetPassword));
+                    final Path changedFilePath = comparer.compare(tempFilePath, new CompareOptions.Builder()
+                            .setShowDeletedContent(true)
+                            .setDetectStyleChanges(true)
+                            .setCalculateCoordinates(true)
+                            .build());
+                    if (changedFilePath == null) {
+                        outputFilePath = tempFilePath;
+                    } else {
+                        outputFilePath = changedFilePath;
+                    }
+                    outputFileName = outputFilePath.getFileName().toString();
+                    logger.debug("outputFileName is '" + outputFileName + "'");
+                    try (final OutputStream outputFile = filesProvider.createResultOutputStream(outputFileName)) {
+                        Files.copy(outputFilePath, outputFile);
+                    }
                     changes = comparer.getChanges();
                 }
 
@@ -227,35 +220,33 @@ public class ComparisonServiceImpl implements ComparisonService {
                 final CachedPageStream cachedPageStream = new CachedPageStream(sessionCache, outputFileName);
 
                 if (!cachedPageStream.isCached()) {
-                    final Document document = new Document(outputFile);
-                    document.generatePreview(new PreviewOptions.Builder(cachedPageStream)
-                            .setHeight(pageHeight)
-                            .setWidth(pageWidth)
-                            .build());
+                    try (final Document document = new Document(outputFilePath)) {
+                        document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
+                    }
                 }
 
-                    pageDescriptionEntities = cachedPageStream.stream().map(item -> {
-                        try (InputStream inputStream = item.pageStream) {
-                            final PageDescriptionEntity pageDescription = new PageDescriptionEntity();
-                            pageDescription.setNumber(item.pageIndex);
-                            pageDescription.setHeight(pageHeight);
-                            pageDescription.setWidth(pageWidth);
-                            pageDescription.setData(getStringFromStream(inputStream));
-                            return pageDescription;
-                        } catch (Exception e) {
-                            logger.error("Exception occurred while getting page description", e);
-                            throw new TotalGroupDocsException("Exception occurred while getting page description", e);
-                        }
-                    }).collect(Collectors.toList());
+                pageDescriptionEntities = cachedPageStream.stream().map(item -> {
+                    try (InputStream inputStream = item.pageStream) {
+                        final PageDescriptionEntity pageDescription = new PageDescriptionEntity();
+                        pageDescription.setNumber(item.pageIndex);
+                        pageDescription.setHeight(pageHeight);
+                        pageDescription.setWidth(pageWidth);
+                        pageDescription.setData(getStringFromStream(inputStream));
+                        return pageDescription;
+                    } catch (Exception e) {
+                        throw new TotalGroupDocsException("Exception occurred while getting page description", e);
+                    }
+                }).collect(Collectors.toList());
 
                 compareResultResponse.setChanges(changes);
                 compareResultResponse.setPages(pageDescriptionEntities);
-                compareResultResponse.setGuid(outputFile.toString());
                 compareResultResponse.setExtension(extension);
+                compareResultResponse.setGuid(outputFileName);
 
-            } catch (Exception e) {
-                logger.error("Exception occurred while comparing files", e);
-                throw new TotalGroupDocsException("Exception occurred while comparing files", e);
+            } finally {
+                if (outputFilePath != null) {
+                    Files.deleteIfExists(outputFilePath);
+                }
             }
         }
         return compareResultResponse;
@@ -273,5 +264,57 @@ public class ComparisonServiceImpl implements ComparisonService {
         final String targetExtension = parseFileExtension(targetDocumentRequest.getGuid());
         // check if files extensions are the same and support format file
         return StringUtils.equals(sourceExtension, targetExtension) && checkSupportedFiles(sourceExtension);
+    }
+
+    /**
+     * Internal upload file into server
+     *
+     * @param inputStream file stream
+     * @param fileName    file name
+     * @param isRewrite   flag for rewriting file
+     * @return path to file in storage
+     */
+    @Override
+    public String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) throws Exception {
+        final FilesProvider filesProvider = FilesProvider.getInstance();
+        if (!filesProvider.isFileExists(fileName) || isRewrite) {
+            try (final OutputStream outputStream = filesProvider.createFilesOutputStream(fileName)) {
+                IOUtils.copy(inputStream, outputStream);
+            }
+        } else {
+            throw new TotalGroupDocsException("File with the name is already exist and rewrite option in configuration is false");
+        }
+        return fileName;
+    }
+
+    @Override
+    public void downloadFile(String fileName, DownloadFileCallback callback) throws IOException {
+        final FilesProvider filesProvider = FilesProvider.getInstance();
+        final Path tempPath = createTempPath(fileName);
+        try (final InputStream inputStream = filesProvider.createResultInputStream(fileName); OutputStream outputStream = Files.newOutputStream(tempPath.toFile().toPath())) {
+            IOUtils.copyLarge(inputStream, outputStream);
+        }
+        // Using temp file to get file's size before sending data
+        try (InputStream inputStream = new BufferedInputStream(Files.newInputStream(tempPath.toFile().toPath()))) {
+            final long fileSize = Files.size(tempPath);
+            callback.call(fileSize, inputStream);
+        } finally {
+            Files.deleteIfExists(tempPath);
+        }
+    }
+
+    private Path createTempPath(String fileName) throws IOException {
+        if (tempDirectoryAbsolutePath == null) {
+
+            final String tempDirectory = getComparisonConfiguration().getTempDirectory();
+            Path tempDirectoryPath = Paths.get(tempDirectory);
+            final boolean isRelative = !tempDirectoryPath.isAbsolute();
+            if (isRelative) {
+                tempDirectoryPath = FileSystems.getDefault().getPath(tempDirectoryPath.toString()).toAbsolutePath();
+            }
+            logger.debug("Temp directory is going to be '" + tempDirectoryPath + "', creating it...");
+            tempDirectoryAbsolutePath = Files.createDirectories(tempDirectoryPath);
+        }
+        return tempDirectoryAbsolutePath.resolve(fileName);
     }
 }

@@ -19,6 +19,7 @@ public class ExceptionEntity {
 
     /**
      * Get exception message
+     *
      * @return message
      */
     public String getMessage() {
@@ -27,6 +28,7 @@ public class ExceptionEntity {
 
     /**
      * Set exception message
+     *
      * @param message message
      */
     public void setMessage(String message) {
@@ -35,6 +37,7 @@ public class ExceptionEntity {
 
     /**
      * Get exception
+     *
      * @return exception
      */
     public Exception getException() {
@@ -43,6 +46,7 @@ public class ExceptionEntity {
 
     /**
      * Set exception
+     *
      * @param exception exception
      */
     public void setException(Exception exception) {

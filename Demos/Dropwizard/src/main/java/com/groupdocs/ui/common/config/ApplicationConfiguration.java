@@ -1,13 +1,11 @@
 package com.groupdocs.ui.common.config;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.groupdocs.ui.common.Defaults;
 import io.dropwizard.Configuration;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.validation.Valid;
-
-import static com.groupdocs.ui.common.config.DefaultDirectories.defaultLicenseDirectory;
-import static com.groupdocs.ui.common.config.DefaultDirectories.relativePathToAbsolute;
 
 /**
  * ApplicationConfiguration
@@ -24,11 +22,7 @@ public class ApplicationConfiguration extends Configuration {
     private String hostAddress;
 
     public String getLicensePath() {
-        return licensePath;
-    }
-
-    public void setLicensePath(String licensePath) {
-        this.licensePath = StringUtils.isEmpty(licensePath) ? defaultLicenseDirectory() : relativePathToAbsolute(licensePath);
+        return licensePath == null || StringUtils.isBlank(licensePath) ? Defaults.Application.DEFAULT_LICENSE_PATH : licensePath;
     }
 
     public String getHostAddress() {

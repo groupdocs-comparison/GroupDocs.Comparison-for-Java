@@ -2,24 +2,15 @@ package com.groupdocs.ui.common.resources;
 
 import com.google.common.collect.Lists;
 import com.groupdocs.ui.common.config.GlobalConfiguration;
-import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import io.dropwizard.jetty.ConnectorFactory;
 import io.dropwizard.jetty.HttpConnectorFactory;
 import io.dropwizard.server.SimpleServerFactory;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
-import java.io.*;
 import java.net.InetAddress;
-import java.net.URL;
 import java.net.UnknownHostException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -28,8 +19,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-
-import static com.groupdocs.ui.common.util.Utils.getFreeFileName;
 
 /**
  * Resources
@@ -43,115 +32,20 @@ public abstract class Resources {
     private static final ZoneId GMT = ZoneId.of("GMT");
 
     /**
-     * Get path to storage. Different for different products
-     *
-     * @param params parameters for calculating the path
-     * @return path to files storage
-     */
-    protected abstract String getStoragePath(Map<String, Object> params);
-
-    /**
-     * Internal upload file into server
-     *
-     * @param documentUrl url for document
-     * @param inputStream file stream
-     * @param fileDetail file description
-     * @param rewrite flag for rewriting file
-     * @param params parameters for creating path to files storage
-     * @return path to file in storage
-     */
-    protected String uploadFile(String documentUrl, InputStream inputStream, FormDataContentDisposition fileDetail, boolean rewrite, Map<String, Object> params) {
-        InputStream uploadedInputStream = null;
-        String pathname;
-        try {
-            String fileName;
-            if (StringUtils.isEmpty(documentUrl)) {
-                // get the InputStream to store the file
-                uploadedInputStream = inputStream;
-                fileName = fileDetail.getFileName();
-            } else {
-                // get the InputStream from the URL
-                URL url =  new URL(documentUrl);
-                uploadedInputStream = url.openStream();
-                fileName = FilenameUtils.getName(url.getPath());
-            }
-            // get documents storage path
-            String documentStoragePath = getStoragePath(params);
-            // save the file
-            pathname = String.format("%s%s%s", documentStoragePath, File.separator, fileName);
-            File file = new File(pathname);
-            // check rewrite mode
-            if (rewrite) {
-                // save file with rewrite if exists
-                Files.copy(uploadedInputStream, file.toPath(), StandardCopyOption.REPLACE_EXISTING);
-            } else {
-                if (file.exists()){
-                    // get file with new name
-                    file = getFreeFileName(documentStoragePath, fileName);
-                }
-                // save file with out rewriting
-                Path path = file.toPath();
-                Files.copy(uploadedInputStream, path);
-                pathname = path.toString();
-            }
-        } catch(Exception ex) {
-            throw new TotalGroupDocsException(ex.getMessage(), ex);
-        } finally {
-            try {
-                uploadedInputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return pathname;
-    }
-
-    /**
      * Date formats with time zone as specified in the HTTP RFC.
+     *
      * @see <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.1">Section 7.1.1.1 of RFC 7231</a>
      */
-    private static final DateTimeFormatter[] DATE_FORMATTERS = new DateTimeFormatter[] {
+    private static final DateTimeFormatter[] DATE_FORMATTERS = new DateTimeFormatter[]{
             DateTimeFormatter.RFC_1123_DATE_TIME,
             DateTimeFormatter.ofPattern("EEEE, dd-MMM-yy HH:mm:ss zz", Locale.US),
-            DateTimeFormatter.ofPattern("EEE MMM dd HH:mm:ss yyyy",Locale.US).withZone(GMT)
+            DateTimeFormatter.ofPattern("EEE MMM dd HH:mm:ss yyyy", Locale.US).withZone(GMT)
     };
 
     /**
-     * Fill Header Content-disposition parameter for download file
-     *
-     * @param response http response to fill header
-     * @param fileName name of file
-     */
-    protected void fillResponseHeaderDisposition(HttpServletResponse response, String fileName) {
-        response.setHeader("Content-disposition", "attachment; filename=" + fileName);
-    }
-
-    /**
-     * Download file
-     *
-     * @param response http response
-     * @param pathToFile path to file
-     */
-    protected void downloadFile(HttpServletResponse response, String pathToFile) {
-        String fileName = FilenameUtils.getName(pathToFile);
-        // don't delete, should be before writing
-        fillResponseHeaderDisposition(response, fileName);
-        long length;
-        try (InputStream inputStream = new FileInputStream(pathToFile);
-             OutputStream outputStream = response.getOutputStream()){
-            // download the document
-            length = IOUtils.copyLarge(inputStream, outputStream);
-        } catch (Exception ex){
-            throw new TotalGroupDocsException(ex.getMessage(), ex);
-        }
-        // set response content disposition
-        addFileDownloadHeaders(response, fileName, length);
-    }
-
-    /**
      * Constructor
+     *
      * @param globalConfiguration global application configuration
-     * @throws UnknownHostException
      */
     public Resources(GlobalConfiguration globalConfiguration) throws UnknownHostException {
         this.globalConfiguration = globalConfiguration;
@@ -163,7 +57,7 @@ public abstract class Resources {
 
         // set host address
         String hostAddress = globalConfiguration.getApplication().getHostAddress();
-        if (StringUtils.isEmpty(hostAddress) || hostAddress.startsWith("${")) {
+        if (StringUtils.isBlank(hostAddress) || hostAddress.startsWith("${")) {
             globalConfiguration.getApplication().setHostAddress(InetAddress.getLocalHost().getHostAddress());
         }
     }

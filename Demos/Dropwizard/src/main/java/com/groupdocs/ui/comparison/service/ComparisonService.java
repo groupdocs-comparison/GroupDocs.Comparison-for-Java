@@ -11,6 +11,8 @@ import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.model.request.CompareRequest;
 import com.groupdocs.ui.comparison.model.response.CompareResultResponse;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public interface ComparisonService {
@@ -28,7 +30,7 @@ public interface ComparisonService {
      * @param fileTreeRequest request with path to directory
      * @return list of files and folders
      */
-    List<FileDescriptionEntity> loadFileTree(FileTreeRequest fileTreeRequest);
+    List<FileDescriptionEntity> loadFileTree(FileTreeRequest fileTreeRequest) throws IOException;
 
     /**
      * Loads document
@@ -36,7 +38,7 @@ public interface ComparisonService {
      * @param loadDocumentRequest request with paths to documents to load
      * @return document loading result
      */
-    LoadDocumentEntity loadDocumentDescription(LoadDocumentRequest loadDocumentRequest, SessionCache sessionCache);
+    LoadDocumentEntity loadDocumentDescription(LoadDocumentRequest loadDocumentRequest, SessionCache sessionCache) throws Exception;
 
     /**
      * Load the page of results
@@ -44,7 +46,7 @@ public interface ComparisonService {
      * @param loadDocumentPageRequest request with path to page result
      * @return page result data
      */
-    PageDescriptionEntity loadDocumentPage(LoadDocumentPageRequest loadDocumentPageRequest, SessionCache sessionCache);
+    PageDescriptionEntity loadDocumentPage(LoadDocumentPageRequest loadDocumentPageRequest, SessionCache sessionCache) throws Exception;
 
     /**
      * Compare two documents, save results in files,
@@ -53,7 +55,7 @@ public interface ComparisonService {
      * @param compareRequest request with paths to documents to compare
      * @return comparing results
      */
-    CompareResultResponse compare(CompareRequest compareRequest, SessionCache sessionCache);
+    CompareResultResponse compare(CompareRequest compareRequest, SessionCache sessionCache) throws Exception;
 
     /**
      * Check format files for comparing
@@ -62,4 +64,13 @@ public interface ComparisonService {
      * @return true - formats of the both files are the same and format is supported, false - other
      */
     boolean checkFiles(CompareRequest request);
+
+    String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) throws Exception;
+
+    @FunctionalInterface
+    interface DownloadFileCallback {
+        void call(long length, InputStream inputStream) throws IOException;
+    }
+
+    void downloadFile(String fileGuid, DownloadFileCallback callback) throws IOException;
 }

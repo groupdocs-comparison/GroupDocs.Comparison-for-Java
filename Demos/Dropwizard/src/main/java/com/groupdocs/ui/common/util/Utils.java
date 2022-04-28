@@ -36,6 +36,7 @@ public class Utils {
             "ppt",
             "pptx",
             "pdf",
+            "png",
             "txt",
             "htm",
             "html"

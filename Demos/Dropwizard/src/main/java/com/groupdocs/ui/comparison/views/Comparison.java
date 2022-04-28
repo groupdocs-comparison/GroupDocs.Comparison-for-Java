@@ -10,16 +10,18 @@ public class Comparison extends View {
 
     /**
      * Constructor
+     *
      * @param globalConfiguration total configuration
-     * @param charset charset
+     * @param charset             charset
      */
-    public Comparison(GlobalConfiguration globalConfiguration, String charset){
+    public Comparison(GlobalConfiguration globalConfiguration, String charset) {
         super("comparison.ftl", Charset.forName(charset));
         this.globalConfiguration = globalConfiguration;
     }
 
     /**
      * Get total config
+     *
      * @return total config
      */
     public GlobalConfiguration getGlobalConfiguration() {
@@ -28,6 +30,7 @@ public class Comparison extends View {
 
     /**
      * Set total config
+     *
      * @param globalConfiguration total config
      */
     public void setGlobalConfiguration(GlobalConfiguration globalConfiguration) {

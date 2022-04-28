@@ -41,20 +41,20 @@ public class CachedPageStream implements Delegates.CreatePageStream {
 
         final boolean isCached = !mCacheFiles.isEmpty();
 
-        logger.error("File with guid='" + mGuid + "' " + (isCached ? "is cached" : "is NOT cached"));
+        logger.debug("File with guid='" + mGuid + "' " + (isCached ? "is cached" : "is NOT cached"));
         return isCached;
     }
 
     @Override
     public OutputStream invoke(int pageNumber) {
+        logger.debug("Creating cache file...");
         try {
             final String fileName = createFileName(mGuid, pageNumber);
             final Path cacheEntry = mSessionCache.createCacheEntry(fileName);
             mCacheFiles.put(pageNumber - 1 /* to pageIndex */, cacheEntry);
             return new FileOutputStream(cacheEntry.toFile());
         } catch (FileNotFoundException e) {
-            logger.error("Exception occurred while creating cache file", e);
-            throw new TotalGroupDocsException("Exception occurred while creating cache file", e);
+            throw new TotalGroupDocsException("Cache exception occurred", e);
         }
     }
 
@@ -66,21 +66,21 @@ public class CachedPageStream implements Delegates.CreatePageStream {
         if (!mCacheFiles.containsKey(pageIndex)) {
             throw new IllegalArgumentException("Incorrect page index");
         }
+        logger.debug("Creating cached page stream...");
         try {
             return new FileInputStream(mCacheFiles.get(pageIndex).toFile());
         } catch (Exception e) {
-            logger.error("Exception occurred while creating page stream", e);
-            throw new TotalGroupDocsException("Exception occurred while creating page stream", e);
+            throw new TotalGroupDocsException("Cache exception occurred", e);
         }
     }
 
     public Stream<PageStream> stream() {
+        logger.debug("Iterating cached pages stream...");
         return mCacheFiles.entrySet().stream().map(entry -> {
             try {
                 return new PageStream(entry.getKey(), new FileInputStream(entry.getValue().toFile()));
             } catch (Exception e) {
-                logger.error("Exception occurred while iterating cache files", e);
-                throw new TotalGroupDocsException("Exception occurred while iterating cache files", e);
+                throw new TotalGroupDocsException("Cache exception occurred", e);
             }
         });
 

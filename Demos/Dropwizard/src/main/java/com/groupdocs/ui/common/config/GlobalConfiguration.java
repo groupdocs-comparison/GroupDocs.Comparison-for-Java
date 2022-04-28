@@ -2,6 +2,8 @@ package com.groupdocs.ui.common.config;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
+import com.groupdocs.ui.comparison.config.GoogleProviderConfiguration;
+import com.groupdocs.ui.comparison.config.LocalProviderConfiguration;
 import io.dropwizard.Configuration;
 
 import javax.validation.Valid;
@@ -30,18 +32,29 @@ public class GlobalConfiguration extends Configuration {
     @JsonProperty
     private ComparisonConfiguration comparison;
 
+    @Valid
+    @JsonProperty
+    private LocalProviderConfiguration local;
+
+    @Valid
+    @JsonProperty
+    private GoogleProviderConfiguration google;
+
     /**
      * Constructor
      */
-    public GlobalConfiguration(){
+    public GlobalConfiguration() {
         server = new ServerConfiguration();
         application = new ApplicationConfiguration();
         common = new CommonConfiguration();
         comparison = new ComparisonConfiguration();
+        local = new LocalProviderConfiguration();
+        google = new GoogleProviderConfiguration();
     }
 
     /**
      * Get server configuration
+     *
      * @return server configuration
      */
     public ServerConfiguration getServer() {
@@ -50,6 +63,7 @@ public class GlobalConfiguration extends Configuration {
 
     /**
      * Get application configuration
+     *
      * @return application configuration
      */
     public ApplicationConfiguration getApplication() {
@@ -58,6 +72,7 @@ public class GlobalConfiguration extends Configuration {
 
     /**
      * Get common configuration
+     *
      * @return common configuration
      */
     public CommonConfiguration getCommon() {
@@ -66,10 +81,29 @@ public class GlobalConfiguration extends Configuration {
 
     /**
      * Get common configuration
+     *
      * @return comparison configuration
      */
     public ComparisonConfiguration getComparison() {
         return comparison;
+    }
+
+    /**
+     * Get google provider configuration
+     *
+     * @return google provider configuration
+     */
+    public GoogleProviderConfiguration getGoogle() {
+        return google;
+    }
+
+    /**
+     * Get local provider configuration
+     *
+     * @return local provider configuration
+     */
+    public LocalProviderConfiguration getLocal() {
+        return local;
     }
 }
 

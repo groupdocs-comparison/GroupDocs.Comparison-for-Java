@@ -14,9 +14,10 @@ server:
 # Application (global) configurations
 ################################################
 application:
-  # License path
-  # Absolute or relative path to GroupDocs license file
-  licensePath: ${LIC_PATH:-C:/GroupDocs.Total.Java.lic}
+  # Absolute or relative path to GroupDocs license
+  # Can be as a path to license file, to directory, in which license file is placed (*.lic) or url to download license file
+  # Default value is `Licenses`
+  licensePath: ${LIC_PATH:-}
   # Host name or ip for server instance
   hostAddress: ${HOST_ADDRESS:-}
 
@@ -25,9 +26,9 @@ application:
 ################################################
 common:
   # File rewriting on document uploading
-  # Set false to keep both files
+  # Set false to cancel uploading in case of existence of file with the same name
   # Set true to replace files with same name
-  rewrite: true
+  rewrite: ${REWRITE:-true}
   # Page navigation
   # Set false to disable document navigation (go to next, previous, last and first page)
   pageSelector: true
@@ -52,13 +53,52 @@ common:
 # GroupDocs.Comparison configurations
 ################################################
 comparison:
-  # Files directory path
-  # Absolute or relative path to files directory
-  filesDirectory: ${FILES_DIR:-DocumentSamples}
-  # FResult files directory path
-  # Absolute path to result files directory
-  resultDirectory: ${RESULT_DIR:-DocumentSamples}
+  # Files provider, where to get files to show them in browse dialog
+  # Available values are `google` - using Google Drive API, `local` - using local directories
+  filesProviderType: ${FILES_PROVIDER_TYPE:-local}
   # Result pages preload
   # How many pages from a result document should be loaded, remaining pages will be loaded on page scrolling
   # Set 0 to load all pages at once
-  preloadResultPageCount: 2
+  preloadResultPageCount: 0
+  # Page width that will be used to resize preview images before displaying them
+  # Default value is 768
+  previewPageWidth: ${PREVIEW_PAGE_WIDTH:-}
+  # Ratio to calculate height of preview images using width
+  # Default value is 1.3
+  previewPageRatio: ${PREVIEW_PAGE_RATIO:-}
+  # Absolute or relative path to directory to save cache files
+  # Default value is system temp directory. The path is always local
+  cacheDirectory: ${CACHE_DIR:-}
+  # Absolute or relative path to directory to save temporary files
+  # Default value is system temp directory. The path is always local
+  tempDirectory: ${TEMP_DIR:-}
+################################################
+# Local files provider Configuration
+################################################
+local:
+  # Files directory path
+  # Absolute or relative path to files directory, default value is `DocumentSamples`.
+  filesDirectory: ${FILES_DIR:-DocumentSamples}
+  # Result files directory path
+  # Absolute or relative path to result files directory, default value is `DocumentSamples/Temp`.
+  resultDirectory: ${RESULT_DIR:-}
+################################################
+# Google API files provider Configuration
+################################################
+google:
+  # When false or empty, file with name `credentials.json` from resources will be used
+  useCredentialsPath: ${USE_CREDENTIALS_PATH:-false}
+  # When useCredentialsPath is true, this path will be used as a path to google credentials file (usually `credentials.json`)
+  credentialsPath: ${CREDENTIALS_PATH:-}
+  # Path to directory to save stored credentials. When empty, credentials will not be saved
+  tokensDirectoryPath: ${TOKENS_DIRECTORY_PATH:-}
+  # Client application name
+  applicationName: ${APPLICATION_NAME:-GroupDocs.Comparison for Java Dropwizard sample}
+  # Files access type, available options are `offline` and `online`.
+  # Default value is `offline`
+  accessType: offline
+  # Port that will be used for Google Drive API authorization callback.
+  # Default value is `8888`
+  localServerReceiverPort: ${LOCAL_SERVER_RECEIVER_PORT:-8888}
+  # user ID or null if not using a persisted credential store
+  authorizationUserId: user

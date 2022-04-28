@@ -14,6 +14,7 @@ public class FileDescriptionEntity {
 
     /**
      * Get guid (file id)
+     *
      * @return guid
      */
     public String getGuid() {
@@ -22,6 +23,7 @@ public class FileDescriptionEntity {
 
     /**
      * Set guid (File id)
+     *
      * @param guid guid
      */
     public void setGuid(String guid) {
@@ -30,6 +32,7 @@ public class FileDescriptionEntity {
 
     /**
      * Get file name
+     *
      * @return file name
      */
     public String getName() {
@@ -38,6 +41,7 @@ public class FileDescriptionEntity {
 
     /**
      * Set file name
+     *
      * @param name file name
      */
     public void setName(String name) {
@@ -46,6 +50,7 @@ public class FileDescriptionEntity {
 
     /**
      * Get document type
+     *
      * @return document type
      */
     public String getDocType() {
@@ -54,6 +59,7 @@ public class FileDescriptionEntity {
 
     /**
      * Set document type
+     *
      * @param docType document type
      */
     public void setDocType(String docType) {
@@ -62,6 +68,7 @@ public class FileDescriptionEntity {
 
     /**
      * Check if path is directory
+     *
      * @return true/false flag
      */
     public Boolean isDirectory() {
@@ -70,6 +77,7 @@ public class FileDescriptionEntity {
 
     /**
      * Set is directory flag
+     *
      * @param directory true/false flag
      */
     public void setDirectory(Boolean directory) {
@@ -78,6 +86,7 @@ public class FileDescriptionEntity {
 
     /**
      * Get file size
+     *
      * @return file size
      */
     public Long getSize() {
@@ -86,6 +95,7 @@ public class FileDescriptionEntity {
 
     /**
      * Set file size
+     *
      * @param size file size
      */
     public void setSize(Long size) {

@@ -10,14 +10,6 @@ public class ComparisonConfigurationModel {
 
     @Valid
     @JsonProperty
-    private String filesDirectory;
-
-    @Valid
-    @JsonProperty
-    private String resultDirectory;
-
-    @Valid
-    @JsonProperty
     private int preloadResultPageCount;
 
     @Valid
@@ -47,22 +39,6 @@ public class ComparisonConfigurationModel {
     @Valid
     @JsonProperty
     private boolean pageSelector;
-
-    public String getFilesDirectory() {
-        return filesDirectory;
-    }
-
-    public void setFilesDirectory(String filesDirectory) {
-        this.filesDirectory = filesDirectory;
-    }
-
-    public String getResultDirectory() {
-        return resultDirectory;
-    }
-
-    public void setResultDirectory(String resultDirectory) {
-        this.resultDirectory = resultDirectory;
-    }
 
     public int getPreloadResultPageCount() {
         return preloadResultPageCount;
@@ -130,8 +106,6 @@ public class ComparisonConfigurationModel {
 
     public static ComparisonConfigurationModel createComparisonConfiguration(ComparisonConfiguration comparison, CommonConfiguration common) {
         ComparisonConfigurationModel model = new ComparisonConfigurationModel();
-        model.setFilesDirectory(comparison.getFilesDirectory());
-        model.setResultDirectory(comparison.getResultDirectory());
         model.setPreloadResultPageCount(comparison.getPreloadResultPageCount());
         model.setPageSelector(common.isPageSelector());
         model.setDownload(common.isDownload());
@@ -146,8 +120,6 @@ public class ComparisonConfigurationModel {
     @Override
     public String toString() {
         return "ComparisonConfigurationModel{" +
-                "filesDirectory='" + filesDirectory + '\'' +
-                ", resultDirectory='" + resultDirectory + '\'' +
                 ", preloadResultPageCount=" + preloadResultPageCount +
                 ", download=" + download +
                 ", upload=" + upload +
