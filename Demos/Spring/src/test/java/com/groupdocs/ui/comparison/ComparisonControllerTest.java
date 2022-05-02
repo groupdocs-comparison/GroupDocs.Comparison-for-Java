@@ -1,5 +1,7 @@
 package com.groupdocs.ui.comparison;
 
+import com.groupdocs.ui.common.Application;
+import com.groupdocs.ui.comparison.resources.ComparisonResources;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,33 +13,52 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import static org.hamcrest.CoreMatchers.*;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = {Application.class})
 public class ComparisonControllerTest {
     MockMvc mvc;
     @Autowired
     protected WebApplicationContext wac;
     @Autowired
-    ComparisonController controller;
+    ComparisonResources controller;
+
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/templates/");
         viewResolver.setSuffix(".html");
 
         this.mvc = standaloneSetup(this.controller).setViewResolvers(viewResolver).build();
     }
+
     @Test
-    public void getView()  throws Exception {
+    public void getView() throws Exception {
         mvc.perform(get("/comparison")).andExpect(status().isOk()).andExpect(view().name("comparison"));
     }
 
-    public void loadFileTree() {
+    @Test
+    public void loadFileTree() throws Exception {
+        mvc.perform(post("/comparison/loadFileTree")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"path\": \"\"}")
+                )
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(APPLICATION_JSON_VALUE))
+                .andExpect(content().string(startsWith("[{\"")))
+                .andExpect(content().string(endsWith("}]")))
+                .andExpect(content().string(containsString("\"guid\":")))
+                .andExpect(content().string(containsString("\"directory\":")))
+                .andExpect(content().string(containsString("\"docType\":")))
+                .andExpect(content().string(containsString("\"name\":")))
+                .andExpect(content().string(containsString("\"size\":")))
+        ;
     }
 
     public void downloadDocument() {

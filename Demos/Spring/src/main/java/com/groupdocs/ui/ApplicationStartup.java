@@ -1,6 +1,6 @@
 package com.groupdocs.ui;
 
-import com.groupdocs.ui.config.ServerConfiguration;
+import com.groupdocs.ui.common.config.ServerConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.context.ApplicationListener;

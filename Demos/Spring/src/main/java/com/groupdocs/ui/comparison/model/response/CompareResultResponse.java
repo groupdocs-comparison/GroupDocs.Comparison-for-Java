@@ -1,6 +1,7 @@
 package com.groupdocs.ui.comparison.model.response;
 
-import com.groupdocs.ui.model.response.PageDescriptionEntity;
+import com.groupdocs.comparison.result.ChangeInfo;
+import com.groupdocs.ui.common.entity.web.PageDescriptionEntity;
 
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class CompareResultResponse {
     /**
      * List of change information
      */
-    private ChangeInfoEntity[] changes;
+    private ChangeInfo[] changes;
     /**
      * List of images of pages with marked changes
      */
@@ -22,11 +23,11 @@ public class CompareResultResponse {
      */
     private String extension;
 
-    public void setChanges(ChangeInfoEntity[] changes) {
+    public void setChanges(ChangeInfo[] changes) {
         this.changes = changes;
     }
 
-    public ChangeInfoEntity[] getChanges() {
+    public ChangeInfo[] getChanges() {
         return changes;
     }
 
