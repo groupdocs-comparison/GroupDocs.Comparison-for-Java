@@ -123,6 +123,10 @@ public class DropboxFilesProvider extends FilesProvider {
         final String path = "/" + resultDirectory + "/" + fileName;
         logger.debug("Request to Dropbox API to upload result file '" + path + "'");
         try {
+            // Always delete result file if it is already exist.
+            if (isFileExists(path)) {
+                deleteFile(path);
+            }
             final DbxUserFilesRequests filesRequests = client.files();
             try (final UploadUploader apiUploader = filesRequests.upload(path)) {
                 try (final OutputStream outputStream = apiUploader.getOutputStream()) {
@@ -139,11 +143,39 @@ public class DropboxFilesProvider extends FilesProvider {
     public boolean isFileExists(String path) {
         logger.debug("Checking is result file exists: '" + path + "'");
         try {
-            ListFolderResult result = client.files().listFolder("");
+            if (path.startsWith("/")) {
+                path = path.substring(1);
+            }
+            final String fileDirectory, fileName;
+            if (path.contains("/")) {
+                final int nameStartsFrom = path.lastIndexOf("/") + 1;
+                fileDirectory = "/" + path.substring(0, nameStartsFrom);
+                fileName = path.substring(nameStartsFrom);
+            } else {
+                fileDirectory = "";
+                fileName = path;
+            }
+
+            ListFolderResult result = client.files().listFolder(fileDirectory);
             final List<Metadata> entries = result.getEntries();
-            return entries.stream().anyMatch(metadata -> metadata.getPathLower().equals(path.toLowerCase(Locale.ROOT)));
+            return entries.stream().anyMatch(metadata -> metadata.getName().equals(fileName.toLowerCase(Locale.ROOT)));
         } catch (Exception e) {
             throw new ApiException("Api exception: Can't check if result file exists!", e);
+        }
+    }
+
+    @Override
+    public void deleteFile(String path) throws ApiException {
+        logger.debug("Request to Dropbox API to delete file with path '" + path + "'");
+
+        try {
+            final DbxUserFilesRequests filesRequests = client.files();
+            if (!path.startsWith("/")) {
+                path = "/" + path;
+            }
+            filesRequests.deleteV2(path);
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't delete file data!", e);
         }
     }
 }

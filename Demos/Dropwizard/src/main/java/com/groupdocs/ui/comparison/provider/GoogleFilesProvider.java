@@ -257,4 +257,27 @@ public class GoogleFilesProvider extends FilesProvider {
             throw new ApiException("Api exception: Can't check if result file exists!", e);
         }
     }
+
+    @Override
+    public void deleteFile(String path) throws ApiException {
+        logger.debug("Deleting the file: '" + path + "'");
+        try {
+            FileList result = service.files().list()
+                    .setFields("files(id)")
+                    .setCorpora("user")
+                    .set("ownedByMe", true)
+                    .setSpaces("drive")
+                    .set("trashed", false)
+                    // Remove directories and their content from the list, check by name is file exists
+                    .setQ("mimeType != 'application/vnd.google-apps.folder' and 'root' in parents and name = '" + path + "'")
+                    .execute();
+            final Optional<File> optionalFile = result.getFiles().stream().findFirst();
+            if (optionalFile.isPresent()) {
+                service.files().delete(optionalFile.get().getId());
+            }
+
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't delete the file!", e);
+        }
+    }
 }

@@ -1,7 +1,7 @@
 package com.groupdocs.ui.comparison.provider;
 
 import com.groupdocs.ui.common.exception.LocalDiskException;
-import com.groupdocs.ui.common.exception.LocalDiskException;
+import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.comparison.config.LocalProviderConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -119,7 +119,17 @@ public class LocalFilesProvider extends FilesProvider {
 
     @Override
     public boolean isFileExists(String path) {
-        logger.debug("Checking is result file exists: '" + path + "'");
+        logger.debug("Checking is file exists: '" + path + "'");
         return Files.exists(filesDirectory.resolve(path));
+    }
+
+    @Override
+    public void deleteFile(String path) throws TotalGroupDocsException {
+        logger.debug("Deleting the file: '" + path + "'");
+        try {
+            Files.delete(filesDirectory.resolve(path));
+        } catch (IOException e) {
+            throw new LocalDiskException("Storage exception: Can't delete the file!", e);
+        }
     }
 }

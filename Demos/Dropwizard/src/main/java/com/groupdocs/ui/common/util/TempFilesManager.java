@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public final class TempFilesManager {
     private static final Logger logger = LoggerFactory.getLogger(TempFilesManager.class);
@@ -36,7 +37,7 @@ public final class TempFilesManager {
         if (tempDirectory == null) {
             throw new IllegalArgumentException("tempDirectory must not be null");
         }
-        INSTANCE = new TempFilesManager(Path.of(tempDirectory));
+        INSTANCE = new TempFilesManager(Paths.get(tempDirectory));
     }
 
     public static TempFilesManager getInstance() {

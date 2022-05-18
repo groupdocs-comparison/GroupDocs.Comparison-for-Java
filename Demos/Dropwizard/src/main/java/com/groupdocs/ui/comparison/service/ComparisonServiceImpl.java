@@ -305,9 +305,13 @@ public class ComparisonServiceImpl implements ComparisonService {
      * @return path to file in storage
      */
     @Override
-    public String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) throws Exception {
+    public String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) {
         final FilesProvider filesProvider = FilesProvider.getInstance();
-        if (!filesProvider.isFileExists(fileName) || isRewrite) {
+        final boolean isFileExists = filesProvider.isFileExists(fileName);
+        if (!isFileExists || isRewrite) {
+            if (isFileExists) {
+                filesProvider.deleteFile(fileName);
+            }
             filesProvider.receiveFilesOutputStream(fileName, outputStream -> {
                 try {
                     IOUtils.copy(inputStream, outputStream);

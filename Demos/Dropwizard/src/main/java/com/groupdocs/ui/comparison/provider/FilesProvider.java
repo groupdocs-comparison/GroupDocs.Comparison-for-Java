@@ -2,7 +2,8 @@ package com.groupdocs.ui.comparison.provider;
 
 import com.groupdocs.ui.common.Defaults;
 import com.groupdocs.ui.common.config.GlobalConfiguration;
-import com.groupdocs.ui.common.exception.ApiException;
+import com.groupdocs.ui.common.exception.TotalGroupDocsException;
+import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
 
 import java.io.InputStream;
@@ -17,17 +18,19 @@ public abstract class FilesProvider {
         void visit(String guid, String name, boolean isDirectory, long size);
     }
 
-    public abstract void visitDirectoryContent(String path, DirectoryContentVisitor visitor) throws ApiException;
+    public abstract void visitDirectoryContent(String path, DirectoryContentVisitor visitor) throws TotalGroupDocsException;
 
-    public abstract void receiveFilesInputStream(String path, Consumer<InputStream> streamConsumer) throws ApiException;
+    public abstract void receiveFilesInputStream(String path, Consumer<InputStream> streamConsumer) throws TotalGroupDocsException;
 
-    public abstract void receiveFilesOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws ApiException;
+    public abstract void receiveFilesOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws TotalGroupDocsException;
 
-    public abstract void receiveResultInputStream(String fileName, Consumer<InputStream> streamConsumer) throws ApiException;
+    public abstract void receiveResultInputStream(String fileName, Consumer<InputStream> streamConsumer) throws TotalGroupDocsException;
 
-    public abstract void receiveResultOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws ApiException;
+    public abstract void receiveResultOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws TotalGroupDocsException;
 
-    public abstract boolean isFileExists(String fileName) throws ApiException;
+    public abstract boolean isFileExists(String fileName) throws TotalGroupDocsException;
+
+    public abstract void deleteFile(String path) throws TotalGroupDocsException;
 
     public static void create(GlobalConfiguration globalConfiguration) {
         final ComparisonConfiguration comparisonConfiguration = globalConfiguration.getComparison();
