@@ -22,13 +22,7 @@ import java.net.MalformedURLException;
 //@EnableAutoConfiguration
 @SpringBootApplication(
         scanBasePackages = {
-                "com.groupdocs.ui",
-//                "com.groupdocs.ui.common",
-//                "com.groupdocs.ui.comparison",
-//                "com.groupdocs.ui.common.config",
-//                "com.groupdocs.ui.comparison.config",
-//                "com.groupdocs.ui.comparison.resources",
-//                "com.groupdocs.ui.comparison.service"
+                "com.groupdocs.ui"
         }
 )
 public class Application extends SpringBootServletInitializer {

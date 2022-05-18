@@ -1,11 +1,15 @@
 package com.groupdocs.ui.common.config;
 
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
+import com.groupdocs.ui.comparison.config.DropboxProviderConfiguration;
 import com.groupdocs.ui.comparison.config.GoogleProviderConfiguration;
 import com.groupdocs.ui.comparison.config.LocalProviderConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * The type Global configuration.
+ */
 @Component
 public class GlobalConfiguration {
 
@@ -26,27 +30,59 @@ public class GlobalConfiguration {
 
     @Autowired
     private GoogleProviderConfiguration google;
+    @Autowired
+    private DropboxProviderConfiguration dropbox;
 
+    /**
+     * Gets server configuration
+     *
+     * @return the server configuration
+     */
     public ServerConfiguration getServer() {
         return server;
     }
 
+    /**
+     * Sets server configuration
+     *
+     * @param server the server configuration
+     */
     public void setServer(ServerConfiguration server) {
         this.server = server;
     }
 
+    /**
+     * Gets application configuration
+     *
+     * @return the application configuration
+     */
     public ApplicationConfiguration getApplication() {
         return application;
     }
 
+    /**
+     * Sets application configuration
+     *
+     * @param application the application configuration
+     */
     public void setApplication(ApplicationConfiguration application) {
         this.application = application;
     }
 
+    /**
+     * Gets common configuration
+     *
+     * @return the common configuration
+     */
     public CommonConfiguration getCommon() {
         return common;
     }
 
+    /**
+     * Gets comparison configuration
+     *
+     * @return the comparison configuration
+     */
     public ComparisonConfiguration getComparison() {
         return comparison;
     }
@@ -58,6 +94,15 @@ public class GlobalConfiguration {
      */
     public GoogleProviderConfiguration getGoogle() {
         return google;
+    }
+
+    /**
+     * Gets dropbox provider configuration
+     *
+     * @return the dropbox provider configuration
+     */
+    public DropboxProviderConfiguration getDropbox() {
+        return dropbox;
     }
 
     /**

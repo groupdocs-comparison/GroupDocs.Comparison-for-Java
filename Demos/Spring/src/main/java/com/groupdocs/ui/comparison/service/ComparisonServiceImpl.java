@@ -16,6 +16,7 @@ import com.groupdocs.ui.common.entity.web.request.LoadDocumentRequest;
 import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.common.util.CachedPageStream;
 import com.groupdocs.ui.common.util.SessionCache;
+import com.groupdocs.ui.common.util.TempFilesManager;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.model.request.CompareRequest;
 import com.groupdocs.ui.comparison.model.response.CompareResultResponse;
@@ -30,13 +31,13 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import static com.groupdocs.ui.common.util.Utils.*;
@@ -100,11 +101,12 @@ public class ComparisonServiceImpl implements ComparisonService {
                 final CachedPageStream cachedPageStream = new CachedPageStream(sessionCache, guid);
 
                 if (!cachedPageStream.isCached()) {
-                    try (final InputStream inputStream = FilesProvider.getInstance().createFilesInputStream(guid); final Document document = new Document(inputStream, password)) {
-                        document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
-                    }
+                    FilesProvider.getInstance().receiveFilesInputStream(guid, inputStream -> {
+                        try (final Document document = new Document(inputStream, password)) {
+                            document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
+                        }
+                    });
                 }
-
                 pageDescriptionEntities = cachedPageStream.stream().map(item -> {
                     try (InputStream inputStream = item.pageStream) {
                         final PageDescriptionEntity pageDescription = new PageDescriptionEntity();
@@ -114,7 +116,7 @@ public class ComparisonServiceImpl implements ComparisonService {
                         pageDescription.setData(getStringFromStream(inputStream));
                         return pageDescription;
                     } catch (Exception e) {
-                        throw new RuntimeException("Exception occurred while getting page description", e);
+                        throw new TotalGroupDocsException("Exception occurred while getting page description", e);
                     }
                 }).collect(Collectors.toList());
                 loadDocumentEntity.setGuid(guid);
@@ -132,8 +134,6 @@ public class ComparisonServiceImpl implements ComparisonService {
 
     /**
      * {@inheritDoc}
-     *
-     * @return
      */
     @Override
     public PageDescriptionEntity loadDocumentPage(LoadDocumentPageRequest loadDocumentPageRequest, SessionCache sessionCache) throws Exception {
@@ -151,11 +151,13 @@ public class ComparisonServiceImpl implements ComparisonService {
             final CachedPageStream cachedPageStream = new CachedPageStream(sessionCache, guid);
 
             if (!cachedPageStream.isCached()) {
-                try (final InputStream inputStream = FilesProvider.getInstance().createFilesInputStream(guid); final Document document = new Document(inputStream, password)) {
-                    document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
-                }
-            }
+                FilesProvider.getInstance().receiveFilesInputStream(guid, inputStream -> {
+                    try (final Document document = new Document(inputStream, password)) {
+                        document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
+                    }
 
+                });
+            }
             try (InputStream inputStream = cachedPageStream.createPageStream(pageIndex)) {
                 pageDescription.setNumber(pageIndex);
                 pageDescription.setHeight(pageHeight);
@@ -188,32 +190,56 @@ public class ComparisonServiceImpl implements ComparisonService {
             final String extension = parseFileExtension(sourceGuid);
             final String tempFileName = "gd_comparison_result_" + sourceGuid.hashCode() + "_" + targetGuid.hashCode() + "." + extension;
             final String outputFileName;
-            java.nio.file.Path outputFilePath = null;
-            final java.nio.file.Path tempFilePath = createTempPath(tempFileName);
+            Path outputFilePath = null;
+            final TempFilesManager tempFilesManager = TempFilesManager.getInstance();
+            final Path sourceTempPath = tempFilesManager.createTempPath("gd_" + UUID.randomUUID() + ".tmp");
+            final Path targetTempPath = tempFilesManager.createTempPath("gd_" + UUID.randomUUID() + ".tmp");
+            final Path resultTempPath = tempFilesManager.createTempPath(tempFileName);
 
             try {
                 final FilesProvider filesProvider = FilesProvider.getInstance();
-
+                {
+                    filesProvider.receiveFilesInputStream(sourceGuid, inputStream -> {
+                        try {
+                            Files.copy(inputStream, sourceTempPath);
+                        } catch (IOException e) {
+                            throw new TotalGroupDocsException("Can't retrieve source file", e);
+                        }
+                    });
+                    filesProvider.receiveFilesInputStream(targetGuid, inputStream -> {
+                        try {
+                            Files.copy(inputStream, targetTempPath);
+                        } catch (IOException e) {
+                            throw new TotalGroupDocsException("Can't retrieve target file", e);
+                        }
+                    });
+                }
                 final ChangeInfo[] changes;
-                try (InputStream sourceStream = filesProvider.createFilesInputStream(sourceGuid);
-                     InputStream targetStream = filesProvider.createFilesInputStream(targetGuid);
+                try (InputStream sourceStream = Files.newInputStream(sourceTempPath);
+                     InputStream targetStream = Files.newInputStream(targetTempPath);
                      final Comparer comparer = new Comparer(sourceStream, new LoadOptions(sourcePassword))) {
                     comparer.add(targetStream, new LoadOptions(targetPassword));
-                    final java.nio.file.Path changedFilePath = comparer.compare(tempFilePath, new CompareOptions.Builder()
+                    final Path changedFilePath = comparer.compare(resultTempPath, new CompareOptions.Builder()
                             .setShowDeletedContent(true)
                             .setDetectStyleChanges(true)
                             .setCalculateCoordinates(true)
                             .build());
+                    final Path pathToUpload;
                     if (changedFilePath == null) {
-                        outputFilePath = tempFilePath;
+                        pathToUpload = resultTempPath;
                     } else {
-                        outputFilePath = changedFilePath;
+                        pathToUpload = changedFilePath;
                     }
-                    outputFileName = outputFilePath.getFileName().toString();
+                    outputFilePath = pathToUpload;
+                    outputFileName = pathToUpload.getFileName().toString();
                     logger.debug("outputFileName is '" + outputFileName + "'");
-                    try (final OutputStream outputFile = filesProvider.createResultOutputStream(outputFileName)) {
-                        Files.copy(outputFilePath, outputFile);
-                    }
+                    filesProvider.receiveResultOutputStream(outputFileName, outputStream -> {
+                        try {
+                            Files.copy(pathToUpload, outputStream);
+                        } catch (IOException e) {
+                            throw new TotalGroupDocsException("Can't upload result file", e);
+                        }
+                    });
                     changes = comparer.getChanges();
                 }
 
@@ -245,6 +271,8 @@ public class ComparisonServiceImpl implements ComparisonService {
                 compareResultResponse.setGuid(outputFileName);
 
             } finally {
+                Files.deleteIfExists(sourceTempPath);
+                Files.deleteIfExists(targetTempPath);
                 if (outputFilePath != null) {
                     Files.deleteIfExists(outputFilePath);
                 }
@@ -263,8 +291,6 @@ public class ComparisonServiceImpl implements ComparisonService {
 
         final String sourceExtension = parseFileExtension(sourceDocumentRequest.getGuid());
         final String targetExtension = parseFileExtension(targetDocumentRequest.getGuid());
-        assert sourceExtension != null : "sourceExtension is null";
-        assert targetExtension != null : "targetExtension is null";
         // check if files extensions are the same and support format file
         return StringUtils.equals(sourceExtension, targetExtension) && checkSupportedFiles(sourceExtension);
     }
@@ -278,12 +304,20 @@ public class ComparisonServiceImpl implements ComparisonService {
      * @return path to file in storage
      */
     @Override
-    public String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) throws Exception {
+    public String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) {
         final FilesProvider filesProvider = FilesProvider.getInstance();
-        if (!filesProvider.isFileExists(fileName) || isRewrite) {
-            try (final OutputStream outputStream = filesProvider.createFilesOutputStream(fileName)) {
-                IOUtils.copy(inputStream, outputStream);
+        final boolean isFileExists = filesProvider.isFileExists(fileName);
+        if (!isFileExists || isRewrite) {
+            if (isFileExists) {
+                filesProvider.deleteFile(fileName);
             }
+            filesProvider.receiveFilesOutputStream(fileName, outputStream -> {
+                try {
+                    IOUtils.copy(inputStream, outputStream);
+                } catch (IOException e) {
+                    throw new TotalGroupDocsException("Can't upload file", e);
+                }
+            });
         } else {
             throw new TotalGroupDocsException("File with the name is already exist and rewrite option in configuration is false");
         }
@@ -293,12 +327,16 @@ public class ComparisonServiceImpl implements ComparisonService {
     @Override
     public void downloadFile(String fileName, DownloadFileCallback callback) throws IOException {
         final FilesProvider filesProvider = FilesProvider.getInstance();
-        final java.nio.file.Path tempPath = createTempPath(fileName);
-        try (final InputStream inputStream = filesProvider.createResultInputStream(fileName); OutputStream outputStream = Files.newOutputStream(tempPath.toFile().toPath())) {
-            IOUtils.copyLarge(inputStream, outputStream);
-        }
+        final Path tempPath = createTempPath(fileName);
+        filesProvider.receiveResultInputStream(fileName, inputStream -> {
+            try {
+                Files.copy(inputStream, tempPath);
+            } catch (IOException e) {
+                throw new TotalGroupDocsException("Can't download file", e);
+            }
+        });
         // Using temp file to get file's size before sending data
-        try (InputStream inputStream = new BufferedInputStream(Files.newInputStream(tempPath.toFile().toPath()))) {
+        try (InputStream inputStream = new BufferedInputStream(Files.newInputStream(tempPath))) {
             final long fileSize = Files.size(tempPath);
             callback.call(fileSize, inputStream);
         } finally {
@@ -306,7 +344,7 @@ public class ComparisonServiceImpl implements ComparisonService {
         }
     }
 
-    private java.nio.file.Path createTempPath(String fileName) throws IOException {
+    private Path createTempPath(String fileName) throws IOException {
         if (tempDirectoryAbsolutePath == null) {
 
             final String tempDirectory = getComparisonConfiguration().getTempDirectory();

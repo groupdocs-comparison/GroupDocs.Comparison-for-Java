@@ -12,6 +12,7 @@ import com.groupdocs.ui.common.entity.web.request.LoadDocumentPageRequest;
 import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.common.resources.Resources;
 import com.groupdocs.ui.common.util.SessionCache;
+import com.groupdocs.ui.common.util.TempFilesManager;
 import com.groupdocs.ui.common.util.Utils;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.model.ComparisonConfigurationModel;
@@ -66,6 +67,7 @@ public class ComparisonResources extends Resources implements HttpSessionListene
     @PostConstruct
     public void init() {
         try {
+            TempFilesManager.createInstance(globalConfiguration.getComparison().getTempDirectory());
             FilesProvider.create(globalConfiguration);
             // set GroupDocs license
             try {

@@ -1,11 +1,14 @@
 package com.groupdocs.ui.comparison.provider;
 
+import com.groupdocs.ui.common.exception.LocalDiskException;
+import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.comparison.config.LocalProviderConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.nio.file.*;
+import java.util.function.Consumer;
 
 public class LocalFilesProvider extends FilesProvider {
     private static final Logger logger = LoggerFactory.getLogger(LocalFilesProvider.class);
@@ -40,12 +43,12 @@ public class LocalFilesProvider extends FilesProvider {
                 return path;
             }
         } catch (IOException e) {
-            throw new RuntimeException("Can't create files directory: '" + path + "'", e);
+            throw new LocalDiskException("Storage exception: Can't create files directory!", e);
         }
     }
 
     @Override
-    public void visitDirectoryContent(String path, DirectoryContentVisitor visitor) throws IOException {
+    public void visitDirectoryContent(String path, DirectoryContentVisitor visitor) throws LocalDiskException {
         logger.debug("Getting directory content for '" + path + "'");
         Path directoryPath = filesDirectory.resolve(path);
         try (final DirectoryStream<Path> directoryStream = Files.newDirectoryStream(directoryPath)) {
@@ -66,39 +69,67 @@ public class LocalFilesProvider extends FilesProvider {
                     logger.warn("Can't get data for '" + directoryPath + "'", e);
                 }
             });
+        } catch (IOException e) {
+            throw new LocalDiskException("Storage exception: Can't list files in directory", e);
         }
     }
 
     @Override
-    public InputStream createFilesInputStream(String path) throws IOException {
+    public void receiveFilesInputStream(String path, Consumer<InputStream> streamConsumer) throws LocalDiskException {
         logger.debug("Creating document input stream for '" + path + "'");
-        return new BufferedInputStream(Files.newInputStream(filesDirectory.resolve(path)));
+        try (final BufferedInputStream inputStream = new BufferedInputStream(Files.newInputStream(filesDirectory.resolve(path)))) {
+            streamConsumer.accept(inputStream);
+        } catch (IOException e) {
+            throw new LocalDiskException("Storage exception: Can't receive file data! Try to reload page.", e);
+        }
     }
 
     @Override
-    public OutputStream createFilesOutputStream(String fileName) throws IOException {
+    public void receiveFilesOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws LocalDiskException {
         logger.debug("Creating document output stream for '" + fileName + "'");
 
-        return new BufferedOutputStream(Files.newOutputStream(filesDirectory.resolve(fileName)));
+        try (final BufferedOutputStream outputStream = new BufferedOutputStream(Files.newOutputStream(filesDirectory.resolve(fileName)))) {
+            streamConsumer.accept(outputStream);
+        } catch (IOException e) {
+            throw new LocalDiskException("Storage exception: Can't upload file data!", e);
+        }
     }
 
     @Override
-    public OutputStream createResultOutputStream(String fileName) throws IOException {
-        logger.debug("Creating result output stream for '" + fileName + "'");
-
-        return new BufferedOutputStream(Files.newOutputStream(resultDirectory.resolve(fileName)));
-    }
-
-    @Override
-    public InputStream createResultInputStream(String fileName) throws IOException {
+    public void receiveResultInputStream(String fileName, Consumer<InputStream> streamConsumer) throws LocalDiskException {
         logger.debug("Creating result input stream for '" + fileName + "'");
 
-        return new BufferedInputStream(Files.newInputStream(resultDirectory.resolve(fileName)));
+        try (final BufferedInputStream inputStream = new BufferedInputStream(Files.newInputStream(resultDirectory.resolve(fileName)))) {
+            streamConsumer.accept(inputStream);
+        } catch (IOException e) {
+            throw new LocalDiskException("Storage exception: Can't receive result file data!", e);
+        }
     }
 
     @Override
-    public boolean isFileExists(String fileName) {
-        logger.debug("Checking is result file exists: '" + fileName + "'");
-        return Files.exists(filesDirectory.resolve(fileName));
+    public void receiveResultOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws LocalDiskException {
+        logger.debug("Creating result output stream for '" + fileName + "'");
+
+        try (final BufferedOutputStream outputStream = new BufferedOutputStream(Files.newOutputStream(resultDirectory.resolve(fileName)))) {
+            streamConsumer.accept(outputStream);
+        } catch (IOException e) {
+            throw new LocalDiskException("Storage exception: Can't upload result file data!", e);
+        }
+    }
+
+    @Override
+    public boolean isFileExists(String path) {
+        logger.debug("Checking is file exists: '" + path + "'");
+        return Files.exists(filesDirectory.resolve(path));
+    }
+
+    @Override
+    public void deleteFile(String path) throws TotalGroupDocsException {
+        logger.debug("Deleting the file: '" + path + "'");
+        try {
+            Files.delete(filesDirectory.resolve(path));
+        } catch (IOException e) {
+            throw new LocalDiskException("Storage exception: Can't delete the file!", e);
+        }
     }
 }

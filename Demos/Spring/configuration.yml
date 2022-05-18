@@ -50,7 +50,7 @@ common:
 ################################################
 comparison:
   # Files provider, where to get files to show them in browse dialog
-  # Available values are `google` - using Google Drive API, `local` - using local directories
+  # Available values are `google` - using Google Drive API, `dropbox` - using Dropbox API, `local` - using local directories
   filesProviderType: ${FILES_PROVIDER_TYPE:local}
   # Result pages preload
   # How many pages from a result document should be loaded, remaining pages will be loaded on page scrolling
@@ -98,3 +98,13 @@ google:
   localServerReceiverPort: ${LOCAL_SERVER_RECEIVER_PORT:8888}
   # user ID or null if not using a persisted credential store
   authorizationUserId: user
+################################################
+# Dropbox API files provider Configuration
+################################################
+dropbox:
+  # The identifier that will be used as User-Agent in API requests
+  clientIdentifier: ${CLIENT_IDENTIFIER:groupdocs/comparison-java}
+  # Dropbox access token
+  accessToken: ${ACCESS_TOKEN:}
+  # Directory in which result files will be uploaded via Dropbox API, default value is `ResultFiles`.
+  resultDirectory: ${RESULT_DIR:ResultFiles}

@@ -69,7 +69,7 @@ public class CachedPageStream  implements Delegates.CreatePageStream {
         }
         logger.debug("Creating cached page stream...");
         try {
-            return Files.newInputStream(mCacheFiles.get(pageIndex).toFile().toPath());
+            return Files.newInputStream(mCacheFiles.get(pageIndex));
         } catch (Exception e) {
             throw new TotalGroupDocsException("Cache exception occurred", e);
         }
@@ -79,7 +79,7 @@ public class CachedPageStream  implements Delegates.CreatePageStream {
         logger.debug("Iterating cached pages stream...");
         return mCacheFiles.entrySet().stream().map(entry -> {
             try {
-                return new PageStream(entry.getKey(), Files.newInputStream(entry.getValue().toFile().toPath()));
+                return new PageStream(entry.getKey(), Files.newInputStream(entry.getValue()));
             } catch (Exception e) {
                 throw new TotalGroupDocsException("Cache exception occurred", e);
             }
