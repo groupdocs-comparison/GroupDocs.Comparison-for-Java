@@ -16,6 +16,7 @@ import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
 import com.groupdocs.ui.common.Defaults;
+import com.groupdocs.ui.common.exception.ApiException;
 import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.comparison.config.GoogleProviderConfiguration;
 import org.slf4j.Logger;
@@ -28,6 +29,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.GeneralSecurityException;
 import java.util.*;
+import java.util.function.Consumer;
 
 /**
  * Entering into folders is not implemented, folders are excluded from the list
@@ -61,7 +63,7 @@ public class GoogleFilesProvider extends FilesProvider {
                     path = FileSystems.getDefault().getPath(path.toString()).toAbsolutePath();
                 }
 
-                credentialsInputStream = new BufferedInputStream(Files.newInputStream(path.toFile().toPath()));
+                credentialsInputStream = new BufferedInputStream(Files.newInputStream(path));
             } else {
                 logger.debug("Credentials path to Google API credentials file is not provided. Trying to load it from resources (Usually 'credentials.json')");
                 final InputStream resourceCredentialsStream = getClass().getClassLoader().getResourceAsStream(credentialsPath);
@@ -97,140 +99,162 @@ public class GoogleFilesProvider extends FilesProvider {
                 credentialsInputStream.close();
             }
         } catch (IOException | GeneralSecurityException e) {
-            throw new RuntimeException(e);
+            throw new ApiException("Api exception: Can't connect to files API", e);
         }
     }
 
     @Override
-    public void visitDirectoryContent(String path, DirectoryContentVisitor visitor) throws IOException {
+    public void visitDirectoryContent(String path, DirectoryContentVisitor visitor) throws ApiException {
         logger.debug("Request to Google API to list files in directory '" + path + "'");
-        FileList result = service.files().list()
-                .setFields("files(id, name, size, mimeType, parents)")
-                .setCorpora("user")
-                .set("ownedByMe", true)
-                .setSpaces("drive")
-                .set("trashed", false)
-                // Remove directories and their content from the list
-                .setQ("mimeType != 'application/vnd.google-apps.folder' and 'root' in parents")
-                .setOrderBy("name_natural")
-                .execute();
-        final List<File> files = result.getFiles();
-        logger.debug("Request returned " + files.size() + " files, processing...");
-        files.stream()
-                // Remove Google Docs items from the list
-                .filter(item -> {
-                    final String mimeType = item.getMimeType();
-                    return mimeType == null || !mimeType.startsWith("application/vnd.google-apps");
-                })
-                .forEach(item -> {
-                    final String guid = item.getId();
-                    final String fileName = item.getName();
-                    final boolean isDirectory = "application/vnd.google-apps.folder".equalsIgnoreCase(item.getMimeType());
-                    final Long size = item.getSize();
+        try {
+            FileList result = service.files().list()
+                    .setFields("files(id, name, size, mimeType, parents)")
+                    .setCorpora("user")
+                    .set("ownedByMe", true)
+                    .setSpaces("drive")
+                    .set("trashed", false)
+                    // Remove directories and their content from the list
+                    .setQ("mimeType != 'application/vnd.google-apps.folder' and 'root' in parents")
+                    .setOrderBy("name_natural")
+                    .execute();
+            final List<File> files = result.getFiles();
+            logger.debug("Request returned " + files.size() + " files, processing...");
+            files.stream()
+                    // Remove Google Docs items from the list
+                    .filter(item -> {
+                        final String mimeType = item.getMimeType();
+                        return mimeType == null || !mimeType.startsWith("application/vnd.google-apps");
+                    })
+                    .forEach(item -> {
+                        final String guid = item.getId();
+                        final String fileName = item.getName();
+                        final boolean isDirectory = "application/vnd.google-apps.folder".equalsIgnoreCase(item.getMimeType());
+                        final Long size = item.getSize();
 
-                    guid2name.put(guid, fileName);
+                        guid2name.put(guid, fileName);
 
-                    visitor.visit(
-                            fileName,
-                            fileName,
-                            isDirectory,
-                            isDirectory || size == null ? 0L : size
-                    );
-                });
+                        visitor.visit(
+                                fileName,
+                                fileName,
+                                isDirectory,
+                                isDirectory || size == null ? 0L : size
+                        );
+                    });
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't list files in directory", e);
+        }
     }
 
     @Override
-    public InputStream createFilesInputStream(String path) throws Exception {
+    public void receiveFilesInputStream(String path, Consumer<InputStream> streamConsumer) throws ApiException {
         logger.debug("Request to Google API to get file content '" + path + "'");
-        final Optional<String> first = guid2name.entrySet().stream()
-                .filter(entry -> Objects.equals(entry.getValue(), path))
-                .map(Map.Entry::getKey).findFirst();
-        if (first.isPresent()) {
-            return new BufferedInputStream(service.files().get(first.get()).executeMediaAsInputStream());
+        try {
+            final Optional<String> first = guid2name.entrySet().stream()
+                    .filter(entry -> Objects.equals(entry.getValue(), path))
+                    .map(Map.Entry::getKey).findFirst();
+            if (first.isPresent()) {
+                final Drive.Files.Get getFilesRequest = service.files().get(first.get());
+                try (final InputStream inputStream = getFilesRequest.executeMediaAsInputStream()) {
+                    streamConsumer.accept(inputStream);
+                }
+            } else {
+                logger.debug("Guid for file '" + path + "' was not found");
+                throw new TotalGroupDocsException("Can not get file! Try to reload page.");
+            }
+        } catch (TotalGroupDocsException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't receive file data! Try to reload page.", e);
         }
-        logger.debug("Guid for file '" + path + "' was not found");
-        throw new TotalGroupDocsException("Can not get the file! Try to reload page.");
     }
 
     @Override
-    public OutputStream createFilesOutputStream(String fileName) {
+    public void receiveFilesOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws ApiException {
         logger.debug("Request to Google API to save uploaded file by name'" + fileName + "'");
-        return new BufferedOutputStream(new ByteArrayOutputStream() {
-            @Override
-            public void close() throws IOException {
-                flush();
-                try (InputStream inputStream = new ByteArrayInputStream(this.toByteArray())) {
-                    final File fileMetadata = new File();
-                    fileMetadata.setName(fileName);
-                    final InputStreamContent inputStreamContent = new InputStreamContent("application/octet-stream", inputStream);
+        try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
+            final File fileMetadata = new File();
+            fileMetadata.setName(fileName);
+            streamConsumer.accept(outputStream);
+            try (ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray())) {
+                final InputStreamContent inputStreamContent = new InputStreamContent("application/octet-stream", inputStream);
 
-                    File file = service.files().create(fileMetadata, inputStreamContent)
-                            .setFields("id")
-                            .execute();
-                    final String guid = file.getId();
+                File file = service.files().create(fileMetadata, inputStreamContent)
+                        .setFields("id")
+                        .execute();
 
-                    guid2name.put(guid, fileName);
-                } catch (Exception e) {
-                    throw new TotalGroupDocsException("Exception occurred while using Google API to get file content", e);
-                } finally {
-                    super.close();
-                }
+                final String guid = file.getId();
+
+                guid2name.put(guid, fileName);
             }
-        });
-    }
-
-    @Override
-    public OutputStream createResultOutputStream(String fileName) {
-        logger.debug("Request to Google API to save result file by name'" + fileName + "'");
-        return new BufferedOutputStream(new ByteArrayOutputStream() {
-            @Override
-            public void close() throws IOException {
-                flush();
-                try (InputStream inputStream = new ByteArrayInputStream(this.toByteArray())) {
-                    final File fileMetadata = new File();
-                    fileMetadata.setName(fileName);
-                    final InputStreamContent inputStreamContent = new InputStreamContent("application/octet-stream", inputStream);
-
-                    File file = service.files().create(fileMetadata, inputStreamContent)
-                            .setFields("id")
-                            .execute();
-                    final String guid = file.getId();
-
-                    guid2name.put(guid, fileName);
-                } catch (Exception e) {
-                    throw new TotalGroupDocsException("Exception occurred while using Google API to get result file content", e);
-                } finally {
-                    super.close();
-                }
-            }
-        });
-    }
-
-    @Override
-    public InputStream createResultInputStream(String fileName) throws IOException {
-        logger.debug("Request to Google API to get result file content '" + fileName + "'");
-        final Optional<String> first = guid2name.entrySet().stream()
-                .filter(entry -> Objects.equals(entry.getValue(), fileName))
-                .map(Map.Entry::getKey).findFirst();
-        if (first.isPresent()) {
-            return service.files().get(first.get()).executeMediaAsInputStream();
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't upload file data!", e);
         }
-        logger.debug("Guid for result file '" + fileName + "' was not found");
-        throw new TotalGroupDocsException("Can not get result file! Try to reload page.");
     }
 
     @Override
-    public boolean isFileExists(String fileName) throws IOException {
-        logger.debug("Checking is result file exists: '" + fileName + "'");
-        FileList result = service.files().list()
-                .setFields("files(id)")
-                .setCorpora("user")
-                .set("ownedByMe", true)
-                .setSpaces("drive")
-                .set("trashed", false)
-                // Remove directories and their content from the list, check by name is file exists
-                .setQ("mimeType != 'application/vnd.google-apps.folder' and 'root' in parents and name = '" + fileName + "'")
-                .execute();
-        return !result.isEmpty();
+    public void receiveResultInputStream(String fileName, Consumer<InputStream> streamConsumer) throws ApiException {
+        logger.debug("Request to Google API to get result file content '" + fileName + "'");
+        try {
+            final Optional<String> first = guid2name.entrySet().stream()
+                    .filter(entry -> Objects.equals(entry.getValue(), fileName))
+                    .map(Map.Entry::getKey).findFirst();
+            if (first.isPresent()) {
+                final Drive.Files.Get getFilesRequest = service.files().get(first.get());
+                try (final InputStream inputStream = getFilesRequest.executeMediaAsInputStream()) {
+                    streamConsumer.accept(inputStream);
+                }
+            } else {
+                logger.debug("Guid for result file '" + fileName + "' was not found");
+                throw new TotalGroupDocsException("Api exception: File was not found!");
+            }
+        } catch (TotalGroupDocsException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't receive result file data!", e);
+        }
+    }
+
+    @Override
+    public void receiveResultOutputStream(String fileName, Consumer<OutputStream> streamConsumer) throws ApiException {
+        logger.debug("Request to Google API to save result file by name'" + fileName + "'");
+        try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
+            final File fileMetadata = new File();
+            fileMetadata.setName(fileName);
+            streamConsumer.accept(outputStream);
+            try (ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray())) {
+                final InputStreamContent inputStreamContent = new InputStreamContent("application/octet-stream", inputStream);
+
+                File file = service.files().create(fileMetadata, inputStreamContent)
+                        .setFields("id")
+                        .execute();
+
+                final String guid = file.getId();
+
+                guid2name.put(guid, fileName);
+            }
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't upload result file data!", e);
+        }
+
+    }
+
+    @Override
+    public boolean isFileExists(String path) throws ApiException {
+        logger.debug("Checking is result file exists: '" + path + "'");
+        try {
+            FileList result = service.files().list()
+                    .setFields("files(id)")
+                    .setCorpora("user")
+                    .set("ownedByMe", true)
+                    .setSpaces("drive")
+                    .set("trashed", false)
+                    // Remove directories and their content from the list, check by name is file exists
+                    .setQ("mimeType != 'application/vnd.google-apps.folder' and 'root' in parents and name = '" + path + "'")
+                    .execute();
+            return !result.isEmpty();
+
+        } catch (Exception e) {
+            throw new ApiException("Api exception: Can't check if result file exists!", e);
+        }
     }
 }

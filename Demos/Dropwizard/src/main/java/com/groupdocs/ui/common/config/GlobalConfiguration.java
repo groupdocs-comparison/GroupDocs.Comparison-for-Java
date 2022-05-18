@@ -2,6 +2,7 @@ package com.groupdocs.ui.common.config;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
+import com.groupdocs.ui.comparison.config.DropboxProviderConfiguration;
 import com.groupdocs.ui.comparison.config.GoogleProviderConfiguration;
 import com.groupdocs.ui.comparison.config.LocalProviderConfiguration;
 import io.dropwizard.Configuration;
@@ -40,6 +41,10 @@ public class GlobalConfiguration extends Configuration {
     @JsonProperty
     private GoogleProviderConfiguration google;
 
+    @Valid
+    @JsonProperty
+    private DropboxProviderConfiguration dropbox;
+
     /**
      * Constructor
      */
@@ -50,6 +55,7 @@ public class GlobalConfiguration extends Configuration {
         comparison = new ComparisonConfiguration();
         local = new LocalProviderConfiguration();
         google = new GoogleProviderConfiguration();
+        dropbox = new DropboxProviderConfiguration();
     }
 
     /**
@@ -89,6 +95,15 @@ public class GlobalConfiguration extends Configuration {
     }
 
     /**
+     * Get local provider configuration
+     *
+     * @return local provider configuration
+     */
+    public LocalProviderConfiguration getLocal() {
+        return local;
+    }
+
+    /**
      * Get google provider configuration
      *
      * @return google provider configuration
@@ -98,12 +113,12 @@ public class GlobalConfiguration extends Configuration {
     }
 
     /**
-     * Get local provider configuration
+     * Get dropbox provider configuration
      *
-     * @return local provider configuration
+     * @return dropbox provider configuration
      */
-    public LocalProviderConfiguration getLocal() {
-        return local;
+    public DropboxProviderConfiguration getDropbox() {
+        return dropbox;
     }
 }
 

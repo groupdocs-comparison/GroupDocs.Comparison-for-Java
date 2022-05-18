@@ -5,6 +5,7 @@ import com.groupdocs.ui.common.config.CommonConfiguration;
 import com.groupdocs.ui.common.config.GlobalConfiguration;
 import com.groupdocs.ui.common.exception.TotalGroupDocsExceptionMapper;
 import com.groupdocs.ui.common.health.TemplateHealthCheck;
+import com.groupdocs.ui.common.util.TempFilesManager;
 import com.groupdocs.ui.comparison.resources.ComparisonResources;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -124,6 +125,8 @@ public class MainService extends Application<GlobalConfiguration> {
         environment.healthChecks().register("HealthCheck", healthCheck);
 
         final CommonConfiguration commonConfiguration = globalConfiguration.getCommon();
+
+        TempFilesManager.createInstance(globalConfiguration.getComparison().getTempDirectory());
 
         final SessionHandler sessionHandler = new SessionHandler();
         sessionHandler.setMaxInactiveInterval(commonConfiguration.getSessionTimeout());

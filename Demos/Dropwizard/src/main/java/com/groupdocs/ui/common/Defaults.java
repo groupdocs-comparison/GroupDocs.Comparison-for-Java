@@ -8,7 +8,7 @@ public interface Defaults {
 
     interface Comparison {
         enum FilesProviderType {
-            LOCAL, GOOGLE
+            LOCAL, GOOGLE, DROPBOX
         }
 
         int DEFAULT_PRELOAD_RESULT_PAGE_COUNT = 2;
