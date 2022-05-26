@@ -24,7 +24,7 @@ import org.slf4j.event.Level
 fun Application.module() {
     install(CallLogging) {
         level = Level.DEBUG
-        filter { call -> call.request.path().startsWith("/") }
+        filter { call -> call.request.path().startsWith("/comparison") }
     }
     install(ContentNegotiation) { gson { } }
     install(DefaultHeaders) {

@@ -6,13 +6,15 @@ val logback_version: String by project
 plugins {
     application
     kotlin("jvm") version "1.6.21"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.6.21"
 }
 
 group = "com.groupdocs.ui"
-version = "0.0.1"
+version = "22.3"
 
 repositories {
     mavenCentral()
+    maven("https://repository.groupdocs.com/repo/")
 }
 
 application {
@@ -24,6 +26,8 @@ application {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
+
+    implementation("com.groupdocs:groupdocs-comparison:$version")
 
     implementation("io.insert-koin:koin-ktor:$koin_version")
 
@@ -37,6 +41,12 @@ dependencies {
     implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
     implementation("io.ktor:ktor-serialization-gson:$ktor_version")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
+
+    implementation("io.ktor:ktor-server-html-builder:$ktor_version")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-hocon:1.3.3")
+
     implementation("ch.qos.logback:logback-classic:$logback_version")
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")

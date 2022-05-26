@@ -1,13 +1,15 @@
 package com.groupdocs.ui.status
 
+import com.groupdocs.ui.model.ExceptionResponse
 import io.ktor.http.*
 import io.ktor.server.plugins.statuspages.*
 import io.ktor.server.response.*
 
 fun StatusPagesConfig.internalStatusPages() {
     exception<InternalServerException> { call, cause ->
-        call.respondText(cause.message, status = HttpStatusCode.InternalServerError)
+        call.application.environment.log.error(cause.message, cause)
+        call.respond(HttpStatusCode.InternalServerError, ExceptionResponse(cause.message))
     }
 }
 
-data class InternalServerException(override val message: String = "Internal server error") : Exception()
+open class InternalServerException(override val message: String = "Internal server error", throwable: Throwable? = null) : Exception(message, throwable)

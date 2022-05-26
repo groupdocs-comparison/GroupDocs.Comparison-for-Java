@@ -1,5 +1,6 @@
 package com.groupdocs.ui.modules.config
 
+import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
@@ -11,7 +12,6 @@ fun Routing.configModule() {
 
     get("/comparison/loadConfig") {
         val response = configController.config()
-        call.respond(response)
-//        call.respondBytes(HttpStatusCode.OK)
+        call.respond(HttpStatusCode.OK, response)
     }
 }
