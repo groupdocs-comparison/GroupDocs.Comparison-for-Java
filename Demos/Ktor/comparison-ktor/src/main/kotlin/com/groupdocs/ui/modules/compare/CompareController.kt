@@ -125,7 +125,8 @@ class CompareControllerImpl(
         return CompareResponse(
             guid = guid.toString(),
             changes = changes,
-            pages = pages
+            pages = pages,
+            extension = resultExtension
         )
     }
 

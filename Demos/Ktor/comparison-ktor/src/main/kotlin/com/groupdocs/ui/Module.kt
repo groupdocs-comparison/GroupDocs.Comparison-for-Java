@@ -26,7 +26,9 @@ fun Application.module() {
         level = Level.DEBUG
         filter { call -> call.request.path().startsWith("/comparison") }
     }
-    install(ContentNegotiation) { gson { } }
+    install(ContentNegotiation) { gson {
+        serializeNulls()
+    }}
     install(DefaultHeaders) {
         header("X-Engine", "Ktor") // will send this header with each response
     }

@@ -7,9 +7,9 @@ data class CompareResponse(
     val changes: List<DocumentChange>,
 
     /**
-     * List of images of pages with marked changes
+     * Extension of compared files, for saving total results
      */
-    val pages: List<ComparePage>,
+    val extension: String? = null,
 
     /**
      * Unique key of results
@@ -17,9 +17,9 @@ data class CompareResponse(
     val guid: String,
 
     /**
-     * Extension of compared files, for saving total results
+     * List of images of pages with marked changes
      */
-    val extension: String? = null
+    val pages: List<ComparePage>,
 )
 
 /**
@@ -28,42 +28,42 @@ data class CompareResponse(
  * @author Aspose Pty Ltd
  */
 data class ComparePage(
-    val data: String? = null,
     val angle: Int = 0,
-    val width: Int = 0,
+    val data: String? = null,
     val height: Int = 0,
     val number: Int = 0,
+    val width: Int = 0,
 )
 
 data class DocumentChange(
-    val id: Int,
-    val type: Int,
-    val comparisonAction: Int,
-    val sourceText: String,
-    val targetText: String,
-    val text: String,
-    val componentType: String,
-    val box: ChangeBox,
     val authors: List<String>,
+    val box: ChangeBox,
+    val comparisonAction: Int,
+    val componentType: String,
+    val id: Int,
     val pageInfo: PageInfo,
+    val sourceText: String?,
     val styleChanges: List<StyleChange>,
+    val targetText: String?,
+    val text: String,
+    val type: Int,
 )
 
 data class ChangeBox(
-    val y: Double,
     val x: Double,
+    val y: Double,
     val height: Double,
     val width: Double
 )
 
 data class PageInfo(
     val height: Int,
-    val width: Int,
-    val pageNumber: Int
+    val pageNumber: Int,
+    val width: Int
 )
 
 data class StyleChange(
-    val oldValue: Any,
     val newValue: Any,
+    val oldValue: Any,
     val propertyName: String
 )

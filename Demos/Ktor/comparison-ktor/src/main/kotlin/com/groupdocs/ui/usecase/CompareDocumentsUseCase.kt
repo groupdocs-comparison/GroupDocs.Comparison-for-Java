@@ -1,6 +1,7 @@
 package com.groupdocs.ui.usecase
 
 import com.groupdocs.comparison.Comparer
+import com.groupdocs.comparison.options.CompareOptions
 import com.groupdocs.comparison.options.load.LoadOptions
 import com.groupdocs.comparison.result.ChangeInfo
 import com.groupdocs.ui.status.InternalServerException
@@ -20,7 +21,11 @@ class CompareDocumentsUseCase : KoinComponent {
             Comparer(sourcePath, LoadOptions(sourcePassword)).use { comparer ->
                 comparer.apply {
                     add(targetPath, LoadOptions(targetPassword))
-                    compare(outputStream)
+                    compare(outputStream, CompareOptions().apply {
+                        showDeletedContent = true
+                        detectStyleChanges = true
+                        calculateCoordinates = true
+                    })
                     return changes.toList()
                 }
             }
