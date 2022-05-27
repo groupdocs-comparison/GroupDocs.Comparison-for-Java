@@ -1,6 +1,7 @@
 package com.groupdocs.ui.modules.description
 
 import com.groupdocs.ui.model.DescriptionRequest
+import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
@@ -14,7 +15,6 @@ fun Routing.descriptionModule() {
     post("/comparison/loadDocumentDescription") {
         val request = call.receive<DescriptionRequest>()
         val response = descriptionController.description(request)
-        call.respond(response)
-//        call.respondBytes(HttpStatusCode.OK)
+        call.respond(HttpStatusCode.OK, response)
     }
 }

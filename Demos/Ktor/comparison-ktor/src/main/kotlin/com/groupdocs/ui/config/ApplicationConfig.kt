@@ -36,7 +36,7 @@ data class Comparison(
             when (filesProviderType.uppercase()) {
                 in Defaults.Comparison.FilesProviderType.values()
                     .map { it.name.uppercase() } -> Defaults.Comparison.FilesProviderType.valueOf(filesProviderType.uppercase())
-                else -> Defaults.Comparison.FilesProviderType.LOCAL
+                else -> Defaults.Comparison.DEFAULT_FILES_PROVIDER_TYPE
             }
     val tempDirectoryOrDefault: String
         get() = tempDirectory.ifBlank { Defaults.Comparison.DEFAULT_TEMP_DIRECTORY }

@@ -3,6 +3,7 @@ package com.groupdocs.ui
 import com.groupdocs.ui.config.ApplicationConfig
 import com.groupdocs.ui.config.ServerConfig
 import com.groupdocs.ui.di.ModulesInjection
+import com.groupdocs.ui.status.InternalServerException
 import com.typesafe.config.ConfigFactory
 import io.ktor.server.application.*
 import io.ktor.server.config.*

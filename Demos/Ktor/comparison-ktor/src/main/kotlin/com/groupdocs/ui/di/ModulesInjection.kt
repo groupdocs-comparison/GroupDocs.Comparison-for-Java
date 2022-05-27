@@ -1,7 +1,7 @@
 package com.groupdocs.ui.di
 
-import com.groupdocs.ui.manager.TempFolderManager
-import com.groupdocs.ui.manager.TempFolderManagerImpl
+import com.groupdocs.ui.manager.PathManager
+import com.groupdocs.ui.manager.PathManagerImpl
 import com.groupdocs.ui.modules.compare.CompareController
 import com.groupdocs.ui.modules.compare.CompareControllerImpl
 import com.groupdocs.ui.modules.config.ConfigController
@@ -16,6 +16,8 @@ import com.groupdocs.ui.modules.tree.TreeController
 import com.groupdocs.ui.modules.tree.TreeControllerImpl
 import com.groupdocs.ui.modules.upload.UploadController
 import com.groupdocs.ui.modules.upload.UploadControllerImpl
+import com.groupdocs.ui.usecase.AreFilesSupportedUseCase
+import com.groupdocs.ui.usecase.CompareDocumentsUseCase
 import com.groupdocs.ui.usecase.GetLocalFilesUseCase
 import com.groupdocs.ui.usecase.RetrieveLocalFilePagesStreamUseCase
 import org.koin.core.module.dsl.bind
@@ -36,8 +38,10 @@ object ModulesInjection {
     val usecaseBeans = module {
         singleOf(::GetLocalFilesUseCase)
         singleOf(::RetrieveLocalFilePagesStreamUseCase)
+        singleOf(::AreFilesSupportedUseCase)
+        singleOf(::CompareDocumentsUseCase)
     }
     val managerBeans = module {
-        singleOf(::TempFolderManagerImpl) { bind<TempFolderManager>() }
+        singleOf(::PathManagerImpl) { bind<PathManager>() }
     }
 }

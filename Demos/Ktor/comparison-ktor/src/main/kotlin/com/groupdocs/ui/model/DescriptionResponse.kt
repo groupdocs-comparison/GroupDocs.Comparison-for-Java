@@ -18,7 +18,6 @@ data class LoadDocumentEntity (
     val printAllowed: Boolean = true
 )
 
-
 /**
  * PageDescriptionEntity
  *

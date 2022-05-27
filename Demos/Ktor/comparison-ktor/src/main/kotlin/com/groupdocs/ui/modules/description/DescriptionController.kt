@@ -1,5 +1,6 @@
 package com.groupdocs.ui.modules.description
 
+import com.groupdocs.ui.manager.PathManager
 import com.groupdocs.ui.model.DescriptionRequest
 import com.groupdocs.ui.model.LoadDocumentEntity
 import com.groupdocs.ui.model.PageDescriptionEntity
@@ -13,19 +14,20 @@ import java.io.FileInputStream
 import java.util.*
 
 class DescriptionControllerImpl(
-    private val retrieveLocalFilePagesStream: RetrieveLocalFilePagesStreamUseCase
+    private val retrieveLocalFilePagesStream: RetrieveLocalFilePagesStreamUseCase,
+    private val pathManager: PathManager
 ) : BaseController(), DescriptionController, KoinComponent {
     override suspend fun description(request: DescriptionRequest): LoadDocumentEntity {
-        val path = makeSurePathIsInsideFilesDirectory(request.guid)
+        val path = pathManager.assertPathIsInsideFilesDirectory(request.guid)
         val password = request.password
-        val previewPageWidth = applicationConfig.comparison.previewPageWidth
-        val previewPageRatio = applicationConfig.comparison.previewPageRatio
+        val previewPageWidth = applicationConfig.comparison.previewPageWidthOrDefault
+        val previewPageRatio = applicationConfig.comparison.previewPageRatioOrDefault
 
         val entity = LoadDocumentEntity(
             guid = request.guid,
             printAllowed = applicationConfig.common.print
         )
-        withContext(Dispatchers.IO) {
+        return withContext(Dispatchers.IO) {
             BufferedInputStream(FileInputStream(path.toFile())).use { inputStream ->
                 retrieveLocalFilePagesStream(
                     inputStream = inputStream,
@@ -33,21 +35,19 @@ class DescriptionControllerImpl(
                     previewWidth = previewPageWidth,
                     previewRatio = previewPageRatio
                 ) { pageNumber, pageInputStream ->
-                    val data = withContext(Dispatchers.IO) {
-                        Base64.getEncoder().encodeToString(pageInputStream.readAllBytes())
-                    }
+                    val data = Base64.getEncoder().encodeToString(pageInputStream.readAllBytes())
                     entity.pages.add(
                         PageDescriptionEntity(
-                            number = pageNumber,
+                            number = pageNumber - 1,
                             width = previewPageWidth,
                             height = (previewPageWidth * previewPageRatio).toInt(),
                             data = data
                         )
                     )
                 }
+                entity
             }
         }
-        return entity
     }
 
 }
