@@ -1,9 +1,9 @@
 package com.groupdocs.ui
 
+import com.groupdocs.comparison.license.License
 import com.groupdocs.ui.config.ApplicationConfig
 import com.groupdocs.ui.config.ServerConfig
 import com.groupdocs.ui.di.ModulesInjection
-import com.groupdocs.ui.status.InternalServerException
 import com.typesafe.config.ConfigFactory
 import io.ktor.server.application.*
 import io.ktor.server.config.*
@@ -15,6 +15,11 @@ import kotlinx.serialization.hocon.Hocon
 import org.koin.core.logger.PrintLogger
 import org.koin.dsl.module
 import org.koin.ktor.plugin.Koin
+import java.io.BufferedInputStream
+import java.net.URL
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
 
 @ExperimentalSerializationApi
 @KtorExperimentalAPI
@@ -39,6 +44,10 @@ fun main(args: Array<String>) {
                 )
             }
             main()
+        }
+
+        comparisonConfig.application.licensePathOrNull?.let { path ->
+            setGroupdocsLicense(path)
         }
     }.start(wait = true)
 }
@@ -68,4 +77,36 @@ fun extractComparisonConfig(): ApplicationConfig {
         useConfigNamingConvention = false
     }
     return hocon.decodeFromConfig(ApplicationConfig.serializer(), ConfigFactory.load("application.conf"))
+}
+
+fun Application.setGroupdocsLicense(licensePath: String) {
+    try {
+        log.debug("Setting Groupdocs license...")
+
+        val licenseExtension = Defaults.Application.DEFAULT_LICENSE_EXTENSION
+        val license = License()
+        if (licensePath.startsWith("http://") || licensePath.startsWith("https://")) {
+            val url = URL(licensePath)
+            BufferedInputStream(url.openStream()).use { inputStream -> license.setLicense(inputStream) }
+        } else {
+            val path = Paths.get(licensePath)
+            if (Files.exists(path)) {
+                if (Files.isRegularFile(path)) {
+                    license.setLicense(licensePath)
+                } else {
+                    Files.list(path).use { pathStream ->
+                        val first =
+                            pathStream.filter { path ->
+                                path.endsWith(licenseExtension)
+                            }.findFirst()
+                        first.ifPresent { licensePath: Path? ->
+                            license.setLicense(licensePath)
+                        }
+                    }
+                }
+            }
+        }
+    } catch (e: Exception) {
+        log.warn("Can not verify Comparison license!", e)
+    }
 }

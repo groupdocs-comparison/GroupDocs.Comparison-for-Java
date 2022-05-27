@@ -5,10 +5,20 @@ import java.nio.file.Path
 
 @kotlinx.serialization.Serializable
 data class ApplicationConfig(
+    val application: Application = Application(),
     val common: Common = Common(),
     val comparison: Comparison = Comparison(),
     val local: Local = Local(),
 )
+
+@kotlinx.serialization.Serializable
+data class Application(
+    private val licensePath: String = "",
+    val hostAddress: String = "",
+) {
+    val licensePathOrNull: String?
+        get() = licensePath.ifBlank { null }
+}
 
 @kotlinx.serialization.Serializable
 data class Common(
@@ -26,10 +36,10 @@ data class Common(
 data class Comparison(
     private val filesProviderType: String = "",
     val preloadResultPageCount: Int = 0,
-    val previewPageWidth: Int = 0,
-    val previewPageRatio: Float = 0f,
-    val cacheDirectory: String = "",
-    val tempDirectory: String = "",
+    private val previewPageWidth: Int = 0,
+    private val previewPageRatio: Float = 0f,
+    private val cacheDirectory: String = "",
+    private val tempDirectory: String = "",
 ) {
     val filesProviderTypeOrDefault: Defaults.Comparison.FilesProviderType
         get() =
@@ -48,8 +58,8 @@ data class Comparison(
 
 @kotlinx.serialization.Serializable
 data class Local(
-    val filesDirectory: String = "",
-    val resultDirectory: String = "",
+    private val filesDirectory: String = "",
+    private val resultDirectory: String = "",
 ) {
 
     val filesDirectoryOrDefault: Path

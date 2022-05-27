@@ -1,9 +1,7 @@
 package com.groupdocs.ui.modules.compare
 
 import com.groupdocs.ui.manager.PathManager
-import com.groupdocs.ui.model.ComparePage
-import com.groupdocs.ui.model.CompareRequest
-import com.groupdocs.ui.model.CompareResponse
+import com.groupdocs.ui.model.*
 import com.groupdocs.ui.modules.BaseController
 import com.groupdocs.ui.status.InternalServerException
 import com.groupdocs.ui.usecase.AreFilesSupportedUseCase
@@ -17,6 +15,7 @@ import java.io.BufferedInputStream
 import java.io.BufferedOutputStream
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import java.nio.file.Files
 import java.util.*
 
 class CompareControllerImpl(
@@ -46,7 +45,10 @@ class CompareControllerImpl(
             targetName = targetFilePath.fileName.toString(),
             extension = resultExtension
         )
-        val changes = withContext(Dispatchers.IO) {
+        if (Files.notExists(resultPath.parent)) {
+            throw InternalServerException("Result directory does not exist") // TODO: Need another exception type
+        }
+        val changeInfos = withContext(Dispatchers.IO) {
             BufferedOutputStream(FileOutputStream(resultPath.toFile())).use { outputStream ->
                 return@withContext compareDocuments(
                     sourcePath = sourceFilePath,
@@ -82,11 +84,47 @@ class CompareControllerImpl(
             pages
         }
 
+        val changes = changeInfos.map { changeInfo ->
+            DocumentChange(
+                id = changeInfo.id,
+                type = changeInfo.type,
+                comparisonAction = changeInfo.comparisonAction,
+                sourceText = changeInfo.sourceText,
+                targetText = changeInfo.targetText,
+                text = changeInfo.text,
+                componentType = changeInfo.componentType,
+                box = ChangeBox(
+                    x = changeInfo.box.x,
+                    y = changeInfo.box.y,
+                    width = changeInfo.box.width,
+                    height = changeInfo.box.height
+                ),
+                authors = changeInfo.authors,
+                pageInfo = PageInfo(
+                    pageNumber = changeInfo.pageInfo.pageNumber,
+                    width = changeInfo.pageInfo.width,
+                    height = changeInfo.pageInfo.height
+                ),
+                styleChanges = changeInfo.styleChanges.map { styleChangeInfo ->
+                    StyleChange(
+                        propertyName = styleChangeInfo.propertyName,
+                        oldValue = styleChangeInfo.oldValue,
+                        newValue = styleChangeInfo.newValue
+                    )
+                }
+            )
+        }
+
+        val filesDirectory = pathManager.filesDirectory
         val resultDirectory = pathManager.resultDirectory
+
+        val guid = if (resultDirectory.startsWith(filesDirectory)) {
+            filesDirectory.relativize(resultPath)
+        } else resultDirectory.relativize(resultPath)
+
         return CompareResponse(
-            guid = resultDirectory.relativize(resultPath).toString(),
+            guid = guid.toString(),
             changes = changes,
-            extension = resultExtension,
             pages = pages
         )
     }

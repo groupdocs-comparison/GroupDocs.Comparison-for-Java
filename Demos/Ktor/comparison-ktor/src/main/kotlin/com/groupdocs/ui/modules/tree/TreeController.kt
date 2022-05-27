@@ -24,11 +24,14 @@ class TreeControllerImpl(
             val isDirectory = it is LocalStorageEntry.Directory
             val size = if (it is LocalStorageEntry.File) it.size else 0
 
+            val filesDirectory = pathManager.filesDirectory
+            val fileFullPath = it.fullPath
+            val guid = filesDirectory.relativize(fileFullPath).toString()
             FileDescriptionEntity(
-                guid = it.fullPath.toString(),
+                guid = guid,
                 name = it.name,
                 docType = docType,
-                isDirectory = isDirectory,
+                directory = isDirectory,
                 size = size
             )
         }
