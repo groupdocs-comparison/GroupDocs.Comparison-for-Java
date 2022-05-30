@@ -9,10 +9,10 @@ import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
 
-fun Routing.compareModule() {
+fun Route.compareModule() {
     val compareController by inject<CompareController>()
 
-    post("/comparison/compare") {
+    post("/compare") {
         val request = call.receive<CompareRequest>()
         val response = compareController.compare(request)
         call.respond(HttpStatusCode.OK, response)

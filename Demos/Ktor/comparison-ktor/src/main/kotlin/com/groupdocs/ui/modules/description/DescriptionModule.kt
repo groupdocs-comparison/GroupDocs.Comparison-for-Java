@@ -9,10 +9,10 @@ import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
 
-fun Routing.descriptionModule() {
+fun Route.descriptionModule() {
     val descriptionController by inject<DescriptionController>()
 
-    post("/comparison/loadDocumentDescription") {
+    post("/loadDocumentDescription") {
         val request = call.receive<DescriptionRequest>()
         val response = descriptionController.description(request)
         call.respond(HttpStatusCode.OK, response)

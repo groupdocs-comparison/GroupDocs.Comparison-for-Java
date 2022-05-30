@@ -7,10 +7,10 @@ import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
 
-fun Routing.configModule() {
+fun Route.configModule() {
     val configController by inject<ConfigController>()
 
-    get("/comparison/loadConfig") {
+    get("/loadConfig") {
         val response = configController.config()
         call.respond(HttpStatusCode.OK, response)
     }

@@ -13,11 +13,10 @@ data class ApplicationConfig(
 
 @kotlinx.serialization.Serializable
 data class Application(
-    private val licensePath: String = "",
-    val hostAddress: String = "",
+    private val licensePath: String = ""
 ) {
-    val licensePathOrNull: String?
-        get() = licensePath.ifBlank { null }
+    val licensePathOrNull: String
+        get() = licensePath.ifBlank { Defaults.Application.DEFAULT_LICENSE_PATH }
 }
 
 @kotlinx.serialization.Serializable
@@ -28,8 +27,7 @@ data class Common(
     val print: Boolean = false,
     val browse: Boolean = false,
     val rewrite: Boolean = false,
-    val enableRightClick: Boolean = false,
-    val sessionTimeout: Int = 0
+    val enableRightClick: Boolean = false
 )
 
 @kotlinx.serialization.Serializable
@@ -49,7 +47,7 @@ data class Comparison(
                 else -> Defaults.Comparison.DEFAULT_FILES_PROVIDER_TYPE
             }
     val tempDirectoryOrDefault: String
-        get() = tempDirectory.ifBlank { Defaults.Comparison.DEFAULT_TEMP_DIRECTORY }
+        get() = tempDirectory.ifBlank { Defaults.Comparison.DEFAULT_TEMP_DIRECTORY } ?: throw IllegalStateException("Can't get temp directory!")
     val previewPageWidthOrDefault: Int
         get() = if (previewPageWidth == 0) Defaults.Comparison.DEFAULT_PREVIEW_PAGE_WIDTH else previewPageWidth
     val previewPageRatioOrDefault: Float

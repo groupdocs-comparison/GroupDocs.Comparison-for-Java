@@ -16,10 +16,7 @@ import com.groupdocs.ui.modules.tree.TreeController
 import com.groupdocs.ui.modules.tree.TreeControllerImpl
 import com.groupdocs.ui.modules.upload.UploadController
 import com.groupdocs.ui.modules.upload.UploadControllerImpl
-import com.groupdocs.ui.usecase.AreFilesSupportedUseCase
-import com.groupdocs.ui.usecase.CompareDocumentsUseCase
-import com.groupdocs.ui.usecase.GetLocalFilesUseCase
-import com.groupdocs.ui.usecase.RetrieveLocalFilePagesStreamUseCase
+import com.groupdocs.ui.usecase.*
 import org.koin.core.module.dsl.bind
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
@@ -40,6 +37,7 @@ object ModulesInjection {
         singleOf(::RetrieveLocalFilePagesStreamUseCase)
         singleOf(::AreFilesSupportedUseCase)
         singleOf(::CompareDocumentsUseCase)
+        singleOf(::SaveStreamToFilesDirectoryUseCase)
     }
     val managerBeans = module {
         singleOf(::PathManagerImpl) { bind<PathManager>() }

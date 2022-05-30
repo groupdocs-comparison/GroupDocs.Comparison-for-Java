@@ -26,9 +26,11 @@ fun Application.module() {
         level = Level.DEBUG
         filter { call -> call.request.path().startsWith("/comparison") }
     }
-    install(ContentNegotiation) { gson {
-        serializeNulls()
-    }}
+    install(ContentNegotiation) {
+        gson {
+            serializeNulls()
+        }
+    }
     install(DefaultHeaders) {
         header("X-Engine", "Ktor") // will send this header with each response
     }
@@ -36,25 +38,20 @@ fun Application.module() {
         generalStatusPages()
         internalStatusPages()
     }
-//    data class MySession(val count: Int = 0)
-//    install(Sessions) {
-//        cookie<MySession>("MY_SESSION") {
-//            cookie.extensions["SameSite"] = "lax"
-//        }
-//    }
-
 
     install(Routing) {
         static("/static") {
             resources("static")
         }
-        homeModule()
-        configModule()
-        treeModule()
-        downloadModule()
-        uploadModule()
-        compareModule()
-        pageModule()
-        descriptionModule()
+        route("/comparison") {
+            homeModule()
+            configModule()
+            treeModule()
+            descriptionModule()
+            compareModule()
+            downloadModule()
+            uploadModule()
+            pageModule()
+        }
     }
 }

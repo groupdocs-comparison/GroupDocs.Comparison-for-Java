@@ -9,10 +9,10 @@ import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
 
-fun Routing.treeModule() {
+fun Route.treeModule() {
     val treeController by inject<TreeController>()
 
-    post("/comparison/loadFileTree") {
+    post("/loadFileTree") {
         val request = call.receive<TreeRequest>()
         val response = treeController.tree(request)
         call.respond(HttpStatusCode.OK, response)
