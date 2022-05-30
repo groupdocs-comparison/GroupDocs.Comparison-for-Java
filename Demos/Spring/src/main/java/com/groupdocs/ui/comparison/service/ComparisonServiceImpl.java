@@ -103,7 +103,8 @@ public class ComparisonServiceImpl implements ComparisonService {
                 if (!cachedPageStream.isCached()) {
                     FilesProvider.getInstance().receiveFilesInputStream(guid, inputStream -> {
                         try (final Document document = new Document(inputStream, password)) {
-                            document.generatePreview(new PreviewOptions.Builder(cachedPageStream).setHeight(pageHeight).setWidth(pageWidth).build());
+                            document.generatePreview(new PreviewOptions.Builder(cachedPageStream)
+                                    .setHeight(pageHeight).setWidth(pageWidth).build());
                         }
                     });
                 }
