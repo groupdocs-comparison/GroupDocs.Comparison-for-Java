@@ -15,14 +15,14 @@ import kotlin.math.min
  * Does not create or check is any directory exist
  */
 class PathManagerImpl(
-    private val applicationConfig: com.groupdocs.ui.config.ApplicationConfig
+    private val comparerConfig: com.groupdocs.ui.config.ComparerConfig
 ) : PathManager, KoinComponent {
     private val isLocalProvider: Boolean by lazy {
-        applicationConfig.comparison.filesProviderTypeOrDefault == Defaults.Comparison.FilesProviderType.LOCAL
+        comparerConfig.comparison.filesProviderTypeOrDefault == Defaults.Comparison.FilesProviderType.LOCAL
     }
 
     override val tempDirectory: Path by lazy {
-        val absoluteOrRelativeTempDirectory = Paths.get(applicationConfig.comparison.tempDirectoryOrDefault)
+        val absoluteOrRelativeTempDirectory = Paths.get(comparerConfig.comparison.tempDirectoryOrDefault)
         if (absoluteOrRelativeTempDirectory.isAbsolute) {
             absoluteOrRelativeTempDirectory
         } else if (isLocalProvider) {
@@ -36,7 +36,7 @@ class PathManagerImpl(
         if (!isLocalProvider) {
             throw InternalServerException("Access to result directory is impossible, because local provider is not enabled")
         }
-        val absoluteOrRelativeResultDirectory = applicationConfig.local.resultDirectoryOrDefault
+        val absoluteOrRelativeResultDirectory = comparerConfig.local.resultDirectoryOrDefault
         if (absoluteOrRelativeResultDirectory.isAbsolute) {
             absoluteOrRelativeResultDirectory
         } else {
@@ -48,7 +48,7 @@ class PathManagerImpl(
         if (!isLocalProvider) {
             throw InternalServerException("Access to files directory is impossible, because local provider is not enabled")
         }
-        val absoluteOrRelativeFilesDirectory = applicationConfig.local.filesDirectoryOrDefault
+        val absoluteOrRelativeFilesDirectory = comparerConfig.local.filesDirectoryOrDefault
         absoluteOrRelativeFilesDirectory.toAbsolutePath().normalize()
     }
 

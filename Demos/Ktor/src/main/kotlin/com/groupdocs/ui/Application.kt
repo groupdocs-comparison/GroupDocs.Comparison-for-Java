@@ -2,7 +2,7 @@ package com.groupdocs.ui
 
 import com.groupdocs.comparison.license.License
 import com.groupdocs.ui.config.ApplicationConfig
-import com.groupdocs.ui.config.ServerConfig
+import com.groupdocs.ui.config.ComparerConfig
 import com.groupdocs.ui.di.ModulesInjection
 import com.typesafe.config.ConfigFactory
 import io.ktor.server.application.*
@@ -26,7 +26,7 @@ import java.nio.file.Paths
 fun main(args: Array<String>) {
     val environment = System.getenv()["ENVIRONMENT"] ?: handleDefaultEnvironment()
     val applicationConfig = extractApplicationConfig(environment)
-    val comparisonConfig by lazy { extractComparisonConfig() }
+    val comparerConfig by lazy { extractComparerConfig() }
 
     embeddedServer(Netty, port = applicationConfig.port) {
         println("Starting instance in ${applicationConfig.host}:${applicationConfig.port}")
@@ -36,7 +36,7 @@ fun main(args: Array<String>) {
                 modules(
                     module {
                         single { applicationConfig }
-                        single { comparisonConfig }
+                        single { comparerConfig }
                     },
                     ModulesInjection.controllerBeans,
                     ModulesInjection.usecaseBeans,
@@ -46,9 +46,7 @@ fun main(args: Array<String>) {
             main()
         }
 
-        comparisonConfig.application.licensePathOrNull?.let { path ->
-            setGroupdocsLicense(path)
-        }
+        setGroupdocsLicense(comparerConfig.licensePathOrDefault)
     }.start(wait = true)
 }
 
@@ -61,29 +59,29 @@ fun Application.main() {
     module()
 }
 
-fun extractApplicationConfig(environment: String): ServerConfig {
-    val hoconConfig = HoconApplicationConfig(ConfigFactory.load("server.conf"))
+fun extractApplicationConfig(environment: String): ApplicationConfig {
+    val hoconConfig = HoconApplicationConfig(ConfigFactory.load("application.conf"))
     val hoconEnvironment = hoconConfig.config("ktor.deployment.$environment")
 
-    return ServerConfig(
+    return ApplicationConfig(
         hoconEnvironment.property("host").getString(),
         Integer.parseInt(hoconEnvironment.property("port").getString())
     )
 }
 
 @OptIn(ExperimentalSerializationApi::class)
-fun extractComparisonConfig(): ApplicationConfig {
+fun extractComparerConfig(): ComparerConfig {
     val hocon = Hocon {
         useConfigNamingConvention = false
     }
-    return hocon.decodeFromConfig(ApplicationConfig.serializer(), ConfigFactory.load("application.conf"))
+    return hocon.decodeFromConfig(ComparerConfig.serializer(), ConfigFactory.load("comparer.conf"))
 }
 
 fun Application.setGroupdocsLicense(licensePath: String) {
     try {
         log.debug("Setting Groupdocs license...")
 
-        val licenseExtension = Defaults.Application.DEFAULT_LICENSE_EXTENSION
+        val licenseExtension = Defaults.DEFAULT_LICENSE_EXTENSION
         val license = License()
         if (licensePath.startsWith("http://") || licensePath.startsWith("https://")) {
             val url = URL(licensePath)

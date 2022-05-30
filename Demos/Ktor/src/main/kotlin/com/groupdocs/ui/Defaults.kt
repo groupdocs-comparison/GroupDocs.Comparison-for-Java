@@ -2,11 +2,9 @@ package com.groupdocs.ui
 
 
 interface Defaults {
-    interface Application {
-        companion object {
-            const val DEFAULT_LICENSE_PATH = "Licenses"
-            const val DEFAULT_LICENSE_EXTENSION = ".lic"
-        }
+    companion object {
+        const val DEFAULT_LICENSE_PATH = "Licenses"
+        const val DEFAULT_LICENSE_EXTENSION = ".lic"
     }
 
     interface Comparison {

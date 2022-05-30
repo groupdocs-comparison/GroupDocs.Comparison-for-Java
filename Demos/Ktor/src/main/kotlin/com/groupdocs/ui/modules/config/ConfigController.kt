@@ -8,14 +8,14 @@ class ConfigControllerImpl : BaseController(), ConfigController, KoinComponent {
 
     override suspend fun config(): ConfigResponse {
         return ConfigResponse(
-            browse = applicationConfig.common.browse,
-            download = applicationConfig.common.download,
-            enableRightClick = applicationConfig.common.enableRightClick,
-            pageSelector = applicationConfig.common.pageSelector,
-            preloadResultPageCount = applicationConfig.comparison.preloadResultPageCount,
-            print = applicationConfig.common.print,
-            rewrite = applicationConfig.common.rewrite,
-            upload = applicationConfig.common.upload,
+            browse = comparerConfig.common.browse,
+            download = comparerConfig.common.download,
+            enableRightClick = comparerConfig.common.enableRightClick,
+            pageSelector = comparerConfig.common.pageSelector,
+            preloadResultPageCount = comparerConfig.comparison.preloadResultPageCount,
+            print = comparerConfig.common.print,
+            rewrite = comparerConfig.common.rewrite,
+            upload = comparerConfig.common.upload,
         )
     }
 

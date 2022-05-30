@@ -20,12 +20,12 @@ class DescriptionControllerImpl(
     override suspend fun description(request: DescriptionRequest): LoadDocumentEntity {
         val path = pathManager.assertPathIsInsideFilesDirectory(request.guid)
         val password = request.password
-        val previewPageWidth = applicationConfig.comparison.previewPageWidthOrDefault
-        val previewPageRatio = applicationConfig.comparison.previewPageRatioOrDefault
+        val previewPageWidth = comparerConfig.comparison.previewPageWidthOrDefault
+        val previewPageRatio = comparerConfig.comparison.previewPageRatioOrDefault
 
         val entity = LoadDocumentEntity(
             guid = request.guid,
-            printAllowed = applicationConfig.common.print
+            printAllowed = comparerConfig.common.print
         )
         return withContext(Dispatchers.IO) {
             BufferedInputStream(FileInputStream(path.toFile())).use { inputStream ->

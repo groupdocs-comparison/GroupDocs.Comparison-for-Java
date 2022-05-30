@@ -61,8 +61,8 @@ class CompareControllerImpl(
         }
         val pages = withContext(Dispatchers.IO) {
             val pages = mutableListOf<ComparePage>()
-            val previewPageWidth = applicationConfig.comparison.previewPageWidthOrDefault
-            val previewPageRatio = applicationConfig.comparison.previewPageRatioOrDefault
+            val previewPageWidth = comparerConfig.comparison.previewPageWidthOrDefault
+            val previewPageRatio = comparerConfig.comparison.previewPageRatioOrDefault
 
             BufferedInputStream(FileInputStream(resultPath.toFile())).use { inputStream ->
                 retrieveLocalFilePagesStream(
