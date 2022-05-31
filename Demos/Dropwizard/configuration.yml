@@ -7,7 +7,7 @@ server:
   adminContextPath: /admin
   connector:
     type: http
-    port: ${HOST_ADDRESS:-8080}
+    port: ${PORT:-8080}
 
 
 ################################################
