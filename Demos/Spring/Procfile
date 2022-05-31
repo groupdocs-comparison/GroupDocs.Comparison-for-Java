@@ -1,0 +1,1 @@
+web: java -jar target/comparison-spring-22.3.0.jar
