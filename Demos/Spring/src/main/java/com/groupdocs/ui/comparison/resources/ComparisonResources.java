@@ -209,7 +209,7 @@ public class ComparisonResources extends Resources implements HttpSessionListene
             InputStream inputStream = null;
             try {
                 if (content != null && StringUtils.isBlank(fileUrl)) {
-                    fileName = content.getName();
+                    fileName = content.getOriginalFilename();
                     inputStream = content.getInputStream();
                 } else {
                     URL url = new URL(fileUrl);
