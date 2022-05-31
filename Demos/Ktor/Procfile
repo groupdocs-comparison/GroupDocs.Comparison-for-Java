@@ -1,1 +1,1 @@
-web: .\gradlew.bat :run
+web: build\install\comparison-ktor\bin\comparison-ktor
