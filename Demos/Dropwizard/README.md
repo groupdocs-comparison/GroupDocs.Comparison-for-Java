@@ -5,7 +5,7 @@ New GroupDocs.Comparison for Java Dropwizard UI Example
 
 [![Build Status](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg?branch=master)](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bd15712ebdd04405b1ea/maintainability)](https://codeclimate.com/github/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/maintainability)
-[![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Dropwizard/blob/master/LICENSE)
 
 ## System Requirements
 - Java 8+ (JDK 1.8+)
@@ -58,7 +58,7 @@ You can run this sample by one of following methods
 
 #### Build from source
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/archive/master.zip) from GitHub or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/archive/refs/heads/master.zip) from GitHub or clone this repository.
 
 ```bash
 git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
@@ -74,7 +74,7 @@ Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comp
 **Note**: This method is **recommended** for running this sample behind firewall.
 
 ```bash
-curl -J -L -o release.tar.gz https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/releases/download/1.8.17/release.tar.gz
+curl -J -L -o release.tar.gz https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v22.3/groupdocs-comparison-dropwizard-22.3.0.tar.gz
 tar -xvzf release.tar.gz
 cd release
 java -jar comparison-1.8.6.jar configuration.yaml
@@ -142,8 +142,9 @@ Please have a look at the LICENSE.md for more details
 
 ## GroupDocs Comparison on other platforms & frameworks
 
-- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring) with JAVA Spring 
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Spring) with JAVA Spring 
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Compose) with Kotlin in Compose Desktop application
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Ktor) with JAVA Ktor
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC) with .NET MVC 
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms) with .NET WebForms 
 

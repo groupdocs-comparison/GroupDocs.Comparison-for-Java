@@ -31,7 +31,6 @@ data class Comparison(
     val preloadResultPageCount: Int = 0,
     private val previewPageWidth: Int = 0,
     private val previewPageRatio: Float = 0f,
-    private val cacheDirectory: String = "",
     private val tempDirectory: String = "",
 ) {
     val filesProviderTypeOrDefault: Defaults.Comparison.FilesProviderType

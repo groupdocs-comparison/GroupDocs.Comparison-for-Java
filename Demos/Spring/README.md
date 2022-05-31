@@ -74,7 +74,7 @@ Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Compari
 
 ```bash
 git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring
-cd GroupDocs.Comparison-for-Java-Spring
+cd GroupDocs.Comparison-for-Java/Demos/Spring
 mvn package -P war
 ## Deploy this war on any server
 ```
@@ -150,7 +150,8 @@ Please have a look at the LICENSE.md for more details
 
 ## GroupDocs Comparison on other platforms & frameworks
 
-- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard) with JAVA Dropwizard
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Ktor) with JAVA Ktor
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Dropwizard) with JAVA Dropwizard
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Compose) with Kotlin in Compose Desktop application
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC) with .NET MVC 
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms) with .NET WebForms 
