@@ -13,14 +13,12 @@ import com.groupdocs.ui.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.common.resources.Resources;
 import com.groupdocs.ui.common.util.SessionCache;
 import com.groupdocs.ui.common.util.TempFilesManager;
-import com.groupdocs.ui.common.util.Utils;
 import com.groupdocs.ui.comparison.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.model.ComparisonConfigurationModel;
 import com.groupdocs.ui.comparison.model.request.CompareRequest;
 import com.groupdocs.ui.comparison.model.response.CompareResultResponse;
 import com.groupdocs.ui.comparison.provider.FilesProvider;
 import com.groupdocs.ui.comparison.service.ComparisonService;
-import com.groupdocs.ui.comparison.service.ComparisonServiceImpl;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -33,9 +31,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Nullable;
 import javax.annotation.PostConstruct;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.*;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -204,6 +204,11 @@ public class ComparisonResources extends Resources implements HttpSessionListene
     public UploadedDocumentEntity uploadDocument(@Nullable @RequestParam("file") MultipartFile content,
                                                  @RequestParam(value = "url", required = false) String fileUrl,
                                                  @RequestParam("rewrite") Boolean rewrite) {
+        boolean isUploadEnabled = globalConfiguration.getCommon().isUpload();
+        if (!isUploadEnabled) {
+            throw new TotalGroupDocsException("Files uploading is disabled!");
+        }
+
         try {
             final String fileName;
             InputStream inputStream = null;

@@ -6,6 +6,7 @@ import com.groupdocs.ui.modules.description.descriptionModule
 import com.groupdocs.ui.modules.download.downloadModule
 import com.groupdocs.ui.modules.home.homeModule
 import com.groupdocs.ui.modules.page.pageModule
+import com.groupdocs.ui.modules.rootModule
 import com.groupdocs.ui.modules.tree.treeModule
 import com.groupdocs.ui.modules.upload.uploadModule
 import com.groupdocs.ui.status.generalStatusPages
@@ -43,6 +44,7 @@ fun Application.module() {
         static("/static") {
             resources("static")
         }
+        rootModule()
         route("/comparison") {
             homeModule()
             configModule()

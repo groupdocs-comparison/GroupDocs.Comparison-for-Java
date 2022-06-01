@@ -1,5 +1,6 @@
 package com.groupdocs.ui.modules.upload
 
+import com.groupdocs.ui.config.ComparerConfig
 import com.groupdocs.ui.model.UploadResponse
 import com.groupdocs.ui.status.InternalServerException
 import io.ktor.http.*
@@ -14,8 +15,14 @@ import java.io.BufferedInputStream
 
 fun Route.uploadModule() {
     val uploadController by inject<UploadController>()
+    val comparerConfig by inject<ComparerConfig>()
 
     post("/uploadDocument") {
+        val isUploadEnabled = comparerConfig.common.upload
+        if (!isUploadEnabled) {
+            throw InternalServerException("Files uploading is disabled!")
+        }
+
         var url: String? = null
         var rewrite: Boolean = false
         var fileName: String? = null

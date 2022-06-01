@@ -7,6 +7,7 @@ import com.groupdocs.ui.common.exception.TotalGroupDocsExceptionMapper;
 import com.groupdocs.ui.common.health.TemplateHealthCheck;
 import com.groupdocs.ui.common.util.TempFilesManager;
 import com.groupdocs.ui.comparison.resources.ComparisonResources;
+import com.groupdocs.ui.comparison.resources.RootResources;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
@@ -115,6 +116,7 @@ public class MainService extends Application<GlobalConfiguration> {
         // Initiate resources (web pages)
         final ComparisonResources comparisonResources = new ComparisonResources(globalConfiguration);
         environment.jersey().register(comparisonResources);
+        environment.jersey().register(new RootResources());
 
         // Add custom exception mapper
         environment.jersey().register(new TotalGroupDocsExceptionMapper());

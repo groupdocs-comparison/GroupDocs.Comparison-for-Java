@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/date/index.js":
-/*!*******************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/date/index.js ***!
-  \*******************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/date/index.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19,9 +19,9 @@ module.exports = __webpack_require__(/*! ../../internals/path */ "../../node_mod
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/math/index.js":
-/*!*******************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/math/index.js ***!
-  \*******************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/math/index.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50,9 +50,9 @@ module.exports = __webpack_require__(/*! ../../internals/path */ "../../node_mod
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/number/index.js":
-/*!*********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/number/index.js ***!
-  \*********************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/number/index.js ***!
+  \*************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -75,9 +75,9 @@ module.exports = __webpack_require__(/*! ../../internals/path */ "../../node_mod
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/reflect/index.js":
-/*!**********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/reflect/index.js ***!
-  \**********************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/reflect/index.js ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -101,9 +101,9 @@ module.exports = __webpack_require__(/*! ../../internals/path */ "../../node_mod
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/regexp/index.js":
-/*!*********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/regexp/index.js ***!
-  \*********************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/regexp/index.js ***!
+  \*************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -120,9 +120,9 @@ __webpack_require__(/*! ../../modules/es.string.split */ "../../node_modules/@an
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-function.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-function.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-function.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -136,9 +136,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/add-to-unscopables.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/add-to-unscopables.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/add-to-unscopables.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -162,9 +162,9 @@ module.exports = function (key) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/advance-string-index.js":
-/*!************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/advance-string-index.js ***!
-  \************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/advance-string-index.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -182,9 +182,9 @@ module.exports = function (S, index, unicode) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-instance.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-instance.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-instance.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -198,9 +198,9 @@ module.exports = function (it, Constructor, name) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-object.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-object.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-object.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -216,9 +216,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-copy-within.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-copy-within.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-copy-within.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -255,9 +255,9 @@ module.exports = [].copyWithin || function copyWithin(target /* = 0 */, start /*
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-fill.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-fill.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-fill.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -284,9 +284,9 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-for-each.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-for-each.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-for-each.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -307,9 +307,9 @@ module.exports = SLOPPY_METHOD ? function forEach(callbackfn /* , thisArg */) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-from.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-from.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-from.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -360,9 +360,9 @@ module.exports = function from(arrayLike /* , mapfn = undefined, thisArg = undef
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-includes.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-includes.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-includes.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -398,9 +398,9 @@ module.exports = function (IS_INCLUDES) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-last-index-of.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-last-index-of.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-last-index-of.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -432,9 +432,9 @@ module.exports = (NEGATIVE_ZERO || SLOPPY_METHOD) ? function lastIndexOf(searchE
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-has-species-support.js":
-/*!************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-has-species-support.js ***!
-  \************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-has-species-support.js ***!
+  \****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -456,9 +456,9 @@ module.exports = function (METHOD_NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-methods.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-methods.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-methods.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -520,9 +520,9 @@ module.exports = function (TYPE, specificCreate) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-reduce.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-reduce.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-reduce.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -562,9 +562,9 @@ module.exports = function (that, callbackfn, argumentsLength, memo, isRight) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-species-create.js":
-/*!************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-species-create.js ***!
-  \************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-species-create.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -591,9 +591,9 @@ module.exports = function (originalArray, length) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/bind-context.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/bind-context.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/bind-context.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -626,9 +626,9 @@ module.exports = function (fn, that, length) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/call-with-safe-iteration-closing.js":
-/*!************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
-  \************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
+  \****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -650,9 +650,9 @@ module.exports = function (iterator, fn, value, ENTRIES) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/check-correctness-of-iteration.js":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
-  \**********************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
+  \**************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -697,9 +697,9 @@ module.exports = function (exec, SKIP_CLOSING) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof-raw.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof-raw.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof-raw.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -713,9 +713,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof.js":
-/*!***********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof.js ***!
-  \***********************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -747,9 +747,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-strong.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-strong.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-strong.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -944,9 +944,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-weak.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-weak.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-weak.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1076,9 +1076,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1185,9 +1185,9 @@ module.exports = function (CONSTRUCTOR_NAME, wrapper, common, IS_MAP, IS_WEAK) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/copy-constructor-properties.js":
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/copy-constructor-properties.js ***!
-  \*******************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/copy-constructor-properties.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1210,9 +1210,9 @@ module.exports = function (target, source) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-is-regexp-logic.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-is-regexp-logic.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-is-regexp-logic.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1234,9 +1234,9 @@ module.exports = function (METHOD_NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-prototype-getter.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-prototype-getter.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-prototype-getter.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1250,9 +1250,9 @@ module.exports = !__webpack_require__(/*! ../internals/fails */ "../../node_modu
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-html.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-html.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-html.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1272,9 +1272,9 @@ module.exports = function (string, tag, attribute, value) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-iterator-constructor.js":
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-iterator-constructor.js ***!
-  \*******************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-iterator-constructor.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1300,9 +1300,9 @@ module.exports = function (IteratorConstructor, NAME, next) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property-descriptor.js":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property-descriptor.js ***!
-  \******************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property-descriptor.js ***!
+  \**********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1319,9 +1319,9 @@ module.exports = function (bitmap, value) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1341,9 +1341,9 @@ module.exports = function (object, key, value) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-iso-string.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-iso-string.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-iso-string.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1385,9 +1385,9 @@ module.exports = (fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-primitive.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-primitive.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-primitive.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1406,9 +1406,9 @@ module.exports = function (hint) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-iterator.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-iterator.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-iterator.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1506,9 +1506,9 @@ module.exports = function (Iterable, NAME, IteratorConstructor, next, DEFAULT, I
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-well-known-symbol.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-well-known-symbol.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-well-known-symbol.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1528,9 +1528,9 @@ module.exports = function (NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/descriptors.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/descriptors.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/descriptors.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1543,9 +1543,9 @@ module.exports = !__webpack_require__(/*! ../internals/fails */ "../../node_modu
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/document-create-element.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/document-create-element.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/document-create-element.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1562,9 +1562,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/dom-iterables.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/dom-iterables.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/dom-iterables.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1608,9 +1608,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-bug-keys.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-bug-keys.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-bug-keys.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1629,9 +1629,9 @@ module.exports = [
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-keys.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-keys.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-keys.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1656,9 +1656,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/export.js":
-/*!**********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/export.js ***!
-  \**********************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/export.js ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1721,9 +1721,9 @@ module.exports = function (options, source) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fails.js":
-/*!*********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fails.js ***!
-  \*********************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fails.js ***!
+  \*************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1739,9 +1739,9 @@ module.exports = function (exec) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js ***!
-  \**************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js ***!
+  \******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1844,9 +1844,9 @@ module.exports = function (KEY, length, exec, sham) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/forced-string-html-method.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/forced-string-html-method.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/forced-string-html-method.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1865,9 +1865,9 @@ module.exports = function (METHOD_NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/forced-string-trim-method.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/forced-string-trim-method.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/forced-string-trim-method.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1887,9 +1887,9 @@ module.exports = function (METHOD_NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/freezing.js":
-/*!************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/freezing.js ***!
-  \************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/freezing.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1901,9 +1901,9 @@ module.exports = !__webpack_require__(/*! ../internals/fails */ "../../node_modu
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1939,9 +1939,9 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-to-string.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-to-string.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-to-string.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1951,9 +1951,9 @@ module.exports = __webpack_require__(/*! ../internals/shared */ "../../node_modu
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-built-in.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-built-in.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-built-in.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1973,9 +1973,9 @@ module.exports = function (namespace, method) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-iterator-method.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-iterator-method.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-iterator-method.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1993,9 +1993,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/global.js":
-/*!**********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/global.js ***!
-  \**********************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/global.js ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2009,9 +2009,9 @@ module.exports = typeof window == 'object' && window && window.Math == Math ? wi
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/has.js":
-/*!*******************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/has.js ***!
-  \*******************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/has.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2025,9 +2025,9 @@ module.exports = function (it, key) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hidden-keys.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hidden-keys.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hidden-keys.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2037,9 +2037,9 @@ module.exports = {};
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hide.js":
-/*!********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hide.js ***!
-  \********************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hide.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2057,9 +2057,9 @@ module.exports = __webpack_require__(/*! ../internals/descriptors */ "../../node
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/host-report-errors.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/host-report-errors.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/host-report-errors.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2076,9 +2076,9 @@ module.exports = function (a, b) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js":
-/*!********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js ***!
-  \********************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2090,9 +2090,9 @@ module.exports = document && document.documentElement;
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/ie8-dom-define.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/ie8-dom-define.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/ie8-dom-define.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2107,9 +2107,9 @@ module.exports = !__webpack_require__(/*! ../internals/descriptors */ "../../nod
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/indexed-object.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/indexed-object.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/indexed-object.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2130,9 +2130,9 @@ module.exports = fails(function () {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inherit-if-required.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inherit-if-required.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inherit-if-required.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2151,9 +2151,9 @@ module.exports = function (that, target, C) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-metadata.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-metadata.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-metadata.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2220,9 +2220,9 @@ __webpack_require__(/*! ../internals/hidden-keys */ "../../node_modules/@angular
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-state.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-state.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-state.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2290,9 +2290,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array-iterator-method.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array-iterator-method.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array-iterator-method.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2309,9 +2309,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array.js":
-/*!************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array.js ***!
-  \************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2327,9 +2327,9 @@ module.exports = Array.isArray || function isArray(arg) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-forced.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-forced.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-forced.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2358,9 +2358,9 @@ module.exports = isForced;
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-integer.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-integer.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-integer.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2377,9 +2377,9 @@ module.exports = function isInteger(it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-object.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-object.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-object.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2391,9 +2391,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-pure.js":
-/*!***********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-pure.js ***!
-  \***********************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-pure.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2403,9 +2403,9 @@ module.exports = false;
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-regexp.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-regexp.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-regexp.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2424,9 +2424,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterate.js":
-/*!***********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterate.js ***!
-  \***********************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterate.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2468,9 +2468,9 @@ exports.BREAK = BREAK;
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators-core.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators-core.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators-core.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2513,9 +2513,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2525,9 +2525,9 @@ module.exports = {};
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-expm1.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-expm1.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-expm1.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2548,9 +2548,9 @@ module.exports = (!nativeExpm1
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-fround.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-fround.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-fround.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2583,9 +2583,9 @@ module.exports = Math.fround || function fround(x) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-log1p.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-log1p.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-log1p.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2599,9 +2599,9 @@ module.exports = Math.log1p || function log1p(x) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-sign.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-sign.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-sign.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2616,9 +2616,9 @@ module.exports = Math.sign || function sign(x) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/microtask.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/microtask.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/microtask.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2703,9 +2703,9 @@ module.exports = queueMicrotask || function (fn) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-symbol.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-symbol.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-symbol.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2719,9 +2719,9 @@ module.exports = !__webpack_require__(/*! ../internals/fails */ "../../node_modu
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-weak-map.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-weak-map.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-weak-map.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2734,9 +2734,9 @@ module.exports = typeof WeakMap === 'function' && /native code/.test(nativeFunct
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/new-promise-capability.js":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/new-promise-capability.js ***!
-  \**************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/new-promise-capability.js ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2764,9 +2764,9 @@ module.exports.f = function (C) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-is-finite.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-is-finite.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-is-finite.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2782,9 +2782,9 @@ module.exports = Number.isFinite || function isFinite(it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-assign.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-assign.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-assign.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2828,9 +2828,9 @@ module.exports = !nativeAssign || __webpack_require__(/*! ../internals/fails */ 
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-create.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-create.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-create.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2884,9 +2884,9 @@ __webpack_require__(/*! ../internals/hidden-keys */ "../../node_modules/@angular
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-properties.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-properties.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-properties.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2909,9 +2909,9 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-property.js":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-property.js ***!
-  \**************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-property.js ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2937,9 +2937,9 @@ exports.f = DESCRIPTORS ? nativeDefineProperty : function defineProperty(O, P, A
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-descriptor.js":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
-  \**************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
+  \******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2965,9 +2965,9 @@ exports.f = DESCRIPTORS ? nativeGetOwnPropertyDescriptor : function getOwnProper
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names-external.js":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names-external.js ***!
-  \******************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names-external.js ***!
+  \**********************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2997,9 +2997,9 @@ module.exports.f = function getOwnPropertyNames(it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names.js":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names.js ***!
-  \*********************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names.js ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3015,9 +3015,9 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-symbols.js":
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
-  \***********************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
+  \***************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3027,9 +3027,9 @@ exports.f = Object.getOwnPropertySymbols;
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-prototype-of.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-prototype-of.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-prototype-of.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3052,9 +3052,9 @@ module.exports = CORRECT_PROTOTYPE_GETTER ? Object.getPrototypeOf : function (O)
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys-internal.js":
-/*!************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys-internal.js ***!
-  \************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys-internal.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3080,9 +3080,9 @@ module.exports = function (object, names) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3098,9 +3098,9 @@ module.exports = Object.keys || function keys(O) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-property-is-enumerable.js":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-property-is-enumerable.js ***!
-  \*********************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-property-is-enumerable.js ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3121,9 +3121,9 @@ exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-set-prototype-of.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-set-prototype-of.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-set-prototype-of.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3152,9 +3152,9 @@ module.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-to-string.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-to-string.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-to-string.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3176,9 +3176,9 @@ module.exports = String(test) !== '[object z]' ? function toString() {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/own-keys.js":
-/*!************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/own-keys.js ***!
-  \************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/own-keys.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3198,9 +3198,9 @@ module.exports = Reflect && Reflect.ownKeys || function ownKeys(it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/parse-float.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/parse-float.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/parse-float.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3219,9 +3219,9 @@ module.exports = FORCED ? function parseFloat(str) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/parse-int.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/parse-int.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/parse-int.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3240,9 +3240,9 @@ module.exports = FORCED ? function parseInt(str, radix) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/path.js":
-/*!********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/path.js ***!
-  \********************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/path.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3252,9 +3252,9 @@ module.exports = __webpack_require__(/*! ../internals/global */ "../../node_modu
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/perform.js":
-/*!***********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/perform.js ***!
-  \***********************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/perform.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3270,9 +3270,9 @@ module.exports = function (exec) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/promise-resolve.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/promise-resolve.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/promise-resolve.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3293,9 +3293,9 @@ module.exports = function (C, x) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine-all.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine-all.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine-all.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3310,9 +3310,9 @@ module.exports = function (target, src, options) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine.js":
-/*!************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine.js ***!
-  \************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3358,9 +3358,9 @@ __webpack_require__(/*! ../internals/shared */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/reflect-metadata.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/reflect-metadata.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/reflect-metadata.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3421,9 +3421,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec-abstract.js":
-/*!************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec-abstract.js ***!
-  \************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec-abstract.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3454,9 +3454,9 @@ module.exports = function (R, S) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3521,9 +3521,9 @@ module.exports = patchedExec;
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-flags.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-flags.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-flags.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3548,9 +3548,9 @@ module.exports = function () {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/require-object-coercible.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/require-object-coercible.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/require-object-coercible.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3565,9 +3565,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/same-value.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/same-value.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/same-value.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3582,9 +3582,9 @@ module.exports = Object.is || function is(x, y) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-global.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-global.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-global.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3603,9 +3603,9 @@ module.exports = function (key, value) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-species.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-species.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-species.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3629,9 +3629,9 @@ module.exports = function (CONSTRUCTOR_NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-to-string-tag.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-to-string-tag.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-to-string-tag.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3649,9 +3649,9 @@ module.exports = function (it, TAG, STATIC) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-key.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-key.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-key.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3666,9 +3666,9 @@ module.exports = function (key) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared.js":
-/*!**********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared.js ***!
-  \**********************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared.js ***!
+  \**************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3689,9 +3689,9 @@ var store = global[SHARED] || setGlobal(SHARED, {});
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/sloppy-array-method.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/sloppy-array-method.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/sloppy-array-method.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3711,9 +3711,9 @@ module.exports = function (METHOD_NAME, argument) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/species-constructor.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/species-constructor.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/species-constructor.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3733,9 +3733,9 @@ module.exports = function (O, defaultConstructor) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-at.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-at.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-at.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3760,9 +3760,9 @@ module.exports = function (that, pos, CONVERT_TO_STRING) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-repeat.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-repeat.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-repeat.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3786,9 +3786,9 @@ module.exports = ''.repeat || function repeat(count) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3811,9 +3811,9 @@ module.exports = function (string, TYPE) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/task.js":
-/*!********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/task.js ***!
-  \********************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/task.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3910,9 +3910,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/this-number-value.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/this-number-value.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/this-number-value.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3931,9 +3931,9 @@ module.exports = function (value) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-absolute-index.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-absolute-index.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-absolute-index.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3953,9 +3953,9 @@ module.exports = function (index, length) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-indexed-object.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-indexed-object.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-indexed-object.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3971,9 +3971,9 @@ module.exports = function (it) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-integer.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-integer.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-integer.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3990,9 +3990,9 @@ module.exports = function (argument) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-length.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-length.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-length.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4009,9 +4009,9 @@ module.exports = function (argument) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-object.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-object.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-object.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4027,9 +4027,9 @@ module.exports = function (argument) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-primitive.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-primitive.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-primitive.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4050,9 +4050,9 @@ module.exports = function (it, S) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/uid.js":
-/*!*******************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/uid.js ***!
-  \*******************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/uid.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4067,9 +4067,9 @@ module.exports = function (key) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/user-agent.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/user-agent.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/user-agent.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4082,9 +4082,9 @@ module.exports = navigator && navigator.userAgent || '';
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/validate-set-prototype-of-arguments.js":
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/validate-set-prototype-of-arguments.js ***!
-  \***************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/validate-set-prototype-of-arguments.js ***!
+  \*******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4102,9 +4102,9 @@ module.exports = function (O, proto) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/validate-string-method-arguments.js":
-/*!************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/validate-string-method-arguments.js ***!
-  \************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/validate-string-method-arguments.js ***!
+  \****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4122,9 +4122,9 @@ module.exports = function (that, searchString, NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4142,9 +4142,9 @@ module.exports = function (name) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/whitespaces.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/whitespaces.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/whitespaces.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4156,9 +4156,9 @@ module.exports = '\u0009\u000A\u000B\u000C\u000D\u0020\u00A0\u1680\u2000\u2001\u
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/wrapped-well-known-symbol.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/wrapped-well-known-symbol.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/wrapped-well-known-symbol.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4168,9 +4168,9 @@ exports.f = __webpack_require__(/*! ../internals/well-known-symbol */ "../../nod
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.copy-within.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.copy-within.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.copy-within.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4187,9 +4187,9 @@ __webpack_require__(/*! ../internals/add-to-unscopables */ "../../node_modules/@
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.every.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.every.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.every.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4211,9 +4211,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.fill.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.fill.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.fill.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4228,9 +4228,9 @@ __webpack_require__(/*! ../internals/add-to-unscopables */ "../../node_modules/@
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.filter.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.filter.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.filter.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4253,9 +4253,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find-index.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find-index.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find-index.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4283,9 +4283,9 @@ __webpack_require__(/*! ../internals/add-to-unscopables */ "../../node_modules/@
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4313,9 +4313,9 @@ __webpack_require__(/*! ../internals/add-to-unscopables */ "../../node_modules/@
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.for-each.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.for-each.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.for-each.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4331,9 +4331,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.from.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.from.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.from.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4351,9 +4351,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.index-of.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.index-of.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.index-of.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4380,9 +4380,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.is-array.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.is-array.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.is-array.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4394,9 +4394,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.iterator.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.iterator.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.iterator.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4458,9 +4458,9 @@ addToUnscopables('entries');
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.join.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.join.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.join.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4484,9 +4484,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.last-index-of.js":
-/*!************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.last-index-of.js ***!
-  \************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.last-index-of.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4502,9 +4502,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.map.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.map.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.map.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4527,9 +4527,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.of.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.of.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.of.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4560,9 +4560,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce-right.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce-right.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce-right.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4584,9 +4584,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4608,9 +4608,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.slice.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.slice.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.slice.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4663,9 +4663,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.some.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.some.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.some.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4687,9 +4687,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.sort.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.sort.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.sort.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4728,9 +4728,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.now.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.now.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.now.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4746,9 +4746,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-iso-string.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-iso-string.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-iso-string.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4765,9 +4765,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-json.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-json.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-json.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4796,9 +4796,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-primitive.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-primitive.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-primitive.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4815,9 +4815,9 @@ if (!(TO_PRIMITIVE in DatePrototype)) hide(DatePrototype, TO_PRIMITIVE, dateToPr
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-string.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-string.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-string.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4841,9 +4841,9 @@ if (new Date(NaN) + '' != INVALID_DATE) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.bind.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.bind.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.bind.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4857,9 +4857,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.has-instance.js":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.has-instance.js ***!
-  \**************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.has-instance.js ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4887,9 +4887,9 @@ if (!(HAS_INSTANCE in FunctionPrototype)) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.name.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.name.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.name.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4919,9 +4919,9 @@ if (DESCRIPTORS && !(NAME in FunctionPrototype)) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.map.js":
-/*!********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.map.js ***!
-  \********************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.map.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4937,9 +4937,9 @@ module.exports = __webpack_require__(/*! ../internals/collection */ "../../node_
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.acosh.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.acosh.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.acosh.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4969,9 +4969,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.asinh.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.asinh.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.asinh.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4994,9 +4994,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.atanh.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.atanh.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.atanh.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5016,9 +5016,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cbrt.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cbrt.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cbrt.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5038,9 +5038,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.clz32.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.clz32.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.clz32.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5060,9 +5060,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cosh.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cosh.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cosh.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5084,9 +5084,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.expm1.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.expm1.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.expm1.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5102,9 +5102,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.fround.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.fround.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.fround.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5116,9 +5116,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.hypot.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.hypot.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.hypot.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5153,9 +5153,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.imul.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.imul.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.imul.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5183,9 +5183,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log10.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log10.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log10.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5204,9 +5204,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log1p.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log1p.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log1p.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5218,9 +5218,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log2.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log2.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log2.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5239,9 +5239,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sign.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sign.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sign.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5253,9 +5253,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sinh.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sinh.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sinh.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5281,9 +5281,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.tanh.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.tanh.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.tanh.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5304,9 +5304,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.to-string-tag.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.to-string-tag.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.to-string-tag.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5318,9 +5318,9 @@ __webpack_require__(/*! ../internals/set-to-string-tag */ "../../node_modules/@a
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.trunc.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.trunc.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.trunc.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5339,9 +5339,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.constructor.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.constructor.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.constructor.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5426,9 +5426,9 @@ if (isForced(NUMBER, !NativeNumber(' 0o1') || !NativeNumber('0b1') || NativeNumb
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.epsilon.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.epsilon.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.epsilon.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5440,9 +5440,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-finite.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-finite.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-finite.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5456,9 +5456,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-integer.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-integer.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-integer.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5472,9 +5472,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-nan.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-nan.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-nan.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5491,9 +5491,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-safe-integer.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-safe-integer.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-safe-integer.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5512,9 +5512,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.max-safe-integer.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.max-safe-integer.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.max-safe-integer.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5526,9 +5526,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.min-safe-integer.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.min-safe-integer.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.min-safe-integer.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5540,9 +5540,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-float.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-float.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-float.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5558,9 +5558,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-int.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-int.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-int.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5576,9 +5576,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-fixed.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-fixed.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-fixed.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5705,9 +5705,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-precision.js":
-/*!************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-precision.js ***!
-  \************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-precision.js ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5737,9 +5737,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.assign.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.assign.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.assign.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5753,9 +5753,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.create.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.create.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.create.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5769,9 +5769,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-properties.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-properties.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-properties.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5787,9 +5787,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-property.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-property.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-property.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5805,9 +5805,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.freeze.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.freeze.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.freeze.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5829,9 +5829,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-descriptor.js":
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-descriptor.js ***!
-  \***************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-descriptor.js ***!
+  \*******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5853,9 +5853,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-names.js":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-names.js ***!
-  \**********************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-names.js ***!
+  \**************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5872,9 +5872,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-prototype-of.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-prototype-of.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-prototype-of.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5898,9 +5898,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-extensible.js":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-extensible.js ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-extensible.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5920,9 +5920,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-frozen.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-frozen.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-frozen.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5942,9 +5942,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-sealed.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-sealed.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-sealed.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5964,9 +5964,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5978,9 +5978,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.keys.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.keys.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.keys.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6000,9 +6000,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.prevent-extensions.js":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.prevent-extensions.js ***!
-  \******************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.prevent-extensions.js ***!
+  \**********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6024,9 +6024,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.seal.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.seal.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.seal.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6048,9 +6048,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.set-prototype-of.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.set-prototype-of.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.set-prototype-of.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6064,9 +6064,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.to-string.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.to-string.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.to-string.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6083,9 +6083,9 @@ if (toString !== ObjectPrototype.toString) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-float.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-float.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-float.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6101,9 +6101,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-int.js":
-/*!**************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-int.js ***!
-  \**************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-int.js ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6119,9 +6119,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.promise.js":
-/*!************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.promise.js ***!
-  \************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.promise.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6477,9 +6477,9 @@ $export({ target: PROMISE, stat: true, forced: INCORRECT_ITERATION }, {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.apply.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.apply.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.apply.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6509,9 +6509,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.construct.js":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.construct.js ***!
-  \**********************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.construct.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6568,9 +6568,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.define-property.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.define-property.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.define-property.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6605,9 +6605,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.delete-property.js":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.delete-property.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.delete-property.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6627,9 +6627,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get-own-property-descriptor.js":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get-own-property-descriptor.js ***!
-  \****************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get-own-property-descriptor.js ***!
+  \********************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6649,9 +6649,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get-prototype-of.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get-prototype-of.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get-prototype-of.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6671,9 +6671,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.get.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6703,9 +6703,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.has.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.has.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.has.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6721,9 +6721,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.is-extensible.js":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.is-extensible.js ***!
-  \**************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.is-extensible.js ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6743,9 +6743,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.own-keys.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.own-keys.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.own-keys.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6757,9 +6757,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.prevent-extensions.js":
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.prevent-extensions.js ***!
-  \*******************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.prevent-extensions.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6786,9 +6786,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.set-prototype-of.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.set-prototype-of.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.set-prototype-of.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6813,9 +6813,9 @@ if (objectSetPrototypeOf) __webpack_require__(/*! ../internals/export */ "../../
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.set.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.set.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.reflect.set.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6857,9 +6857,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.constructor.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.constructor.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.constructor.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6925,9 +6925,9 @@ __webpack_require__(/*! ../internals/set-species */ "../../node_modules/@angular
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.exec.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.exec.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.exec.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6944,9 +6944,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.flags.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.flags.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.flags.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6963,9 +6963,9 @@ if (__webpack_require__(/*! ../internals/descriptors */ "../../node_modules/@ang
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.to-string.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.to-string.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.to-string.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6996,9 +6996,9 @@ if (NOT_GENERIC || INCORRECT_NAME) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.set.js":
-/*!********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.set.js ***!
-  \********************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.set.js ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7014,9 +7014,9 @@ module.exports = __webpack_require__(/*! ../internals/collection */ "../../node_
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.anchor.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.anchor.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.anchor.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7037,9 +7037,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.big.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.big.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.big.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7060,9 +7060,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.blink.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.blink.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.blink.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7083,9 +7083,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.bold.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.bold.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.bold.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7106,9 +7106,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.code-point-at.js":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.code-point-at.js ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.code-point-at.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7128,9 +7128,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.ends-with.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.ends-with.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.ends-with.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7163,9 +7163,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fixed.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fixed.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fixed.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7186,9 +7186,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontcolor.js":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontcolor.js ***!
-  \*********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontcolor.js ***!
+  \*************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7209,9 +7209,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontsize.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontsize.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontsize.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7232,9 +7232,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.from-code-point.js":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.from-code-point.js ***!
-  \***************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.from-code-point.js ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7268,9 +7268,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.includes.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.includes.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.includes.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7294,9 +7294,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.italics.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.italics.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.italics.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7317,9 +7317,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.iterator.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.iterator.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.iterator.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7357,9 +7357,9 @@ defineIterator(String, 'String', function (iterated) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.link.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.link.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.link.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7380,9 +7380,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.match.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.match.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.match.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7440,9 +7440,9 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "../.
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.raw.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.raw.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.raw.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7469,9 +7469,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.repeat.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.repeat.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.repeat.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7485,9 +7485,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.replace.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.replace.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.replace.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7626,9 +7626,9 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "../.
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.search.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.search.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.search.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7676,9 +7676,9 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "../.
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.small.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.small.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.small.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7699,9 +7699,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.split.js":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.split.js ***!
-  \*****************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.split.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7849,9 +7849,9 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "../.
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.starts-with.js":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.starts-with.js ***!
-  \***********************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.starts-with.js ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7880,9 +7880,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.strike.js":
-/*!******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.strike.js ***!
-  \******************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.strike.js ***!
+  \**********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7903,9 +7903,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sub.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sub.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sub.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7926,9 +7926,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sup.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sup.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sup.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7949,9 +7949,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.trim.js":
-/*!****************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.trim.js ***!
-  \****************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.trim.js ***!
+  \********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7972,9 +7972,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.iterator.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.iterator.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.iterator.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7986,9 +7986,9 @@ __webpack_require__(/*! ../internals/define-well-known-symbol */ "../../node_mod
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.js":
-/*!***********************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.js ***!
-  \***********************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8275,9 +8275,9 @@ hiddenKeys[HIDDEN] = true;
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.weak-map.js":
-/*!*************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.weak-map.js ***!
-  \*************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.weak-map.js ***!
+  \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8352,9 +8352,9 @@ if (NATIVE_WEAK_MAP && IS_IE11) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.define-metadata.js":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.define-metadata.js ***!
-  \********************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.define-metadata.js ***!
+  \************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8376,9 +8376,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.delete-metadata.js":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.delete-metadata.js ***!
-  \********************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.delete-metadata.js ***!
+  \************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8406,9 +8406,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js ***!
-  \**********************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-metadata-keys.js ***!
+  \**************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8447,9 +8447,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-metadata.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-metadata.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-metadata.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8480,9 +8480,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js ***!
-  \**************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-own-metadata-keys.js ***!
+  \******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8504,9 +8504,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js ***!
-  \*********************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.get-own-metadata.js ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8528,9 +8528,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.has-metadata.js":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.has-metadata.js ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.has-metadata.js ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8560,9 +8560,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js ***!
-  \*********************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.has-own-metadata.js ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8584,9 +8584,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.metadata.js":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.metadata.js ***!
-  \*************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/esnext.reflect.metadata.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8609,9 +8609,9 @@ __webpack_require__(/*! ../internals/export */ "../../node_modules/@angular-devk
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.iterator.js":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.iterator.js ***!
-  \******************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.iterator.js ***!
+  \**********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8650,9 +8650,9 @@ for (var COLLECTION_NAME in DOMIterables) {
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/proposals/reflect-metadata.js":
-/*!********************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/proposals/reflect-metadata.js ***!
-  \********************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/node_modules/core-js/proposals/reflect-metadata.js ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8670,9 +8670,9 @@ __webpack_require__(/*! ../modules/esnext.reflect.metadata */ "../../node_module
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ***!
-  \*******************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ***!
+  \***********************************************************************************************************************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8693,9 +8693,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8951,9 +8951,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js":
-/*!***************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
-  \***************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
+  \*******************************************************************************************************************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8974,9 +8974,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "../../node_modules/zone.js/dist/zone.js":
-/*!********************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/zone.js/dist/zone.js ***!
-  \********************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/zone.js/dist/zone.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12530,16 +12530,16 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 1:
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ./src/polyfills.ts D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js ./src/polyfills.ts D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Spring\client\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
-__webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Spring\client\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-jit-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js");
-__webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Spring\client\apps\comparison\src\polyfills.ts */"./src/polyfills.ts");
-module.exports = __webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Spring\client\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+__webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Dropwizard\client\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
+__webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Dropwizard\client\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-jit-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js");
+__webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Dropwizard\client\apps\comparison\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Dropwizard\client\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */"../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
 
 /***/ })

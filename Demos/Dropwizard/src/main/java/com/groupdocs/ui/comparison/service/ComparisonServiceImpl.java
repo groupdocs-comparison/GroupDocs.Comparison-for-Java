@@ -306,6 +306,11 @@ public class ComparisonServiceImpl implements ComparisonService {
      */
     @Override
     public String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) {
+        final boolean isUploadEnabled = globalConfiguration.getCommon().isUpload();
+        if (!isUploadEnabled) {
+            throw new TotalGroupDocsException("Files uploading is disabled!");
+        }
+
         final FilesProvider filesProvider = FilesProvider.getInstance();
         final boolean isFileExists = filesProvider.isFileExists(fileName);
         if (!isFileExists || isRewrite) {

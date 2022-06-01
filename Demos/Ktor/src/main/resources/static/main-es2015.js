@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
 /***/ "../../node_modules/raw-loader/index.js!./src/app/app.component.html":
-/*!***************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/raw-loader!./src/app/app.component.html ***!
-  \***************************************************************************************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/raw-loader!./src/app/app.component.html ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -174,7 +174,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Spring\client\apps\comparison\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Dropwizard\client\apps\comparison\src\main.ts */"./src/main.ts");
 
 
 /***/ })

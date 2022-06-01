@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
 /***/ "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../../node_modules/postcss-loader/src/index.js?!../../node_modules/less-loader/dist/cjs.js?!./src/styles.less":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/postcss-loader/src??embedded!D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/less-loader/dist/cjs.js??ref--14-3!./src/styles.less ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/postcss-loader/src??embedded!D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/less-loader/dist/cjs.js??ref--14-3!./src/styles.less ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -12,9 +12,9 @@ module.exports = [[module.i, "/* You can add global styles to this file, and als
 /***/ }),
 
 /***/ "../../node_modules/style-loader/lib/addStyles.js":
-/*!*****************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/style-loader/lib/addStyles.js ***!
-  \*****************************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/style-loader/lib/addStyles.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -421,9 +421,9 @@ function updateLink (link, options, obj) {
 /***/ }),
 
 /***/ "../../node_modules/style-loader/lib/urls.js":
-/*!************************************************************************************************************!*\
-  !*** D:/java/groupdocs-comparison-java-examples/Demos/Spring/client/node_modules/style-loader/lib/urls.js ***!
-  \************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** D:/java/groupdocs-comparison-java-examples/Demos/Dropwizard/client/node_modules/style-loader/lib/urls.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Spring\client\apps\comparison\src\styles.less */"./src/styles.less");
+module.exports = __webpack_require__(/*! D:\java\groupdocs-comparison-java-examples\Demos\Dropwizard\client\apps\comparison\src\styles.less */"./src/styles.less");
 
 
 /***/ })
