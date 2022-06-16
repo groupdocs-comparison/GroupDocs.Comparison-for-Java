@@ -56,7 +56,7 @@ You can run this sample by one of following methods
 
 #### Run using IDE
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/archive/master.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v22.3/groupdocs-comparison-ktor-22.3.0.zip) from github or clone this repository.
 
 ```bash
 git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
@@ -66,27 +66,41 @@ Open project in IDE. Open `Application.kt` file and run `main` method inside it.
 
 #### Run from command line
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/archive/master.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/archive/refs/heads/master.zip) from github.
+
+Alternatively you can clone this repository using next command
+```bash
+git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
+```
+
+Run sample from Windows PowerShell or Linux Terminal using next commands
 
 ```bash
-git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring
 cd GroupDocs.Comparison-for-Java/Demos/Ktor
 .\gradlew.bat :run
 ```
+
 Open [http://localhost:8080/comparison/](http://localhost:8080/comparison/) in your favorite browser.
 
 #### Build distribution archive
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/archive/master.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/archive/refs/heads/master.zip) from github.
+
+Alternatively you can clone this repository using next command
+```bash
+git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
+```
+
+Run sample from Windows PowerShell or Linux Terminal using next commands
 
 ```bash
-git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring
 cd GroupDocs.Comparison-for-Java/Demos/Ktor
 .\gradlew.bat :build
 ```
+
 After that, go to `.\build\distributions\` directory to get distribution files.
 
-#### Binary release (with all dependencies)
+#### Binary release (with all dependencies) for Linux
 
 Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/latest) from [releases page](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases).
 
@@ -102,7 +116,7 @@ bin/comparison-ktor
 ```
 
 ## Configuration
-You can adjust settings in `/src/main/resources/application.conf` and `/src/main/resources/comparer.conf`. By default, this sample will lookup for license file in `./Licenses` folder, so you can simply put your license file in that folder or specify relative/absolute path by setting `licensePath` value in `/src/main/resources/comparer.conf`. 
+You can adjust settings in `/src/main/resources/application.conf`. Specify relative/absolute path to license file by setting `licensePath` value in `/src/main/resources/application.conf` or by setting up `LIC_PATH` environment variable
 
 ### Comparison configuration options
 
@@ -121,7 +135,8 @@ Please have a look at the LICENSE.md for more details
 
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Compose) with Kotlin in Compose Desktop application
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Dropwizard) with JAVA Dropwizard
-- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Compose) with Kotlin in Compose Desktop application
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Javalin) with Javalin application
+- [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Spring) with Spring application
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-MVC) with .NET MVC 
 - [Compare documents](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-.NET-WebForms) with .NET WebForms 
 
