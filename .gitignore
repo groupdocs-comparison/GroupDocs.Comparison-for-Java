@@ -3,5 +3,7 @@ deploy_key
 .gradle
 build
 
+DocumentSamples
+
 #License files
 *.lic
