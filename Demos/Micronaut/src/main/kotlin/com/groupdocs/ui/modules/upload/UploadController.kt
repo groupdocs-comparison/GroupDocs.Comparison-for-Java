@@ -10,9 +10,11 @@ import io.micronaut.http.annotation.Post
 import io.micronaut.http.annotation.Produces
 import io.micronaut.http.multipart.CompletedFileUpload
 import jakarta.inject.Inject
+import jakarta.inject.Singleton
 import kotlinx.coroutines.runBlocking
 import java.io.BufferedInputStream
 
+@Singleton
 @Controller("/comparison")
 class UploadController(
     @Inject private val uploadBean: UploadBean,

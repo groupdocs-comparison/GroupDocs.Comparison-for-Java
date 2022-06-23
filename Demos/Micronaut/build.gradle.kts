@@ -39,6 +39,11 @@ dependencies {
 application {
     mainClass.set("com.groupdocs.ui.ApplicationKt")
 }
+
+tasks {
+    create("stage").dependsOn("installDist")
+}
+
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
 }

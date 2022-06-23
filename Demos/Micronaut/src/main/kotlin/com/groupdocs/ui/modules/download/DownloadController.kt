@@ -8,11 +8,13 @@ import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Produces
 import io.micronaut.http.annotation.QueryValue
 import jakarta.inject.Inject
+import jakarta.inject.Singleton
 import kotlinx.coroutines.runBlocking
 import java.io.BufferedInputStream
 import java.nio.charset.StandardCharsets
 import java.nio.file.Paths
 
+@Singleton
 @Controller("/comparison")
 class DownloadController(
     @Inject private val downloadBean: DownloadBean

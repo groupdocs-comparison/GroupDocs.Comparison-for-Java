@@ -9,8 +9,10 @@ import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Post
 import io.micronaut.http.annotation.Produces
 import jakarta.inject.Inject
+import jakarta.inject.Singleton
 import kotlinx.coroutines.runBlocking
 
+@Singleton
 @Controller("/comparison")
 class TreeController(
     @Inject private val treeBean: TreeBean
