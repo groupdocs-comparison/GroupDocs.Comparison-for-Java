@@ -17,11 +17,11 @@ import kotlinx.coroutines.runBlocking
 class CompareController(
     @Inject private val compareBean: CompareBean
 ) {
-    @Post("/compare")
-    @Produces(MediaType.APPLICATION_JSON)
-    fun comparer(request: CompareRequest): HttpResponse<CompareResponse> {
-        val response = runBlocking { compareBean.compare(request) }
+@Post("/compare")
+@Produces(MediaType.APPLICATION_JSON)
+fun comparer(request: CompareRequest): HttpResponse<CompareResponse> {
+    val response = runBlocking { compareBean.compare(request) }
 
-        return HttpResponse.ok<ConfigResponse>().body(response)
-    }
+    return HttpResponse.ok<ConfigResponse>().body(response)
+}
 }

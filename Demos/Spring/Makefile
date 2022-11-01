@@ -1,5 +1,5 @@
 
-COMPARISON_VERSION = 22.3
+COMPARISON_VERSION = 22.11
 
 # Groupdocs.Comparison for Java - Spring sample
 

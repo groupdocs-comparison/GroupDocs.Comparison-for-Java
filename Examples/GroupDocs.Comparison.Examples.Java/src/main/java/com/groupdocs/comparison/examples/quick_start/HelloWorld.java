@@ -26,6 +26,6 @@ public class HelloWorld {
             final Path resultPath = comparer.compare(outputFileName);
         }
 
-        System.out.println("\nSource document rendered successfully.\nCheck output in " + outputFileName + ".");
+          System.out.println("\nSource document rendered successfully.\nCheck output in " + outputFileName + ".");
     }
 }

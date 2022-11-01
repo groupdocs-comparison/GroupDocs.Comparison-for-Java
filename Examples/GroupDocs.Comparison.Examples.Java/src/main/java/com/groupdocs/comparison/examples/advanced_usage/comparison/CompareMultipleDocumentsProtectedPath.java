@@ -21,6 +21,6 @@ public class CompareMultipleDocumentsProtectedPath {
             comparer.add(SampleFiles.TARGET3_WORD_PROTECTED, new LoadOptions("5678"));
             final Path resultPath = comparer.compare(outputFileName);
         }
-        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 }

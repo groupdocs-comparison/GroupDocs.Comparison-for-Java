@@ -6,7 +6,7 @@
 
     <groupId>com.groupdocs.ui</groupId>
     <artifactId>comparison-dropwizard</artifactId>
-    <version>22.3</version>
+    <version>22.11</version>
     <packaging>jar</packaging>
 
     <name>GroupDocs.Comparison Dropwizard</name>
@@ -148,7 +148,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <mainClass>com.groupdocs.ui.common.MainService</mainClass>
+                    <mainClass>com.groupdocs.ui.comparison.dropwizard.common.MainService</mainClass>
                     <arguments>
                         <argument>server</argument>
                         <argument>configuration.yml</argument>
@@ -182,68 +182,12 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.groupdocs.ui.common.MainService</mainClass>
+                                    <mainClass>com.groupdocs.ui.comparison.dropwizard.common.MainService</mainClass>
                                     <manifestEntries>
                                         <Class-Path>.</Class-Path>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.github.eirslett</groupId>
-                <artifactId>frontend-maven-plugin</artifactId>
-                <version>1.6</version>
-                <configuration>
-                    <workingDirectory>client</workingDirectory>
-                </configuration>
-                <executions>
-                    <execution>
-                        <!-- optional: you don't really need execution ids, but it looks nice in your build log. -->
-                        <id>install node and npm</id>
-                        <goals>
-                            <goal>install-node-and-npm</goal>
-                        </goals>
-                        <configuration>
-                            <nodeVersion>v10.15.1</nodeVersion>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>npm install</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>install</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>npm update</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>update</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>install client</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>install</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>build client</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>run build</arguments>
                         </configuration>
                     </execution>
                 </executions>
@@ -278,9 +222,14 @@
             <url>https://repository.springsource.com/maven/bundles/external</url>
         </repository>
         <repository>
-            <id>maven.groupdocs.com</id>
-            <name>artifact.groupdocs.com-releases</name>
-            <url>https://repository.groupdocs.com/repo/</url>
+            <id>releases.groupdocs.com</id>
+            <name>releases.groupdocs</name>
+            <url>https://releases.groupdocs.com/java/repo/</url>
+        </repository>
+        <repository>
+            <id>releases-qa.groupdocs.com</id>
+            <name>releases-qa.groupdocs</name>
+            <url>https://releases-qa.groupdocs.com/java/repo</url>
         </repository>
         <repository>
             <id>maven-central</id>

@@ -28,6 +28,6 @@ public class AcceptRejectDetectedChangesPath {
             changes[0].setComparisonAction(ComparisonAction.REJECT);
             comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
         }
-        System.out.println("\nChanges updated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nChanges updated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 }

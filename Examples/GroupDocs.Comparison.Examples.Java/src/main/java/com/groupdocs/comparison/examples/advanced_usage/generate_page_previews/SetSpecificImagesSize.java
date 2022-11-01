@@ -10,6 +10,7 @@ import com.groupdocs.comparison.options.enums.PreviewFormats;
 
 import java.io.*;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * This example demonstrates how to get document specific size previews
@@ -19,14 +20,17 @@ public class SetSpecificImagesSize {
 
         String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_SLIDES, "SetSpecificImagesSize");
 
-        final Path resultPath;
+        Path resultPath;
         try (OutputStream resultStream = new FileOutputStream(outputFileName);
              Comparer comparer = new Comparer(SampleFiles.SOURCE_SLIDES)) {
             comparer.add(SampleFiles.TARGET_SLIDES);
             resultPath = comparer.compare(resultStream);
         }
-        try (InputStream documentStream = new FileInputStream(resultPath.toFile())) {
-            Document document = new Document(documentStream);
+        if (resultPath == null) {
+            resultPath = Paths.get(outputFileName);
+        }
+        try (InputStream documentStream = new FileInputStream(resultPath.toFile());
+             Document document = new Document(documentStream)) {
 
             {
                 // Note: It is the same with commented code below

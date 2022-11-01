@@ -50,6 +50,6 @@ public class CompareDocumentsSettingsStream {
             }
 
         }
-        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 }

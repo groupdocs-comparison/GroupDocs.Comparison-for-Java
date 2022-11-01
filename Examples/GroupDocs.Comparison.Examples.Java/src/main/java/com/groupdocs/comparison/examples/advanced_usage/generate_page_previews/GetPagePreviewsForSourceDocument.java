@@ -55,6 +55,6 @@ public class GetPagePreviewsForSourceDocument {
 //                comparer.getSource().generatePreview(previewOptions);
             }
         }
-        System.out.println("\nDocument previews generated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocument previews generated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 }

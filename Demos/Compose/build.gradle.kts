@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.groupdocs.ui"
-version = "22.3"
+version = "22.11"
 
 repositories {
     google()
@@ -20,7 +20,7 @@ repositories {
 dependencies {
     implementation(compose.desktop.currentOs)
     implementation("commons-io:commons-io:2.11.0")
-    implementation("com.groupdocs:groupdocs-comparison:22.3")
+    implementation("com.groupdocs:groupdocs-comparison:22.11")
 }
 
 tasks.withType<KotlinCompile> {
@@ -33,7 +33,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "groupdocs-comparison-compose"
-            packageVersion = "22.3.0"
+            packageVersion = "22.11.0"
 
             windows {
                 shortcut = true

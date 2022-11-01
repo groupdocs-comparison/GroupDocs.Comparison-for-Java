@@ -14,8 +14,9 @@ public class GetDocumentInfoStream {
     public static void run() throws Exception {
         try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_WORD);
              Comparer comparer = new Comparer(sourceStream)) {
-            IDocumentInfo info = comparer.getSource().getDocumentInfo();
-            System.out.println(String.format("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize()));
+            try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+                System.out.printf("\nFile type: %s\nNumber of pages: %d\nDocument size: %d bytes%n", info.getFileType().getFileFormat(), info.getPageCount(), info.getSize());
+            }
         }
         System.out.println("\nDocument info extracted successfully.");
     }

@@ -6,7 +6,7 @@
 
     <groupId>com.groupdocs.ui</groupId>
     <artifactId>comparison-spring</artifactId>
-    <version>22.3.0</version>
+    <version>22.11</version>
     <packaging>${packaging.type}</packaging>
 
     <name>GroupDocs.Comparison for Java Spring Sample</name>
@@ -51,7 +51,7 @@
     </profiles>
 
     <properties>
-        <start-class>com.groupdocs.ui.common.Application</start-class>
+        <start-class>com.groupdocs.ui.comparison.spring.common.Application</start-class>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -62,7 +62,7 @@
         <dependency>
             <groupId>com.groupdocs</groupId>
             <artifactId>groupdocs-comparison</artifactId>
-            <version>22.3</version>
+            <version>${project.version}</version>
             <type>jar</type>
         </dependency>
         <dependency>
@@ -173,9 +173,14 @@
             <url>https://repository.springsource.com/maven/bundles/external</url>
         </repository>
         <repository>
-            <id>maven.groupdocs.com</id>
-            <name>artifact.groupdocs.com-releases</name>
-            <url>https://repository.groupdocs.com/repo/</url>
+            <id>releases.groupdocs.com</id>
+            <name>releases.groupdocs</name>
+            <url>https://releases.groupdocs.com/java/repo/</url>
+        </repository>
+        <repository>
+            <id>releases-qa.groupdocs.com</id>
+            <name>releases-qa.groupdocs</name>
+            <url>https://releases-qa.groupdocs.com/java/repo</url>
         </repository>
         <repository>
             <id>maven-central</id>
@@ -189,62 +194,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.0</version>
-            </plugin>
-            <plugin>
-                <groupId>com.github.eirslett</groupId>
-                <artifactId>frontend-maven-plugin</artifactId>
-                <version>1.6</version>
-                <configuration>
-                    <workingDirectory>client</workingDirectory>
-                </configuration>
-                <executions>
-                    <execution>
-                        <!-- optional: you don't really need execution ids, but it looks nice in your build log. -->
-                        <id>install node and npm</id>
-                        <goals>
-                            <goal>install-node-and-npm</goal>
-                        </goals>
-                        <configuration>
-                            <nodeVersion>v10.15.1</nodeVersion>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>npm install</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>install</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>npm update</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>update</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>install client</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>install</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>build client</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>run build</arguments>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>

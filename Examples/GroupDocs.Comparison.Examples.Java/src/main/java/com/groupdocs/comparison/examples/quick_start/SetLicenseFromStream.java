@@ -26,7 +26,7 @@ public class SetLicenseFromStream {
                 com.groupdocs.comparison.common.Utils.closeStreams(stream);
             }
 
-            System.out.println("License set successfully.");
+             System.out.println("\nLicense set successfully.");
         } else {
             System.out.println("\nWe do not ship any license with this example. " +
                     "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +

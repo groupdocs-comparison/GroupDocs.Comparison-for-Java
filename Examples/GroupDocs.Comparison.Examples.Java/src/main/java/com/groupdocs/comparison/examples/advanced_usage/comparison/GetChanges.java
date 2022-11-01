@@ -37,7 +37,7 @@ public class GetChanges {
                 System.out.printf("Change Type: %d, X: %f, Y: %f, Text: %s%n", change.getType(), change.getBox().getX(), change.getBox().getY(), change.getText());
             }
         }
-        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 
     /**
@@ -48,7 +48,7 @@ public class GetChanges {
             comparer.add(SampleFiles.TARGET1_WORD);
             final Path resultPath = comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
-            System.out.println("Count of changes: " + changes.length);
+            System.out.println("\nCount of changes: " + changes.length);
         }
         System.out.println("\nChanges received successfully.");
     }
@@ -63,7 +63,7 @@ public class GetChanges {
             comparer.add(targetStream);
             final Path resultPath = comparer.compare();
             ChangeInfo[] changes = comparer.getChanges();
-            System.out.println("Count of changes: " + changes.length);
+            System.out.println("\nCount of changes: " + changes.length);
         }
         System.out.println("\nChanges received successfully.");
     }

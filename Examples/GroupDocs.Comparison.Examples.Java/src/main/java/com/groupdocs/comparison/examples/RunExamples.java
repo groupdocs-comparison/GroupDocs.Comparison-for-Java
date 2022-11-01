@@ -10,7 +10,7 @@ import com.groupdocs.comparison.examples.advanced_usage.saving.SetDocumentMetada
 import com.groupdocs.comparison.examples.advanced_usage.saving.SetPasswordForResultantDocument;
 import com.groupdocs.comparison.examples.basic_usage.*;
 import com.groupdocs.comparison.examples.quick_start.HelloWorld;
-import com.groupdocs.comparison.examples.quick_start.SetLicenseFromFile;
+import com.groupdocs.comparison.examples.quick_start.SetLicenseFromUrl;
 
 public class RunExamples {
 
@@ -27,8 +27,8 @@ public class RunExamples {
 
         //NOTE: Please uncomment the example you want to try out
         // region Quick Start
-        SetLicenseFromFile.run();
-//        SetLicenseFromUrl.run();
+//        SetLicenseFromFile.run();
+        SetLicenseFromUrl.run();
         //SetLicenseFromStream.run();
         //SetMeteredLicense.run();
         HelloWorld.run();

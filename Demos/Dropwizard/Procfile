@@ -1,1 +1,1 @@
-web: java -jar target/comparison-dropwizard-22.3.jar
+web: java -jar target/comparison-dropwizard-22.11.jar

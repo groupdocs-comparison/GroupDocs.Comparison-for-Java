@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../src/main/resources/assets/angular/comparison",
+            "outputPath": "../src/main/resources/static/angular/comparison",
             "index": "apps/comparison/src/index.html",
             "main": "apps/comparison/src/main.ts",
             "polyfills": "apps/comparison/src/polyfills.ts",

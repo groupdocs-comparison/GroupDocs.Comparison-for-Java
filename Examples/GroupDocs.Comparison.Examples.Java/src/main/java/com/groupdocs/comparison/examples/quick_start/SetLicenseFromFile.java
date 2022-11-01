@@ -26,7 +26,7 @@ public class SetLicenseFromFile {
         if (new File(Utils.LICENSE_PATH).exists()) {
             License license = new License();
             license.setLicense(Utils.LICENSE_PATH);
-            System.out.println("License set successfully.");
+            System.out.println("\nLicense set successfully.");
         } else {
             System.out.println("\nWe do not ship any license with this example. " +
                     "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +

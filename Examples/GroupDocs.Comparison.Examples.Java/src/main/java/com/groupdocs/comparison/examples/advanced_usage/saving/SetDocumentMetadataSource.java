@@ -32,6 +32,6 @@ public class SetDocumentMetadataSource {
 //                final Path resultPath = comparer.compare(outputFileName, saveOptions);
             }
         }
-        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 }

@@ -57,6 +57,6 @@ public class GetPagePreviewsForTargetDocument {
 //                comparer.getTargets().get(0).generatePreview(previewOptions);
             }
         }
-        System.out.println("\nDocument previews generated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocument previews generated successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 }

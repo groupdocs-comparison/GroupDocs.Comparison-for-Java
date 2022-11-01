@@ -39,7 +39,7 @@ public class UseCompareOptions {
 //                final Path resultPath = comparer.compare(new FileOutputStream(outputFileName), new SaveOptions(), compareOptions);
             }
         }
-        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 
     /**

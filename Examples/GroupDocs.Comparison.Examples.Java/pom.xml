@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>GroupDocs.Comparison.Examples.Java</groupId>
 	<artifactId>GroupDocs.Comparison.Examples.Java</artifactId>
-	<version>22.3</version>
+	<version>22.11</version>
 	<properties>
-		<maven.compiler.source>7</maven.compiler.source>
-		<maven.compiler.target>7</maven.compiler.target>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -15,13 +15,31 @@
 			<groupId>com.groupdocs</groupId>
 			<artifactId>groupdocs-comparison</artifactId>
 			<version>${project.version}</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.9.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.23.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>maven.groupdocs.com</id>
-			<name>artifact.groupdocs.com-releases</name>
-			<url>https://repository.groupdocs.com/repo/</url>
+			<id>releases.groupdocs.com</id>
+			<name>releases.groupdocs</name>
+			<url>https://releases.groupdocs.com/java/repo/</url>
+		</repository>
+		<repository>
+			<id>releases-qa.groupdocs.com</id>
+			<name>releases-qa.groupdocs</name>
+			<url>https://releases-qa.groupdocs.com/java/repo</url>
 		</repository>
 		<repository>
 			<id>maven-central</id>
@@ -51,7 +69,14 @@
 					</executions>
 					<configuration>
 						<mainClass>com.groupdocs.comparison.examples.RunExamples</mainClass>
+						<killAfter>-1</killAfter>
+						<cleanupDaemonThreads>false</cleanupDaemonThreads>
+						<executable>maven</executable>
 					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M6</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

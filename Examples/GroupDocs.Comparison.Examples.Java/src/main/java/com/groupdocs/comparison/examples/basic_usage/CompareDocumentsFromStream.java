@@ -25,6 +25,6 @@ public class CompareDocumentsFromStream {
             comparer.add(targetStream);
             final Path resultPath = comparer.compare(resultStream);
         }
-        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+          System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
 }

@@ -11,6 +11,6 @@ public class GetSupportedFormats {
         for (FileType fileType : fileTypes) {
             System.out.println(fileType);
         }
-        System.out.println("\nSupported file types retrieved successfully.");
+          System.out.println("\nSupported file types retrieved successfully.");
     }
 }
