@@ -13,6 +13,7 @@ group = "com.groupdocs.ui"
 version = "22.11"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven("https://repository.groupdocs.com/repo/")
 }

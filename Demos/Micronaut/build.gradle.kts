@@ -11,6 +11,7 @@ version = "22.11"
 
 val kotlinVersion = project.properties["kotlinVersion"]
 repositories {
+    mavenLocal()
     mavenCentral()
     maven("https://repository.groupdocs.com/repo/")
 }
@@ -58,6 +59,10 @@ tasks {
         kotlinOptions {
             jvmTarget = "11"
         }
+    }
+
+    shadowJar {
+        isZip64 = true
     }
 }
 graalvmNative.toolchainDetection.set(false)

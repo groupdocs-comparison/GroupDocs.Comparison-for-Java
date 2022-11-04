@@ -1,6 +1,8 @@
 package com.groupdocs.ui.modules.compare
 
 import com.groupdocs.ui.model.CompareRequest
+import com.groupdocs.ui.model.ErrorResponse
+import com.groupdocs.ui.status.InternalServerException
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
@@ -13,8 +15,21 @@ fun Route.compareModule() {
     val compareController by inject<CompareController>()
 
     post("/compare") {
-        val request = call.receive<CompareRequest>()
-        val response = compareController.compare(request)
-        call.respond(HttpStatusCode.OK, response)
+        try {
+            val request = call.receive<CompareRequest>()
+            val response = compareController.compare(request)
+            call.respond(HttpStatusCode.OK, response)
+        } catch (e: InternalServerException) {
+            call.respond(
+                status = HttpStatusCode.InternalServerError,
+                message = ErrorResponse(
+                    message = if (e.message == "File's types are different or are not supported") {
+                        "Document types are not supported in sample app, anyway, it is still supported by GroupDocs.Comparison itself. Other probable reason of the error - documents types are different."
+                    } else {
+                        e.message
+                    }
+                )
+            )
+        }
     }
 }

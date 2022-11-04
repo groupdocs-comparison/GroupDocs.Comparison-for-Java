@@ -12,6 +12,7 @@ version = "22.11"
 
 repositories {
     google()
+    mavenLocal()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     maven("https://repository.groupdocs.com/repo/")
@@ -20,7 +21,7 @@ repositories {
 dependencies {
     implementation(compose.desktop.currentOs)
     implementation("commons-io:commons-io:2.11.0")
-    implementation("com.groupdocs:groupdocs-comparison:22.11")
+    implementation("com.groupdocs:groupdocs-comparison:$version")
 }
 
 tasks.withType<KotlinCompile> {
@@ -33,7 +34,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "groupdocs-comparison-compose"
-            packageVersion = "22.11.0"
+            packageVersion = "$version.0"
 
             windows {
                 shortcut = true

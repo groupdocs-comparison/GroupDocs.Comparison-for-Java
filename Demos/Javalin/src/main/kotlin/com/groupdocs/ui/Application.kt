@@ -3,6 +3,7 @@ package com.groupdocs.ui
 import com.groupdocs.comparison.license.License
 import com.groupdocs.ui.config.ApplicationConfig
 import com.groupdocs.ui.di.ModulesInjection
+import com.groupdocs.ui.model.ErrorResponse
 import com.groupdocs.ui.modules.compare.compareModule
 import com.groupdocs.ui.modules.config.configModule
 import com.groupdocs.ui.modules.description.descriptionModule
@@ -64,6 +65,19 @@ fun main(args: Array<String>) {
         compareModule()
         downloadModule()
         uploadModule()
+    }
+    app.exception(Exception::class.java) { e, ctx ->
+        e.printStackTrace()
+        ctx.json(
+            ErrorResponse(
+                message = if (e.message?.equals("File's types are different or are not supported") == true) {
+                    "Document types are not supported in sample app, anyway, it is still supported by GroupDocs.Comparison itself. Other probable reason of the error - documents types are different."
+
+                } else {
+                    e.message ?: "Internal server error"
+                }
+            )
+        ).status(500)
     }
 }
 

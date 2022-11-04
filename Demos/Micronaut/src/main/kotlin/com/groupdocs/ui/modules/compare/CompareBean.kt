@@ -45,7 +45,7 @@ class CompareBeanImpl(
         val targetFilePath = pathManager.assertPathIsInsideFilesDirectory(targetFile)
 
         if (!checkAreFilesSupported(sourceFilePath.fileName.toString(), targetFilePath.fileName.toString())) {
-            throw InternalServerException("File's types are different or are not supported") // TODO: Need another exception type
+            throw InternalServerException("Document types are not supported in sample app, anyway, it is still supported by GroupDocs.Comparison itself. Other probable reason of the error - documents types are different.") // TODO: Need another exception type
         }
 
         val sourcePassword = sourceDocument.password

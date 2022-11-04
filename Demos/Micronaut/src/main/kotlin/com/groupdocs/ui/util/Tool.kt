@@ -9,6 +9,7 @@ import java.nio.file.Path
 import java.nio.file.Paths
 
 open class InternalServerException(override val message: String = "Internal server error", throwable: Throwable? = null) : Exception(message, throwable)
+open class FileFormatNotSupportedException(override val message: String, throwable: Throwable? = null) : Exception(message, throwable)
 
 fun setGroupdocsLicense(licensePath: String) {
     try {
