@@ -1,14 +1,12 @@
 package com.groupdocs.comparison.examples.basic_usage;
 
 import com.groupdocs.comparison.examples.TestsSetUp;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Test;
 
-@ExtendWith(TestsSetUp.TimingExtension.class)
 public class GetSupportedFormatsTest extends TestsSetUp {
 
     @Test
-    void run() {
+    public void run() {
         GetSupportedFormats.run();
     }
 }

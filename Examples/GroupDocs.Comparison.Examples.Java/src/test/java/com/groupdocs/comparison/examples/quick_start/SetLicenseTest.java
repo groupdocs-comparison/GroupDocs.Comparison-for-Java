@@ -1,34 +1,32 @@
 package com.groupdocs.comparison.examples.quick_start;
 
 import com.groupdocs.comparison.examples.TestsSetUp;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Ignore;
+import org.junit.Test;
 
-@ExtendWith(TestsSetUp.TimingExtension.class)
 public class SetLicenseTest extends TestsSetUp {
 
     @Test
-    void runFromUrl() {
+    public void runFromUrl() {
         // Environment variable 'GROUPDOCS_LIC_PATH' must contain license url
         SetLicenseFromUrl.run();
     }
 
     @Test
-    @Disabled("You must have license file")
-    void runFromFile() {
+    @Ignore("You must have license file")
+    public void runFromFile() {
         SetLicenseFromFile.run();
     }
 
     @Test
-    @Disabled("You must have license stream")
-    void runFromStream() throws Exception {
+    @Ignore("You must have license stream")
+    public void runFromStream() throws Exception {
         SetLicenseFromStream.run();
     }
 
     @Test
-    @Disabled("You must have public and private keys")
-    void runMeteredLicense() {
+    @Ignore("You must have public and private keys")
+    public void runMeteredLicense() {
         SetMeteredLicense.run();
     }
 }

@@ -23,11 +23,19 @@ public class Utils {
         final URI uri;
         try {
             uri = Objects.requireNonNull(resource).toURI();
-            final String path = uri.getPath().substring(1);
-            final File baseFile = new File(path).getParentFile().getParentFile();
-            SAMPLES_PATH = baseFile.getAbsolutePath() + "/resources/sample_files";
-            LICENSE_PATH = baseFile.getAbsolutePath() + "/resources/GroupDocs.Viewer.Java.lic";
-            OUTPUT_PATH = baseFile.getAbsolutePath() + "/output";
+            Path basePath = Paths.get(uri.getPath().substring(1));
+            while (basePath != null && Files.notExists(basePath.resolve("Data"))) {
+                basePath = basePath.getParent();
+            }
+            if (basePath == null) {
+                throw new IllegalStateException("Data directory was not found!");
+            } else {
+                basePath = basePath.resolve("Data");
+            }
+
+            SAMPLES_PATH = basePath.resolve("SampleFiles").toString();
+            LICENSE_PATH = basePath.resolve("LicenseFiles/GroupDocs.Viewer.Java.lic").toString();
+            OUTPUT_PATH = basePath.resolve("ResultFiles").toString();
             LICENSE_URL = System.getenv("GROUPDOCS_LIC_PATH");
         } catch (URISyntaxException e) {
             e.printStackTrace();

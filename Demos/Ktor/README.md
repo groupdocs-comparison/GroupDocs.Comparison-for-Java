@@ -1,7 +1,7 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison for Java Ktor Example
 New GroupDocs.Comparison for Java Ktor UI Example
-###### version 22.11
+###### version 23.1
 
 [![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/blob/master/LICENSE)
 
@@ -56,7 +56,7 @@ You can run this sample by one of following methods
 
 #### Run using IDE
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v22.11/groupdocs-comparison-ktor-22.11.0.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.1/groupdocs-comparison-ktor-23.1.0.zip) from github or clone this repository.
 
 ```bash
 git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
@@ -107,9 +107,9 @@ Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comp
 **Note**: This method is **recommended** for running this sample behind firewall.
 
 ```bash
-curl -J -L -o release.tar.gz https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v22.11/groupdocs-comparison-ktor-22.11.0.tar
+curl -J -L -o release.tar.gz https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.1/groupdocs-comparison-ktor-23.1.0.tar
 tar -xvzf release.tar.gz
-cd release/comparison-ktor-22.11
+cd release/comparison-ktor-23.1
 ## Make `bin/comparison-ktor` file to be runnable
 bin/comparison-ktor
 ## Open http://localhost:8080/comparison/ in your favorite browser.

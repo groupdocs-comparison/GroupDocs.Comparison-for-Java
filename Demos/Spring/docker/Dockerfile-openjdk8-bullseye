@@ -2,7 +2,6 @@
 FROM maven:3-openjdk-8 as builder
 COPY pom.xml /usr/local/build/
 COPY src /usr/local/build/src/
-COPY client /usr/local/build/client/
 WORKDIR /usr/local/build
 RUN mvn clean package -DskipTests -P jar
 
@@ -33,7 +32,7 @@ ENV FILES_DIR "DocumentSamples"
 ENV RESULT_DIR "DocumentSamples"
 ENV HOST_ADDRESS ""
 
-LABEL version="22.11" \
+LABEL version="23.1" \
       maintainer="GroupDocs Team" \
       url="https://products.groupdocs.com/comparison/java" \
       documentation="https://docs.groupdocs.com/comparison/java" \

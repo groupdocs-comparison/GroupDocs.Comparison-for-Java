@@ -39,10 +39,10 @@ public class SetSpecificImagesSize {
                                 new Delegates.CreatePageStream() {
                                     @Override
                                     public OutputStream invoke(int pageNumber) {
-                                        String pagePath = Utils.SAMPLES_PATH + "result-SetSpecificImagesSize_" + pageNumber + ".png";
                                         try {
+                                            String pagePath = Utils.getOutputDirectoryPath("result-SetSpecificImagesSize_%s.png", String.valueOf(pageNumber));
                                             return new FileOutputStream(pagePath);
-                                        } catch (FileNotFoundException e) {
+                                        } catch (Exception e) {
                                             e.printStackTrace();
                                             throw new RuntimeException(e);
                                         }
@@ -58,8 +58,8 @@ public class SetSpecificImagesSize {
 //                PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
 //                    @Override
 //                    public OutputStream invoke(int pageNumber) {
-//                        String pagePath = Utils.SAMPLES_PATH + "result-SetSpecificImagesSize_" + pageNumber + ".png";
 //                        try {
+//                              String pagePath = Utils.getOutputDirectoryPath("result-SetSpecificImagesSize_%s.png", String.valueOf(pageNumber));
 //                            return new FileOutputStream(pagePath);
 //                        } catch (FileNotFoundException e) {
 //                            e.printStackTrace();

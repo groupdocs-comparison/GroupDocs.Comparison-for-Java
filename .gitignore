@@ -4,6 +4,7 @@ deploy_key
 build
 
 DocumentSamples
+ResultFiles
 
 #License files
 *.lic

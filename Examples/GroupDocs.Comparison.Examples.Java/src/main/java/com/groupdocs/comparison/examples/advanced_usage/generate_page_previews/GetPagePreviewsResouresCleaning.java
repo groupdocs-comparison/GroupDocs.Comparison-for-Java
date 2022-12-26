@@ -45,10 +45,10 @@ public class GetPagePreviewsResouresCleaning {
                         new Delegates.CreatePageStream() {
                             @Override
                             public OutputStream invoke(int pageNumber) {
-                                String pagePath = Utils.SAMPLES_PATH + "result-GetPagePreviewsResouresCleaning_" + pageNumber + ".png";
                                 try {
+                                    String pagePath = Utils.getOutputDirectoryPath("result-GetPagePreviewsResouresCleaning_%s.png", String.valueOf(pageNumber));
                                     return new FileOutputStream(pagePath);
-                                } catch (FileNotFoundException e) {
+                                } catch (Exception e) {
                                     e.printStackTrace();
                                     throw new RuntimeException(e);
                                 }
@@ -68,8 +68,8 @@ public class GetPagePreviewsResouresCleaning {
 //                PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
 //                    @Override
 //                    public OutputStream invoke(int pageNumber) {
-//                        String pagePath = Utils.SAMPLES_PATH + "result-GetPagePreviewsResouresCleaning_" + pageNumber + ".png";
 //                        try {
+//                              String pagePath = Utils.getOutputDirectoryPath("result-GetPagePreviewsResouresCleaning_%s.png", String.valueOf(pageNumber));
 //                            return new FileOutputStream(pagePath);
 //                        } catch (FileNotFoundException e) {
 //                            e.printStackTrace();

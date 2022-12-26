@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>GroupDocs.Comparison.Examples.Java</groupId>
 	<artifactId>GroupDocs.Comparison.Examples.Java</artifactId>
-	<version>22.11</version>
+	<version>23.1</version>
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
@@ -15,12 +15,11 @@
 			<groupId>com.groupdocs</groupId>
 			<artifactId>groupdocs-comparison</artifactId>
 			<version>${project.version}</version>
-			<type>jar</type>
 		</dependency>
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.9.1</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -30,6 +29,38 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.groupdocs.comparison.examples.RunExamples</mainClass>
+					<killAfter>-1</killAfter>
+					<cleanupDaemonThreads>false</cleanupDaemonThreads>
+					<executable>maven</executable>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M6</version>
+			</plugin>
+		</plugins>
+	</build>
 	<repositories>
 		<repository>
 			<id>releases.groupdocs.com</id>
@@ -46,39 +77,4 @@
 			<url>https://repo1.maven.org/maven2</url>
 		</repository>
 	</repositories>
-	<build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
-
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>exec-maven-plugin</artifactId>
-					<version>1.6.0</version>
-					<executions>
-						<execution>
-							<goals>
-								<goal>java</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<mainClass>com.groupdocs.comparison.examples.RunExamples</mainClass>
-						<killAfter>-1</killAfter>
-						<cleanupDaemonThreads>false</cleanupDaemonThreads>
-						<executable>maven</executable>
-					</configuration>
-				</plugin>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M6</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
 </project>

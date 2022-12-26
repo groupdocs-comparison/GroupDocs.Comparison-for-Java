@@ -55,8 +55,8 @@ public class GetPagePreviewsForResultantDocument {
 //                PreviewOptions previewOptions = new PreviewOptions(new Delegates.CreatePageStream() {
 //                    @Override
 //                    public OutputStream invoke(int pageNumber) {
-//                        String pagePath = Utils.SAMPLES_PATH + "/result-GetPagePreviewsForResultantDocument_" + pageNumber + ".png";
 //                        try {
+//                              String pagePath = Utils.getOutputDirectoryPath("result-GetPagePreviewsForResultantDocument_%s.png", String.valueOf(pageNumber));
 //                            return new FileOutputStream(pagePath);
 //                        } catch (FileNotFoundException e) {
 //                            e.printStackTrace();
