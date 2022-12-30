@@ -103,7 +103,7 @@ class CompareBeanImpl(
                 comparisonAction = changeInfo.comparisonAction,
                 sourceText = changeInfo.sourceText,
                 targetText = changeInfo.targetText,
-                text = changeInfo.text,
+                text = changeInfo.text ?: "",
                 componentType = changeInfo.componentType,
                 box = ChangeBox(
                     x = changeInfo.box.x,

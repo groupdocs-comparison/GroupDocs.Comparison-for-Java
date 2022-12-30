@@ -9,4 +9,8 @@ fun Javalin.homeModule() {
             ctx.result(it)
         }
     }
+
+    get("/comparison/app-name") { ctx ->
+        ctx.result("comparison-javalin")
+    }
 }

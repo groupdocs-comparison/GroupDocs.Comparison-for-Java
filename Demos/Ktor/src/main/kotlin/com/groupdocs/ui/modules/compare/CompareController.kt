@@ -91,7 +91,7 @@ class CompareControllerImpl(
                 comparisonAction = changeInfo.comparisonAction,
                 sourceText = changeInfo.sourceText,
                 targetText = changeInfo.targetText,
-                text = changeInfo.text,
+                text = changeInfo.text ?: "",
                 componentType = changeInfo.componentType,
                 box = ChangeBox(
                     x = changeInfo.box.x,
@@ -105,13 +105,13 @@ class CompareControllerImpl(
                     width = changeInfo.pageInfo.width,
                     height = changeInfo.pageInfo.height
                 ),
-                styleChanges = changeInfo.styleChanges.map { styleChangeInfo ->
+                styleChanges = changeInfo.styleChanges?.map { styleChangeInfo ->
                     StyleChange(
                         propertyName = styleChangeInfo.propertyName,
                         oldValue = styleChangeInfo.oldValue,
                         newValue = styleChangeInfo.newValue
                     )
-                }
+                } ?: listOf()
             )
         }
 

@@ -12,7 +12,7 @@ import java.nio.file.Paths
 fun Route.downloadModule() {
     val downloadController by inject<DownloadController>()
 
-    get("/downloadDocument/") {
+    get("/downloadDocument") {
         call.parameters["guid"]?.let { guid ->
             val guidAsPath = Paths.get(guid)
             call.response.headers.apply {

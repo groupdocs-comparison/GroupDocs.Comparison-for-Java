@@ -101,6 +101,12 @@ public class ComparisonResources extends Resources implements HttpSessionListene
     }
 
     @GET
+    @Path(value = "/app-name")
+    public String appName() {
+        return "comparison-dropwizard";
+    }
+
+    @GET
     @Path(value = "/loadConfig")
     @Produces(APPLICATION_JSON)
     public ComparisonConfigurationModel loadConfig() {

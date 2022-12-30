@@ -8,6 +8,6 @@ import io.ktor.server.routing.*
 fun Routing.rootModule() {
 
     get("/") {
-        call.respondRedirect("/comparison")
+        call.respondRedirect("/comparison/")
     }
 }

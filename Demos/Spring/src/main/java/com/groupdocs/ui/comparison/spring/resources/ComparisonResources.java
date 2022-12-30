@@ -81,6 +81,12 @@ public class ComparisonResources extends Resources implements HttpSessionListene
         }
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/app-name")
+    @ResponseBody
+    public String appName() {
+        return "comparison-spring";
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/loadConfig", produces = APPLICATION_JSON_VALUE)
     @ResponseBody
     public ComparisonConfigurationModel loadConfig() {

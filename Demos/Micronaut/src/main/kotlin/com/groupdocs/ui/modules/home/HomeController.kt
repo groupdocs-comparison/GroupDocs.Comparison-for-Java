@@ -30,4 +30,9 @@ class HomeController(
             setGroupdocsLicense(licensePath)
         }
     }
+
+    @Get("/comparison/app-name")
+    fun appName(): HttpResponse<String> {
+        return HttpResponse.ok("comparison-micronaut")
+    }
 }
