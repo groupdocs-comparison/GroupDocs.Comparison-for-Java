@@ -33,17 +33,21 @@ public class Utils {
      */
     public static boolean checkSupportedFiles(String extension) {
         switch (extension) {
+            case "bmp":
             case "doc":
             case "docx":
-            case "htm":
             case "html":
-            case "jpg":
             case "jpeg":
+            case "jpg":
+            case "ods":
+            case "odt":
             case "pdf":
             case "png":
             case "ppt":
             case "pptx":
             case "txt":
+            case "vsdx":
+            case "vss":
             case "xls":
             case "xlsx":
                 return true;

@@ -23,19 +23,23 @@ class AreFilesSupportedUseCase {
 
     companion object {
         val SUPPORTED_EXTENSIONS = listOf(
+            "bmp",
             "doc",
             "docx",
-            "xls",
-            "xlsx",
-            "ppt",
-            "pptx",
+            "html",
+            "jpeg",
+            "jpg",
+            "ods",
+            "odt",
             "pdf",
             "png",
+            "ppt",
+            "pptx",
             "txt",
-            "html",
-            "htm",
-            "jpg",
-            "jpeg"
+            "vsdx",
+            "vss",
+            "xls",
+            "xlsx"
         )
     }
 }

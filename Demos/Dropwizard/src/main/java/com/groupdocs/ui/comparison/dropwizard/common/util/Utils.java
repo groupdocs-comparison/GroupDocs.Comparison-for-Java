@@ -17,17 +17,21 @@ import java.util.Locale;
 public class Utils {
 
     private static final List<String> SUPPORTED_FORMATS = Arrays.asList(
+            "bmp",
             "doc",
             "docx",
-            "htm",
             "html",
-            "jpg",
             "jpeg",
+            "jpg",
+            "ods",
+            "odt",
             "pdf",
             "png",
             "ppt",
             "pptx",
             "txt",
+            "vsdx",
+            "vss",
             "xls",
             "xlsx"
     );
