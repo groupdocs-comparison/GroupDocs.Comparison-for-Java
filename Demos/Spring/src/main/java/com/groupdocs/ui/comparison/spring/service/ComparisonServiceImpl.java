@@ -262,7 +262,7 @@ public class ComparisonServiceImpl implements ComparisonService {
                 pageDescriptionEntities = cachedPageStream.stream().map(item -> {
                     try (InputStream inputStream = item.pageStream) {
                         final PageDescriptionEntity pageDescription = new PageDescriptionEntity();
-                        pageDescription.setNumber(item.pageIndex);
+                        pageDescription.setNumber(item.pageIndex); // 0->3???
                         pageDescription.setHeight(pageHeight);
                         pageDescription.setWidth(pageWidth);
                         pageDescription.setData(getStringFromStream(inputStream));

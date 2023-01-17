@@ -38,8 +38,8 @@ class CompareBeanImpl(
 ) : CompareBean {
     override suspend fun compare(request: CompareRequest): CompareResponse {
         val (sourceDocument, targetDocument) = request.guids
-        val sourceFile = URLDecoder.decode(sourceDocument.guid, StandardCharsets.UTF_8)
-        val targetFile = URLDecoder.decode(targetDocument.guid, StandardCharsets.UTF_8)
+        val sourceFile = URLDecoder.decode(sourceDocument.guid, StandardCharsets.UTF_8.toString())
+        val targetFile = URLDecoder.decode(targetDocument.guid, StandardCharsets.UTF_8.toString())
 
         val sourceFilePath = pathManager.assertPathIsInsideFilesDirectory(sourceFile)
         val targetFilePath = pathManager.assertPathIsInsideFilesDirectory(targetFile)
@@ -82,7 +82,7 @@ class CompareBeanImpl(
                     previewWidth = previewPageWidth,
                     previewRatio = previewPageRatio
                 ) { pageNumber, pageInputStream ->
-                    val data = Base64.getEncoder().encodeToString(pageInputStream.readAllBytes())
+                    val data = Base64.getEncoder().encodeToString(pageInputStream.readBytes())
                     pages.add(
                         ComparePage(
                             number = pageNumber - 1,
@@ -135,7 +135,7 @@ class CompareBeanImpl(
         } else resultDirectory.relativize(resultPath)
 
         return CompareResponse(
-            guid = URLEncoder.encode(guid.toString(), StandardCharsets.UTF_8),
+            guid = URLEncoder.encode(guid.toString(), StandardCharsets.UTF_8.toString()),
             changes = changes,
             pages = pages,
             extension = resultExtension

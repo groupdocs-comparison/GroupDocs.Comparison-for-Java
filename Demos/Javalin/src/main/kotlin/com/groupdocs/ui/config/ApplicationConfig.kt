@@ -2,6 +2,7 @@ package com.groupdocs.ui.config
 
 import com.groupdocs.ui.Defaults
 import java.nio.file.Path
+import java.nio.file.Paths
 
 @kotlinx.serialization.Serializable
 data class ApplicationConfig(
@@ -63,8 +64,8 @@ data class Local(
 ) {
 
     val filesDirectoryOrDefault: Path
-        get() = Path.of(filesDirectory.ifBlank { Defaults.Local.DEFAULT_FILES_DIRECTORY })
+        get() = Paths.get(filesDirectory.ifBlank { Defaults.Local.DEFAULT_FILES_DIRECTORY })
 
     val resultDirectoryOrDefault: Path
-        get() = Path.of(resultDirectory.ifBlank { Defaults.Local.DEFAULT_RESULT_DIRECTORY })
+        get() = Paths.get(resultDirectory.ifBlank { Defaults.Local.DEFAULT_RESULT_DIRECTORY })
 }

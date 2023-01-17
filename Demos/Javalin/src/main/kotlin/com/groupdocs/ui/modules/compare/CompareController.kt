@@ -10,10 +10,7 @@ import com.groupdocs.ui.util.InternalServerException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.koin.core.component.KoinComponent
-import java.io.BufferedInputStream
-import java.io.BufferedOutputStream
-import java.io.FileInputStream
-import java.io.FileOutputStream
+import java.io.*
 import java.nio.file.Files
 import java.util.*
 import kotlin.io.path.extension
@@ -71,7 +68,7 @@ class CompareControllerImpl(
                     previewWidth = previewPageWidth,
                     previewRatio = previewPageRatio
                 ) { pageNumber, pageInputStream ->
-                    val data = Base64.getEncoder().encodeToString(pageInputStream.readAllBytes())
+                    val data = Base64.getEncoder().encodeToString(pageInputStream.readBytes())
                     pages.add(
                         ComparePage(
                             number = pageNumber - 1,

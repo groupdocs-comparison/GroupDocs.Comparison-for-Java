@@ -30,14 +30,14 @@ class DescriptionBeanImpl(
     @Inject private val appConfig: ApplicationConfig
 ) : DescriptionBean {
     override suspend fun description(request: DescriptionRequest): LoadDocumentEntity {
-        val guid = URLDecoder.decode(request.guid, StandardCharsets.UTF_8)
+        val guid = URLDecoder.decode(request.guid, StandardCharsets.UTF_8.toString())
         val path = pathManager.assertPathIsInsideFilesDirectory(guid)
         val password = request.password
         val previewPageWidth = appConfig.comparison.previewPageWidthOrDefault
         val previewPageRatio = appConfig.comparison.previewPageRatioOrDefault
 
         val entity = LoadDocumentEntity(
-            guid = URLEncoder.encode(guid, StandardCharsets.UTF_8),
+            guid = URLEncoder.encode(guid, StandardCharsets.UTF_8.toString()),
             printAllowed = appConfig.common.print
         )
         return withContext(Dispatchers.IO) {
@@ -48,7 +48,7 @@ class DescriptionBeanImpl(
                     previewWidth = previewPageWidth,
                     previewRatio = previewPageRatio
                 ) { pageNumber, pageInputStream ->
-                    val data = Base64.getEncoder().encodeToString(pageInputStream.readAllBytes())
+                    val data = Base64.getEncoder().encodeToString(pageInputStream.readBytes())
                     entity.pages.add(
                         PageDescriptionEntity(
                             number = pageNumber - 1,

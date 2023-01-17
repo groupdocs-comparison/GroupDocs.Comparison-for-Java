@@ -1,14 +1,10 @@
 package com.groupdocs.ui.modules.description
 
-import com.groupdocs.comparison.result.FileType
 import com.groupdocs.ui.manager.PathManager
-import com.groupdocs.ui.model.FileDescriptionEntity
 import com.groupdocs.ui.model.DescriptionRequest
 import com.groupdocs.ui.model.LoadDocumentEntity
 import com.groupdocs.ui.model.PageDescriptionEntity
 import com.groupdocs.ui.modules.BaseController
-import com.groupdocs.ui.usecase.GetLocalFilesUseCase
-import com.groupdocs.ui.usecase.LocalStorageEntry
 import com.groupdocs.ui.usecase.RetrieveLocalFilePagesStreamUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -40,7 +36,7 @@ class DescriptionControllerImpl(
                     previewWidth = previewPageWidth,
                     previewRatio = previewPageRatio
                 ) { pageNumber, pageInputStream ->
-                    val data = Base64.getEncoder().encodeToString(pageInputStream.readAllBytes())
+                    val data = Base64.getEncoder().encodeToString(pageInputStream.readBytes())
                     entity.pages.add(
                         PageDescriptionEntity(
                             number = pageNumber - 1,

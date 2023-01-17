@@ -24,7 +24,7 @@ class TreeBeanImpl(
     @Inject private val pathManager: PathManager,
 ) : TreeBean {
     override suspend fun tree(request: TreeRequest): List<FileDescriptionEntity> {
-        val path = pathManager.assertPathIsInsideFilesDirectory(URLDecoder.decode(request.path, StandardCharsets.UTF_8))
+        val path = pathManager.assertPathIsInsideFilesDirectory(URLDecoder.decode(request.path, StandardCharsets.UTF_8.toString()))
 
         val localFiles = getLocalFiles(path)
         return localFiles.sortedBy {
@@ -38,7 +38,7 @@ class TreeBeanImpl(
             val fileFullPath = it.fullPath
             val guid = filesDirectory.relativize(fileFullPath).toString()
             FileDescriptionEntity(
-                guid = URLEncoder.encode(guid, StandardCharsets.UTF_8),
+                guid = URLEncoder.encode(guid, StandardCharsets.UTF_8.toString()),
                 name = it.name,
                 docType = docType,
                 directory = isDirectory,
