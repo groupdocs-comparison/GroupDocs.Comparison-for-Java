@@ -56,7 +56,7 @@ You can run this sample by one of following methods
 
 #### Run using IDE
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.3/groupdocs-comparison-ktor-23.2.0.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.3/groupdocs-comparison-ktor-23.3.0.zip) from github or clone this repository.
 
 ```bash
 git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
