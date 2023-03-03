@@ -9,8 +9,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "1.6.21"
 }
 
-group = "com.groupdocs.ui"
-version = "23.1"
+group = "com.groupdocs.ui.comparison.ktor"
+version = "23.3"
 
 repositories {
     mavenLocal()
@@ -19,7 +19,7 @@ repositories {
 }
 
 application {
-    mainClass.set("com.groupdocs.ui.ApplicationKt")
+    mainClass.set("com.groupdocs.ui.comparison.ktor.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")

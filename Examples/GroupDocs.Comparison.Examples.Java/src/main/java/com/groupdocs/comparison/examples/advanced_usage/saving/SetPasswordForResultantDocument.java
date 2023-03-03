@@ -27,7 +27,7 @@ public class SetPasswordForResultantDocument {
                                 .setPassword("3333")
                                 .build(),
                         new CompareOptions.Builder()
-                                .setPasswordSaveOption(PasswordSaveOption.User)
+                                .setPasswordSaveOption(PasswordSaveOption.USER)
                                 .build());
 
                 // Note: It is the same with the code above

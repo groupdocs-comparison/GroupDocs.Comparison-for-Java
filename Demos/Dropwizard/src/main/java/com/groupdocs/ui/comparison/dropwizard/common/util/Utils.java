@@ -18,6 +18,7 @@ public class Utils {
 
     private static final List<String> SUPPORTED_FORMATS = Arrays.asList(
             "bmp",
+            "csv",
             "doc",
             "docx",
             "html",

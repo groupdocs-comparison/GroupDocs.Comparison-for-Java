@@ -24,6 +24,7 @@ class AreFilesSupportedUseCase {
     companion object {
         val SUPPORTED_EXTENSIONS = listOf(
             "bmp",
+            "csv",
             "doc",
             "docx",
             "html",

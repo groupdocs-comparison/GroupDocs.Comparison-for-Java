@@ -31,7 +31,7 @@ public class SetLicenseFromUrl {
                 try (final InputStream inputStream = website.openStream()) {
                     license.setLicense(inputStream);
                 }
-                 System.out.println("\nLicense set successfully.");
+                 System.out.println("\nLicense set without errors.");
             } catch (Exception e) {
                 System.err.println("Can't load remote license from '" + Utils.LICENSE_URL + "'");
                 e.printStackTrace();

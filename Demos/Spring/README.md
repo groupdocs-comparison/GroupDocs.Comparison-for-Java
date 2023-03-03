@@ -106,7 +106,7 @@ Each can be used to run GroupDocs.Comparison for Java Spring sample
 Example:
 
 ```bash
-docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:23.1-java-openjdk8-bullseye-spring
+docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:23.3-java-openjdk8-bullseye-spring
 ## Open http://localhost:8080/comparison/ in your favorite browser.
 ```
 

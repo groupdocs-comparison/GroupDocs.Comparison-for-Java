@@ -37,6 +37,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -272,7 +273,9 @@ public class ComparisonServiceImpl implements ComparisonService {
                     }
                 }).collect(Collectors.toList());
 
-                compareResultResponse.setChanges(changes);
+                compareResultResponse.setChanges(Arrays.stream(changes)
+                        .map(CompareResultResponse.Change::new)
+                        .toArray(CompareResultResponse.Change[]::new));
                 compareResultResponse.setPages(pageDescriptionEntities);
                 compareResultResponse.setExtension(extension);
                 compareResultResponse.setGuid(outputFileName);

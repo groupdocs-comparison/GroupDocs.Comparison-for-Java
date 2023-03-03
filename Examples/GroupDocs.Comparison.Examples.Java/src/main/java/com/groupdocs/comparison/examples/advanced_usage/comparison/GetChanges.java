@@ -34,7 +34,7 @@ public class GetChanges {
             }
             ChangeInfo[] changes = comparer.getChanges();
             for (ChangeInfo change : changes) {
-                System.out.printf("Change Type: %d, X: %f, Y: %f, Text: %s%n", change.getType(), change.getBox().getX(), change.getBox().getY(), change.getText());
+                System.out.printf("Change Type: %s, X: %f, Y: %f, Text: %s%n", change.getType(), change.getBox().getX(), change.getBox().getY(), change.getText());
             }
         }
           System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");

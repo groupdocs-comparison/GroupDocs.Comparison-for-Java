@@ -1,6 +1,6 @@
 SHELL=CMD
 
-COMPARISON_VERSION = 23.1
+COMPARISON_VERSION = 23.3
 
 # Groupdocs.Comparison for Java - Dropwizard sample
 

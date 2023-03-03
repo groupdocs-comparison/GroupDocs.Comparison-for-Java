@@ -24,7 +24,7 @@ public class SetDocumentMetadataUserDefined {
                 // Note: It is the same with commented code below
                 final Path resultPath = comparer.compare(outputFileName,
                         new SaveOptions.Builder()
-                                .setCloneMetadataType(MetadataType.FileAuthor)
+                                .setCloneMetadataType(MetadataType.FILE_AUTHOR)
                                 .setFileAuthorMetadata(
                                         new FileAuthorMetadata.Builder()
                                                 .setAuthor("Tom")

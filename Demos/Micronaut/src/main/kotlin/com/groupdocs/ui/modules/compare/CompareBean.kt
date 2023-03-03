@@ -58,7 +58,7 @@ class CompareBeanImpl(
             extension = resultExtension
         )
         if (Files.notExists(resultPath.parent)) {
-            throw InternalServerException("Result directory does not exist") // TODO: Need another exception type
+            throw InternalServerException("Result directory does not exist. Update 'resultDirectory' property in config or create directory with name 'ResultFiles' in the folder where files are placed") // TODO: Need another exception type
         }
         val changeInfos = withContext(Dispatchers.IO) {
             BufferedOutputStream(FileOutputStream(resultPath.toFile())).use { outputStream ->
@@ -99,8 +99,8 @@ class CompareBeanImpl(
         val changes = changeInfos.map { changeInfo ->
             DocumentChange(
                 id = changeInfo.id,
-                type = changeInfo.type,
-                comparisonAction = changeInfo.comparisonAction,
+                type = changeInfo.type.toInt(),
+                comparisonAction = changeInfo.comparisonAction.toInt(),
                 sourceText = changeInfo.sourceText,
                 targetText = changeInfo.targetText,
                 text = changeInfo.text ?: "",
@@ -111,19 +111,19 @@ class CompareBeanImpl(
                     width = changeInfo.box.width,
                     height = changeInfo.box.height
                 ),
-                authors = changeInfo.authors,
+                authors = changeInfo.authors ?: emptyList(),
                 pageInfo = PageInfo(
                     pageNumber = changeInfo.pageInfo.pageNumber,
                     width = changeInfo.pageInfo.width,
                     height = changeInfo.pageInfo.height
                 ),
-                styleChanges = changeInfo.styleChanges?.map { styleChangeInfo ->
+                styleChanges = (changeInfo.styleChanges  ?: emptyList()).map { styleChangeInfo ->
                     StyleChange(
                         propertyName = styleChangeInfo.propertyName,
                         oldValue = styleChangeInfo.oldValue,
                         newValue = styleChangeInfo.newValue
                     )
-                } ?: listOf()
+                }
             )
         }
 

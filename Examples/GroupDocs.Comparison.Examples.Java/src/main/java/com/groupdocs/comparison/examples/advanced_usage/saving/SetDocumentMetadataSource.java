@@ -23,7 +23,7 @@ public class SetDocumentMetadataSource {
                 // Note: It is the same with commented code below
                 final Path resultPath = comparer.compare(outputFileName,
                         new SaveOptions.Builder()
-                                .setCloneMetadataType(MetadataType.Source)
+                                .setCloneMetadataType(MetadataType.SOURCE)
                                 .build());
 
                 // Note: It is the same with the code above

@@ -7,8 +7,8 @@ plugins {
     id("org.jetbrains.compose") version "1.0.0"
 }
 
-group = "com.groupdocs.ui"
-version = "23.1"
+group = "com.groupdocs.ui.comparison.compose"
+version = "23.3"
 
 repositories {
     google()
@@ -25,12 +25,14 @@ dependencies {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "15"
 }
-
+tasks.withType<JavaCompile> {
+    options.release.set(15)
+}
 compose.desktop {
     application {
-        mainClass = "com.groupdocs.ui.MainKt"
+        mainClass = "com.groupdocs.ui.comparison.compose.MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "groupdocs-comparison-compose"
