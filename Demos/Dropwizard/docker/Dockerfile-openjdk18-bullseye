@@ -33,7 +33,7 @@ ENV FILES_DIR "DocumentSamples"
 ENV RESULT_DIR "DocumentSamples"
 ENV HOST_ADDRESS ""
 
-LABEL version="23.3" \
+LABEL version="23.5" \
       maintainer="GroupDocs Team" \
       url="https://products.groupdocs.com/comparison/java" \
       documentation="https://docs.groupdocs.com/comparison/java" \

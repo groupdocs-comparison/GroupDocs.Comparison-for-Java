@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.groupdocs.ui.comparison.compose"
-version = "23.3"
+version = "23.5"
 
 repositories {
     google()

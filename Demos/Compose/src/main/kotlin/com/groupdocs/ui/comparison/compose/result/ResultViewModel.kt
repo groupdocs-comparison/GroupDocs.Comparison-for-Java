@@ -5,6 +5,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import com.groupdocs.comparison.Comparer
 import com.groupdocs.comparison.Document
+import com.groupdocs.comparison.common.function.CreatePageStreamFunction
 import com.groupdocs.comparison.license.License
 import com.groupdocs.comparison.options.CompareOptions
 import com.groupdocs.comparison.options.PreviewOptions
@@ -35,7 +36,7 @@ class ResultViewModel(private val screen: MutableState<Screen>) {
         val sourcePath: String
         val targetPath: String
         val targetName: String
-        tempDir = Paths.get(System.getenv("TMP"))
+        tempDir = Paths.get(System.getProperty("java.io.tmpdir"))
         if (screen.value is Screen.Result) {
             sourcePath = (screen.value as Screen.Result).source
             targetPath = (screen.value as Screen.Result).target
@@ -89,11 +90,11 @@ class ResultViewModel(private val screen: MutableState<Screen>) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val result = Document(resultPath)
-                result.generatePreview(PreviewOptions {
+                result.generatePreview(PreviewOptions(CreatePageStreamFunction {
                     val pagePath = tempDir.resolve("gd_${System.currentTimeMillis()}_page_$it.png")
                     pageList.add(pagePath.toString())
                     FileOutputStream(pagePath.toFile())
-                }.apply {
+                }).apply {
                     previewFormat = PreviewFormats.PNG
                 })
             } catch (e: Exception) {

@@ -23,7 +23,7 @@ interface Defaults {
     interface Local {
         companion object {
             const val DEFAULT_FILES_DIRECTORY = "DocumentSamples"
-            const val DEFAULT_RESULT_DIRECTORY = "ResultFiles"
+            const val DEFAULT_RESULT_DIRECTORY = ""
         }
     }
 }

@@ -10,12 +10,12 @@ plugins {
 }
 
 group = "com.groupdocs.ui.comparison.ktor"
-version = "23.3"
+version = "23.5"
 
 repositories {
     mavenLocal()
     mavenCentral()
-    maven("https://repository.groupdocs.com/repo/")
+    maven("https://releases.groupdocs.com/java/repo")
 }
 
 application {

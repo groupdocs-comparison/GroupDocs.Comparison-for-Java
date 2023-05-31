@@ -2,6 +2,7 @@ package com.groupdocs.ui.usecase
 
 import com.groupdocs.comparison.Document
 import com.groupdocs.comparison.common.Utils
+import com.groupdocs.comparison.common.function.CreatePageStreamFunction
 import com.groupdocs.comparison.options.PreviewOptions
 import com.groupdocs.ui.manager.PathManager
 import com.groupdocs.ui.util.InternalServerException
@@ -25,7 +26,7 @@ class RetrieveLocalFilePagesStreamUseCase(
             Document(inputStream, password).use { document ->
                 val pages = mutableMapOf<Int, Path>()
 
-                document.generatePreview(PreviewOptions({ pageNumber ->
+                document.generatePreview(PreviewOptions(CreatePageStreamFunction { pageNumber ->
                     val pathForTempFile = managerBeans.createPathForTempFile()
                     pages[pageNumber] = pathForTempFile
                     BufferedOutputStream(FileOutputStream(pathForTempFile.toFile()))

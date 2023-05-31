@@ -1,6 +1,6 @@
 SHELL=CMD
 
-COMPARISON_VERSION = 23.3
+COMPARISON_VERSION = 23.5
 
 # Groupdocs.Comparison for Java - Spring sample
 

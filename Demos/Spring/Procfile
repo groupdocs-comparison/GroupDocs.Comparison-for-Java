@@ -1,1 +1,1 @@
-web: java -jar target/comparison-spring-23.3.0.jar
+web: java -jar target/comparison-spring-23.5.0.jar

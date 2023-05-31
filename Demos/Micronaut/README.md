@@ -1,7 +1,7 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison Micronaut Example
 New GroupDocs.Comparison for Java UI Example
-###### version 23.3
+###### version 23.5
 
 [![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/blob/master/Demos/Micronaut/LICENSE)
 
@@ -56,7 +56,7 @@ You can run this sample by one of following methods
 
 #### Run using IDE
 
-Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.3/groupdocs-comparison-micronaut-23.3.0.zip) from github or clone this repository.
+Download [source code](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.5/groupdocs-comparison-micronaut-23.5.0.zip) from github or clone this repository.
 
 ```bash
 git clone https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java.git
@@ -108,9 +108,9 @@ Download [latest release](https://github.com/groupdocs-comparison/GroupDocs.Comp
 **Note**: This method is **recommended** for running this sample behind firewall.
 
 ```bash
-curl -J -L -o release.tar.gz https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.3/groupdocs-comparison-micronaut-23.3.0.tar
+curl -J -L -o release.tar.gz https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/releases/download/v23.5/groupdocs-comparison-micronaut-23.5.0.tar
 tar -xvzf release.tar.gz
-cd release/comparison-micronaut-23.3
+cd release/comparison-micronaut-23.5
 ## Make `bin/comparison-micronaut` file to be runnable
 bin/comparison-micronaut
 ## Open http://localhost:8080/comparison/ in your favorite browser.

@@ -105,11 +105,15 @@ class CompareControllerImpl(
                     width = changeInfo.pageInfo.width,
                     height = changeInfo.pageInfo.height
                 ),
-                styleChanges = (changeInfo.styleChanges  ?: emptyList()).map { styleChangeInfo ->
+                styleChanges = (changeInfo.styleChanges ?: emptyList()).map { styleChangeInfo ->
                     StyleChange(
                         propertyName = styleChangeInfo.propertyName,
-                        oldValue = styleChangeInfo.oldValue,
-                        newValue = styleChangeInfo.newValue
+                        oldValue =
+                        if ((styleChangeInfo.oldValue == Float.NaN) || styleChangeInfo.oldValue == Double.NaN) "\"NaN\""
+                        else styleChangeInfo.oldValue,
+                        newValue =
+                        if ((styleChangeInfo.newValue == Float.NaN) || styleChangeInfo.newValue == Double.NaN) "\"NaN\""
+                        else styleChangeInfo.newValue,
                     )
                 }
             )

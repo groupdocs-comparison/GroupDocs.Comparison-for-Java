@@ -23,7 +23,7 @@ public class Utils {
         final URI uri;
         try {
             uri = Objects.requireNonNull(resource).toURI();
-            Path basePath = Paths.get(uri.getPath().substring(1));
+            Path basePath = Paths.get(uri);
             while (basePath != null && Files.notExists(basePath.resolve("Data"))) {
                 basePath = basePath.getParent();
             }
