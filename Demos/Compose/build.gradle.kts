@@ -42,6 +42,11 @@ compose.desktop {
                 shortcut = true
                 iconFile.set(project.file("icon.ico"))
             }
+
+            linux {
+                shortcut = true
+                iconFile.set(project.file("icon.ico"))
+            }
         }
     }
 }
