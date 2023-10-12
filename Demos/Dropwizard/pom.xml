@@ -229,7 +229,7 @@
         <repository>
             <id>releases-qa.groupdocs.com</id>
             <name>releases-qa.groupdocs</name>
-            <url>https://releases-qa.groupdocs.com/java/repo</url>
+            <url>https://releases-qa.groupdocs.com/java/repo/</url>
         </repository>
         <repository>
             <id>maven-central</id>
