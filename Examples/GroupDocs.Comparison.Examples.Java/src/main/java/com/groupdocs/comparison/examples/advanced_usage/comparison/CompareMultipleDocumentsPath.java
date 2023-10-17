@@ -148,11 +148,13 @@ public class CompareMultipleDocumentsPath {
                         new CompareOptions.Builder()
                                 .setDiagramMasterSetting(
                                         new DiagramMasterSetting.Builder()
+                                                .setUseSourceMaster(true)
                                                 .setMasterPath(SampleFiles.DIAGRAM_SETTINGS)
                                                 .build())
                                 .build());
                 // Note: It is the same with the code above
 //                final DiagramMasterSetting diagramMasterSetting = new DiagramMasterSetting();
+//                diagramMasterSetting.setUseSourceMaster(true);
 //                diagramMasterSetting.setMasterPath(SampleFiles.DIAGRAM_SETTINGS);
 //                final CompareOptions compareOptions = new CompareOptions();
 //                compareOptions.setDiagramMasterSetting(diagramMasterSetting);

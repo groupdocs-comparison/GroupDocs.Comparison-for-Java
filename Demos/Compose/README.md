@@ -1,7 +1,7 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison for Kotlin Compose Example
 New GroupDocs.Comparison for Java Dropwizard UI Example
-###### version 23.5
+###### version 23.10
 
 [![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/blob/master/Demos/Compose/LICENSE)
 

@@ -6,6 +6,8 @@ public class SampleFiles {
 
 
     public static final String SOURCE_CELLS = getSampleFilePath("source.xlsx");
+    public static final String SOURCE_DIRECTORIES = getSampleFilePath("sourceDirectory");
+    public static final String TARGET_DIRECTORIES = getSampleFilePath("targetDirectory");
     public static final String TARGET_CELLS = getSampleFilePath("target.xlsx");
 
     public static final String SOURCE_WORD = getSampleFilePath("source.docx");
@@ -45,6 +47,7 @@ public class SampleFiles {
 
     public static final String RESULT_WORD = "result-%s.docx";
     public static final String RESULT_CELLS = "result-%s.xlsx";
+    public static final String RESULT_DIRECTORIES = "result-%s.html";
     public static final String RESULT_SLIDES = "result-%s.pptx";
     public static final String RESULT_TXT = "result-%s.txt";
     public static final String RESULT_EMAIL = "result-%s.eml";

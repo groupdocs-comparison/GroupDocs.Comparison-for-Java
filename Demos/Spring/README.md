@@ -1,7 +1,7 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison for Java Spring Example
 New GroupDocs.Comparison for Java Spring UI Example
-###### version 23.5
+###### version 23.10
 
 [![Build Status](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring.svg?branch=master)](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f945b8bc09a5ff2e8a2d/maintainability)](https://codeclimate.com/github/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/maintainability)
@@ -106,7 +106,7 @@ Each can be used to run GroupDocs.Comparison for Java Spring sample
 Example:
 
 ```bash
-docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:23.5-java-openjdk8-bullseye-spring
+docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:23.10-java-openjdk8-bullseye-spring
 ## Open http://localhost:8080/comparison/ in your favorite browser.
 ```
 

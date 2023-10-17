@@ -1,8 +1,10 @@
 package com.groupdocs.ui.comparison.dropwizard.service;
 
 import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.ComparerSettings;
 import com.groupdocs.comparison.Document;
 import com.groupdocs.comparison.common.exceptions.PasswordProtectedFileException;
+import com.groupdocs.comparison.logging.ConsoleLogger;
 import com.groupdocs.comparison.options.CompareOptions;
 import com.groupdocs.comparison.options.PreviewOptions;
 import com.groupdocs.comparison.options.load.LoadOptions;

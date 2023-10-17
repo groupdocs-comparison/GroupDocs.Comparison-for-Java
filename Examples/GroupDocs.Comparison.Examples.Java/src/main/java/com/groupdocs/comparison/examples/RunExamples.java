@@ -50,6 +50,10 @@ public class RunExamples {
         CompareCellsFromPath.run();
         // endregion
 
+        // region Compare directories from path
+        CompareDirectoriesFromPath.run();
+        // endregion
+
         // region Compare cells files from stream
         CompareCellsFromStream.run();
         // endregion
