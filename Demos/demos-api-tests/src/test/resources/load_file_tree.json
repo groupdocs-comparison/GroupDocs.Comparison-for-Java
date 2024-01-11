@@ -1,0 +1,226 @@
+[
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.bmp",
+    "name": "source.bmp",
+    "docType": null,
+    "size": 83262,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.csv",
+    "name": "source.csv",
+    "docType": null,
+    "size": 1153,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.doc",
+    "name": "source.doc",
+    "docType": null,
+    "size": 34816,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.docx",
+    "name": "source.docx",
+    "docType": null,
+    "size": 12119,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.html",
+    "name": "source.html",
+    "docType": null,
+    "size": 12098,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.jpeg",
+    "name": "source.jpeg",
+    "docType": null,
+    "size": 136506,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.ods",
+    "name": "source.ods",
+    "docType": null,
+    "size": 14755,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.odt",
+    "name": "source.odt",
+    "docType": null,
+    "size": 26939,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.pdf",
+    "name": "source.pdf",
+    "docType": null,
+    "size": 767524,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.png",
+    "name": "source.png",
+    "docType": null,
+    "size": 61655,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.ppt",
+    "name": "source.ppt",
+    "docType": null,
+    "size": 198656,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.pptx",
+    "name": "source.pptx",
+    "docType": null,
+    "size": 47696,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.vsdx",
+    "name": "source.vsdx",
+    "docType": null,
+    "size": 27470,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.vss",
+    "name": "source.vss",
+    "docType": null,
+    "size": 48128,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.xls",
+    "name": "source.xls",
+    "docType": null,
+    "size": 30208,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/source.xlsx",
+    "name": "source.xlsx",
+    "docType": null,
+    "size": 9721,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.bmp",
+    "name": "target.bmp",
+    "docType": null,
+    "size": 83264,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.csv",
+    "name": "target.csv",
+    "docType": null,
+    "size": 1151,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.doc",
+    "name": "target.doc",
+    "docType": null,
+    "size": 31744,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.docx",
+    "name": "target.docx",
+    "docType": null,
+    "size": 12062,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.html",
+    "name": "target.html",
+    "docType": null,
+    "size": 11913,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.jpeg",
+    "name": "target.jpeg",
+    "docType": null,
+    "size": 134968,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.ods",
+    "name": "target.ods",
+    "docType": null,
+    "size": 4802,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.odt",
+    "name": "target.odt",
+    "docType": null,
+    "size": 14542,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.pdf",
+    "name": "target.pdf",
+    "docType": null,
+    "size": 390069,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.png",
+    "name": "target.png",
+    "docType": null,
+    "size": 48889,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.ppt",
+    "name": "target.ppt",
+    "docType": null,
+    "size": 188928,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.pptx",
+    "name": "target.pptx",
+    "docType": null,
+    "size": 44981,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.vsdx",
+    "name": "target.vsdx",
+    "docType": null,
+    "size": 27470,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.vss",
+    "name": "target.vss",
+    "docType": null,
+    "size": 48128,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.xls",
+    "name": "target.xls",
+    "docType": null,
+    "size": 37376,
+    "directory": false
+  },
+  {
+    "guid": "~/groupdocs/files/api-comparison-tests/target.xlsx",
+    "name": "target.xlsx",
+    "docType": null,
+    "size": 9077,
+    "directory": false
+  }
+]

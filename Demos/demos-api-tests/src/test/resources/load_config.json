@@ -1,0 +1,10 @@
+{
+  "preloadResultPageCount": 0,
+  "download": true,
+  "upload": true,
+  "print": true,
+  "browse": true,
+  "rewrite": true,
+  "enableRightClick": true,
+  "pageSelector": true
+}
