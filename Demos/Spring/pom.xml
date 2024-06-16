@@ -6,7 +6,7 @@
 
     <groupId>com.groupdocs.ui</groupId>
     <artifactId>comparison-spring</artifactId>
-    <version>24.3</version>
+    <version>24.6</version>
     <packaging>${packaging.type}</packaging>
 
     <name>GroupDocs.Comparison for Java Spring Sample</name>
