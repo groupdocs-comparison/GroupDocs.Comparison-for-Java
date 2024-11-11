@@ -1,0 +1,26 @@
+---
+dist: xenial
+language: java
+java: "2.2"
+
+sudo: true
+
+env:
+  global:
+    - containers: pg-22,pg-10
+  matrix:
+    - test_os: centos7
+    - test_os: ubuntu16.04
+      debug: true
+    - test_os: ubuntu14.04
+    - test_os: debian9
+  - test_os: debian10
+
+install:
+  # Cloning testing template
+  - sudo mkdir /etc/ansible
+  - sudo chown -R "${USER}:" /etc/ansible
+
+script:
+  # Run tests.
+  - bash /etc/ansible/test.sh

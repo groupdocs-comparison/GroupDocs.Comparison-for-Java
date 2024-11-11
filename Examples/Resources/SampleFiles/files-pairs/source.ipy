@@ -1,0 +1,15 @@
+In [9]: pwd
+Out[9]: '/home/jdhunter/py4science/book'
+
+In [10]: cd bookdata/
+/home/jdhunter/py4science/book/bookdata
+
+In [2]: from pylab import *
+
+In [2]: ion()
+
+In [3]: im = imread('stinkbug.png')
+
+@savefig mystinkbug.png width=4in
+In [4]: imshow(im)
+Out[4]: <matplotlib.image.AxesImage object at 0x39ea850>

@@ -1,0 +1,22 @@
+    >>> print(os.getcwd())
+    C:\Python33
+    >>> os.listdir()
+    ['DLLs',
+    'Doc',
+    'Lib',
+    'libs',
+    'LICENSE.txt',
+    'NEWS.txt',
+    'python.exe',
+    'pythonw.exe',
+    'README.txt',
+    'Scripts',
+    'tcl',
+    'Tools']
+    >>> os.listdir('C:\\')
+    ['$RECYCLE.BIN',
+    'Movies',
+    'Music',
+    'Photos',
+    'Series',
+    'System Volume Information']

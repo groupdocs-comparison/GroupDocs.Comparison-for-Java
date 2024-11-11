@@ -1,0 +1,16 @@
+### Installation
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ cd dillinger
+$ npm install -f
+$ node app
+```
+
+For production environments...
+
+```sh
+$ qui official deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil 
+$ impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
+```

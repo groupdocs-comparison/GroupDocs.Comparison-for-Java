@@ -1,0 +1,25 @@
+version: '1.0'
+
+steps:
+#  clone-step:
+#    type: git-clone
+#    repo: https://github.com/codefresh-io/yaml-node-hello-world.git
+  
+  build-step:
+    type: build
+    image-name: codefreshio/yaml-node-hello
+    dockerfile: Dockerfile
+    tag: latest
+
+  test-step:
+    image: codefreshio/git-image:latest
+    commands:
+      - echo 'run and exit'
+
+  composition-step:
+    type: composition
+    composition: test-composition-image
+    composition-candidates:
+      main:
+        image: ${{test-step}}
+        command: bash -c 'git status'

@@ -1,0 +1,19 @@
+diff a.txt    (rejected hunks)
+....
+
+rej files are rejected files (usually hunks patches but not only).
+
+When ever you get those files after merge you will manually have to edit them, fix them and then apply them back.
+
+You can read here some more about it and what is it
+
+.rej file
+
+    diff a.txt    (rejected hunks)
+    ....
+
+Fix it manually and then apply the .rej files like a regular patch.
+
+manually merge the change from *.rej into the required file and remove the *.rej file.
+
+Another very usefully article addressing this can be found here.

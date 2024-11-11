@@ -1,0 +1,11 @@
+page[:reviews].toggle
+
+page[:review_name].value = "this is great"
+
+page << "if ($('review_name').value == 'tho') {"
+page.alert('hi tho!')
+page << "}"
+
+page.select("#reviews strong").each do |element|
+  element.visual_effect :highlight
+end

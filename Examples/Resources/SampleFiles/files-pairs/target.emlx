@@ -1,0 +1,12 @@
+000000411
+X-Unsent: 1
+Message-ID: <f08bbd90cdb54463bd660afb00360397>
+Subject: Goodbye World! Subject
+From: "Target Sender Name" <targetFrom@domain.com>
+To: "Target Sender Name" <targetTo@domain.com>
+Date: Thu, 1 Jun 2017 12:45:43 +0000
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Goodbye World! <br/> <br/><font color=3Dblue>Goodbye world!</font>

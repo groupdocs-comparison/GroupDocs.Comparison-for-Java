@@ -1,0 +1,5 @@
+ $ cd parentDirector
+
+ $ diff –urNb originalSourceDirectory newSourceDirectory >patchFile
+
+ $ diff –urNb originalSourceDirectory newSourceDirectory >patchFile

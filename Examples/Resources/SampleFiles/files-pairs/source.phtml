@@ -1,0 +1,20 @@
+<?php
+$unique = uniqid();
+$reference = function($lang) use ($unique) {
+    return $lang . $unique;
+};
+?>
+<div class="code-snippets">
+    <ul class="nav nav-tabs">
+        <?php $first = true; foreach($examples as $lang => $code):?>
+        <li role="presentation" class="<?php echo $reference($lang) . ($first ? ' active' : ''); $first = false ?>"><a href="#<?php echo $reference($lang) ?>" aria-controls="<?php echo $reference($lang) ?>" role="tab" data-toggle="tab"><?php echo $lang ?></a></li>
+        <?php endforeach ?>
+    </ul>
+    <div class="tab-content">
+        <?php $first = true; foreach($examples as $lang => $code): ?>
+        <div role="tabpanel" class="tab-pane <?php echo ($first ? 'active' : ''); $first = false ?>" id="<?php echo $reference($lang) ?>">
+            <pre><code><?php echo $code ?></code></pre>
+        </div>
+        <?php endforeach ?>
+    </div>
+</div>

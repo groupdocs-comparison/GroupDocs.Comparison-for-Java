@@ -1,0 +1,86 @@
+MIME-Version: 1.0
+Date: Thu, 1 Jun 2017 12:45:43 +0000
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+=EF=BB=BF<head><style type=3D"text/css">
+
+    h4=20
+    {
+        text-align: left;
+    }
+
+@media screen=20
+{
+
+	=2EheaderLineTitle
+	{
+		width:1=2E5in;
+		display:inline;
+		margin:0in;
+		margin-bottom:=2E0001pt;
+		font-size:11=2E0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+	}
+
+	=2EheaderLineText
+	{
+		display:inline;
+		margin:0in;
+		margin-bottom:=2E0001pt;
+		font-size:11=2E0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:normal;
+	}
+
+   =2EpageHeader
+   {
+		font-size:14=2E0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+		visibility:hidden;
+		display:none;
+   }  =20
+}
+
+@media print=20
+{
+	=2EheaderLineTitle
+	{
+		width:1=2E5in;
+		display:inline;
+		margin:0in;
+		margin-bottom:=2E0001pt;
+		font-size:11=2E0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+	}
+
+	=2EheaderLineText
+	{
+		display:inline;
+		margin:0in;
+		margin-bottom:=2E0001pt;
+		font-size:11=2E0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:normal;
+	}
+
+   =2EpageHeader
+   {
+		font-size:14=2E0pt;
+		font-family:"Calibri","sans-serif";
+		font-weight:bold;
+		visibility:visible;
+		display:block;
+   }
+
+}
+</style></head><h4><div class=3D'pageHeader'>Target Sender Name<hr/></div><=
+span class=3D'headerLineTitle'>From:</span><span class=3D'headerLineText'>T=
+arget Sender Name</span><br/><span class=3D'headerLineTitle'>To:</span><spa=
+n class=3D'headerLineText'>Target Sender Name</span><br/><span class=3D'hea=
+derLineTitle'>Subject:</span><span class=3D'headerLineText'>Goodbye World! =
+Subject</span><br/><br/></h4>Goodbye World! <br/> <br/><font color=3Dblue>G=
+oodbye world!</font>

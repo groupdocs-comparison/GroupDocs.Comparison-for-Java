@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+ 
+use strict;
+use warnings;
+use Pod::Simple::Wiki;
+ 
+ 
+my $parser = Pod::Simple::Wiki->new('kwiki');
+ 
+if ( defined $ARGV[0] ) {
+    open IN, $ARGV[0] or die "Couldn't open $ARGV[0]: $!\n";
+}
+else {
+    *IN = *STDIN;
+}
+ 
+if ( 
+}
+else {
+    *OUT = *STDOUT;
+}
+ 
+$parser->output_fh( *OUT );
+$parser->parse_file( *IN );
+$parser->output_fh( *OUT );
+$parser->parse_file( *IN );
+ 
+__END__

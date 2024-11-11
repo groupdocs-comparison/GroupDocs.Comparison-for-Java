@@ -1,0 +1,8 @@
+{
+    version : 2,
+    file: "out.js",
+    sourceRoot : "",
+    sources: ["boo.js", "bar.js"],
+    names: ["src", "maps", "are", "fun"],
+    mappings: "AAgBC,SAAQAAA,CAAEA"
+}
