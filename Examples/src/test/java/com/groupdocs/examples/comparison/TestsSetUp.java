@@ -1,6 +1,7 @@
 package com.groupdocs.examples.comparison;
 
 import com.groupdocs.comparison.license.License;
+import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.LicenseUtils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -14,6 +15,7 @@ public class TestsSetUp {
     @BeforeSuite
     public void setUp() throws IOException {
         Locale.setDefault(Locale.US);
+        FailureRegister.getInstance().setThrowExceptionsImmediately(true);
 
         try (final InputStream licenseStream = LicenseUtils.createLicenseStream()) {
             if (licenseStream == null) {

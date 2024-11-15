@@ -58,7 +58,7 @@ public class Main {
                 MultipleCompareDocumentsPath.compareMultipleTxtDocuments(SampleFiles.SOURCE_TXT, SampleFiles.TARGET1_TXT, SampleFiles.TARGET2_TXT, SampleFiles.TARGET3_TXT);
                 MultipleCompareDocumentsPath.compareMultipleEmailDocuments(SampleFiles.SOURCE_EML, SampleFiles.TARGET1_EML, SampleFiles.TARGET2_EML, SampleFiles.TARGET3_EML);
                 MultipleCompareDocumentsPath.compareMultiplePdfDocuments(SampleFiles.SOURCE_PDF, SampleFiles.TARGET1_PDF, SampleFiles.TARGET2_PDF, SampleFiles.TARGET3_PDF);
-//                MultipleCompareDocumentsPath.compareMultipleDiagramDocuments(SampleFiles.SOURCE_VSDX, SampleFiles.TARGET1_VSDX, SampleFiles.TARGET2_VSDX, SampleFiles.TARGET3_VSDX, SampleFiles.DIAGRAM_MASTER); // An error occurred while trying to create a document. Try to use setUseSourceMaster(true) with custom value for getUserMasterPath(...).
+                MultipleCompareDocumentsPath.compareMultipleDiagramDocuments(SampleFiles.SOURCE_VSDX, SampleFiles.TARGET1_VSDX, SampleFiles.TARGET2_VSDX, SampleFiles.TARGET3_VSDX, SampleFiles.DIAGRAM_MASTER);
                 MultipleCompareProtectedDocumentsPath.run(SampleFiles.SOURCE_DOCX_PROTECTED, SampleFiles.TARGET1_DOCX_PROTECTED, SampleFiles.TARGET2_DOCX_PROTECTED, SampleFiles.TARGET3_DOCX_PROTECTED);
                 MultipleCompareProtectedDocumentsStream.run(SampleFiles.SOURCE_DOCX_PROTECTED, SampleFiles.TARGET1_DOCX_PROTECTED, SampleFiles.TARGET2_DOCX_PROTECTED, SampleFiles.TARGET3_DOCX_PROTECTED);
                 MultipleCompareDocumentsSettingsPath.run(SampleFiles.SOURCE_DOCX, SampleFiles.TARGET1_DOCX, SampleFiles.TARGET2_DOCX, SampleFiles.TARGET3_DOCX);
@@ -77,11 +77,11 @@ public class Main {
             { // Previews
                 PreviewResultantDocument.run(SampleFiles.SOURCE_DOC, SampleFiles.TARGET_DOC);
                 PreviewResultantDocumentWithMemoryClean.run(SampleFiles.SOURCE_DOCX, SampleFiles.TARGET1_DOCX);
-//                PreviewResultantDocumentWithMemoryClean.run(SampleFiles.SOURCE_VSDX, SampleFiles.TARGET1_VSDX); // An error occurred while trying to create a document. Try to use setUseSourceMaster(true) with custom value for getUserMasterPath(...).
+                PreviewResultantDocumentWithMemoryClean.run(SampleFiles.SOURCE_VSDX, SampleFiles.TARGET1_VSDX);
                 PreviewSourceDocument.run(SampleFiles.SOURCE_DOC);
                 PreviewTargetDocument.run(SampleFiles.SOURCE_DOC, SampleFiles.TARGET_DOC);
                 PreviewWithSpecificImagesSize.run(SampleFiles.SOURCE_DOCX, SampleFiles.TARGET1_DOCX);
-//                PreviewWithSpecificImagesSize.run(SampleFiles.SOURCE_VSDX, SampleFiles.TARGET1_VSDX); // An error occurred while trying to create a document. Try to use setUseSourceMaster(true) with custom value for getUserMasterPath(...).
+                PreviewWithSpecificImagesSize.run(SampleFiles.SOURCE_VSDX, SampleFiles.TARGET1_VSDX);
             }
             { // Loading
                 LoadDocumentFromLocalDisc.run(SampleFiles.SOURCE_PDF, SampleFiles.TARGET1_PDF);

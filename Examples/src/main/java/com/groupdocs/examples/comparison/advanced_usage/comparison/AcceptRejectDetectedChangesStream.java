@@ -30,17 +30,21 @@ public class AcceptRejectDetectedChangesStream {
              Comparer comparer = new Comparer(sourceInputStream)) {
 
             comparer.add(targetInputStream);
-            final Path resultPath = comparer.compare();
+
+            Path resultPath = comparer.compare();
+            if (resultPath == null) {
+                resultPath = outputPath;
+            }
             ChangeInfo[] changes = comparer.getChanges();
             // inserted word "Cool" was not be added to result document
             changes[0].setComparisonAction(ComparisonAction.REJECT);
             comparer.applyChanges(outputStream, new ApplyChangeOptions(changes));
 
-            System.out.println("\nChanges updated successfully.\nCheck output: " + resultPath.getParent());
-        } catch (IOException e) {
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
+            return resultPath;
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return outputPath;
     }
 }

@@ -8,7 +8,6 @@ import com.groupdocs.examples.comparison.utils.FailureRegister;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static com.groupdocs.examples.comparison.utils.FilesUtils.makeOutputPath;
 
@@ -18,28 +17,29 @@ import static com.groupdocs.examples.comparison.utils.FilesUtils.makeOutputPath;
 public class PreviewTargetDocument {
     public static Path run(Path sourceFile, Path targetFile) {
 
-        AtomicReference<Path> pagePreviewPath = new AtomicReference<>();
+        Path[] pagePreviewPath = new Path[1];
         try (final Comparer comparer = new Comparer(sourceFile)) {
 
             comparer.add(targetFile);
 
             PreviewOptions previewOptions = new PreviewOptions.Builder(pageNumber -> {
-                pagePreviewPath.set(makeOutputPath(String.format("PreviewTargetDocument_%d.png", pageNumber)));
+                pagePreviewPath[0] = makeOutputPath(String.format("PreviewTargetDocument_%d.png", pageNumber));
                 try {
-                    return Files.newOutputStream(pagePreviewPath.get());
+                    return Files.newOutputStream(pagePreviewPath[0]);
                 } catch (IOException e) {
-                    FailureRegister.getInstance().registerFailedSample(e);
-                    e.printStackTrace();
+                    throw new RuntimeException("Failed to create preview stream for page " + pageNumber, e);
                 }
-                return null;
             })
                     .setPreviewFormat(PreviewFormats.PNG)
                     .setPageNumbers(new int[]{1, 2})
                     .build();
             comparer.getTargets().get(0).generatePreview(previewOptions);
 
-            System.out.println("\nDocument previews generated successfully.\nCheck output: " + pagePreviewPath.get().getParent());
-            return pagePreviewPath.get();
+            System.out.println("\nDocument previews generated successfully.\nCheck output: " + pagePreviewPath[0].getParent());
+            return pagePreviewPath[0];
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 }

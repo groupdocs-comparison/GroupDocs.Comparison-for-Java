@@ -85,7 +85,7 @@ public class FilesUtils {
             try {
                 Files.createDirectories(normalizedPath.getParent());
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                throw new RuntimeException("Failed to create directories for output path: " + normalizedPath, e);
             }
         }
         return normalizedPath;

@@ -36,12 +36,11 @@ public class AcceptRejectDetectedChangesPath {
             changes[0].setComparisonAction(ComparisonAction.REJECT);
             comparer.applyChanges(outputPath, new ApplyChangeOptions(changes));
 
-            System.out.println("\nChanges updated successfully.\nCheck output: " + outputPath.getParent());
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
             return resultPath;
-        } catch (IOException e) {
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

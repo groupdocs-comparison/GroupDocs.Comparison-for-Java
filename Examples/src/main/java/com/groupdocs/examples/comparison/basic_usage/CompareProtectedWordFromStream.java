@@ -23,13 +23,18 @@ public class CompareProtectedWordFromStream {
              OutputStream outputStream = Files.newOutputStream(outputPath);
              Comparer comparer = new Comparer(sourceInputStream, new LoadOptions("1234"))) {
             comparer.add(targetInputStream, new LoadOptions("5678"));
-            comparer.compare(outputStream);
+
+            Path resultPath = comparer.compare(outputStream);
+
+            if (resultPath == null) {
+                resultPath = outputPath;
+            }
 
             System.out.println("\nDocuments compared successfully.\nCheck output: " + outputPath.getParent());
-        } catch (IOException e) {
+            return resultPath;
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return outputPath;
     }
 }

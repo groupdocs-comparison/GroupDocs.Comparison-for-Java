@@ -45,8 +45,7 @@ public class LicenseUtils {
                 return Files.newInputStream(Paths.get(licensePath));
             }
         } catch (IOException e) {
-            FailureRegister.getInstance().registerFailedSample(e);
-            return null;
+            throw new RuntimeException("Error accessing license file: " + e.getMessage(), e);
         }
     }
 
@@ -97,8 +96,7 @@ public class LicenseUtils {
                 return licFileOptional.get().toAbsolutePath().normalize().toString();
             }
         } catch (IOException e) {
-            FailureRegister.getInstance().registerFailedSample(e);
-            return null;
+            throw new RuntimeException("Error accessing license file: " + e.getMessage(), e);
         }
 
         System.err.println("\nNone of license sources was provided:\n" +

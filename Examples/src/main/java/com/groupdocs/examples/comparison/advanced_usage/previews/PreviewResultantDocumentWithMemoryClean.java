@@ -11,7 +11,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static com.groupdocs.examples.comparison.utils.FilesUtils.makeOutputPath;
 import static com.groupdocs.examples.comparison.utils.FilesUtils.obtainExtension;
@@ -30,27 +29,24 @@ public class PreviewResultantDocumentWithMemoryClean {
             comparer.add(targetFile);
 
             resultPath = comparer.compare(resultStream);
-        } catch (IOException e) {
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
         }
         if (resultPath == null) {
             resultPath = outputPath;
         }
 
-        AtomicReference<Path> pagePreviewPath = new AtomicReference<>();
+        Path[] pagePreviewPath = new Path[1];
         try (InputStream documentStream = Files.newInputStream(resultPath);
              Document document = new Document(documentStream)) {
 
             PreviewOptions previewOptions = new PreviewOptions.Builder(pageNumber -> {
-                pagePreviewPath.set(makeOutputPath(String.format("PreviewResultantDocumentWithMemoryClean_%d.png", pageNumber)));
+                pagePreviewPath[0] = makeOutputPath(String.format("PreviewResultantDocumentWithMemoryClean_%d.png", pageNumber));
                 try {
-                    return Files.newOutputStream(pagePreviewPath.get());
+                    return Files.newOutputStream(pagePreviewPath[0]);
                 } catch (IOException e) {
-                    FailureRegister.getInstance().registerFailedSample(e);
-                    e.printStackTrace();
+                    throw new RuntimeException("Error creating preview output stream for page " + pageNumber, e);
                 }
-                return null;
             })
                     .setPreviewFormat(PreviewFormats.PNG)
                     .setPageNumbers(new int[]{1, 2})
@@ -61,12 +57,11 @@ public class PreviewResultantDocumentWithMemoryClean {
                     .build();
             document.generatePreview(previewOptions);
 
-            System.out.println("\nDocument previews generated successfully.\nCheck output: " + pagePreviewPath.get().getParent());
-            return pagePreviewPath.get();
-        } catch (IOException e) {
+            System.out.println("\nDocument previews generated successfully.\nCheck output: " + pagePreviewPath[0].getParent());
+            return pagePreviewPath[0];
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

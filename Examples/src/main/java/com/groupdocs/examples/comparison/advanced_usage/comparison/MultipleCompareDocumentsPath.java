@@ -8,7 +8,6 @@ import com.groupdocs.comparison.options.style.DiagramMasterSetting;
 import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.FilesUtils;
 
-import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -28,22 +27,20 @@ public class MultipleCompareDocumentsPath {
 
         try (Comparer comparer = new Comparer(sourceFile)) {
 
-            {
-                // Note: It is the same with commented code below
-                comparer.add(target1File, target2File, target3File);
+            comparer.add(target1File, target2File, target3File);
 
-                // Note: It is the same with the code above
-//                comparer.add(target1File);
-//                comparer.add(target2File);
-//                comparer.add(target3File);
+            Path resultPath = comparer.compare(outputPath);
+
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
 
-            final Path resultPath = comparer.compare(outputPath);
-
             System.out.println("\nDocuments compared successfully.\nCheck output: " + outputPath.getParent());
+            return resultPath;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
-
-        return outputPath;
     }
 
     /**
@@ -56,25 +53,20 @@ public class MultipleCompareDocumentsPath {
         try (OutputStream resultStream = Files.newOutputStream(outputPath);
              Comparer comparer = new Comparer(sourceFile)) {
 
-            {
-                // Note: It is the same with commented code below
-                comparer.add(target1File, target2File, target3File);
+            comparer.add(target1File, target2File, target3File);
 
-                // Note: It is the same with the code above
-//                comparer.add(target1File);
-//                comparer.add(target2File);
-//                comparer.add(target3File);
+            Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
+
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
 
-            final Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
-
             System.out.println("\nText documents compared successfully.\nCheck output: " + outputPath.getParent());
-        } catch (IOException e) {
+            return resultPath;
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-
-        return outputPath;
     }
 
     /**
@@ -87,25 +79,20 @@ public class MultipleCompareDocumentsPath {
         try (OutputStream resultStream = Files.newOutputStream(outputPath);
              Comparer comparer = new Comparer(sourceFile)) {
 
-            {
-                // Note: It is the same with commented code below
-                comparer.add(target1File, target2File, target3File);
+            comparer.add(target1File, target2File, target3File);
 
-                // Note: It is the same with the code above
-//                comparer.add(target1File);
-//                comparer.add(target2File);
-//                comparer.add(target3File);
+            Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
+
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
 
-            final Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
-
             System.out.println("\nEmail documents compared successfully.\nCheck output: " + outputPath.getParent());
-        } catch (IOException e) {
+            return resultPath;
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-
-        return outputPath;
     }
 
     /**
@@ -118,30 +105,26 @@ public class MultipleCompareDocumentsPath {
         try (OutputStream resultStream = Files.newOutputStream(outputPath);
              Comparer comparer = new Comparer(sourceFile)) {
 
-            {
-                // Note: It is the same with commented code below
-                comparer.add(target1File, target2File, target3File);
+            comparer.add(target1File, target2File, target3File);
 
-                // Note: It is the same with the code above
-//                comparer.add(target1File);
-//                comparer.add(target2File);
-//                comparer.add(target3File);
+            Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
+
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
-            final Path resultPath = comparer.compare(resultStream, new SaveOptions(), new CompareOptions());
 
             System.out.println("\nPDF documents compared successfully.\nCheck output: " + outputPath.getParent());
+            return resultPath;
         } catch (ComparisonException e) {
             if (e.getMessage() != null && e.getMessage().contains("It is impossible to process this document without license")) {
                 System.err.println("Valid license is required to run this sample");
             } else {
                 throw e;
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
         }
-
-        return outputPath;
+        return null;
     }
 
     /**
@@ -158,40 +141,27 @@ public class MultipleCompareDocumentsPath {
         try (OutputStream outputStream = Files.newOutputStream(outputPath);
              Comparer comparer = new Comparer(sourceFile)) {
 
-            {
-                // Note: It is the same with commented code below
-                comparer.add(target1File, target2File, target3File);
+            comparer.add(target1File, target2File, target3File);
 
-                // Note: It is the same with the code above
-//                comparer.add(target1File);
-//                comparer.add(target2File);
-//                comparer.add(target3File);
-            }
+            final CompareOptions compareOptions = new CompareOptions.Builder()
+                    .setDiagramMasterSetting(
+                            new DiagramMasterSetting.Builder()
+                                    .setUseSourceMaster(true)
+                                    .setMasterPath(masterFile.toString())
+                                    .build())
+                    .build();
 
-            {
-                // Note: It is the same with commented code below
-                final CompareOptions compareOptions = new CompareOptions.Builder()
-                        .setDiagramMasterSetting(
-                                new DiagramMasterSetting.Builder()
-                                        .setUseSourceMaster(true)
-                                        .setMasterPath(masterFile.toString())
-                                        .build())
-                        .build();
-                // Note: It is the same with the code above
-//                final DiagramMasterSetting diagramMasterSetting = new DiagramMasterSetting();
-//                diagramMasterSetting.setUseSourceMaster(true);
-//                diagramMasterSetting.setMasterPath(masterFile.toString());
-//                final CompareOptions compareOptions = new CompareOptions();
-//                compareOptions.setDiagramMasterSetting(diagramMasterSetting);
+            Path resultPath = comparer.compare(outputStream, new SaveOptions(), compareOptions);
 
-                final Path resultPath = comparer.compare(outputStream, new SaveOptions(), compareOptions);
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
 
             System.out.println("\nDiagram documents compared successfully.\nCheck output: " + outputPath.getParent());
-        } catch (IOException e) {
+            return resultPath;
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return outputPath;
     }
 }

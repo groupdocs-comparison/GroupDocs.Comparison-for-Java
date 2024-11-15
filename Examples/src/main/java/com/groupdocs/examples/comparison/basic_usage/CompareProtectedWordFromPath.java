@@ -2,6 +2,7 @@ package com.groupdocs.examples.comparison.basic_usage;
 
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.load.LoadOptions;
+import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.FilesUtils;
 
 import java.nio.file.Path;
@@ -19,11 +20,15 @@ public class CompareProtectedWordFromPath {
         try (Comparer comparer = new Comparer(sourceFile, new LoadOptions("1234"))) {
             comparer.add(targetFile, new LoadOptions("5678"));
             Path resultPath = comparer.compare(outputPath);
+
             if (resultPath == null) {
                 resultPath = outputPath;
             }
             System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
             return resultPath;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 }

@@ -47,10 +47,9 @@ public class MultipleCompareDocumentsSettingsStream {
             }
             System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
             return resultPath;
-        } catch (IOException e) {
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

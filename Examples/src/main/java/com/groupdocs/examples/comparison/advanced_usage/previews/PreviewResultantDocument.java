@@ -11,7 +11,6 @@ import com.groupdocs.examples.comparison.utils.FilesUtils;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static com.groupdocs.examples.comparison.utils.FilesUtils.makeOutputPath;
 import static com.groupdocs.examples.comparison.utils.FilesUtils.obtainExtension;
@@ -35,18 +34,17 @@ public class PreviewResultantDocument {
                 resultPath = outputPath;
             }
 
-            AtomicReference<Path> pagePreviewPath = new AtomicReference<>();
-            try (InputStream documentStream = Files.newInputStream(resultPath); Document document = new Document(documentStream)) {
+            Path[] pagePreviewPath = new Path[1];
+            try (InputStream documentStream = Files.newInputStream(resultPath);
+                 Document document = new Document(documentStream)) {
 
                 PreviewOptions previewOptions = new PreviewOptions.Builder(pageNumber -> {
-                    pagePreviewPath.set(makeOutputPath(String.format("PreviewResultantDocument_%d.png", pageNumber)));
+                    pagePreviewPath[0] = makeOutputPath(String.format("PreviewResultantDocument_%d.png", pageNumber));
                     try {
-                        return Files.newOutputStream(pagePreviewPath.get());
+                        return Files.newOutputStream(pagePreviewPath[0]);
                     } catch (IOException e) {
-                        FailureRegister.getInstance().registerFailedSample(e);
-                        e.printStackTrace();
+                        throw new RuntimeException("Failed to create preview for page " + pageNumber, e);
                     }
-                    return null;
                 })
                         .setPreviewFormat(PreviewFormats.PNG)
                         .setPageNumbers(new int[]{1, 2})
@@ -56,11 +54,10 @@ public class PreviewResultantDocument {
             }
 
             System.out.println("\nDocument previews generated successfully.\nCheck output: " + resultPath.getParent());
-            return pagePreviewPath.get();
-        } catch (IOException e) {
+            return pagePreviewPath[0];
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

@@ -1,6 +1,7 @@
 package com.groupdocs.examples.comparison.quick_start.licensing;
 
 import com.groupdocs.comparison.license.Metered;
+import com.groupdocs.examples.comparison.utils.FailureRegister;
 
 /**
  * <p>
@@ -13,8 +14,13 @@ public class SetMeteredLicense {
     public static void run() {
         String publicKey = "*****";
         String privateKey = "*****";
-        Metered metered = new Metered();
-        metered.setMeteredKey(publicKey, privateKey);
-        System.out.println("License set successfully.");
+        try {
+            Metered metered = new Metered();
+            metered.setMeteredKey(publicKey, privateKey);
+            System.out.println("License set successfully.");
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            System.err.println("License was NOT set.");
+        }
     }
 }

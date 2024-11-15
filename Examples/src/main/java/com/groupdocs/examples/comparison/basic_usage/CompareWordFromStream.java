@@ -25,13 +25,17 @@ public class CompareWordFromStream {
              OutputStream outputStream = Files.newOutputStream(outputPath);
              Comparer comparer = new Comparer(sourceInputStream)) {
             comparer.add(targetInputStream);
-            comparer.compare(outputStream);
 
+            Path resultPath = comparer.compare(outputStream);
+
+            if (resultPath == null) {
+                resultPath = outputPath;
+            }
             System.out.println("\nDocuments compared successfully.\nCheck output: " + outputPath.getParent());
-        } catch (IOException e) {
+            return resultPath;
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return outputPath;
     }
 }

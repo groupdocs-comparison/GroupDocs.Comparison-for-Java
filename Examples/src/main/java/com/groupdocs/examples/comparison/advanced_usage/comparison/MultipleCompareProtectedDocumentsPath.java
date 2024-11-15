@@ -2,6 +2,7 @@ package com.groupdocs.examples.comparison.advanced_usage.comparison;
 
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.load.LoadOptions;
+import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.FilesUtils;
 
 import java.nio.file.Path;
@@ -26,6 +27,9 @@ public class MultipleCompareProtectedDocumentsPath {
             }
             System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
             return resultPath;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 }

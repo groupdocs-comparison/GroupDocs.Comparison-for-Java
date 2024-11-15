@@ -45,9 +45,8 @@ public class GetChanges {
             return changes;
         } catch (IOException e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 
     /**
@@ -64,7 +63,10 @@ public class GetChanges {
             System.out.println("\nCount of changes: " + changes.length);
 
             return changes.length;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
         }
+        return -1;
     }
 
     /**
@@ -85,7 +87,6 @@ public class GetChanges {
             return changes.length;
         } catch (IOException e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
         }
         return -1;
     }
@@ -106,6 +107,9 @@ public class GetChanges {
             }
             System.out.println("\nGet Target Text received successfully.");
             return changes;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
         }
+        return null;
     }
 }

@@ -7,7 +7,6 @@ import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.FilesUtils;
 
 import java.awt.*;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
@@ -29,33 +28,25 @@ public class CompareDocumentsSettingsStream {
              Comparer comparer = new Comparer(sourceInputStream)) {
             comparer.add(targetInputStream);
 
-            {
-                // Note: It is the same with commented code below
-                final CompareOptions compareOptions = new CompareOptions.Builder()
-                        .setInsertedItemStyle(
-                                new StyleSettings.Builder()
-                                        .setHighlightColor(Color.RED)
-                                        .setFontColor(Color.GREEN)
-                                        .setUnderline(true)
-                                        .build()
-                        ).build();
+            final CompareOptions compareOptions = new CompareOptions.Builder()
+                    .setInsertedItemStyle(
+                            new StyleSettings.Builder()
+                                    .setHighlightColor(Color.RED)
+                                    .setFontColor(Color.GREEN)
+                                    .setUnderline(true)
+                                    .build()
+                    ).build();
 
-                // Note: It is the same with the code above
-//                final StyleSettings styleSettings = new StyleSettings();
-//                styleSettings.setHighlightColor(Color.RED);
-//                styleSettings.setFontColor(Color.GREEN);
-//                styleSettings.setUnderline(true);
-//                CompareOptions compareOptions = new CompareOptions();
-//                compareOptions.setInsertedItemStyle(styleSettings);
+            Path resultPath = comparer.compare(outputStream, compareOptions);
 
-                final Path resultPath = comparer.compare(outputStream, compareOptions);
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
-
-            System.out.println("\nDocuments compared successfully.\nCheck output: " + outputPath.getParent());
-        } catch (IOException e) {
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
+            return resultPath;
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
+            return null;
         }
-        return outputPath;
     }
 }

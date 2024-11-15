@@ -18,8 +18,8 @@ import com.groupdocs.examples.comparison.utils.LicenseUtils;
 public class SetLicenseFromFile {
 
     public static void run() {
-        final String licensePath = LicenseUtils.obtainLicensePath();
         try {
+            final String licensePath = LicenseUtils.obtainLicensePath();
             if (!LicenseUtils.isUrl(licensePath)) {
 
                 License license = new License();

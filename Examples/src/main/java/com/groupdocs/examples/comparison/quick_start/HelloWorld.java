@@ -1,6 +1,7 @@
 package com.groupdocs.examples.comparison.quick_start;
 
 import com.groupdocs.comparison.Comparer;
+import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.FilesUtils;
 
 import java.nio.file.Path;
@@ -21,12 +22,17 @@ public class HelloWorld {
 
         try (Comparer comparer = new Comparer(sourceFile)) {
             comparer.add(targetFile);
+
             Path resultPath = comparer.compare(outputPath);
+
             if (resultPath == null) {
                 resultPath = outputPath;
             }
             System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
             return resultPath;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 }

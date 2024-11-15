@@ -4,6 +4,7 @@ import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.FileAuthorMetadata;
 import com.groupdocs.comparison.options.enums.MetadataType;
 import com.groupdocs.comparison.options.save.SaveOptions;
+import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.FilesUtils;
 
 import java.nio.file.Path;
@@ -18,19 +19,20 @@ public class SetDocumentMetadata {
         try (Comparer comparer = new Comparer(sourceFile)) {
             comparer.add(targetFile);
 
-            {
                 final SaveOptions saveOptions = new SaveOptions.Builder()
                         .setCloneMetadataType(MetadataType.SOURCE)
                         .build();
 
-                Path resultPath = comparer.compare(outputPath, saveOptions);
+            Path resultPath = comparer.compare(outputPath, saveOptions);
 
-                if (resultPath == null) {
-                    resultPath = outputPath;
-                }
-                System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
-                return resultPath;
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
+            System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
+            return resultPath;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 
@@ -41,19 +43,20 @@ public class SetDocumentMetadata {
         try (Comparer comparer = new Comparer(sourceFile)) {
             comparer.add(targetFile);
 
-            {
-                final SaveOptions saveOptions = new SaveOptions.Builder()
-                        .setCloneMetadataType(MetadataType.TARGET)
-                        .build();
+            final SaveOptions saveOptions = new SaveOptions.Builder()
+                    .setCloneMetadataType(MetadataType.TARGET)
+                    .build();
 
-                Path resultPath = comparer.compare(outputPath, saveOptions);
+            Path resultPath = comparer.compare(outputPath, saveOptions);
 
-                if (resultPath == null) {
-                    resultPath = outputPath;
-                }
-                System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
-                return resultPath;
+            if (resultPath == null) {
+                resultPath = outputPath;
             }
+            System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
+            return resultPath;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 

@@ -1,5 +1,8 @@
 package com.groupdocs.examples.comparison.utils;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * The class is singleton.
  * It registers exceptions in samples and at the end of running examples prints the number of failed samples, their names and Exception object.
@@ -8,13 +11,14 @@ public class FailureRegister {
 
     private static final Object lock = new Object();
     private static FailureRegister instance;
-    private final java.util.HashMap<String, Throwable> failedSamples;
+    private final HashMap<String, Throwable> failedSamples;
+    private boolean _throwExceptionsImmediately;
 
     /**
      * Private constructor to ensure singleton behavior.
      */
     private FailureRegister() {
-        this.failedSamples = new java.util.HashMap<>();
+        this.failedSamples = new HashMap<>();
     }
 
     /**
@@ -39,8 +43,12 @@ public class FailureRegister {
      * @param exception The exception that occurred in the sample.
      */
     public void registerFailedSample(Throwable exception) {
-        final String sampleName = obtainSampleName(exception.getStackTrace());
-        this.failedSamples.put(sampleName, exception);
+        if (isThrowExceptionsImmediately()) {
+            throw new RuntimeException(exception);
+        } else {
+            final String sampleName = obtainSampleName(exception.getStackTrace());
+            this.failedSamples.put(sampleName, exception);
+        }
     }
 
     /**
@@ -75,7 +83,7 @@ public class FailureRegister {
             System.out.println("\n======================= ALL SAMPLES PASSED =======================");
         } else {
             System.err.println("\n======================= FAILED SAMPLES =======================");
-            for (java.util.Map.Entry<String, Throwable> entry : this.failedSamples.entrySet()) {
+            for (Map.Entry<String, Throwable> entry : this.failedSamples.entrySet()) {
                 System.err.println("Sample name: " + entry.getKey());
                 if (printStackTraces) {
                     entry.getValue().printStackTrace();
@@ -91,5 +99,25 @@ public class FailureRegister {
 
     public int getFailedSamplesCount() {
         return this.failedSamples.size();
+    }
+
+    /**
+     * Checks if the direct throw mode is enabled. If true, exceptions will be thrown directly instead of being registered.
+     * This method is primarily for testing purposes and allows toggling between registering exceptions or throwing them immediately.
+     *
+     * @return The current value of the direct throw mode.
+     */
+    public boolean isThrowExceptionsImmediately() {
+        return _throwExceptionsImmediately;
+    }
+
+    /**
+     * Sets the direct throw mode. If true, exceptions will be thrown directly instead of being registered.
+     * This method is primarily for testing purposes and allows toggling between registering exceptions or throwing them immediately.
+     *
+     * @param throwExceptionsImmediately The boolean value to set for direct throw mode.
+     */
+    public void setThrowExceptionsImmediately(boolean throwExceptionsImmediately) {
+        this._throwExceptionsImmediately = throwExceptionsImmediately;
     }
 }

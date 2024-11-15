@@ -20,23 +20,28 @@ import static com.groupdocs.examples.comparison.utils.FilesUtils.obtainExtension
 public class GetMeteredCreditsLimit {
     public static Path run(Path sourceFile, Path targetFile) {
         Path outputPath = FilesUtils.makeOutputPath("GetMeteredCreditsLimit" + obtainExtension(sourceFile));
+        Path resultPath = null;
         try {
             double creditsBefore = Metered.getConsumptionQuantity();
             try (OutputStream outputStream = Files.newOutputStream(outputPath);
                  Comparer comparer = new Comparer(sourceFile)) {
                 comparer.add(targetFile);
-                comparer.compare(outputStream, new SaveOptions(), new CompareOptions());
+
+                resultPath = comparer.compare(outputStream, new SaveOptions(), new CompareOptions());
+
+                if (resultPath == null) {
+                    resultPath = outputPath;
+                }
             }
             double creditsAfter = Metered.getConsumptionQuantity();
 
             System.out.println("Credits before using Comparer: " + creditsBefore);
             System.out.println("Credits after using Comparer: " + creditsAfter);
 
-            System.out.println("\nDocuments compared successfully.\nCheck output: " + outputPath.getParent());
-        } catch (IOException e) {
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
+        } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            e.printStackTrace();
         }
-        return outputPath;
+        return resultPath;
     }
 }

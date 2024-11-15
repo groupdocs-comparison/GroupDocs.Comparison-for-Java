@@ -4,6 +4,7 @@ import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.CompareOptions;
 import com.groupdocs.comparison.options.enums.PasswordSaveOption;
 import com.groupdocs.comparison.options.save.SaveOptions;
+import com.groupdocs.examples.comparison.utils.FailureRegister;
 import com.groupdocs.examples.comparison.utils.FilesUtils;
 
 import java.nio.file.Path;
@@ -35,6 +36,9 @@ public class SetPasswordForResultantDocument {
             }
             System.out.println("\nDocuments compared successfully.\nCheck output: " + resultPath.getParent());
             return resultPath;
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 }
