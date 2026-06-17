@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "com.groupdocs.ui.comparison.ktor"
-version = "24.7"
+version = "26.5"
 
 repositories {
     mavenLocal()

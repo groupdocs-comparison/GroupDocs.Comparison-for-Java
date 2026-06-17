@@ -1,5 +1,6 @@
 package com.groupdocs.ui.comparison.dropwizard.common.util;
 
+import com.groupdocs.ui.comparison.dropwizard.common.util.PathSecurityUtils;
 import com.groupdocs.ui.comparison.dropwizard.common.exception.TotalGroupDocsException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +46,6 @@ public final class TempFilesManager {
     }
 
     public java.nio.file.Path createTempPath(String fileName) {
-
-        return tempDirectoryAbsolutePath.resolve(fileName);
+        return tempDirectoryAbsolutePath.resolve(PathSecurityUtils.sanitizeFileName(fileName));
     }
 }

@@ -2,17 +2,20 @@
 FROM maven:latest as builder
 COPY pom.xml    /usr/local/build/pom.xml
 COPY src        /usr/local/build/src
-COPY client     /usr/local/build/client
 WORKDIR         /usr/local/build
 RUN mvn clean package -DskipTests
 
 # Prepare to run
-FROM openjdk:8-jre-alpine
-RUN mkdir -p /home/groupdocs/app && apk add fontconfig && apk add msttcorefonts-installer && update-ms-fonts && fc-cache -f
+FROM eclipse-temurin:11-jre
+
+RUN apt-get update && \
+    apt-get install -y fontconfig ttf-mscorefonts-installer && \
+    fc-cache -f && \
+    rm -rf /var/lib/apt/lists/*
 COPY /DocumentSamples /home/groupdocs/app/DocumentSamples
 COPY /Licenses /home/groupdocs/app/Licenses
 COPY /configuration.yml /home/groupdocs/app/configuration.yml
-COPY --from=builder /usr/local/build/target/comparison-*.jar /home/groupdocs/app/app.jar
+COPY --from=builder /usr/local/build/target/comparison-dropwizard-*.jar /home/groupdocs/app/app.jar
 WORKDIR /home/groupdocs/app
 
 ENV LIC_PATH "Licenses"

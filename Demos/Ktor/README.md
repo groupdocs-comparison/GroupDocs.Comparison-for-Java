@@ -1,7 +1,7 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison for Java Ktor Example
 New GroupDocs.Comparison for Java Ktor UI Example
-###### version 23.10
+###### version 26.5
 
 [![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java-Spring/blob/master/LICENSE)
 

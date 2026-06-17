@@ -11,6 +11,7 @@ import com.groupdocs.ui.comparison.dropwizard.common.entity.web.request.LoadDocu
 import com.groupdocs.ui.comparison.dropwizard.common.entity.web.request.LoadDocumentRequest;
 import com.groupdocs.ui.comparison.dropwizard.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.comparison.dropwizard.common.resources.Resources;
+import com.groupdocs.ui.comparison.dropwizard.common.util.PathSecurityUtils;
 import com.groupdocs.ui.comparison.dropwizard.common.util.SessionCache;
 import com.groupdocs.ui.comparison.dropwizard.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.dropwizard.model.ComparisonConfigurationModel;
@@ -214,12 +215,15 @@ public class ComparisonResources extends Resources implements HttpSessionListene
             InputStream inputStream = null;
             try {
                 if (fileUrl == null || fileUrl.trim().isEmpty()) {
-                    fileName = fileDetail.getFileName();
+                    fileName = PathSecurityUtils.sanitizeFileName(fileDetail.getFileName());
                     inputStream = fileStream;
                 } else {
+                    if (!fileUrl.startsWith("http://") && !fileUrl.startsWith("https://")) {
+                        throw new TotalGroupDocsException("Only HTTP and HTTPS URLs are allowed");
+                    }
                     URL url = new URL(fileUrl);
                     inputStream = url.openStream();
-                    fileName = FilenameUtils.getName(url.getPath());
+                    fileName = PathSecurityUtils.sanitizeFileName(FilenameUtils.getName(url.getPath()));
                 }
                 // upload file
                 String pathName = comparisonService.uploadFile(inputStream, fileName, rewrite);

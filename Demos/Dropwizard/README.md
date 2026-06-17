@@ -1,11 +1,23 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison for Java Dropwizard Example
 New GroupDocs.Comparison for Java Dropwizard UI Example
-###### version 23.10
+###### version 26.5
 
 [![Build Status](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg?branch=master)](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bd15712ebdd04405b1ea/maintainability)](https://codeclimate.com/github/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/maintainability)
 [![GitHub license](https://img.shields.io/github/license/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg)](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos/Dropwizard/blob/master/LICENSE)
+
+## Security Notice
+
+This Dropwizard sample is a **demonstration application**. It is provided to show how GroupDocs.Comparison can be integrated with a web UI.
+
+- Intended for **local development and evaluation** only
+- **Not** audited or hardened for production deployment
+- File upload, download, and document path handling must be reviewed and adapted before any external exposure
+
+The sample includes basic **path security** checks via `PathSecurityUtils` to mitigate path traversal when browsing, uploading, comparing, and downloading files. Paths are validated against `filesDirectory` and `resultDirectory`, uploaded file names are sanitized, and upload URLs are restricted to HTTP/HTTPS. Invalid paths return HTTP 403 (`Access denied`).
+
+When integrating GroupDocs.Comparison into your product, implement your own secure file storage, input validation, and access control — do not copy this demo directly into a public-facing service.
 
 ## System Requirements
 - Java 8+ (JDK 1.8+)
@@ -94,9 +106,11 @@ Each can be used to run GroupDocs.Comparison for Java Dropwizard sample
 Example:
 
 ```bash
-docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:23.10-java-openjdk8-bullseye-dropwizard
+docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:26.5-java-openjdk8-bullseye-dropwizard
 ## Open http://localhost:8080/comparison/ in your favorite browser.
 ```
+
+**Security notice:** Docker images ship with demo defaults (e.g. upload and browse enabled, no authentication). Use them for local evaluation only. Do not expose port `8080` to untrusted networks without adding authentication, path validation, and other security controls required by your organization.
 
 ## Configuration
 For all methods above you can adjust settings in `configuration.yml`. By default in this sample will lookup for license file in `./Licenses` folder, so you can simply put your license file in that folder or specify relative/absolute path by setting `licensePath` value in `configuration.yml`. 

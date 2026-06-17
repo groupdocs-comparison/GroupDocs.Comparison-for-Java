@@ -1,6 +1,7 @@
 package com.groupdocs.ui.comparison.spring.common.exception;
 
 import com.groupdocs.comparison.common.exceptions.PasswordProtectedFileException;
+import com.groupdocs.ui.comparison.spring.common.util.PathSecurityUtils;
 import com.groupdocs.ui.comparison.spring.common.entity.web.ExceptionEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,9 @@ public class GroupDocsExceptionHandler extends ResponseEntityExceptionHandler {
         ExceptionEntity exceptionEntity = new ExceptionEntity();
         String message = exception.getMessage();
         exceptionEntity.setMessage(message);
+        if (PathSecurityUtils.ACCESS_DENIED.equals(message)) {
+            return new ResponseEntity<>(exceptionEntity, HttpStatus.FORBIDDEN);
+        }
         if (logger.isDebugEnabled()) {
             exception.printStackTrace();
             exceptionEntity.setException(exception);

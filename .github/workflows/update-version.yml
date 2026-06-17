@@ -1,0 +1,60 @@
+name: Update Version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'New version (e.g. 26.5)'
+        required: true
+        type: string
+      create_pr:
+        description: 'Create a pull request with the changes'
+        required: true
+        type: boolean
+        default: true
+
+run-name: "Update version to ${{ inputs.version }}"
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update versions
+        run: ./scripts/update-version.sh ${{ inputs.version }}
+
+      - name: Verify versions
+        run: ./scripts/update-version.sh
+
+      - name: Show changed files
+        run: git diff --name-only
+
+      - name: Create pull request
+        if: ${{ inputs.create_pr }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          BRANCH="update-version-${VERSION}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "${BRANCH}"
+          git add -A
+          git commit -m "Update version to ${VERSION}"
+          git push -u origin "${BRANCH}"
+          gh pr create \
+            --title "Update version to ${VERSION}" \
+            --body "Automated version update to **${VERSION}** across all projects, Dockerfiles, and README."
+
+      - name: Commit directly
+        if: ${{ !inputs.create_pr }}
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update version to ${VERSION}"
+          git push

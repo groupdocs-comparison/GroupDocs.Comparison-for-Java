@@ -14,6 +14,65 @@ Directory | Description
 [Demos](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos)  | GroupDocs.Comparison for Java Dropwizard and Spring Demo projects.
 [Examples](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Examples)  | Java examples and sample documents for you to get started quickly.
 
+## Important: Demo Applications Only
+
+The projects in the [Demos](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java/tree/master/Demos) folder and the Docker images published as [`groupdocs/comparison`](https://hub.docker.com/r/groupdocs/comparison) are **sample applications** intended to demonstrate [GroupDocs.Comparison for Java](https://products.groupdocs.com/comparison/java) features.
+
+They are **not** production-ready services and must **not** be exposed to the public internet without additional hardening.
+
+Before using a demo in any shared or production-like environment:
+
+- Run it on `localhost` or a trusted private network only
+- Do not publish Docker containers directly to the internet without authentication, a reverse proxy, and network restrictions
+- Treat file upload, browse, compare, and download features as untrusted input — validate and sandbox file paths in your own integration
+- Add authentication, authorization, rate limiting, and logging appropriate for your security requirements
+- Keep GroupDocs.Comparison and all dependencies up to date
+
+The Spring and Dropwizard demos include basic path security via `PathSecurityUtils` (path traversal checks, file name sanitization, HTTP/HTTPS-only upload URLs). Invalid paths return HTTP 403 (`Access denied`). This reduces common path-based risks but does not replace a full security review.
+
+For production integrations, use the library ([Examples](Examples), [documentation](https://docs.groupdocs.com/comparison/java/)) and implement your own secure document storage and API layer instead of deploying these demos as-is.
+
+## Demos
+
+All web demos run on `http://localhost:8080/comparison/` and provide document comparison with upload, download, file tree browsing, and result preview support.
+
+| Demo | Framework | Language | Build | Version |
+|------|-----------|----------|-------|---------|
+| [Spring](Demos/Spring) | Spring Boot 2.6 | Java | `mvn clean spring-boot:run` | 26.5 |
+| [Dropwizard](Demos/Dropwizard) | Dropwizard | Java | `mvn clean compile exec:java` | 26.5 |
+| [Javalin](Demos/Javalin) | Javalin | Kotlin | `./gradlew run` | 26.5 |
+| [Ktor](Demos/Ktor) | Ktor | Kotlin | `./gradlew run` | 26.5 |
+| [Micronaut](Demos/Micronaut) | Micronaut | Kotlin | `./gradlew run` | 26.5 |
+| [Compose](Demos/Compose) | Compose Desktop | Kotlin | `./gradlew run` | 26.5 |
+
+The [Compose](Demos/Compose) demo is a standalone desktop application (not a web app).
+
+## Docker
+
+Pre-built Docker images are available on [Docker Hub](https://hub.docker.com/r/groupdocs/comparison).
+
+```bash
+docker pull groupdocs/comparison:latest
+docker run -p 8080:8080 groupdocs/comparison:latest
+```
+
+**Security notice:** Docker images ship with demo defaults (e.g. upload and browse enabled, no authentication). Use them for local evaluation only. Do not expose port `8080` to untrusted networks without adding authentication, path validation, and other security controls required by your organization.
+
+Available image tags follow the pattern `{version}-java-{jdk}-bullseye-{framework}`:
+
+| Tag | JDK | Framework |
+|-----|-----|-----------|
+| `{ver}-java-openjdk8-bullseye-spring` | Eclipse Temurin 8 | Spring |
+| `{ver}-java-openjdk11-bullseye-spring` | Eclipse Temurin 11 | Spring |
+| `{ver}-java-openjdk18-bullseye-spring` | Eclipse Temurin 21 | Spring |
+| `{ver}-java-openjdk8-bullseye-dropwizard` | Eclipse Temurin 8 | Dropwizard |
+| `{ver}-java-openjdk11-bullseye-dropwizard` | Eclipse Temurin 11 | Dropwizard |
+| `{ver}-java-openjdk18-bullseye-dropwizard` | Eclipse Temurin 21 | Dropwizard |
+
+The `latest` tag points to the `openjdk18-bullseye-spring` variant.
+
+Images are built and published via the [Publish Docker Images](.github/workflows/docker-publish.yml) GitHub Actions workflow (manual dispatch). Set repository secrets `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` before pushing.
+
 ## Compare Documents via Java
 
 - Accept or reject document changes.

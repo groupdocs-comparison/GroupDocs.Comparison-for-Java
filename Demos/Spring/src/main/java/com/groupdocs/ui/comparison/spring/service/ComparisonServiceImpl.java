@@ -17,6 +17,7 @@ import com.groupdocs.ui.comparison.spring.common.entity.web.request.LoadDocument
 import com.groupdocs.ui.comparison.spring.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.comparison.spring.common.util.CachedPageStream;
 import com.groupdocs.ui.comparison.spring.common.util.SessionCache;
+import com.groupdocs.ui.comparison.spring.common.util.PathSecurityUtils;
 import com.groupdocs.ui.comparison.spring.common.util.TempFilesManager;
 import com.groupdocs.ui.comparison.spring.config.ComparisonConfiguration;
 import com.groupdocs.ui.comparison.spring.model.request.CompareRequest;
@@ -315,13 +316,14 @@ public class ComparisonServiceImpl implements ComparisonService {
      */
     @Override
     public String uploadFile(InputStream inputStream, String fileName, boolean isRewrite) {
+        final String safeFileName = PathSecurityUtils.sanitizeFileName(fileName);
         final FilesProvider filesProvider = FilesProvider.getInstance();
-        final boolean isFileExists = filesProvider.isFileExists(fileName);
+        final boolean isFileExists = filesProvider.isFileExists(safeFileName);
         if (!isFileExists || isRewrite) {
             if (isFileExists) {
-                filesProvider.deleteFile(fileName);
+                filesProvider.deleteFile(safeFileName);
             }
-            filesProvider.receiveFilesOutputStream(fileName, outputStream -> {
+            filesProvider.receiveFilesOutputStream(safeFileName, outputStream -> {
                 try {
                     IOUtils.copy(inputStream, outputStream);
                 } catch (IOException e) {
@@ -331,7 +333,7 @@ public class ComparisonServiceImpl implements ComparisonService {
         } else {
             throw new TotalGroupDocsException("File with the name is already exist and rewrite option in configuration is false");
         }
-        return fileName;
+        return safeFileName;
     }
 
     @Override
@@ -366,6 +368,6 @@ public class ComparisonServiceImpl implements ComparisonService {
             logger.debug("Temp directory is going to be '" + tempDirectoryPath + "', creating it...");
             tempDirectoryAbsolutePath = Files.createDirectories(tempDirectoryPath);
         }
-        return tempDirectoryAbsolutePath.resolve(fileName);
+        return tempDirectoryAbsolutePath.resolve(PathSecurityUtils.sanitizeFileName(fileName));
     }
 }

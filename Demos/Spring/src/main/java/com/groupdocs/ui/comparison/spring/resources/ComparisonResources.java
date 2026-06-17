@@ -12,6 +12,7 @@ import com.groupdocs.ui.comparison.spring.common.entity.web.request.FileTreeRequ
 import com.groupdocs.ui.comparison.spring.common.entity.web.request.LoadDocumentPageRequest;
 import com.groupdocs.ui.comparison.spring.common.exception.TotalGroupDocsException;
 import com.groupdocs.ui.comparison.spring.common.resources.Resources;
+import com.groupdocs.ui.comparison.spring.common.util.PathSecurityUtils;
 import com.groupdocs.ui.comparison.spring.common.util.SessionCache;
 import com.groupdocs.ui.comparison.spring.common.util.TempFilesManager;
 import com.groupdocs.ui.comparison.spring.config.ComparisonConfiguration;
@@ -196,12 +197,15 @@ public class ComparisonResources extends Resources implements HttpSessionListene
             InputStream inputStream = null;
             try {
                 if (content != null && StringUtils.isBlank(fileUrl)) {
-                    fileName = content.getOriginalFilename();
+                    fileName = PathSecurityUtils.sanitizeFileName(content.getOriginalFilename());
                     inputStream = content.getInputStream();
                 } else {
+                    if (!fileUrl.startsWith("http://") && !fileUrl.startsWith("https://")) {
+                        throw new TotalGroupDocsException("Only HTTP and HTTPS URLs are allowed");
+                    }
                     URL url = new URL(fileUrl);
                     inputStream = url.openStream();
-                    fileName = FilenameUtils.getName(url.getPath());
+                    fileName = PathSecurityUtils.sanitizeFileName(FilenameUtils.getName(url.getPath()));
                 }
                 // upload file
                 String pathName = comparisonService.uploadFile(inputStream, fileName, rewrite);

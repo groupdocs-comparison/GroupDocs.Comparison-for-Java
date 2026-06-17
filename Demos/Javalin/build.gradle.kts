@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.groupdocs.ui"
-version = "24.7"
+version = "26.5"
 
 repositories {
     mavenLocal()
