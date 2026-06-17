@@ -320,8 +320,12 @@ public class ComparisonResources extends Resources implements HttpSessionListene
 
     private void setLicense() {
         try {
-            // set GroupDocs license
             final String licensePath = globalConfiguration.getApplication().getLicensePath();
+            if (StringUtils.isBlank(licensePath)) {
+                logger.info("License path is not configured. Running in evaluation mode.");
+                return;
+            }
+            // set GroupDocs license
             final String licenseExtension = Defaults.Application.DEFAULT_LICENSE_EXTENSION;
             License license = new License();
             if (licensePath.startsWith("http://") || licensePath.startsWith("https://")) {

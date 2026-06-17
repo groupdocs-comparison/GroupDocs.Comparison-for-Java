@@ -71,6 +71,8 @@ Available image tags follow the pattern `{version}-java-{jdk}-bullseye-{framewor
 
 The `latest` tag points to the `openjdk18-bullseye-spring` variant.
 
+The [Docker Hub repository overview](https://hub.docker.com/r/groupdocs/comparison) is generated from [`docs/docker-hub-overview.md`](docs/docker-hub-overview.md) when the [Publish Docker Images](.github/workflows/docker-publish.yml) workflow runs with **Push** enabled.
+
 Images are built and published via the [Publish Docker Images](.github/workflows/docker-publish.yml) GitHub Actions workflow (manual dispatch). Set repository secrets `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` before pushing.
 
 ## Compare Documents via Java
