@@ -1,7 +1,7 @@
 ![GroupDocs.Comparison](https://raw.githubusercontent.com/groupdocs-comparison/groupdocs-comparison.github.io/master/resources/image/banner.png "GroupDocs.Comparison")
 # GroupDocs.Comparison for Java Dropwizard Example
 New GroupDocs.Comparison for Java Dropwizard UI Example
-###### version 26.5
+###### version 26.9
 
 [![Build Status](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard.svg?branch=master)](https://travis-ci.org/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bd15712ebdd04405b1ea/maintainability)](https://codeclimate.com/github/groupdocs-comparison/GroupDocs.Comparison-for-Java-Dropwizard/maintainability)
@@ -106,7 +106,7 @@ Each can be used to run GroupDocs.Comparison for Java Dropwizard sample
 Example:
 
 ```bash
-docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:26.5-java-openjdk8-bullseye-dropwizard
+docker run -p 8080:8080 --name my-comparison --rm groupdocs/comparison:26.9-java-openjdk8-bullseye-dropwizard
 ## Open http://localhost:8080/comparison/ in your favorite browser.
 ```
 

@@ -6,7 +6,7 @@
 
     <groupId>com.groupdocs.ui</groupId>
     <artifactId>comparison-dropwizard</artifactId>
-    <version>26.5</version>
+    <version>26.9</version>
     <packaging>jar</packaging>
 
     <name>GroupDocs.Comparison Dropwizard</name>

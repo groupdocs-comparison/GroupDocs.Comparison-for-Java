@@ -38,12 +38,12 @@ All web demos run on `http://localhost:8080/comparison/` and provide document co
 
 | Demo | Framework | Language | Build | Version |
 |------|-----------|----------|-------|---------|
-| [Spring](Demos/Spring) | Spring Boot 2.6 | Java | `mvn clean spring-boot:run` | 26.5 |
-| [Dropwizard](Demos/Dropwizard) | Dropwizard | Java | `mvn clean compile exec:java` | 26.5 |
-| [Javalin](Demos/Javalin) | Javalin | Kotlin | `./gradlew run` | 26.5 |
-| [Ktor](Demos/Ktor) | Ktor | Kotlin | `./gradlew run` | 26.5 |
-| [Micronaut](Demos/Micronaut) | Micronaut | Kotlin | `./gradlew run` | 26.5 |
-| [Compose](Demos/Compose) | Compose Desktop | Kotlin | `./gradlew run` | 26.5 |
+| [Spring](Demos/Spring) | Spring Boot 2.6 | Java | `mvn clean spring-boot:run` | 26.9 |
+| [Dropwizard](Demos/Dropwizard) | Dropwizard | Java | `mvn clean compile exec:java` | 26.9 |
+| [Javalin](Demos/Javalin) | Javalin | Kotlin | `./gradlew run` | 26.9 |
+| [Ktor](Demos/Ktor) | Ktor | Kotlin | `./gradlew run` | 26.9 |
+| [Micronaut](Demos/Micronaut) | Micronaut | Kotlin | `./gradlew run` | 26.9 |
+| [Compose](Demos/Compose) | Compose Desktop | Kotlin | `./gradlew run` | 26.9 |
 
 The [Compose](Demos/Compose) demo is a standalone desktop application (not a web app).
 
