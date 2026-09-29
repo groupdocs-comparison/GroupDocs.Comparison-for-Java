@@ -26,7 +26,7 @@ public class GetPagePreviewsForTargetDocument {
                                 new Delegates.CreatePageStream() {
                                     @Override
                                     public OutputStream invoke(int pageNumber) {
-                                        String pagePath = Utils.OUTPUT_PATH + ".result-GetPagePreviewsForTargetDocument_" + pageNumber + ".png";
+                                        String pagePath = Utils.OUTPUT_PATH + "/result-GetPagePreviewsForTargetDocument_" + pageNumber + ".png";
                                         try {
                                             return new FileOutputStream(pagePath);
                                         } catch (FileNotFoundException e) {

@@ -26,4 +26,22 @@ public class CompareDirectoriesFromPath {
         }
         System.out.println("\nDirectories compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
+
+    /**
+     * This example demonstrates comparing of two directories and saving result to TXT file
+     */
+    public static void runSaveAsTxt() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_TXT, "CompareDirectoriesFromPathSaveAsTxt");
+
+        final CompareOptions compareOptions = new CompareOptions();
+        compareOptions.setDirectoryCompare(true);
+        compareOptions.setFolderComparisonExtension(FolderComparisonExtension.TXT);
+
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_DIRECTORIES, compareOptions)) {
+            comparer.add(SampleFiles.TARGET_DIRECTORIES, compareOptions);
+            comparer.compareDirectory(outputFileName, compareOptions);
+        }
+        System.out.println("\nDirectories compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
 }

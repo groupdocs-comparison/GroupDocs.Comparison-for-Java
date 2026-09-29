@@ -9,4 +9,9 @@ public class CompareDirectoriesFromPathTest extends TestsSetUp {
     public void run() throws Exception {
         CompareDirectoriesFromPath.run();
     }
+
+    @Test
+    public void runSaveAsTxt() throws Exception {
+        CompareDirectoriesFromPath.runSaveAsTxt();
+    }
 }

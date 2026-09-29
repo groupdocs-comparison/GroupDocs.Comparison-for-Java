@@ -26,4 +26,9 @@ public class GetChangesTest extends TestsSetUp {
     public void getTargetText() {
         GetChanges.getTargetText();
     }
+
+    @Test
+    public void getSourceAndTargetTexts() {
+        GetChanges.getSourceAndTargetTexts();
+    }
 }

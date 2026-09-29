@@ -83,4 +83,21 @@ public class GetChanges {
         }
         System.out.println("\nGet Target Text received successfully.");
     }
+
+    /**
+     * This example demonstrates how to get source and target texts of changes
+     */
+    public static void getSourceAndTargetTexts() {
+        try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
+            comparer.add(SampleFiles.TARGET1_WORD);
+            comparer.compare();
+            ChangeInfo[] changes = comparer.getChanges();
+            for (ChangeInfo change : changes) {
+                System.out.println();
+                System.out.println("Source text: " + change.getSourceText());
+                System.out.println("Target text: " + change.getTargetText());
+            }
+        }
+        System.out.println("\nGet Source and Target Texts received successfully.");
+    }
 }

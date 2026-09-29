@@ -45,7 +45,23 @@ public class SampleFiles {
     public static final String SOURCE_WITH_FOOTER = getSampleFilePath("sourceWithFooter.docx");
     public static final String TARGET_WITH_FOOTER = getSampleFilePath("targetWithFooter.docx");
 
+    public static final String SOURCE_WORD_FONT = getSampleFilePath("source_font.docx");
+    public static final String TARGET_WORD_FONT = getSampleFilePath("target_font.docx");
+    public static final String CUSTOM_FONTS_DIRECTORY = getSampleFilePath("fonts");
+
+    public static final String SOURCE_COMPARE_OPTIONS = getSampleFilePath("source_compare_options.docx");
+    public static final String TARGET_COMPARE_OPTIONS = getSampleFilePath("target_compare_options.docx");
+
+    public static final String SOURCE_REVISIONS = getSampleFilePath("revision.docx");
+
+    public static final String SOURCE_PDF_NEW = getSampleFilePath("source_new.pdf");
+    public static final String TARGET_PDF_NEW = getSampleFilePath("target_new.pdf");
+
+    public static final String SOURCE_IMAGE = getSampleFilePath("source.png");
+    public static final String TARGET_IMAGE = getSampleFilePath("target.png");
+
     public static final String RESULT_WORD = "result-%s.docx";
+    public static final String RESULT_IMAGE = "result-%s.png";
     public static final String RESULT_CELLS = "result-%s.xlsx";
     public static final String RESULT_DIRECTORIES = "result-%s.html";
     public static final String RESULT_SLIDES = "result-%s.pptx";

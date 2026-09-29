@@ -31,4 +31,39 @@ public class UseCompareOptionsTest extends TestsSetUp {
     public void customizeChangesStylesPath() throws IOException {
         UseCompareOptions.customizeChangesStylesPath();
     }
+
+    @Test
+    public void compareBookmarks() throws IOException {
+        UseCompareOptions.compareBookmarks();
+    }
+
+    @Test
+    public void compareDocumentProperties() throws IOException {
+        UseCompareOptions.compareDocumentProperties();
+    }
+
+    @Test
+    public void disableShowRevisions() throws IOException {
+        UseCompareOptions.disableShowRevisions();
+    }
+
+    @Test
+    public void getExtendedSummaryPage() throws IOException {
+        UseCompareOptions.getExtendedSummaryPage();
+    }
+
+    @Test
+    public void getOnlySummaryPage() throws IOException {
+        UseCompareOptions.getOnlySummaryPage();
+    }
+
+    @Test
+    public void leaveGaps() throws IOException {
+        UseCompareOptions.leaveGaps();
+    }
+
+    @Test
+    public void wordTrackChanges() throws IOException {
+        UseCompareOptions.wordTrackChanges();
+    }
 }

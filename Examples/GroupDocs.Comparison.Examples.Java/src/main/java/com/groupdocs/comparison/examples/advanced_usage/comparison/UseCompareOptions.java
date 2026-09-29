@@ -246,4 +246,152 @@ public class UseCompareOptions {
         }
         System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
     }
+
+    /**
+     * This example demonstrates how to activate comparison of bookmarks
+     */
+    public static void compareBookmarks() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CompareBookmarks");
+
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_COMPARE_OPTIONS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_COMPARE_OPTIONS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+
+            final CompareOptions compareOptions = new CompareOptions();
+            compareOptions.setCompareBookmarks(true);
+            comparer.compare(resultStream, compareOptions);
+        }
+        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
+
+    /**
+     * This example demonstrates how to activate comparison of variable, built-in and custom document properties
+     */
+    public static void compareDocumentProperties() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "CompareDocumentProperties");
+
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_COMPARE_OPTIONS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_COMPARE_OPTIONS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+
+            final CompareOptions compareOptions = new CompareOptions();
+            compareOptions.setCompareVariableProperty(true);
+            compareOptions.setCompareDocumentProperty(true);
+            comparer.compare(resultStream, compareOptions);
+        }
+        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
+
+    /**
+     * This example demonstrates how to disable showing revisions in the result document
+     */
+    public static void disableShowRevisions() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "DisableShowRevisions");
+
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_COMPARE_OPTIONS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_COMPARE_OPTIONS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+
+            final CompareOptions compareOptions = new CompareOptions();
+            compareOptions.setShowRevisions(false);
+            comparer.compare(resultStream, compareOptions);
+        }
+        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
+
+    /**
+     * This example demonstrates how to get extended comparison information on the summary page
+     */
+    public static void getExtendedSummaryPage() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "GetExtendedSummaryPage");
+
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_COMPARE_OPTIONS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_COMPARE_OPTIONS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+
+            // To get extended information about comparison, the GenerateSummaryPage property must be set to true.
+            // Extended information contains words and symbols count; for diagrams also count of shapes, for HTML count of tags.
+            final CompareOptions compareOptions = new CompareOptions();
+            compareOptions.setGenerateSummaryPage(true);
+            compareOptions.setExtendedSummaryPage(true);
+            comparer.compare(resultStream, compareOptions);
+        }
+        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
+
+    /**
+     * This example demonstrates how to get only the summary page in the result document
+     */
+    public static void getOnlySummaryPage() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "GetOnlySummaryPage");
+
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_COMPARE_OPTIONS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_COMPARE_OPTIONS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+
+            // To get only the summary page, the GenerateSummaryPage property must be set to true
+            final CompareOptions compareOptions = new CompareOptions();
+            compareOptions.setGenerateSummaryPage(true);
+            compareOptions.setShowOnlySummaryPage(true);
+            comparer.compare(resultStream, compareOptions);
+        }
+        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
+
+    /**
+     * This example demonstrates how to replace changed content with empty lines in the result document
+     */
+    public static void leaveGaps() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "LeaveGaps");
+
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_COMPARE_OPTIONS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_COMPARE_OPTIONS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+
+            final CompareOptions compareOptions = new CompareOptions();
+            compareOptions.setShowInsertedContent(false);
+            compareOptions.setShowDeletedContent(false);
+            compareOptions.setLeaveGaps(true);
+            comparer.compare(resultStream, compareOptions);
+        }
+        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
+
+    /**
+     * This example demonstrates how to use the Microsoft Word "Track Changes" comparing
+     */
+    public static void wordTrackChanges() throws IOException {
+
+        String outputFileName = Utils.getOutputDirectoryPath(SampleFiles.RESULT_WORD, "WordTrackChanges");
+
+        try (InputStream sourceStream = new FileInputStream(SampleFiles.SOURCE_COMPARE_OPTIONS);
+             InputStream targetStream = new FileInputStream(SampleFiles.TARGET_COMPARE_OPTIONS);
+             OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer(sourceStream)) {
+            comparer.add(targetStream);
+
+            final CompareOptions compareOptions = new CompareOptions();
+            compareOptions.setWordTrackChanges(true);
+            comparer.compare(resultStream, compareOptions);
+        }
+        System.out.println("\nDocuments compared successfully.\nCheck output in " + Utils.OUTPUT_PATH + ".");
+    }
 }

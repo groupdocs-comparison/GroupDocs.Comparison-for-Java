@@ -1,8 +1,11 @@
 package com.groupdocs.comparison.examples;
 
+import com.groupdocs.comparison.examples.advanced_usage.AcceptRejectRevisions;
 import com.groupdocs.comparison.examples.advanced_usage.comparison.*;
 import com.groupdocs.comparison.examples.advanced_usage.generate_page_previews.*;
+import com.groupdocs.comparison.examples.advanced_usage.loading.LoadCustomFonts;
 import com.groupdocs.comparison.examples.advanced_usage.loading.LoadDocumentFromLocalDisc;
+import com.groupdocs.comparison.examples.advanced_usage.loading.LoadTextFromString;
 import com.groupdocs.comparison.examples.advanced_usage.loading.LoadDocumentFromStream;
 import com.groupdocs.comparison.examples.advanced_usage.saving.SetDocumentMetadataSource;
 import com.groupdocs.comparison.examples.advanced_usage.saving.SetDocumentMetadataTarget;
@@ -210,6 +213,55 @@ public class RunExamples {
 
         // region Get target text from changed range
         GetChanges.getTargetText();
+        // endregion
+
+        // region Get source and target texts of changes
+        GetChanges.getSourceAndTargetTexts();
+        // endregion
+
+        // region Compare directories and save result as TXT
+        CompareDirectoriesFromPath.runSaveAsTxt();
+        // endregion
+
+        // region Get document info of target document
+        GetDocumentInfoFromResultDocument.run();
+        // endregion
+
+        // region Compare images
+        CompareImage.run();
+        // endregion
+
+        // region Word/PDF specific compare options
+        WordComparisonSample.run();
+        PdfComparisonSample.run();
+        // endregion
+
+        // region Set author of changes
+        SetAuthorOfChanges.run();
+        // endregion
+
+        // region Load custom fonts
+        LoadCustomFonts.run();
+        // endregion
+
+        // region Compare texts loaded from string
+        LoadTextFromString.run();
+        // endregion
+
+        // region Accept/reject revisions
+        AcceptRejectRevisions.acceptRejectRevisionsFromPath();
+        AcceptRejectRevisions.acceptRejectRevisionsFromStream();
+        AcceptRejectRevisions.acceptRejectAllRevisions();
+        // endregion
+
+        // region Additional compare options
+        UseCompareOptions.compareBookmarks();
+        UseCompareOptions.compareDocumentProperties();
+        UseCompareOptions.disableShowRevisions();
+        UseCompareOptions.getExtendedSummaryPage();
+        UseCompareOptions.getOnlySummaryPage();
+        UseCompareOptions.leaveGaps();
+        UseCompareOptions.wordTrackChanges();
         // endregion*/
 
         //CompareDocumentsFromStream.run();
