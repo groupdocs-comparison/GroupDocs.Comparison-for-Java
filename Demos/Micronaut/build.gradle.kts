@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.groupdocs.ui"
-version = "26.9"
+version = "26.10"
 
 val kotlinVersion = project.properties["kotlinVersion"]
 repositories {
