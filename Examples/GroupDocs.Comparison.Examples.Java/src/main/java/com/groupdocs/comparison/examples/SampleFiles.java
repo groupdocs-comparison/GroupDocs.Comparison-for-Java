@@ -60,6 +60,9 @@ public class SampleFiles {
     public static final String SOURCE_IMAGE = getSampleFilePath("source.png");
     public static final String TARGET_IMAGE = getSampleFilePath("target.png");
 
+    public static final String OCR_SOURCE_IMAGE = getSampleFilePath("ocr/source.png");
+    public static final String OCR_TARGET_IMAGE = getSampleFilePath("ocr/target.png");
+
     public static final String RESULT_WORD = "result-%s.docx";
     public static final String RESULT_IMAGE = "result-%s.png";
     public static final String RESULT_CELLS = "result-%s.xlsx";

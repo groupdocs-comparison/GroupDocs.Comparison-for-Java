@@ -6,7 +6,12 @@ import org.junit.Test;
 public class PdfComparisonSampleTest extends TestsSetUp {
 
     @Test
-    public void run() throws Exception {
-        PdfComparisonSample.run();
+    public void displayModeSideBySide() throws Exception {
+        PdfComparisonSample.displayModeSideBySide();
+    }
+
+    @Test
+    public void displayModeInline() throws Exception {
+        PdfComparisonSample.displayModeInline();
     }
 }

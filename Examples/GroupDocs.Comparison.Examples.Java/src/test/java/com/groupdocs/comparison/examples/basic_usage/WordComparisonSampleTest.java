@@ -6,7 +6,12 @@ import org.junit.Test;
 public class WordComparisonSampleTest extends TestsSetUp {
 
     @Test
-    public void run() throws Exception {
-        WordComparisonSample.run();
+    public void displayModeRevisions() throws Exception {
+        WordComparisonSample.displayModeRevisions();
+    }
+
+    @Test
+    public void displayModeHighlight() throws Exception {
+        WordComparisonSample.displayModeHighlight();
     }
 }

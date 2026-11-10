@@ -232,8 +232,19 @@ public class RunExamples {
         // endregion
 
         // region Word/PDF specific compare options
-        WordComparisonSample.run();
-        PdfComparisonSample.run();
+        WordComparisonSample.displayModeRevisions();
+        WordComparisonSample.displayModeHighlight();
+        PdfComparisonSample.displayModeSideBySide();
+        PdfComparisonSample.displayModeInline();
+        // endregion
+
+        // region OCR comparison of images
+        OcrComparison.displayModeSideBySide();
+        OcrComparison.displayModeText();
+        // endregion
+
+        // region Skip external resources
+        SkipExternalResources.run();
         // endregion
 
         // region Set author of changes
